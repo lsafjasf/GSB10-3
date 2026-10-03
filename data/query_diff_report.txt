@@ -1,0 +1,21 @@
+=== 全表还原对拍（列存解码 vs 原始行存） ===
+rows=5000 restored=5000 mismatched_rows=0 -> PASS
+
+=== 查询对拍（行存结果 vs 列存结果，逐行比较） ===
+query                         row_cnt  col_cnt result
+全表扫描                             5000     5000 MATCH
+全空列 is_null                      5000     5000 MATCH
+全空列等值(应空集)                          0        0 MATCH
+单值列等值命中                          5000     5000 MATCH
+单值列等值未命中                            0        0 MATCH
+高度重复列等值                          4762     4762 MATCH
+高度重复列不等                           238      238 MATCH
+混合列 bool 等值                       762      762 MATCH
+混合列 int 等值(不吃 bool)               737      737 MATCH
+混合列字符串等值                          676      676 MATCH
+混合列 is_null                       700      700 MATCH
+范围过滤                              734      734 MATCH
+范围+空值组合                          2373     2373 MATCH
+空结果集                                0        0 MATCH
+
+overall: PASS

@@ -1,0 +1,216 @@
+{
+  "method": "area average (exact pixel-overlap weights)",
+  "reference": "area_average_reference: brute-force 2D per-output-pixel summation",
+  "tolerance_note": "two implementations are mathematically identical; diff comes only from float summation order",
+  "cases": [
+    {
+      "case": "integer_ratio_downsample_4x4_to_2x2",
+      "src_size": [
+        4,
+        4
+      ],
+      "window": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "out_size": [
+        2,
+        2
+      ],
+      "area_average_sample": [
+        [
+          2.5,
+          4.5
+        ],
+        [
+          10.5,
+          12.5
+        ]
+      ],
+      "max_abs_diff_area_avg_vs_reference": 0.0,
+      "max_abs_diff_nearest_neighbor_vs_reference": 2.5
+    },
+    {
+      "case": "non_integer_ratio_37x23_to_16x9",
+      "src_size": [
+        37,
+        23
+      ],
+      "window": [
+        0,
+        0,
+        37,
+        23
+      ],
+      "out_size": [
+        16,
+        9
+      ],
+      "area_average_sample": [
+        [
+          6.730469243319495,
+          -8.661496268216961,
+          -5.570652746387887,
+          -47.78372934684553
+        ],
+        [
+          -19.45834775192186,
+          29.130286097736413,
+          -15.344426824457344,
+          -20.59454421685697
+        ],
+        [
+          29.86182531367142,
+          -24.76467731161104,
+          0.8685583613182475,
+          17.031418106253533
+        ],
+        [
+          -7.379901573030396,
+          18.224931247421054,
+          15.789196094002946,
+          -9.838126700948932
+        ]
+      ],
+      "max_abs_diff_area_avg_vs_reference": 1.4210854715202004e-14,
+      "max_abs_diff_nearest_neighbor_vs_reference": 101.00912505813616
+    },
+    {
+      "case": "fractional_window_10x10_to_8x8",
+      "src_size": [
+        10,
+        10
+      ],
+      "window": [
+        0.3,
+        0.7,
+        9.1,
+        8.9
+      ],
+      "out_size": [
+        8,
+        8
+      ],
+      "area_average_sample": [
+        [
+          2.827050997782705,
+          2.9490022172949004,
+          2.4035476718403563,
+          2.4944567627494436
+        ],
+        [
+          3.9445676274944557,
+          3.6940133037694016,
+          3.1485587583148553,
+          2.3082039911308208
+        ],
+        [
+          2.5787139689578717,
+          2.6696230598669635,
+          2.1241685144124163,
+          4.310421286031041
+        ],
+        [
+          4.006651884700667,
+          3.104212860310423,
+          2.5587583148558783,
+          3.3481152993348093
+        ]
+      ],
+      "max_abs_diff_area_avg_vs_reference": 4.440892098500626e-15,
+      "max_abs_diff_nearest_neighbor_vs_reference": 2.4035476718403572
+    },
+    {
+      "case": "upscale_8x6_to_16x12",
+      "src_size": [
+        8,
+        6
+      ],
+      "window": [
+        0,
+        0,
+        8,
+        6
+      ],
+      "out_size": [
+        16,
+        12
+      ],
+      "area_average_sample": [
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          2.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.0,
+          2.0,
+          2.0
+        ]
+      ],
+      "max_abs_diff_area_avg_vs_reference": 0.0,
+      "max_abs_diff_nearest_neighbor_vs_reference": 0.0
+    },
+    {
+      "case": "edge_partial_window_232x188_to_232x188",
+      "src_size": [
+        232,
+        188
+      ],
+      "window": [
+        0,
+        0,
+        232,
+        188
+      ],
+      "out_size": [
+        232,
+        188
+      ],
+      "area_average_sample": [
+        [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ],
+        [
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        [
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ],
+        [
+          3.0,
+          4.0,
+          5.0,
+          6.0
+        ]
+      ],
+      "max_abs_diff_area_avg_vs_reference": 0.0,
+      "max_abs_diff_nearest_neighbor_vs_reference": 0.0
+    }
+  ]
+}

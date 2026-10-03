@@ -1,0 +1,683 @@
+{
+  "capacity": 4,
+  "eviction_policy": "LRU (least-recently-used, access moves key to most-recent end)",
+  "trace": [
+    {
+      "request": [
+        0,
+        0
+      ],
+      "outcome": "miss",
+      "evicted": [],
+      "cache_keys_after": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "request": [
+        0,
+        0
+      ],
+      "outcome": "hit",
+      "evicted": [],
+      "cache_keys_after": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "request": [
+        0,
+        1
+      ],
+      "outcome": "miss",
+      "evicted": [],
+      "cache_keys_after": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "request": [
+        0,
+        2
+      ],
+      "outcome": "miss",
+      "evicted": [],
+      "cache_keys_after": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "request": [
+        0,
+        3
+      ],
+      "outcome": "miss",
+      "evicted": [],
+      "cache_keys_after": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "request": [
+        1,
+        0
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          0,
+          0
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "request": [
+        0,
+        3
+      ],
+      "outcome": "hit",
+      "evicted": [],
+      "cache_keys_after": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "request": [
+        1,
+        1
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          0,
+          1
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "request": [
+        1,
+        2
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          0,
+          2
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "request": [
+        1,
+        3
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          1,
+          0
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "request": [
+        2,
+        0
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          0,
+          3
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "request": [
+        2,
+        1
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          1,
+          1
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "request": [
+        2,
+        2
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          1,
+          2
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "request": [
+        2,
+        3
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          1,
+          3
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "request": [
+        3,
+        0
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          2,
+          0
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "request": [
+        3,
+        1
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          2,
+          1
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "request": [
+        3,
+        2
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          2,
+          2
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "request": [
+        3,
+        3
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          2,
+          3
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "request": [
+        0,
+        0
+      ],
+      "outcome": "miss",
+      "evicted": [
+        [
+          3,
+          0
+        ]
+      ],
+      "cache_keys_after": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "request": [
+        3,
+        3
+      ],
+      "outcome": "hit",
+      "evicted": [],
+      "cache_keys_after": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    }
+  ],
+  "eviction_log": [
+    {
+      "seq": 1,
+      "key": [
+        0,
+        0
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 2,
+      "key": [
+        0,
+        1
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 3,
+      "key": [
+        0,
+        2
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 4,
+      "key": [
+        1,
+        0
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 5,
+      "key": [
+        0,
+        3
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 6,
+      "key": [
+        1,
+        1
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 7,
+      "key": [
+        1,
+        2
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 8,
+      "key": [
+        1,
+        3
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 9,
+      "key": [
+        2,
+        0
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 10,
+      "key": [
+        2,
+        1
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 11,
+      "key": [
+        2,
+        2
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 12,
+      "key": [
+        2,
+        3
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    },
+    {
+      "seq": 13,
+      "key": [
+        3,
+        0
+      ],
+      "reason": "capacity",
+      "size_after": 4
+    }
+  ],
+  "stats": {
+    "capacity": 4,
+    "size": 4,
+    "hits": 3,
+    "misses": 17,
+    "requests": 20,
+    "hit_rate": 0.15,
+    "evictions": 13
+  }
+}

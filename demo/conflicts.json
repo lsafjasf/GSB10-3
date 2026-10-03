@@ -1,0 +1,62 @@
+[
+  {
+    "key": "dXNlcjox",
+    "key_text": "user:1",
+    "winner": {
+      "page_no": 4,
+      "page_offset": 258,
+      "record_index": 0,
+      "record_offset": 282,
+      "value": "YWxpY2VAdjQ=",
+      "value_text": "alice@v4"
+    },
+    "superseded": [
+      {
+        "page_no": 0,
+        "page_offset": 0,
+        "record_index": 0,
+        "record_offset": 24,
+        "value": "YWxpY2VAdjA=",
+        "value_text": "alice@v0"
+      },
+      {
+        "page_no": 1,
+        "page_offset": 62,
+        "record_index": 0,
+        "record_offset": 86,
+        "value": "YWxpY2VAdjE=",
+        "value_text": "alice@v1"
+      }
+    ]
+  },
+  {
+    "key": "dXNlcjoy",
+    "key_text": "user:2",
+    "winner": {
+      "page_no": 2,
+      "page_offset": 126,
+      "record_index": 1,
+      "record_offset": 168,
+      "value": "Ym9iQHYyLWZpbmFs",
+      "value_text": "bob@v2-final"
+    },
+    "superseded": [
+      {
+        "page_no": 0,
+        "page_offset": 0,
+        "record_index": 1,
+        "record_offset": 44,
+        "value": "Ym9iQHYw",
+        "value_text": "bob@v0"
+      },
+      {
+        "page_no": 2,
+        "page_offset": 126,
+        "record_index": 0,
+        "record_offset": 150,
+        "value": "Ym9iQHYy",
+        "value_text": "bob@v2"
+      }
+    ]
+  }
+]

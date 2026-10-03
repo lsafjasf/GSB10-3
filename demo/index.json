@@ -1,0 +1,34 @@
+{
+  "format": "pagestore-index",
+  "version": 1,
+  "entries": [
+    {
+      "key": "dXNlcjox",
+      "value": "YWxpY2VAdjQ=",
+      "page_no": 4,
+      "page_offset": 258,
+      "record_offset": 282
+    },
+    {
+      "key": "dXNlcjoy",
+      "value": "Ym9iQHYyLWZpbmFs",
+      "page_no": 2,
+      "page_offset": 126,
+      "record_offset": 168
+    },
+    {
+      "key": "dXNlcjoz",
+      "value": "Y2Fyb2xAdjE=",
+      "page_no": 1,
+      "page_offset": 62,
+      "record_offset": 106
+    },
+    {
+      "key": "dXNlcjo0",
+      "value": "ZGFuQHY0",
+      "page_no": 4,
+      "page_offset": 258,
+      "record_offset": 302
+    }
+  ]
+}

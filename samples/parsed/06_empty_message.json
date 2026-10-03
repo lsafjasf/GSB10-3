@@ -1,0 +1,25 @@
+{
+  "framed": true,
+  "pri": 191,
+  "facility": 23,
+  "facility_name": "local7",
+  "severity": 7,
+  "severity_name": "debug",
+  "host": "mon01",
+  "structured": [
+    {
+      "key": "alert",
+      "order": 0,
+      "occurrence": 0,
+      "value": "disk"
+    }
+  ],
+  "structured_map": {
+    "alert": [
+      "disk"
+    ]
+  },
+  "message": "",
+  "raw_hex": "3235203c3139313e6d6f6e3031205b616c6572743d226469736b225d",
+  "roundtrip_ok": true
+}

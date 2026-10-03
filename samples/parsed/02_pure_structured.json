@@ -1,0 +1,41 @@
+{
+  "framed": true,
+  "pri": 134,
+  "facility": 16,
+  "facility_name": "local0",
+  "severity": 6,
+  "severity_name": "informational",
+  "host": "db01",
+  "structured": [
+    {
+      "key": "app",
+      "order": 0,
+      "occurrence": 0,
+      "value": "postgres"
+    },
+    {
+      "key": "app",
+      "order": 1,
+      "occurrence": 1,
+      "value": "pgbouncer"
+    },
+    {
+      "key": "env",
+      "order": 2,
+      "occurrence": 0,
+      "value": "prod"
+    }
+  ],
+  "structured_map": {
+    "app": [
+      "postgres",
+      "pgbouncer"
+    ],
+    "env": [
+      "prod"
+    ]
+  },
+  "message": "",
+  "raw_hex": "3533203c3133343e64623031205b6170703d22706f73746772657322206170703d227067626f756e6365722220656e763d2270726f64225d",
+  "roundtrip_ok": true
+}

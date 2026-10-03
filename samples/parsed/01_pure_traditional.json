@@ -1,0 +1,14 @@
+{
+  "framed": false,
+  "pri": 13,
+  "facility": 1,
+  "facility_name": "user",
+  "severity": 5,
+  "severity_name": "notice",
+  "host": "web01",
+  "structured": null,
+  "structured_map": null,
+  "message": "nginx 404 burst detected",
+  "raw_hex": "3c31333e7765623031206e67696e7820343034206275727374206465746563746564",
+  "roundtrip_ok": true
+}

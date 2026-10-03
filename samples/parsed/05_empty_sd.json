@@ -1,0 +1,14 @@
+{
+  "framed": false,
+  "pri": 0,
+  "facility": 0,
+  "facility_name": "kern",
+  "severity": 0,
+  "severity_name": "emergency",
+  "host": "edge01",
+  "structured": [],
+  "structured_map": {},
+  "message": "boot ok",
+  "raw_hex": "3c303e656467653031205b5d20626f6f74206f6b",
+  "roundtrip_ok": true
+}

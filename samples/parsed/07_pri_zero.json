@@ -1,0 +1,14 @@
+{
+  "framed": false,
+  "pri": 0,
+  "facility": 0,
+  "facility_name": "kern",
+  "severity": 0,
+  "severity_name": "emergency",
+  "host": "node00",
+  "structured": null,
+  "structured_map": null,
+  "message": "kernel panic",
+  "raw_hex": "3c303e6e6f64653030206b65726e656c2070616e6963",
+  "roundtrip_ok": true
+}

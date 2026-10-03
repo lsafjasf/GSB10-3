@@ -1,0 +1,89 @@
+{
+  "language": "English",
+  "type": "pattern",
+  "min_left": 2,
+  "min_right": 2,
+  "patterns": [
+    "hy3p",
+    "n1a",
+    "a1t",
+    "om3p",
+    "t1er",
+    "au3t",
+    "ti1f",
+    "n3n",
+    "in3t",
+    "r3n",
+    "l1i",
+    "ern2a",
+    "nt2e",
+    "h3er"
+  ],
+  "cases": [
+    {
+      "word": "hyphenation",
+      "breaks": [
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "word": "computer",
+      "breaks": [
+        3,
+        6
+      ]
+    },
+    {
+      "word": "beautiful",
+      "breaks": [
+        4,
+        6
+      ]
+    },
+    {
+      "word": "running",
+      "breaks": [
+        3
+      ]
+    },
+    {
+      "word": "internationalization",
+      "breaks": [
+        2,
+        5,
+        7,
+        11,
+        13,
+        16
+      ]
+    },
+    {
+      "word": "mother",
+      "breaks": [
+        4
+      ]
+    },
+    {
+      "word": "cat",
+      "breaks": []
+    },
+    {
+      "word": "strength",
+      "breaks": []
+    },
+    {
+      "word": "a",
+      "breaks": []
+    },
+    {
+      "word": "mother-in-law",
+      "breaks": [
+        4,
+        7,
+        10
+      ]
+    }
+  ]
+}

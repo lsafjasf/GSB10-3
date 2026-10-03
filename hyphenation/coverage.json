@@ -1,0 +1,62 @@
+{
+  "en": {
+    "language": "English",
+    "type": "pattern",
+    "min_left": 2,
+    "min_right": 2,
+    "patterns": 14,
+    "morphemes": 0,
+    "kinsoku": 0,
+    "cases_total": 10,
+    "cases_covered": 10,
+    "failed_cases": []
+  },
+  "de": {
+    "language": "German",
+    "type": "pattern",
+    "min_left": 2,
+    "min_right": 2,
+    "patterns": 8,
+    "morphemes": 11,
+    "kinsoku": 0,
+    "cases_total": 8,
+    "cases_covered": 8,
+    "failed_cases": []
+  },
+  "zh": {
+    "language": "Chinese",
+    "type": "cjk",
+    "min_left": 1,
+    "min_right": 1,
+    "patterns": 0,
+    "morphemes": 0,
+    "kinsoku": 19,
+    "cases_total": 3,
+    "cases_covered": 3,
+    "failed_cases": []
+  },
+  "ja": {
+    "language": "Japanese",
+    "type": "cjk",
+    "min_left": 1,
+    "min_right": 1,
+    "patterns": 0,
+    "morphemes": 0,
+    "kinsoku": 21,
+    "cases_total": 3,
+    "cases_covered": 3,
+    "failed_cases": []
+  },
+  "ko": {
+    "language": "Korean",
+    "type": "cjk",
+    "min_left": 1,
+    "min_right": 1,
+    "patterns": 0,
+    "morphemes": 0,
+    "kinsoku": 11,
+    "cases_total": 2,
+    "cases_covered": 2,
+    "failed_cases": []
+  }
+}

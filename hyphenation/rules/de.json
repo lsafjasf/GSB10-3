@@ -1,0 +1,25 @@
+{
+  "language": "German",
+  "type": "pattern",
+  "min_left": 2,
+  "min_right": 2,
+  "patterns": [
+    "o3n", "n3k", "n3h", "t3t", "ge3s", "l3sch", "ka3p", "pi3t"
+  ],
+  "morphemes": [
+    "donau", "dampf", "schiff", "fahrt", "fahrts",
+    "gesellschaft", "gesellschafts", "kapitän",
+    "kranken", "haus", "mutter"
+  ],
+  "cases": [
+    {"word": "Krankenhaus", "breaks": [4, 7]},
+    {"word": "Mutter", "breaks": [3]},
+    {"word": "Gesellschaft", "breaks": [2, 6]},
+    {"word": "Kapitän", "breaks": [2, 4]},
+    {"word": "Donau", "breaks": [2]},
+    {"word": "Dampf", "breaks": []},
+    {"word": "Donau-Dampf", "breaks": [2, 6]},
+    {"word": "Donaudampfschifffahrtsgesellschaftskapitän",
+     "breaks": [2, 5, 10, 16, 22, 24, 28, 35, 37, 39]}
+  ]
+}

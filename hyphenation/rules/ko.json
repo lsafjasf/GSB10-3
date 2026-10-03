@@ -1,0 +1,12 @@
+{
+  "language": "Korean",
+  "type": "cjk",
+  "min_left": 1,
+  "min_right": 1,
+  "no_break_before": ["。", "，", "、", "！", "？", "）", "」", "』"],
+  "no_break_after": ["（", "「", "『"],
+  "cases": [
+    {"text": "한국어는세계에서사용됩니다。", "breaks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]},
+    {"text": "안녕하세요", "breaks": [1, 2, 3, 4]}
+  ]
+}

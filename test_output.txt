@@ -1,0 +1,81 @@
+== two points, natural (reduces to a line) ==
+  [OK] interpolation: 2 knots, max |S(x_i)-y_i| = 0.000e+00
+  [OK] continuity: single segment, no interior knots
+  [OK] boundary: left=('natural',) right=('natural',)
+  [OK] two-point natural spline is the straight line y=2x+1
+== two points, clamped slope 0/0 ==
+  [OK] interpolation: 2 knots, max |S(x_i)-y_i| = 0.000e+00
+  [OK] continuity: single segment, no interior knots
+  [OK] boundary: left=('clamped', 0.0) right=('clamped', 0.0)
+== equally spaced knots, natural ==
+  [OK] interpolation: 5 knots, max |S(x_i)-y_i| = 1.110e-16
+  knot x        S'(left)     S'(right)    |dS'|      S''(left)    S''(right)   |dS''|
+  1.000000     0.541814     0.541814     2.22e-16   -0.898971    -0.898971    0.00e+00
+  2.000000     -0.430663    -0.430663    2.78e-16   -1.045982    -1.045982    0.00e+00
+  3.000000     -0.920215    -0.920215    0.00e+00   0.066878     0.066878     0.00e+00
+  [OK] continuity: max |dS'| = 2.776e-16, max |dS''| = 0.000e+00
+  [OK] boundary: left=('natural',) right=('natural',)
+  system A M = d (natural, h=1):
+  [  1.000       .       .       .       .] [M_0 ] =    0.0000
+  [  0.500   2.000   0.500       .       .] [M_1 ] =   -2.3209
+  [      .   0.500   2.000   0.500       .] [M_2 ] =   -2.5080
+  [      .       .   0.500   2.000   0.500] [M_3 ] =   -0.3892
+  [      .       .       .       .   1.000] [M_4 ] =    0.0000
+  solution M = [0.000000, -0.898971, -1.045982, 0.066878, 0.000000]
+== equally spaced knots, clamped cos() ==
+  [OK] interpolation: 5 knots, max |S(x_i)-y_i| = 0.000e+00
+  knot x        S'(left)     S'(right)    |dS'|      S''(left)    S''(right)   |dS''|
+  1.000000     0.535320     0.535320     1.11e-16   -0.907544    -0.907544    0.00e+00
+  2.000000     -0.413389    -0.413389    2.22e-16   -0.989874    -0.989874    0.00e+00
+  3.000000     -0.982817    -0.982817    0.00e+00   -0.148981    -0.148981    0.00e+00
+  [OK] continuity: max |dS'| = 2.220e-16, max |dS''| = 0.000e+00
+  [OK] boundary: left=('clamped', 1.0) right=('clamped', -0.6536436208636119)
+  system A M = d (clamped, h=1):
+  [  2.000   1.000       .       .       .] [M_0 ] =   -0.9512
+  [  0.500   2.000   0.500       .       .] [M_1 ] =   -2.3209
+  [      .   0.500   2.000   0.500       .] [M_2 ] =   -2.5080
+  [      .       .   0.500   2.000   0.500] [M_3 ] =   -0.3892
+  [      .       .       .   1.000   2.000] [M_4 ] =    1.4657
+  solution M = [-0.021815, -0.907544, -0.989874, -0.148981, 0.807327]
+  [OK] natural vs clamped differ, max mid-interval gap = 0.0370
+== dense points (n=40), natural ==
+  [OK] interpolation: 40 knots, max |S(x_i)-y_i| = 2.220e-16
+  [OK] continuity: max |dS'| = 1.155e-14, max |dS''| = 2.220e-16
+  [OK] boundary: left=('natural',) right=('natural',)
+  worst knot x=2.186380: S' left=-0.6593957080 right=-0.6593957080
+  worst knot x=8.474944: S'' left=-1.6799130177 right=-1.6799130177
+== missing both endpoint conditions ==
+  [OK] interpolation: 5 knots, max |S(x_i)-y_i| = 0.000e+00
+  knot x        S'(left)     S'(right)    |dS'|      S''(left)    S''(right)   |dS''|
+  0.500000     0.521505     0.521505     2.22e-16   -8.870968    -8.870968    0.00e+00
+  1.500000     1.892473     1.892473     1.11e-15   11.612903    11.612903    0.00e+00
+  2.000000     2.311828     2.311828     4.44e-16   -9.935484    -9.935484    0.00e+00
+  [OK] continuity: max |dS'| = 1.110e-15, max |dS''| = 0.000e+00
+  [OK] boundary: left=('natural',) right=('natural',)
+== only left derivative given ==
+  [OK] interpolation: 5 knots, max |S(x_i)-y_i| = 2.220e-16
+  knot x        S'(left)     S'(right)    |dS'|      S''(left)    S''(right)   |dS''|
+  0.500000     1.120178     1.120178     8.88e-16   -11.038576   -11.038576   0.00e+00
+  1.500000     1.778932     1.778932     4.44e-16   12.356083    12.356083    0.00e+00
+  2.000000     2.353116     2.353116     0.00e+00   -10.059347   -10.059347   0.00e+00
+  [OK] continuity: max |dS'| = 8.882e-16, max |dS''| = 0.000e+00
+  [OK] boundary: left=('clamped', 1.0) right=('natural',)
+== only right derivative given ==
+  [OK] interpolation: 5 knots, max |S(x_i)-y_i| = 0.000e+00
+  knot x        S'(left)     S'(right)    |dS'|      S''(left)    S''(right)   |dS''|
+  0.500000     0.500000     0.500000     4.44e-16   -9.000000    -9.000000    0.00e+00
+  1.500000     2.000000     2.000000     4.44e-16   12.000000    12.000000    0.00e+00
+  2.000000     2.000000     2.000000     0.00e+00   -12.000000   -12.000000   0.00e+00
+  [OK] continuity: max |dS'| = 4.441e-16, max |dS''| = 0.000e+00
+  [OK] boundary: left=('natural',) right=('clamped', -1.0)
+== mixed: clamped left, natural right ==
+  [OK] interpolation: 4 knots, max |S(x_i)-y_i| = 0.000e+00
+  knot x        S'(left)     S'(right)    |dS'|      S''(left)    S''(right)   |dS''|
+  1.000000     0.788462     0.788462     2.22e-16   7.153846     7.153846     0.00e+00
+  2.000000     0.846154     0.846154     8.88e-16   -7.038462    -7.038462    0.00e+00
+  [OK] continuity: max |dS'| = 8.882e-16, max |dS''| = 0.000e+00
+  [OK] boundary: left=('clamped', -1.0) right=('natural',)
+== error handling ==
+  [OK] invalid inputs and out-of-range evaluation raise ValueError
+
+ALL TESTS PASSED

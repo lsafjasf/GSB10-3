@@ -1,0 +1,21 @@
+case,query,candidate,label,baseline_overlap,ours
+仅标点不同,The file was saved successfully.,The file was saved successfully!,1,0.8333,0.9500
+仅大小写不同,Click the Save button to continue.,Click the save button to continue.,1,1.0000,1.0000
+变格：单复数,All items were updated.,All item were updated.,1,0.8000,1.0000
+变格：时态/词形,The user is running the backup task.,The user is run the backup task.,1,0.8750,1.0000
+变格：复数,She deleted three files from the folder.,She deleted three file from the folder.,1,0.8750,1.0000
+虚词增减,Please restart the application to apply changes.,Please restart the application to apply the changes.,1,0.9412,0.9414
+中文：仅标点不同,把文件保存到本地磁盘。,把文件保存到本地磁盘,1,0.9524,0.9500
+中文：近义字,用户已成功登录系统。,用户已成功登陆系统。,1,0.9000,0.9011
+仅标点不同,No changes were made to the document.,No changes were made to the document!,1,0.8750,0.9500
+变格：动词,The report contains five charts.,The report contain five charts.,1,0.8333,1.0000
+关键词相反：save/delete,The file was saved successfully.,The file was deleted successfully.,0,0.8333,0.8300
+关键词相反：Save/Cancel,Click the Save button to continue.,Click the Cancel button to continue.,0,0.8571,0.8560
+关键名词不同,She deleted three files from the folder.,She deleted three files from the server.,0,0.8750,0.8750
+关键名词不同,Please restart the application to apply changes.,Please restart the server to apply changes.,0,0.8750,0.8750
+完全不同,The quick brown fox jumps over the lazy dog.,Quantum chromodynamics describes strong interactions.,0,0.1250,0.1250
+中文：语义相反,用户已成功登录系统。,用户登录系统失败。,0,0.7368,0.7392
+中文：语义相反,把文件保存到本地磁盘。,从本地磁盘删除文件。,0,0.6667,0.5568
+关键名词不同,The report contains five charts.,The report contains five tables.,0,0.8333,0.8300
+数量词相反,No changes were made to the document.,Many changes were made to the document.,0,0.8750,0.8750
+关键词相反,All items were updated.,All items were deleted.,0,0.8000,0.7925

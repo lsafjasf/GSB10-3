@@ -1,0 +1,2437 @@
+query,row_no,row_store_result,columnar_result,match
+"age > 50 且 vip=True, 投影全部列",0,"(54, None, None, True)","(54, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",1,"(67, '广州', 9.9, True)","(67, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",2,"(98, '上海', 19.9, True)","(98, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",3,"(91, '广州', 9.9, True)","(91, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",4,"(92, None, None, True)","(92, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",5,"(72, '上海', 0.0, True)","(72, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",6,"(79, '上海', 0.0, True)","(79, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",7,"(68, '北京', 19.9, True)","(68, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",8,"(81, '广州', None, True)","(81, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",9,"(77, None, None, True)","(77, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",10,"(84, None, 19.9, True)","(84, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",11,"(52, '广州', None, True)","(52, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",12,"(90, '上海', 9.9, True)","(90, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",13,"(95, '北京', 19.9, True)","(95, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",14,"(91, '上海', 9.9, True)","(91, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",15,"(62, '上海', 0.0, True)","(62, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",16,"(65, '广州', 9.9, True)","(65, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",17,"(85, '北京', 19.9, True)","(85, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",18,"(82, '广州', 0.0, True)","(82, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",19,"(65, '广州', None, True)","(65, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",20,"(75, '广州', 19.9, True)","(75, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",21,"(83, None, 9.9, True)","(83, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",22,"(70, None, None, True)","(70, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",23,"(56, '广州', 9.9, True)","(56, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",24,"(55, '北京', None, True)","(55, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",25,"(89, '上海', None, True)","(89, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",26,"(88, '北京', None, True)","(88, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",27,"(53, '上海', 0.0, True)","(53, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",28,"(77, '上海', 19.9, True)","(77, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",29,"(75, None, 19.9, True)","(75, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",30,"(81, '上海', None, True)","(81, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",31,"(70, None, 9.9, True)","(70, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",32,"(95, '北京', 19.9, True)","(95, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",33,"(97, '北京', 0.0, True)","(97, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",34,"(86, '北京', 9.9, True)","(86, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",35,"(57, '上海', 19.9, True)","(57, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",36,"(82, '上海', 19.9, True)","(82, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",37,"(82, '上海', 19.9, True)","(82, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",38,"(59, None, 0.0, True)","(59, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",39,"(98, '广州', 19.9, True)","(98, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",40,"(57, '北京', 9.9, True)","(57, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",41,"(90, '上海', 0.0, True)","(90, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",42,"(62, '广州', 9.9, True)","(62, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",43,"(71, '广州', 9.9, True)","(71, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",44,"(65, '北京', None, True)","(65, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",45,"(57, '广州', None, True)","(57, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",46,"(74, '广州', 19.9, True)","(74, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",47,"(78, '广州', 9.9, True)","(78, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",48,"(56, '广州', 19.9, True)","(56, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",49,"(81, '广州', 9.9, True)","(81, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",50,"(69, '北京', 9.9, True)","(69, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",51,"(57, '北京', None, True)","(57, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",52,"(62, '广州', 0.0, True)","(62, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",53,"(51, '广州', 19.9, True)","(51, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",54,"(55, '广州', 0.0, True)","(55, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",55,"(56, '北京', 9.9, True)","(56, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",56,"(97, '北京', None, True)","(97, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",57,"(73, None, None, True)","(73, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",58,"(91, '北京', 19.9, True)","(91, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",59,"(88, '北京', 19.9, True)","(88, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",60,"(99, '广州', None, True)","(99, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",61,"(86, '北京', 19.9, True)","(86, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",62,"(51, '广州', 9.9, True)","(51, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",63,"(68, None, 19.9, True)","(68, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",64,"(96, '广州', 9.9, True)","(96, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",65,"(81, '上海', 9.9, True)","(81, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",66,"(64, '上海', 0.0, True)","(64, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",67,"(82, '上海', 9.9, True)","(82, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",68,"(57, '上海', 19.9, True)","(57, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",69,"(68, '上海', 0.0, True)","(68, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",70,"(60, '广州', 19.9, True)","(60, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",71,"(68, '广州', None, True)","(68, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",72,"(96, '广州', 9.9, True)","(96, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",73,"(54, None, 9.9, True)","(54, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",74,"(72, '广州', 9.9, True)","(72, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",75,"(52, '上海', None, True)","(52, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",76,"(98, '上海', 19.9, True)","(98, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",77,"(99, '上海', 9.9, True)","(99, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",78,"(74, None, 9.9, True)","(74, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",79,"(60, '上海', None, True)","(60, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",80,"(61, '广州', 19.9, True)","(61, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",81,"(68, None, 0.0, True)","(68, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",82,"(90, '北京', 0.0, True)","(90, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",83,"(84, '北京', 0.0, True)","(84, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",84,"(91, '上海', None, True)","(91, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",85,"(71, '北京', None, True)","(71, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",86,"(77, None, 9.9, True)","(77, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",87,"(71, '广州', 0.0, True)","(71, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",88,"(75, '上海', 0.0, True)","(75, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",89,"(66, None, None, True)","(66, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",90,"(77, '北京', 0.0, True)","(77, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",91,"(76, '广州', None, True)","(76, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",92,"(87, '北京', 9.9, True)","(87, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",93,"(56, '广州', None, True)","(56, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",94,"(86, '上海', None, True)","(86, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",95,"(70, '广州', 19.9, True)","(70, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",96,"(52, None, 19.9, True)","(52, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",97,"(75, '北京', 9.9, True)","(75, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",98,"(89, None, 19.9, True)","(89, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",99,"(77, '北京', 0.0, True)","(77, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",100,"(76, '广州', 19.9, True)","(76, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",101,"(84, '上海', 19.9, True)","(84, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",102,"(97, '上海', None, True)","(97, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",103,"(85, '上海', 0.0, True)","(85, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",104,"(67, '广州', 9.9, True)","(67, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",105,"(56, '上海', 9.9, True)","(56, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",106,"(75, '广州', 19.9, True)","(75, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",107,"(61, '上海', None, True)","(61, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",108,"(72, None, 9.9, True)","(72, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",109,"(72, '上海', None, True)","(72, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",110,"(85, '上海', 0.0, True)","(85, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",111,"(67, '北京', 19.9, True)","(67, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",112,"(100, '广州', None, True)","(100, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",113,"(93, '北京', None, True)","(93, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",114,"(93, '上海', 9.9, True)","(93, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",115,"(58, '上海', 19.9, True)","(58, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",116,"(98, None, None, True)","(98, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",117,"(71, '北京', None, True)","(71, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",118,"(54, '北京', None, True)","(54, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",119,"(73, '上海', 0.0, True)","(73, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",120,"(70, '北京', 0.0, True)","(70, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",121,"(96, '北京', 0.0, True)","(96, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",122,"(79, '北京', 19.9, True)","(79, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",123,"(70, '广州', None, True)","(70, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",124,"(72, None, 19.9, True)","(72, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",125,"(75, '广州', 9.9, True)","(75, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",126,"(72, '上海', None, True)","(72, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",127,"(83, '上海', 9.9, True)","(83, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",128,"(84, None, None, True)","(84, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",129,"(89, None, None, True)","(89, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",130,"(57, None, 19.9, True)","(57, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",131,"(100, '上海', 9.9, True)","(100, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",132,"(100, '广州', 0.0, True)","(100, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",133,"(53, '广州', 19.9, True)","(53, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",134,"(94, '上海', 9.9, True)","(94, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",135,"(75, '广州', 0.0, True)","(75, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",136,"(68, '广州', 9.9, True)","(68, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",137,"(94, '上海', None, True)","(94, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",138,"(68, None, None, True)","(68, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",139,"(73, '上海', 19.9, True)","(73, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",140,"(60, None, 0.0, True)","(60, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",141,"(85, '北京', 19.9, True)","(85, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",142,"(96, None, 0.0, True)","(96, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",143,"(63, '北京', None, True)","(63, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",144,"(94, '广州', 0.0, True)","(94, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",145,"(75, '北京', None, True)","(75, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",146,"(56, '北京', 19.9, True)","(56, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",147,"(84, '广州', 0.0, True)","(84, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",148,"(78, '北京', None, True)","(78, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",149,"(89, None, None, True)","(89, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",150,"(75, '广州', 9.9, True)","(75, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",151,"(77, None, 9.9, True)","(77, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",152,"(55, '北京', 0.0, True)","(55, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",153,"(90, '广州', None, True)","(90, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",154,"(53, None, None, True)","(53, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",155,"(63, '广州', 0.0, True)","(63, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",156,"(92, None, 19.9, True)","(92, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",157,"(87, '上海', None, True)","(87, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",158,"(90, '北京', 19.9, True)","(90, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",159,"(93, '上海', None, True)","(93, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",160,"(59, '上海', 0.0, True)","(59, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",161,"(68, None, None, True)","(68, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",162,"(87, '上海', 0.0, True)","(87, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",163,"(59, '北京', 0.0, True)","(59, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",164,"(88, '广州', 0.0, True)","(88, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",165,"(58, '广州', None, True)","(58, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",166,"(52, '北京', 9.9, True)","(52, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",167,"(62, '北京', 0.0, True)","(62, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",168,"(65, '上海', 0.0, True)","(65, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",169,"(63, '上海', None, True)","(63, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",170,"(74, None, 0.0, True)","(74, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",171,"(85, '上海', 0.0, True)","(85, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",172,"(53, None, 9.9, True)","(53, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",173,"(74, None, 9.9, True)","(74, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",174,"(71, '北京', 9.9, True)","(71, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",175,"(100, '广州', 0.0, True)","(100, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",176,"(92, '上海', 9.9, True)","(92, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",177,"(95, '上海', None, True)","(95, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",178,"(91, '北京', 19.9, True)","(91, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",179,"(81, '广州', 19.9, True)","(81, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",180,"(61, '北京', 19.9, True)","(61, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",181,"(99, '北京', 0.0, True)","(99, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",182,"(100, '北京', 0.0, True)","(100, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",183,"(90, '广州', 9.9, True)","(90, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",184,"(86, '广州', 0.0, True)","(86, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",185,"(78, '上海', None, True)","(78, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",186,"(77, '上海', 0.0, True)","(77, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",187,"(79, '广州', 9.9, True)","(79, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",188,"(82, '上海', None, True)","(82, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",189,"(74, '广州', 9.9, True)","(74, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",190,"(57, '上海', 9.9, True)","(57, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",191,"(74, '广州', 9.9, True)","(74, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",192,"(56, '北京', 19.9, True)","(56, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",193,"(98, '广州', 0.0, True)","(98, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",194,"(92, '广州', None, True)","(92, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",195,"(63, '广州', 0.0, True)","(63, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",196,"(87, '北京', 9.9, True)","(87, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",197,"(65, '广州', 19.9, True)","(65, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",198,"(96, '北京', 9.9, True)","(96, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",199,"(68, '北京', None, True)","(68, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",200,"(76, '北京', 9.9, True)","(76, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",201,"(61, '上海', 19.9, True)","(61, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",202,"(81, '上海', 19.9, True)","(81, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",203,"(90, None, 9.9, True)","(90, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",204,"(82, '北京', None, True)","(82, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",205,"(51, '上海', None, True)","(51, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",206,"(70, '广州', 0.0, True)","(70, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",207,"(79, '广州', 19.9, True)","(79, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",208,"(100, '北京', 0.0, True)","(100, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",209,"(86, '上海', 0.0, True)","(86, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",210,"(95, None, None, True)","(95, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",211,"(83, None, 9.9, True)","(83, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",212,"(54, '上海', 19.9, True)","(54, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",213,"(87, None, 9.9, True)","(87, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",214,"(70, None, 0.0, True)","(70, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",215,"(84, '广州', None, True)","(84, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",216,"(95, '上海', None, True)","(95, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",217,"(82, '广州', 9.9, True)","(82, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",218,"(76, '广州', 19.9, True)","(76, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",219,"(52, '北京', 0.0, True)","(52, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",220,"(53, '北京', None, True)","(53, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",221,"(69, '广州', 19.9, True)","(69, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",222,"(77, '广州', 9.9, True)","(77, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",223,"(96, '北京', 0.0, True)","(96, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",224,"(62, None, None, True)","(62, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",225,"(96, '广州', 19.9, True)","(96, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",226,"(99, None, None, True)","(99, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",227,"(69, None, 0.0, True)","(69, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",228,"(67, None, 19.9, True)","(67, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",229,"(94, '上海', 19.9, True)","(94, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",230,"(77, None, 0.0, True)","(77, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",231,"(97, '上海', 9.9, True)","(97, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",232,"(100, None, 9.9, True)","(100, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",233,"(81, '上海', 19.9, True)","(81, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",234,"(87, '北京', 9.9, True)","(87, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",235,"(77, '北京', 19.9, True)","(77, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",236,"(85, '上海', 19.9, True)","(85, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",237,"(64, None, 19.9, True)","(64, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",238,"(86, None, 0.0, True)","(86, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",239,"(80, '上海', 9.9, True)","(80, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",240,"(96, '广州', None, True)","(96, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",241,"(62, None, 0.0, True)","(62, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",242,"(90, None, 19.9, True)","(90, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",243,"(68, '北京', 19.9, True)","(68, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",244,"(55, '北京', 0.0, True)","(55, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",245,"(100, None, 0.0, True)","(100, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",246,"(59, None, 9.9, True)","(59, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",247,"(83, None, None, True)","(83, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",248,"(97, '广州', 0.0, True)","(97, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",249,"(60, '广州', 9.9, True)","(60, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",250,"(90, '广州', None, True)","(90, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",251,"(52, '北京', 0.0, True)","(52, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",252,"(64, '上海', 9.9, True)","(64, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",253,"(96, None, None, True)","(96, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",254,"(79, '上海', 19.9, True)","(79, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",255,"(62, '北京', 19.9, True)","(62, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",256,"(71, '广州', 19.9, True)","(71, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",257,"(55, '北京', 9.9, True)","(55, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",258,"(75, '广州', 19.9, True)","(75, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",259,"(84, '北京', None, True)","(84, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",260,"(72, '广州', 19.9, True)","(72, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",261,"(82, '北京', None, True)","(82, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",262,"(98, '广州', None, True)","(98, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",263,"(62, None, 9.9, True)","(62, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",264,"(77, '北京', None, True)","(77, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",265,"(88, '北京', 9.9, True)","(88, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",266,"(54, '广州', 19.9, True)","(54, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",267,"(85, None, 9.9, True)","(85, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",268,"(66, None, None, True)","(66, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",269,"(84, '广州', 0.0, True)","(84, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",270,"(51, '广州', 19.9, True)","(51, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",271,"(72, '北京', 19.9, True)","(72, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",272,"(92, '上海', 19.9, True)","(92, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",273,"(53, '北京', 9.9, True)","(53, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",274,"(90, '广州', 19.9, True)","(90, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",275,"(92, '北京', None, True)","(92, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",276,"(58, '北京', None, True)","(58, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",277,"(55, '广州', 19.9, True)","(55, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",278,"(99, None, 9.9, True)","(99, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",279,"(82, '上海', None, True)","(82, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",280,"(96, '上海', None, True)","(96, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",281,"(86, '广州', 9.9, True)","(86, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",282,"(89, '北京', None, True)","(89, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",283,"(66, '北京', 19.9, True)","(66, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",284,"(84, '上海', 0.0, True)","(84, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",285,"(99, '上海', 0.0, True)","(99, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",286,"(67, '上海', 0.0, True)","(67, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",287,"(63, '北京', 0.0, True)","(63, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",288,"(88, '北京', None, True)","(88, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",289,"(93, '上海', 9.9, True)","(93, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",290,"(87, '上海', 9.9, True)","(87, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",291,"(100, '北京', 19.9, True)","(100, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",292,"(60, None, None, True)","(60, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",293,"(98, '上海', 9.9, True)","(98, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",294,"(65, '广州', 19.9, True)","(65, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",295,"(72, '上海', 0.0, True)","(72, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",296,"(69, '广州', 9.9, True)","(69, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",297,"(93, '北京', None, True)","(93, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",298,"(69, '北京', 19.9, True)","(69, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",299,"(75, None, None, True)","(75, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",300,"(97, '北京', None, True)","(97, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",301,"(75, '北京', 0.0, True)","(75, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",302,"(85, None, 9.9, True)","(85, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",303,"(80, '广州', 9.9, True)","(80, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",304,"(77, '上海', 9.9, True)","(77, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",305,"(61, '广州', 9.9, True)","(61, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",306,"(74, '北京', 9.9, True)","(74, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",307,"(82, '上海', None, True)","(82, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",308,"(78, '北京', 19.9, True)","(78, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",309,"(56, '北京', 19.9, True)","(56, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",310,"(96, '上海', 9.9, True)","(96, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",311,"(77, '上海', 19.9, True)","(77, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",312,"(74, '北京', 0.0, True)","(74, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",313,"(84, None, None, True)","(84, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",314,"(82, '北京', 19.9, True)","(82, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",315,"(75, '广州', 9.9, True)","(75, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",316,"(74, '上海', 19.9, True)","(74, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",317,"(67, '上海', 9.9, True)","(67, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",318,"(84, None, 19.9, True)","(84, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",319,"(77, None, 19.9, True)","(77, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",320,"(86, '上海', 0.0, True)","(86, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",321,"(60, '上海', 9.9, True)","(60, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",322,"(66, '北京', 19.9, True)","(66, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",323,"(94, None, 0.0, True)","(94, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",324,"(100, None, 9.9, True)","(100, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",325,"(91, None, 19.9, True)","(91, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",326,"(81, None, 0.0, True)","(81, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",327,"(83, None, None, True)","(83, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",328,"(75, '北京', 0.0, True)","(75, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",329,"(90, None, 0.0, True)","(90, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",330,"(66, '广州', 0.0, True)","(66, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",331,"(84, '广州', 19.9, True)","(84, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",332,"(97, '上海', 19.9, True)","(97, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",333,"(83, '广州', None, True)","(83, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",334,"(72, '广州', 9.9, True)","(72, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",335,"(52, '北京', 9.9, True)","(52, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",336,"(88, '广州', 9.9, True)","(88, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",337,"(94, '广州', None, True)","(94, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",338,"(69, '广州', 0.0, True)","(69, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",339,"(100, None, 0.0, True)","(100, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",340,"(88, None, 0.0, True)","(88, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",341,"(80, '广州', 9.9, True)","(80, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",342,"(100, '北京', None, True)","(100, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",343,"(75, '上海', 0.0, True)","(75, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",344,"(63, '上海', 9.9, True)","(63, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",345,"(55, None, None, True)","(55, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",346,"(56, '北京', 9.9, True)","(56, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",347,"(53, '广州', 9.9, True)","(53, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",348,"(55, None, 19.9, True)","(55, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",349,"(59, None, 9.9, True)","(59, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",350,"(82, '上海', 0.0, True)","(82, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",351,"(58, '北京', 9.9, True)","(58, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",352,"(94, '北京', None, True)","(94, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",353,"(72, None, None, True)","(72, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",354,"(67, '上海', 9.9, True)","(67, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",355,"(71, '北京', None, True)","(71, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",356,"(80, None, 0.0, True)","(80, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",357,"(66, None, 19.9, True)","(66, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",358,"(83, '上海', 9.9, True)","(83, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",359,"(68, '北京', 9.9, True)","(68, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",360,"(67, '上海', 0.0, True)","(67, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",361,"(95, '上海', 0.0, True)","(95, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",362,"(79, '北京', 0.0, True)","(79, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",363,"(86, '上海', 19.9, True)","(86, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",364,"(59, '上海', 19.9, True)","(59, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",365,"(72, None, 0.0, True)","(72, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",366,"(97, '广州', 19.9, True)","(97, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",367,"(87, '上海', 9.9, True)","(87, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",368,"(71, '上海', 0.0, True)","(71, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",369,"(51, '广州', None, True)","(51, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",370,"(58, None, 19.9, True)","(58, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",371,"(66, None, 9.9, True)","(66, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",372,"(74, '广州', 0.0, True)","(74, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",373,"(57, '广州', 0.0, True)","(57, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",374,"(77, None, 0.0, True)","(77, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",375,"(91, '广州', 19.9, True)","(91, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",376,"(99, '上海', None, True)","(99, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",377,"(76, '广州', 19.9, True)","(76, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",378,"(67, '上海', 19.9, True)","(67, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",379,"(73, '广州', 19.9, True)","(73, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",380,"(89, None, 9.9, True)","(89, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",381,"(75, '北京', 9.9, True)","(75, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",382,"(54, '北京', 9.9, True)","(54, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",383,"(66, None, None, True)","(66, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",384,"(58, '上海', 9.9, True)","(58, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",385,"(77, '北京', 0.0, True)","(77, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",386,"(58, '北京', 0.0, True)","(58, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",387,"(55, '广州', 9.9, True)","(55, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",388,"(51, None, 9.9, True)","(51, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",389,"(88, None, 9.9, True)","(88, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",390,"(51, '上海', 0.0, True)","(51, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",391,"(63, '广州', 9.9, True)","(63, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",392,"(53, '北京', 19.9, True)","(53, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",393,"(92, '广州', 0.0, True)","(92, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",394,"(61, None, 9.9, True)","(61, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",395,"(89, '上海', None, True)","(89, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",396,"(52, '上海', None, True)","(52, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",397,"(58, None, 9.9, True)","(58, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",398,"(71, None, 19.9, True)","(71, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",399,"(94, '上海', 19.9, True)","(94, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",400,"(53, '广州', 0.0, True)","(53, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",401,"(74, '广州', 0.0, True)","(74, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",402,"(70, '上海', 9.9, True)","(70, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",403,"(69, '广州', 19.9, True)","(69, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",404,"(65, '北京', 19.9, True)","(65, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",405,"(72, '广州', 0.0, True)","(72, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",406,"(89, '北京', 9.9, True)","(89, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",407,"(79, '广州', 9.9, True)","(79, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",408,"(98, '广州', 19.9, True)","(98, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",409,"(76, '上海', 19.9, True)","(76, '上海', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",410,"(88, None, None, True)","(88, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",411,"(63, None, 19.9, True)","(63, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",412,"(79, '广州', 19.9, True)","(79, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",413,"(82, None, 9.9, True)","(82, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",414,"(61, '上海', None, True)","(61, '上海', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",415,"(58, '广州', None, True)","(58, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",416,"(95, None, None, True)","(95, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",417,"(99, '广州', 19.9, True)","(99, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",418,"(57, '上海', 9.9, True)","(57, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",419,"(93, '北京', 9.9, True)","(93, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",420,"(71, None, 0.0, True)","(71, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",421,"(94, None, None, True)","(94, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",422,"(92, None, None, True)","(92, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",423,"(54, '北京', 9.9, True)","(54, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",424,"(58, '北京', 0.0, True)","(58, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",425,"(91, '北京', 9.9, True)","(91, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",426,"(74, None, None, True)","(74, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",427,"(95, '广州', 9.9, True)","(95, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",428,"(71, '北京', 9.9, True)","(71, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",429,"(89, '上海', 0.0, True)","(89, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",430,"(84, None, 19.9, True)","(84, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",431,"(76, None, 19.9, True)","(76, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",432,"(71, None, 0.0, True)","(71, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",433,"(70, '北京', 9.9, True)","(70, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",434,"(57, '广州', 19.9, True)","(57, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",435,"(66, '上海', 0.0, True)","(66, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",436,"(84, '广州', 19.9, True)","(84, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",437,"(67, '北京', 9.9, True)","(67, '北京', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",438,"(74, '广州', None, True)","(74, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",439,"(84, '广州', None, True)","(84, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",440,"(75, '北京', None, True)","(75, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",441,"(91, None, 19.9, True)","(91, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",442,"(87, None, 19.9, True)","(87, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",443,"(87, '广州', 9.9, True)","(87, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",444,"(62, '北京', None, True)","(62, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",445,"(83, '广州', 0.0, True)","(83, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",446,"(67, '上海', 0.0, True)","(67, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",447,"(51, None, 19.9, True)","(51, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",448,"(100, '广州', 9.9, True)","(100, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",449,"(71, None, 19.9, True)","(71, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",450,"(95, '北京', 0.0, True)","(95, '北京', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",451,"(61, None, None, True)","(61, None, None, True)",OK
+"age > 50 且 vip=True, 投影全部列",452,"(97, '广州', None, True)","(97, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",453,"(78, '广州', None, True)","(78, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",454,"(84, '北京', 19.9, True)","(84, '北京', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",455,"(65, '上海', 9.9, True)","(65, '上海', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",456,"(77, '北京', None, True)","(77, '北京', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",457,"(55, '广州', 9.9, True)","(55, '广州', 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",458,"(63, '上海', 0.0, True)","(63, '上海', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",459,"(89, '广州', 0.0, True)","(89, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",460,"(63, None, 19.9, True)","(63, None, 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",461,"(71, None, 9.9, True)","(71, None, 9.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",462,"(58, '广州', 19.9, True)","(58, '广州', 19.9, True)",OK
+"age > 50 且 vip=True, 投影全部列",463,"(89, None, 0.0, True)","(89, None, 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",464,"(52, '广州', None, True)","(52, '广州', None, True)",OK
+"age > 50 且 vip=True, 投影全部列",465,"(85, '广州', 0.0, True)","(85, '广州', 0.0, True)",OK
+"age > 50 且 vip=True, 投影全部列",466,"(88, '上海', None, True)","(88, '上海', None, True)",OK
+"city == None, 投影 city,age",0,"(None, 97)","(None, 97)",OK
+"city == None, 投影 city,age",1,"(None, 54)","(None, 54)",OK
+"city == None, 投影 city,age",2,"(None, 57)","(None, 57)",OK
+"city == None, 投影 city,age",3,"(None, 10)","(None, 10)",OK
+"city == None, 投影 city,age",4,"(None, 85)","(None, 85)",OK
+"city == None, 投影 city,age",5,"(None, 92)","(None, 92)",OK
+"city == None, 投影 city,age",6,"(None, 3)","(None, 3)",OK
+"city == None, 投影 city,age",7,"(None, 26)","(None, 26)",OK
+"city == None, 投影 city,age",8,"(None, 72)","(None, 72)",OK
+"city == None, 投影 city,age",9,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",10,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",11,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",12,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",13,"(None, 57)","(None, 57)",OK
+"city == None, 投影 city,age",14,"(None, 11)","(None, 11)",OK
+"city == None, 投影 city,age",15,"(None, 46)","(None, 46)",OK
+"city == None, 投影 city,age",16,"(None, 55)","(None, 55)",OK
+"city == None, 投影 city,age",17,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",18,"(None, 45)","(None, 45)",OK
+"city == None, 投影 city,age",19,"(None, 7)","(None, 7)",OK
+"city == None, 投影 city,age",20,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",21,"(None, 83)","(None, 83)",OK
+"city == None, 投影 city,age",22,"(None, 70)","(None, 70)",OK
+"city == None, 投影 city,age",23,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",24,"(None, 97)","(None, 97)",OK
+"city == None, 投影 city,age",25,"(None, 44)","(None, 44)",OK
+"city == None, 投影 city,age",26,"(None, 17)","(None, 17)",OK
+"city == None, 投影 city,age",27,"(None, 85)","(None, 85)",OK
+"city == None, 投影 city,age",28,"(None, 95)","(None, 95)",OK
+"city == None, 投影 city,age",29,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",30,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",31,"(None, 75)","(None, 75)",OK
+"city == None, 投影 city,age",32,"(None, 70)","(None, 70)",OK
+"city == None, 投影 city,age",33,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",34,"(None, 59)","(None, 59)",OK
+"city == None, 投影 city,age",35,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",36,"(None, 86)","(None, 86)",OK
+"city == None, 投影 city,age",37,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",38,"(None, 3)","(None, 3)",OK
+"city == None, 投影 city,age",39,"(None, 0)","(None, 0)",OK
+"city == None, 投影 city,age",40,"(None, 40)","(None, 40)",OK
+"city == None, 投影 city,age",41,"(None, 33)","(None, 33)",OK
+"city == None, 投影 city,age",42,"(None, 25)","(None, 25)",OK
+"city == None, 投影 city,age",43,"(None, 23)","(None, 23)",OK
+"city == None, 投影 city,age",44,"(None, 30)","(None, 30)",OK
+"city == None, 投影 city,age",45,"(None, 20)","(None, 20)",OK
+"city == None, 投影 city,age",46,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",47,"(None, 4)","(None, 4)",OK
+"city == None, 投影 city,age",48,"(None, 50)","(None, 50)",OK
+"city == None, 投影 city,age",49,"(None, 89)","(None, 89)",OK
+"city == None, 投影 city,age",50,"(None, 52)","(None, 52)",OK
+"city == None, 投影 city,age",51,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",52,"(None, 10)","(None, 10)",OK
+"city == None, 投影 city,age",53,"(None, 37)","(None, 37)",OK
+"city == None, 投影 city,age",54,"(None, 61)","(None, 61)",OK
+"city == None, 投影 city,age",55,"(None, 61)","(None, 61)",OK
+"city == None, 投影 city,age",56,"(None, 73)","(None, 73)",OK
+"city == None, 投影 city,age",57,"(None, 0)","(None, 0)",OK
+"city == None, 投影 city,age",58,"(None, 35)","(None, 35)",OK
+"city == None, 投影 city,age",59,"(None, 68)","(None, 68)",OK
+"city == None, 投影 city,age",60,"(None, 15)","(None, 15)",OK
+"city == None, 投影 city,age",61,"(None, 46)","(None, 46)",OK
+"city == None, 投影 city,age",62,"(None, 31)","(None, 31)",OK
+"city == None, 投影 city,age",63,"(None, 39)","(None, 39)",OK
+"city == None, 投影 city,age",64,"(None, 39)","(None, 39)",OK
+"city == None, 投影 city,age",65,"(None, 87)","(None, 87)",OK
+"city == None, 投影 city,age",66,"(None, 44)","(None, 44)",OK
+"city == None, 投影 city,age",67,"(None, 3)","(None, 3)",OK
+"city == None, 投影 city,age",68,"(None, 83)","(None, 83)",OK
+"city == None, 投影 city,age",69,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",70,"(None, 57)","(None, 57)",OK
+"city == None, 投影 city,age",71,"(None, 54)","(None, 54)",OK
+"city == None, 投影 city,age",72,"(None, 56)","(None, 56)",OK
+"city == None, 投影 city,age",73,"(None, 8)","(None, 8)",OK
+"city == None, 投影 city,age",74,"(None, 28)","(None, 28)",OK
+"city == None, 投影 city,age",75,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",76,"(None, 63)","(None, 63)",OK
+"city == None, 投影 city,age",77,"(None, 34)","(None, 34)",OK
+"city == None, 投影 city,age",78,"(None, 99)","(None, 99)",OK
+"city == None, 投影 city,age",79,"(None, 73)","(None, 73)",OK
+"city == None, 投影 city,age",80,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",81,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",82,"(None, 43)","(None, 43)",OK
+"city == None, 投影 city,age",83,"(None, 15)","(None, 15)",OK
+"city == None, 投影 city,age",84,"(None, 11)","(None, 11)",OK
+"city == None, 投影 city,age",85,"(None, 73)","(None, 73)",OK
+"city == None, 投影 city,age",86,"(None, 41)","(None, 41)",OK
+"city == None, 投影 city,age",87,"(None, 33)","(None, 33)",OK
+"city == None, 投影 city,age",88,"(None, 75)","(None, 75)",OK
+"city == None, 投影 city,age",89,"(None, 68)","(None, 68)",OK
+"city == None, 投影 city,age",90,"(None, 25)","(None, 25)",OK
+"city == None, 投影 city,age",91,"(None, 27)","(None, 27)",OK
+"city == None, 投影 city,age",92,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",93,"(None, 96)","(None, 96)",OK
+"city == None, 投影 city,age",94,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",95,"(None, 7)","(None, 7)",OK
+"city == None, 投影 city,age",96,"(None, 43)","(None, 43)",OK
+"city == None, 投影 city,age",97,"(None, 5)","(None, 5)",OK
+"city == None, 投影 city,age",98,"(None, 94)","(None, 94)",OK
+"city == None, 投影 city,age",99,"(None, 50)","(None, 50)",OK
+"city == None, 投影 city,age",100,"(None, 9)","(None, 9)",OK
+"city == None, 投影 city,age",101,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",102,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",103,"(None, 8)","(None, 8)",OK
+"city == None, 投影 city,age",104,"(None, 85)","(None, 85)",OK
+"city == None, 投影 city,age",105,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",106,"(None, 80)","(None, 80)",OK
+"city == None, 投影 city,age",107,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",108,"(None, 52)","(None, 52)",OK
+"city == None, 投影 city,age",109,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",110,"(None, 53)","(None, 53)",OK
+"city == None, 投影 city,age",111,"(None, 89)","(None, 89)",OK
+"city == None, 投影 city,age",112,"(None, 23)","(None, 23)",OK
+"city == None, 投影 city,age",113,"(None, 52)","(None, 52)",OK
+"city == None, 投影 city,age",114,"(None, 65)","(None, 65)",OK
+"city == None, 投影 city,age",115,"(None, 23)","(None, 23)",OK
+"city == None, 投影 city,age",116,"(None, 56)","(None, 56)",OK
+"city == None, 投影 city,age",117,"(None, 72)","(None, 72)",OK
+"city == None, 投影 city,age",118,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",119,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",120,"(None, 92)","(None, 92)",OK
+"city == None, 投影 city,age",121,"(None, 0)","(None, 0)",OK
+"city == None, 投影 city,age",122,"(None, 39)","(None, 39)",OK
+"city == None, 投影 city,age",123,"(None, 87)","(None, 87)",OK
+"city == None, 投影 city,age",124,"(None, 98)","(None, 98)",OK
+"city == None, 投影 city,age",125,"(None, 43)","(None, 43)",OK
+"city == None, 投影 city,age",126,"(None, 81)","(None, 81)",OK
+"city == None, 投影 city,age",127,"(None, 78)","(None, 78)",OK
+"city == None, 投影 city,age",128,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",129,"(None, 72)","(None, 72)",OK
+"city == None, 投影 city,age",130,"(None, 29)","(None, 29)",OK
+"city == None, 投影 city,age",131,"(None, 30)","(None, 30)",OK
+"city == None, 投影 city,age",132,"(None, 81)","(None, 81)",OK
+"city == None, 投影 city,age",133,"(None, 36)","(None, 36)",OK
+"city == None, 投影 city,age",134,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",135,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",136,"(None, 79)","(None, 79)",OK
+"city == None, 投影 city,age",137,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",138,"(None, 89)","(None, 89)",OK
+"city == None, 投影 city,age",139,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",140,"(None, 57)","(None, 57)",OK
+"city == None, 投影 city,age",141,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",142,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",143,"(None, 68)","(None, 68)",OK
+"city == None, 投影 city,age",144,"(None, 60)","(None, 60)",OK
+"city == None, 投影 city,age",145,"(None, 96)","(None, 96)",OK
+"city == None, 投影 city,age",146,"(None, 11)","(None, 11)",OK
+"city == None, 投影 city,age",147,"(None, 16)","(None, 16)",OK
+"city == None, 投影 city,age",148,"(None, 33)","(None, 33)",OK
+"city == None, 投影 city,age",149,"(None, 80)","(None, 80)",OK
+"city == None, 投影 city,age",150,"(None, 89)","(None, 89)",OK
+"city == None, 投影 city,age",151,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",152,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",153,"(None, 67)","(None, 67)",OK
+"city == None, 投影 city,age",154,"(None, 25)","(None, 25)",OK
+"city == None, 投影 city,age",155,"(None, 35)","(None, 35)",OK
+"city == None, 投影 city,age",156,"(None, 0)","(None, 0)",OK
+"city == None, 投影 city,age",157,"(None, 53)","(None, 53)",OK
+"city == None, 投影 city,age",158,"(None, 92)","(None, 92)",OK
+"city == None, 投影 city,age",159,"(None, 6)","(None, 6)",OK
+"city == None, 投影 city,age",160,"(None, 12)","(None, 12)",OK
+"city == None, 投影 city,age",161,"(None, 29)","(None, 29)",OK
+"city == None, 投影 city,age",162,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",163,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",164,"(None, 68)","(None, 68)",OK
+"city == None, 投影 city,age",165,"(None, 54)","(None, 54)",OK
+"city == None, 投影 city,age",166,"(None, 25)","(None, 25)",OK
+"city == None, 投影 city,age",167,"(None, 87)","(None, 87)",OK
+"city == None, 投影 city,age",168,"(None, 21)","(None, 21)",OK
+"city == None, 投影 city,age",169,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",170,"(None, 90)","(None, 90)",OK
+"city == None, 投影 city,age",171,"(None, 60)","(None, 60)",OK
+"city == None, 投影 city,age",172,"(None, 98)","(None, 98)",OK
+"city == None, 投影 city,age",173,"(None, 76)","(None, 76)",OK
+"city == None, 投影 city,age",174,"(None, 69)","(None, 69)",OK
+"city == None, 投影 city,age",175,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",176,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",177,"(None, 23)","(None, 23)",OK
+"city == None, 投影 city,age",178,"(None, 26)","(None, 26)",OK
+"city == None, 投影 city,age",179,"(None, 65)","(None, 65)",OK
+"city == None, 投影 city,age",180,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",181,"(None, 93)","(None, 93)",OK
+"city == None, 投影 city,age",182,"(None, 31)","(None, 31)",OK
+"city == None, 投影 city,age",183,"(None, 44)","(None, 44)",OK
+"city == None, 投影 city,age",184,"(None, 53)","(None, 53)",OK
+"city == None, 投影 city,age",185,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",186,"(None, 11)","(None, 11)",OK
+"city == None, 投影 city,age",187,"(None, 36)","(None, 36)",OK
+"city == None, 投影 city,age",188,"(None, 5)","(None, 5)",OK
+"city == None, 投影 city,age",189,"(None, 90)","(None, 90)",OK
+"city == None, 投影 city,age",190,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",191,"(None, 0)","(None, 0)",OK
+"city == None, 投影 city,age",192,"(None, 88)","(None, 88)",OK
+"city == None, 投影 city,age",193,"(None, 3)","(None, 3)",OK
+"city == None, 投影 city,age",194,"(None, 88)","(None, 88)",OK
+"city == None, 投影 city,age",195,"(None, 7)","(None, 7)",OK
+"city == None, 投影 city,age",196,"(None, 40)","(None, 40)",OK
+"city == None, 投影 city,age",197,"(None, 73)","(None, 73)",OK
+"city == None, 投影 city,age",198,"(None, 36)","(None, 36)",OK
+"city == None, 投影 city,age",199,"(None, 3)","(None, 3)",OK
+"city == None, 投影 city,age",200,"(None, 76)","(None, 76)",OK
+"city == None, 投影 city,age",201,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",202,"(None, 46)","(None, 46)",OK
+"city == None, 投影 city,age",203,"(None, 47)","(None, 47)",OK
+"city == None, 投影 city,age",204,"(None, 35)","(None, 35)",OK
+"city == None, 投影 city,age",205,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",206,"(None, 0)","(None, 0)",OK
+"city == None, 投影 city,age",207,"(None, 81)","(None, 81)",OK
+"city == None, 投影 city,age",208,"(None, 30)","(None, 30)",OK
+"city == None, 投影 city,age",209,"(None, 42)","(None, 42)",OK
+"city == None, 投影 city,age",210,"(None, 90)","(None, 90)",OK
+"city == None, 投影 city,age",211,"(None, 16)","(None, 16)",OK
+"city == None, 投影 city,age",212,"(None, 69)","(None, 69)",OK
+"city == None, 投影 city,age",213,"(None, 75)","(None, 75)",OK
+"city == None, 投影 city,age",214,"(None, 35)","(None, 35)",OK
+"city == None, 投影 city,age",215,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",216,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",217,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",218,"(None, 95)","(None, 95)",OK
+"city == None, 投影 city,age",219,"(None, 83)","(None, 83)",OK
+"city == None, 投影 city,age",220,"(None, 26)","(None, 26)",OK
+"city == None, 投影 city,age",221,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",222,"(None, 91)","(None, 91)",OK
+"city == None, 投影 city,age",223,"(None, 49)","(None, 49)",OK
+"city == None, 投影 city,age",224,"(None, 87)","(None, 87)",OK
+"city == None, 投影 city,age",225,"(None, 70)","(None, 70)",OK
+"city == None, 投影 city,age",226,"(None, 52)","(None, 52)",OK
+"city == None, 投影 city,age",227,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",228,"(None, 30)","(None, 30)",OK
+"city == None, 投影 city,age",229,"(None, 29)","(None, 29)",OK
+"city == None, 投影 city,age",230,"(None, 50)","(None, 50)",OK
+"city == None, 投影 city,age",231,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",232,"(None, 40)","(None, 40)",OK
+"city == None, 投影 city,age",233,"(None, 33)","(None, 33)",OK
+"city == None, 投影 city,age",234,"(None, 99)","(None, 99)",OK
+"city == None, 投影 city,age",235,"(None, 69)","(None, 69)",OK
+"city == None, 投影 city,age",236,"(None, 32)","(None, 32)",OK
+"city == None, 投影 city,age",237,"(None, 67)","(None, 67)",OK
+"city == None, 投影 city,age",238,"(None, 87)","(None, 87)",OK
+"city == None, 投影 city,age",239,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",240,"(None, 27)","(None, 27)",OK
+"city == None, 投影 city,age",241,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",242,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",243,"(None, 60)","(None, 60)",OK
+"city == None, 投影 city,age",244,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",245,"(None, 7)","(None, 7)",OK
+"city == None, 投影 city,age",246,"(None, 6)","(None, 6)",OK
+"city == None, 投影 city,age",247,"(None, 58)","(None, 58)",OK
+"city == None, 投影 city,age",248,"(None, 28)","(None, 28)",OK
+"city == None, 投影 city,age",249,"(None, 60)","(None, 60)",OK
+"city == None, 投影 city,age",250,"(None, 82)","(None, 82)",OK
+"city == None, 投影 city,age",251,"(None, 5)","(None, 5)",OK
+"city == None, 投影 city,age",252,"(None, 64)","(None, 64)",OK
+"city == None, 投影 city,age",253,"(None, 98)","(None, 98)",OK
+"city == None, 投影 city,age",254,"(None, 86)","(None, 86)",OK
+"city == None, 投影 city,age",255,"(None, 29)","(None, 29)",OK
+"city == None, 投影 city,age",256,"(None, 2)","(None, 2)",OK
+"city == None, 投影 city,age",257,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",258,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",259,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",260,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",261,"(None, 90)","(None, 90)",OK
+"city == None, 投影 city,age",262,"(None, 27)","(None, 27)",OK
+"city == None, 投影 city,age",263,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",264,"(None, 59)","(None, 59)",OK
+"city == None, 投影 city,age",265,"(None, 24)","(None, 24)",OK
+"city == None, 投影 city,age",266,"(None, 91)","(None, 91)",OK
+"city == None, 投影 city,age",267,"(None, 83)","(None, 83)",OK
+"city == None, 投影 city,age",268,"(None, 81)","(None, 81)",OK
+"city == None, 投影 city,age",269,"(None, 96)","(None, 96)",OK
+"city == None, 投影 city,age",270,"(None, 51)","(None, 51)",OK
+"city == None, 投影 city,age",271,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",272,"(None, 78)","(None, 78)",OK
+"city == None, 投影 city,age",273,"(None, 32)","(None, 32)",OK
+"city == None, 投影 city,age",274,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",275,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",276,"(None, 88)","(None, 88)",OK
+"city == None, 投影 city,age",277,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",278,"(None, 40)","(None, 40)",OK
+"city == None, 投影 city,age",279,"(None, 45)","(None, 45)",OK
+"city == None, 投影 city,age",280,"(None, 85)","(None, 85)",OK
+"city == None, 投影 city,age",281,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",282,"(None, 2)","(None, 2)",OK
+"city == None, 投影 city,age",283,"(None, 67)","(None, 67)",OK
+"city == None, 投影 city,age",284,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",285,"(None, 23)","(None, 23)",OK
+"city == None, 投影 city,age",286,"(None, 99)","(None, 99)",OK
+"city == None, 投影 city,age",287,"(None, 29)","(None, 29)",OK
+"city == None, 投影 city,age",288,"(None, 27)","(None, 27)",OK
+"city == None, 投影 city,age",289,"(None, 61)","(None, 61)",OK
+"city == None, 投影 city,age",290,"(None, 99)","(None, 99)",OK
+"city == None, 投影 city,age",291,"(None, 52)","(None, 52)",OK
+"city == None, 投影 city,age",292,"(None, 46)","(None, 46)",OK
+"city == None, 投影 city,age",293,"(None, 51)","(None, 51)",OK
+"city == None, 投影 city,age",294,"(None, 36)","(None, 36)",OK
+"city == None, 投影 city,age",295,"(None, 85)","(None, 85)",OK
+"city == None, 投影 city,age",296,"(None, 93)","(None, 93)",OK
+"city == None, 投影 city,age",297,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",298,"(None, 60)","(None, 60)",OK
+"city == None, 投影 city,age",299,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",300,"(None, 75)","(None, 75)",OK
+"city == None, 投影 city,age",301,"(None, 14)","(None, 14)",OK
+"city == None, 投影 city,age",302,"(None, 96)","(None, 96)",OK
+"city == None, 投影 city,age",303,"(None, 1)","(None, 1)",OK
+"city == None, 投影 city,age",304,"(None, 85)","(None, 85)",OK
+"city == None, 投影 city,age",305,"(None, 35)","(None, 35)",OK
+"city == None, 投影 city,age",306,"(None, 78)","(None, 78)",OK
+"city == None, 投影 city,age",307,"(None, 40)","(None, 40)",OK
+"city == None, 投影 city,age",308,"(None, 99)","(None, 99)",OK
+"city == None, 投影 city,age",309,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",310,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",311,"(None, 45)","(None, 45)",OK
+"city == None, 投影 city,age",312,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",313,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",314,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",315,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",316,"(None, 94)","(None, 94)",OK
+"city == None, 投影 city,age",317,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",318,"(None, 91)","(None, 91)",OK
+"city == None, 投影 city,age",319,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",320,"(None, 81)","(None, 81)",OK
+"city == None, 投影 city,age",321,"(None, 83)","(None, 83)",OK
+"city == None, 投影 city,age",322,"(None, 50)","(None, 50)",OK
+"city == None, 投影 city,age",323,"(None, 90)","(None, 90)",OK
+"city == None, 投影 city,age",324,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",325,"(None, 46)","(None, 46)",OK
+"city == None, 投影 city,age",326,"(None, 81)","(None, 81)",OK
+"city == None, 投影 city,age",327,"(None, 4)","(None, 4)",OK
+"city == None, 投影 city,age",328,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",329,"(None, 73)","(None, 73)",OK
+"city == None, 投影 city,age",330,"(None, 9)","(None, 9)",OK
+"city == None, 投影 city,age",331,"(None, 10)","(None, 10)",OK
+"city == None, 投影 city,age",332,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",333,"(None, 69)","(None, 69)",OK
+"city == None, 投影 city,age",334,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",335,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",336,"(None, 88)","(None, 88)",OK
+"city == None, 投影 city,age",337,"(None, 8)","(None, 8)",OK
+"city == None, 投影 city,age",338,"(None, 55)","(None, 55)",OK
+"city == None, 投影 city,age",339,"(None, 50)","(None, 50)",OK
+"city == None, 投影 city,age",340,"(None, 24)","(None, 24)",OK
+"city == None, 投影 city,age",341,"(None, 15)","(None, 15)",OK
+"city == None, 投影 city,age",342,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",343,"(None, 34)","(None, 34)",OK
+"city == None, 投影 city,age",344,"(None, 85)","(None, 85)",OK
+"city == None, 投影 city,age",345,"(None, 55)","(None, 55)",OK
+"city == None, 投影 city,age",346,"(None, 59)","(None, 59)",OK
+"city == None, 投影 city,age",347,"(None, 75)","(None, 75)",OK
+"city == None, 投影 city,age",348,"(None, 17)","(None, 17)",OK
+"city == None, 投影 city,age",349,"(None, 17)","(None, 17)",OK
+"city == None, 投影 city,age",350,"(None, 79)","(None, 79)",OK
+"city == None, 投影 city,age",351,"(None, 33)","(None, 33)",OK
+"city == None, 投影 city,age",352,"(None, 72)","(None, 72)",OK
+"city == None, 投影 city,age",353,"(None, 34)","(None, 34)",OK
+"city == None, 投影 city,age",354,"(None, 80)","(None, 80)",OK
+"city == None, 投影 city,age",355,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",356,"(None, 62)","(None, 62)",OK
+"city == None, 投影 city,age",357,"(None, 49)","(None, 49)",OK
+"city == None, 投影 city,age",358,"(None, 29)","(None, 29)",OK
+"city == None, 投影 city,age",359,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",360,"(None, 80)","(None, 80)",OK
+"city == None, 投影 city,age",361,"(None, 76)","(None, 76)",OK
+"city == None, 投影 city,age",362,"(None, 12)","(None, 12)",OK
+"city == None, 投影 city,age",363,"(None, 78)","(None, 78)",OK
+"city == None, 投影 city,age",364,"(None, 3)","(None, 3)",OK
+"city == None, 投影 city,age",365,"(None, 2)","(None, 2)",OK
+"city == None, 投影 city,age",366,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",367,"(None, 72)","(None, 72)",OK
+"city == None, 投影 city,age",368,"(None, 16)","(None, 16)",OK
+"city == None, 投影 city,age",369,"(None, 12)","(None, 12)",OK
+"city == None, 投影 city,age",370,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",371,"(None, 58)","(None, 58)",OK
+"city == None, 投影 city,age",372,"(None, 44)","(None, 44)",OK
+"city == None, 投影 city,age",373,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",374,"(None, 25)","(None, 25)",OK
+"city == None, 投影 city,age",375,"(None, 52)","(None, 52)",OK
+"city == None, 投影 city,age",376,"(None, 42)","(None, 42)",OK
+"city == None, 投影 city,age",377,"(None, 2)","(None, 2)",OK
+"city == None, 投影 city,age",378,"(None, 88)","(None, 88)",OK
+"city == None, 投影 city,age",379,"(None, 42)","(None, 42)",OK
+"city == None, 投影 city,age",380,"(None, 26)","(None, 26)",OK
+"city == None, 投影 city,age",381,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",382,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",383,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",384,"(None, 3)","(None, 3)",OK
+"city == None, 投影 city,age",385,"(None, 45)","(None, 45)",OK
+"city == None, 投影 city,age",386,"(None, 41)","(None, 41)",OK
+"city == None, 投影 city,age",387,"(None, 57)","(None, 57)",OK
+"city == None, 投影 city,age",388,"(None, 89)","(None, 89)",OK
+"city == None, 投影 city,age",389,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",390,"(None, 33)","(None, 33)",OK
+"city == None, 投影 city,age",391,"(None, 77)","(None, 77)",OK
+"city == None, 投影 city,age",392,"(None, 35)","(None, 35)",OK
+"city == None, 投影 city,age",393,"(None, 35)","(None, 35)",OK
+"city == None, 投影 city,age",394,"(None, 8)","(None, 8)",OK
+"city == None, 投影 city,age",395,"(None, 87)","(None, 87)",OK
+"city == None, 投影 city,age",396,"(None, 41)","(None, 41)",OK
+"city == None, 投影 city,age",397,"(None, 51)","(None, 51)",OK
+"city == None, 投影 city,age",398,"(None, 88)","(None, 88)",OK
+"city == None, 投影 city,age",399,"(None, 17)","(None, 17)",OK
+"city == None, 投影 city,age",400,"(None, 43)","(None, 43)",OK
+"city == None, 投影 city,age",401,"(None, 46)","(None, 46)",OK
+"city == None, 投影 city,age",402,"(None, 61)","(None, 61)",OK
+"city == None, 投影 city,age",403,"(None, 30)","(None, 30)",OK
+"city == None, 投影 city,age",404,"(None, 9)","(None, 9)",OK
+"city == None, 投影 city,age",405,"(None, 58)","(None, 58)",OK
+"city == None, 投影 city,age",406,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",407,"(None, 10)","(None, 10)",OK
+"city == None, 投影 city,age",408,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",409,"(None, 18)","(None, 18)",OK
+"city == None, 投影 city,age",410,"(None, 100)","(None, 100)",OK
+"city == None, 投影 city,age",411,"(None, 48)","(None, 48)",OK
+"city == None, 投影 city,age",412,"(None, 58)","(None, 58)",OK
+"city == None, 投影 city,age",413,"(None, 49)","(None, 49)",OK
+"city == None, 投影 city,age",414,"(None, 29)","(None, 29)",OK
+"city == None, 投影 city,age",415,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",416,"(None, 88)","(None, 88)",OK
+"city == None, 投影 city,age",417,"(None, 63)","(None, 63)",OK
+"city == None, 投影 city,age",418,"(None, 24)","(None, 24)",OK
+"city == None, 投影 city,age",419,"(None, 82)","(None, 82)",OK
+"city == None, 投影 city,age",420,"(None, 70)","(None, 70)",OK
+"city == None, 投影 city,age",421,"(None, 15)","(None, 15)",OK
+"city == None, 投影 city,age",422,"(None, 95)","(None, 95)",OK
+"city == None, 投影 city,age",423,"(None, 49)","(None, 49)",OK
+"city == None, 投影 city,age",424,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",425,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",426,"(None, 94)","(None, 94)",OK
+"city == None, 投影 city,age",427,"(None, 92)","(None, 92)",OK
+"city == None, 投影 city,age",428,"(None, 54)","(None, 54)",OK
+"city == None, 投影 city,age",429,"(None, 22)","(None, 22)",OK
+"city == None, 投影 city,age",430,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",431,"(None, 46)","(None, 46)",OK
+"city == None, 投影 city,age",432,"(None, 73)","(None, 73)",OK
+"city == None, 投影 city,age",433,"(None, 66)","(None, 66)",OK
+"city == None, 投影 city,age",434,"(None, 26)","(None, 26)",OK
+"city == None, 投影 city,age",435,"(None, 32)","(None, 32)",OK
+"city == None, 投影 city,age",436,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",437,"(None, 78)","(None, 78)",OK
+"city == None, 投影 city,age",438,"(None, 38)","(None, 38)",OK
+"city == None, 投影 city,age",439,"(None, 84)","(None, 84)",OK
+"city == None, 投影 city,age",440,"(None, 76)","(None, 76)",OK
+"city == None, 投影 city,age",441,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",442,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",443,"(None, 13)","(None, 13)",OK
+"city == None, 投影 city,age",444,"(None, 7)","(None, 7)",OK
+"city == None, 投影 city,age",445,"(None, 75)","(None, 75)",OK
+"city == None, 投影 city,age",446,"(None, 67)","(None, 67)",OK
+"city == None, 投影 city,age",447,"(None, 91)","(None, 91)",OK
+"city == None, 投影 city,age",448,"(None, 15)","(None, 15)",OK
+"city == None, 投影 city,age",449,"(None, 87)","(None, 87)",OK
+"city == None, 投影 city,age",450,"(None, 63)","(None, 63)",OK
+"city == None, 投影 city,age",451,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",452,"(None, 15)","(None, 15)",OK
+"city == None, 投影 city,age",453,"(None, 1)","(None, 1)",OK
+"city == None, 投影 city,age",454,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",455,"(None, 51)","(None, 51)",OK
+"city == None, 投影 city,age",456,"(None, 26)","(None, 26)",OK
+"city == None, 投影 city,age",457,"(None, 41)","(None, 41)",OK
+"city == None, 投影 city,age",458,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",459,"(None, 61)","(None, 61)",OK
+"city == None, 投影 city,age",460,"(None, 74)","(None, 74)",OK
+"city == None, 投影 city,age",461,"(None, 34)","(None, 34)",OK
+"city == None, 投影 city,age",462,"(None, 39)","(None, 39)",OK
+"city == None, 投影 city,age",463,"(None, 19)","(None, 19)",OK
+"city == None, 投影 city,age",464,"(None, 15)","(None, 15)",OK
+"city == None, 投影 city,age",465,"(None, 6)","(None, 6)",OK
+"city == None, 投影 city,age",466,"(None, 27)","(None, 27)",OK
+"city == None, 投影 city,age",467,"(None, 63)","(None, 63)",OK
+"city == None, 投影 city,age",468,"(None, 71)","(None, 71)",OK
+"city == None, 投影 city,age",469,"(None, 89)","(None, 89)",OK
+"price 非空, 投影 price",0,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",2,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",3,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",4,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",5,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",6,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",7,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",8,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",9,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",10,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",11,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",12,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",13,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",14,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",15,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",16,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",17,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",18,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",19,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",20,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",21,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",22,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",23,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",24,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",25,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",26,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",27,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",28,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",29,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",30,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",31,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",32,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",33,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",34,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",35,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",36,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",37,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",38,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",39,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",40,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",41,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",42,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",43,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",44,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",45,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",46,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",47,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",48,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",49,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",50,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",51,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",52,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",53,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",54,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",55,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",56,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",57,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",58,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",59,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",60,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",61,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",62,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",63,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",64,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",65,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",66,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",67,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",68,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",69,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",70,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",71,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",72,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",73,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",74,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",75,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",76,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",77,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",78,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",79,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",80,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",81,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",82,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",83,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",84,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",85,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",86,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",87,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",88,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",89,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",90,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",91,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",92,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",93,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",94,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",95,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",96,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",97,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",98,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",99,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",100,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",101,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",102,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",103,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",104,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",105,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",106,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",107,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",108,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",109,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",110,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",111,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",112,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",113,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",114,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",115,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",116,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",117,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",118,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",119,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",120,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",121,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",122,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",123,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",124,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",125,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",126,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",127,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",128,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",129,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",130,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",131,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",132,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",133,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",134,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",135,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",136,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",137,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",138,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",139,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",140,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",141,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",142,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",143,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",144,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",145,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",146,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",147,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",148,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",149,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",150,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",151,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",152,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",153,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",154,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",155,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",156,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",157,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",158,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",159,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",160,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",161,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",162,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",163,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",164,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",165,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",166,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",167,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",168,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",169,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",170,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",171,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",172,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",173,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",174,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",175,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",176,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",177,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",178,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",179,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",180,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",181,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",182,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",183,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",184,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",185,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",186,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",187,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",188,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",189,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",190,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",191,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",192,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",193,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",194,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",195,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",196,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",197,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",198,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",199,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",200,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",201,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",202,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",203,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",204,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",205,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",206,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",207,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",208,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",209,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",210,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",211,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",212,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",213,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",214,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",215,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",216,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",217,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",218,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",219,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",220,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",221,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",222,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",223,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",224,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",225,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",226,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",227,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",228,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",229,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",230,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",231,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",232,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",233,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",234,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",235,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",236,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",237,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",238,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",239,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",240,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",241,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",242,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",243,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",244,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",245,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",246,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",247,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",248,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",249,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",250,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",251,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",252,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",253,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",254,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",255,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",256,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",257,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",258,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",259,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",260,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",261,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",262,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",263,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",264,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",265,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",266,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",267,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",268,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",269,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",270,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",271,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",272,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",273,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",274,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",275,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",276,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",277,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",278,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",279,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",280,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",281,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",282,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",283,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",284,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",285,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",286,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",287,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",288,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",289,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",290,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",291,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",292,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",293,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",294,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",295,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",296,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",297,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",298,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",299,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",300,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",301,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",302,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",303,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",304,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",305,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",306,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",307,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",308,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",309,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",310,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",311,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",312,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",313,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",314,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",315,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",316,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",317,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",318,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",319,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",320,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",321,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",322,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",323,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",324,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",325,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",326,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",327,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",328,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",329,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",330,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",331,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",332,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",333,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",334,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",335,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",336,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",337,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",338,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",339,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",340,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",341,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",342,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",343,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",344,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",345,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",346,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",347,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",348,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",349,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",350,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",351,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",352,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",353,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",354,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",355,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",356,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",357,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",358,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",359,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",360,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",361,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",362,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",363,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",364,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",365,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",366,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",367,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",368,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",369,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",370,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",371,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",372,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",373,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",374,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",375,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",376,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",377,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",378,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",379,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",380,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",381,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",382,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",383,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",384,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",385,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",386,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",387,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",388,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",389,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",390,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",391,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",392,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",393,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",394,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",395,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",396,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",397,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",398,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",399,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",400,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",401,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",402,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",403,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",404,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",405,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",406,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",407,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",408,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",409,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",410,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",411,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",412,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",413,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",414,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",415,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",416,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",417,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",418,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",419,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",420,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",421,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",422,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",423,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",424,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",425,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",426,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",427,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",428,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",429,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",430,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",431,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",432,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",433,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",434,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",435,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",436,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",437,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",438,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",439,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",440,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",441,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",442,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",443,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",444,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",445,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",446,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",447,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",448,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",449,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",450,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",451,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",452,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",453,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",454,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",455,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",456,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",457,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",458,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",459,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",460,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",461,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",462,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",463,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",464,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",465,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",466,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",467,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",468,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",469,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",470,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",471,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",472,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",473,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",474,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",475,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",476,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",477,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",478,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",479,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",480,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",481,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",482,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",483,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",484,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",485,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",486,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",487,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",488,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",489,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",490,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",491,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",492,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",493,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",494,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",495,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",496,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",497,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",498,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",499,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",500,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",501,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",502,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",503,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",504,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",505,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",506,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",507,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",508,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",509,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",510,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",511,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",512,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",513,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",514,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",515,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",516,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",517,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",518,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",519,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",520,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",521,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",522,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",523,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",524,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",525,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",526,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",527,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",528,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",529,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",530,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",531,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",532,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",533,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",534,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",535,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",536,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",537,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",538,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",539,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",540,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",541,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",542,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",543,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",544,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",545,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",546,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",547,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",548,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",549,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",550,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",551,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",552,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",553,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",554,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",555,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",556,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",557,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",558,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",559,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",560,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",561,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",562,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",563,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",564,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",565,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",566,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",567,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",568,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",569,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",570,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",571,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",572,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",573,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",574,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",575,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",576,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",577,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",578,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",579,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",580,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",581,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",582,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",583,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",584,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",585,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",586,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",587,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",588,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",589,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",590,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",591,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",592,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",593,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",594,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",595,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",596,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",597,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",598,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",599,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",600,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",601,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",602,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",603,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",604,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",605,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",606,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",607,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",608,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",609,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",610,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",611,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",612,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",613,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",614,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",615,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",616,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",617,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",618,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",619,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",620,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",621,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",622,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",623,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",624,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",625,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",626,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",627,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",628,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",629,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",630,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",631,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",632,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",633,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",634,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",635,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",636,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",637,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",638,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",639,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",640,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",641,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",642,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",643,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",644,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",645,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",646,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",647,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",648,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",649,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",650,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",651,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",652,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",653,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",654,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",655,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",656,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",657,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",658,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",659,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",660,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",661,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",662,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",663,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",664,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",665,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",666,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",667,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",668,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",669,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",670,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",671,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",672,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",673,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",674,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",675,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",676,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",677,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",678,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",679,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",680,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",681,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",682,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",683,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",684,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",685,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",686,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",687,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",688,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",689,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",690,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",691,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",692,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",693,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",694,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",695,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",696,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",697,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",698,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",699,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",700,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",701,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",702,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",703,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",704,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",705,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",706,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",707,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",708,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",709,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",710,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",711,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",712,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",713,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",714,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",715,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",716,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",717,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",718,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",719,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",720,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",721,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",722,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",723,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",724,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",725,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",726,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",727,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",728,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",729,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",730,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",731,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",732,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",733,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",734,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",735,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",736,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",737,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",738,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",739,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",740,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",741,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",742,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",743,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",744,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",745,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",746,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",747,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",748,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",749,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",750,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",751,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",752,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",753,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",754,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",755,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",756,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",757,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",758,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",759,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",760,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",761,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",762,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",763,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",764,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",765,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",766,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",767,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",768,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",769,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",770,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",771,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",772,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",773,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",774,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",775,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",776,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",777,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",778,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",779,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",780,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",781,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",782,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",783,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",784,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",785,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",786,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",787,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",788,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",789,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",790,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",791,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",792,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",793,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",794,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",795,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",796,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",797,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",798,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",799,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",800,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",801,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",802,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",803,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",804,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",805,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",806,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",807,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",808,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",809,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",810,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",811,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",812,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",813,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",814,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",815,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",816,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",817,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",818,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",819,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",820,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",821,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",822,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",823,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",824,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",825,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",826,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",827,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",828,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",829,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",830,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",831,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",832,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",833,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",834,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",835,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",836,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",837,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",838,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",839,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",840,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",841,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",842,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",843,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",844,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",845,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",846,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",847,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",848,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",849,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",850,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",851,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",852,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",853,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",854,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",855,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",856,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",857,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",858,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",859,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",860,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",861,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",862,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",863,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",864,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",865,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",866,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",867,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",868,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",869,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",870,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",871,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",872,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",873,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",874,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",875,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",876,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",877,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",878,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",879,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",880,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",881,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",882,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",883,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",884,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",885,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",886,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",887,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",888,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",889,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",890,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",891,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",892,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",893,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",894,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",895,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",896,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",897,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",898,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",899,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",900,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",901,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",902,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",903,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",904,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",905,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",906,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",907,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",908,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",909,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",910,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",911,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",912,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",913,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",914,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",915,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",916,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",917,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",918,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",919,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",920,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",921,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",922,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",923,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",924,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",925,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",926,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",927,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",928,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",929,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",930,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",931,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",932,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",933,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",934,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",935,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",936,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",937,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",938,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",939,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",940,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",941,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",942,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",943,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",944,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",945,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",946,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",947,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",948,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",949,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",950,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",951,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",952,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",953,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",954,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",955,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",956,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",957,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",958,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",959,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",960,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",961,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",962,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",963,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",964,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",965,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",966,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",967,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",968,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",969,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",970,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",971,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",972,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",973,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",974,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",975,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",976,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",977,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",978,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",979,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",980,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",981,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",982,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",983,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",984,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",985,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",986,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",987,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",988,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",989,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",990,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",991,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",992,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",993,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",994,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",995,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",996,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",997,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",998,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",999,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1000,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1001,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1002,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1003,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1004,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1005,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1006,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1007,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1008,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1009,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1010,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1011,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1012,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1013,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1014,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1015,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1016,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1017,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1018,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1019,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1020,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1021,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1022,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1023,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1024,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1025,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1026,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1027,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1028,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1029,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1030,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1031,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1032,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1033,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1034,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1035,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1036,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1037,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1038,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1039,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1040,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1041,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1042,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1043,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1044,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1045,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1046,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1047,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1048,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1049,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1050,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1051,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1052,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1053,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1054,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1055,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1056,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1057,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1058,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1059,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1060,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1061,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1062,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1063,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1064,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1065,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1066,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1067,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1068,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1069,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1070,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1071,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1072,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1073,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1074,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1075,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1076,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1077,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1078,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1079,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1080,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1081,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1082,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1083,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1084,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1085,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1086,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1087,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1088,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1089,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1090,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1091,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1092,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1093,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1094,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1095,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1096,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1097,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1098,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1099,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1100,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1101,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1102,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1103,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1104,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1105,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1106,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1107,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1108,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1109,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1110,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1111,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1112,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1113,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1114,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1115,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1116,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1117,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1118,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1119,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1120,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1121,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1122,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1123,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1124,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1125,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1126,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1127,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1128,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1129,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1130,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1131,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1132,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1133,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1134,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1135,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1136,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1137,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1138,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1139,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1140,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1141,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1142,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1143,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1144,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1145,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1146,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1147,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1148,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1149,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1150,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1151,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1152,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1153,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1154,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1155,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1156,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1157,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1158,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1159,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1160,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1161,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1162,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1163,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1164,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1165,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1166,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1167,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1168,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1169,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1170,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1171,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1172,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1173,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1174,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1175,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1176,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1177,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1178,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1179,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1180,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1181,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1182,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1183,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1184,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1185,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1186,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1187,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1188,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1189,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1190,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1191,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1192,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1193,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1194,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1195,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1196,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1197,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1198,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1199,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1200,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1201,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1202,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1203,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1204,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1205,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1206,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1207,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1208,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1209,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1210,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1211,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1212,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1213,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1214,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1215,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1216,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1217,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1218,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1219,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1220,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1221,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1222,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1223,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1224,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1225,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1226,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1227,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1228,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1229,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1230,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1231,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1232,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1233,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1234,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1235,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1236,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1237,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1238,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1239,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1240,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1241,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1242,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1243,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1244,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1245,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1246,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1247,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1248,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1249,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1250,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1251,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1252,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1253,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1254,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1255,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1256,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1257,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1258,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1259,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1260,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1261,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1262,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1263,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1264,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1265,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1266,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1267,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1268,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1269,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1270,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1271,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1272,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1273,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1274,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1275,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1276,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1277,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1278,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1279,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1280,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1281,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1282,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1283,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1284,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1285,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1286,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1287,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1288,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1289,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1290,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1291,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1292,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1293,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1294,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1295,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1296,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1297,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1298,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1299,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1300,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1301,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1302,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1303,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1304,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1305,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1306,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1307,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1308,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1309,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1310,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1311,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1312,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1313,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1314,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1315,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1316,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1317,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1318,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1319,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1320,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1321,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1322,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1323,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1324,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1325,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1326,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1327,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1328,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1329,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1330,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1331,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1332,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1333,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1334,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1335,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1336,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1337,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1338,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1339,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1340,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1341,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1342,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1343,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1344,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1345,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1346,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1347,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1348,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1349,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1350,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1351,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1352,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1353,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1354,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1355,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1356,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1357,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1358,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1359,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1360,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1361,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1362,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1363,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1364,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1365,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1366,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1367,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1368,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1369,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1370,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1371,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1372,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1373,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1374,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1375,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1376,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1377,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1378,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1379,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1380,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1381,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1382,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1383,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1384,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1385,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1386,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1387,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1388,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1389,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1390,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1391,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1392,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1393,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1394,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1395,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1396,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1397,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1398,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1399,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1400,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1401,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1402,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1403,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1404,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1405,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1406,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1407,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1408,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1409,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1410,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1411,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1412,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1413,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1414,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1415,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1416,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1417,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1418,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1419,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1420,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1421,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1422,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1423,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1424,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1425,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1426,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1427,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1428,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1429,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1430,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1431,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1432,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1433,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1434,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1435,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1436,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1437,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1438,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1439,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1440,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1441,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1442,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1443,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1444,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1445,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1446,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1447,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1448,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1449,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1450,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1451,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1452,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1453,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1454,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1455,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1456,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1457,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1458,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1459,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1460,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1461,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1462,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1463,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1464,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1465,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1466,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1467,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1468,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1469,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1470,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1471,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1472,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1473,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1474,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1475,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1476,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1477,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1478,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1479,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1480,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1481,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1482,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1483,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1484,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1485,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1486,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1487,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1488,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1489,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1490,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1491,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1492,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1493,"(19.9,)","(19.9,)",OK
+"price 非空, 投影 price",1494,"(9.9,)","(9.9,)",OK
+"price 非空, 投影 price",1495,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1496,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1497,"(0.0,)","(0.0,)",OK
+"price 非空, 投影 price",1498,"(19.9,)","(19.9,)",OK

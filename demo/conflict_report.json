@@ -1,0 +1,99 @@
+{
+  "page_size": 512,
+  "file_size": 1536,
+  "pages_scanned": 3,
+  "corrupt_pages": [
+    {
+      "page": 1,
+      "offset": 512,
+      "reason": "checksum mismatch"
+    }
+  ],
+  "conflicts": [
+    {
+      "key": "key-06",
+      "winner": {
+        "page": 2,
+        "offset": 20
+      },
+      "occurrences": [
+        {
+          "page": 0,
+          "offset": 152
+        },
+        {
+          "page": 2,
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "key": "key-09",
+      "winner": {
+        "page": 2,
+        "offset": 42
+      },
+      "occurrences": [
+        {
+          "page": 0,
+          "offset": 218
+        },
+        {
+          "page": 2,
+          "offset": 42
+        }
+      ]
+    },
+    {
+      "key": "key-12",
+      "winner": {
+        "page": 2,
+        "offset": 64
+      },
+      "occurrences": [
+        {
+          "page": 0,
+          "offset": 286
+        },
+        {
+          "page": 2,
+          "offset": 64
+        }
+      ]
+    },
+    {
+      "key": "key-15",
+      "winner": {
+        "page": 2,
+        "offset": 87
+      },
+      "occurrences": [
+        {
+          "page": 0,
+          "offset": 355
+        },
+        {
+          "page": 2,
+          "offset": 87
+        }
+      ]
+    },
+    {
+      "key": "key-18",
+      "winner": {
+        "page": 2,
+        "offset": 110
+      },
+      "occurrences": [
+        {
+          "page": 0,
+          "offset": 424
+        },
+        {
+          "page": 2,
+          "offset": 110
+        }
+      ]
+    }
+  ]
+}

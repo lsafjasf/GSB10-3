@@ -1,0 +1,114 @@
+{
+  "key-00": {
+    "offset": 20,
+    "page": 0
+  },
+  "key-01": {
+    "offset": 42,
+    "page": 0
+  },
+  "key-02": {
+    "offset": 64,
+    "page": 0
+  },
+  "key-03": {
+    "offset": 86,
+    "page": 0
+  },
+  "key-04": {
+    "offset": 108,
+    "page": 0
+  },
+  "key-05": {
+    "offset": 130,
+    "page": 0
+  },
+  "key-06": {
+    "offset": 20,
+    "page": 2
+  },
+  "key-07": {
+    "offset": 174,
+    "page": 0
+  },
+  "key-08": {
+    "offset": 196,
+    "page": 0
+  },
+  "key-09": {
+    "offset": 42,
+    "page": 2
+  },
+  "key-10": {
+    "offset": 240,
+    "page": 0
+  },
+  "key-11": {
+    "offset": 263,
+    "page": 0
+  },
+  "key-12": {
+    "offset": 64,
+    "page": 2
+  },
+  "key-13": {
+    "offset": 309,
+    "page": 0
+  },
+  "key-14": {
+    "offset": 332,
+    "page": 0
+  },
+  "key-15": {
+    "offset": 87,
+    "page": 2
+  },
+  "key-16": {
+    "offset": 378,
+    "page": 0
+  },
+  "key-17": {
+    "offset": 401,
+    "page": 0
+  },
+  "key-18": {
+    "offset": 110,
+    "page": 2
+  },
+  "key-19": {
+    "offset": 447,
+    "page": 0
+  },
+  "key-20": {
+    "offset": 470,
+    "page": 0
+  },
+  "key-21": {
+    "offset": 133,
+    "page": 2
+  },
+  "key-24": {
+    "offset": 156,
+    "page": 2
+  },
+  "key-27": {
+    "offset": 179,
+    "page": 2
+  },
+  "key-30": {
+    "offset": 202,
+    "page": 2
+  },
+  "key-33": {
+    "offset": 225,
+    "page": 2
+  },
+  "key-36": {
+    "offset": 248,
+    "page": 2
+  },
+  "key-39": {
+    "offset": 271,
+    "page": 2
+  }
+}

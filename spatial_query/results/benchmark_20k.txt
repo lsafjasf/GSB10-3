@@ -1,0 +1,22 @@
+scene: 20000 triangles, 2000 rays, 2000 boxes, 2000 moves
+python: 3.12.3
+
+[build] BVH:    244.16 ms  (nodes=13471, leaves=6736, max_leaf=4, max_depth=16)
+[build] brute force: 0 (无索引)
+
+[ray query x2000]
+  BVH:            146.30 ms  (    73.2 us/query)
+  brute force:    18.727 s  (  9363.5 us/query)
+  speedup:        128.0x   (结果逐条一致)
+
+[box query x2000]
+  BVH:            451.87 ms  (   225.9 us/query)
+  brute force:    27.158 s  ( 13579.1 us/query)
+  speedup:         60.1x   (结果逐条一致)
+
+[incremental update x2000]
+  refit (增量):     16.18 ms  (    8.09 us/move)
+  rebuild(整体):    262.89 ms  (单次全量重建)
+  => 2000 次移动: 增量     16.18 ms vs 每次重建   525.786 s，快 32497x
+
+[post-update differential] ray=OK box=OK (x200/200)

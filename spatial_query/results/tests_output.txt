@@ -1,0 +1,11 @@
+== test_empty
+== test_single
+== test_random_scene
+== test_heavy_overlap
+== test_degenerate
+== test_total_miss
+== test_incremental_update
+== test_boundary_touch
+
+35/35 checks passed
+ALL DIFFERENTIAL TESTS PASSED

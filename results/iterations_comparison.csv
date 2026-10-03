@@ -1,0 +1,13 @@
+case,preconditioner,n,iterations,final_relative_residual,relative_solution_error,status
+diag_dominant,none,300,15,4.787e-09,6.138e-09,converged
+diag_dominant,jacobi,300,11,3.138e-09,3.796e-09,converged
+diag_dominant,ilu0,300,5,3.334e-09,3.807e-09,converged
+non_symmetric,none,300,12,2.369e-09,2.585e-09,converged
+non_symmetric,jacobi,300,12,2.369e-09,2.585e-09,converged
+non_symmetric,ilu0,300,5,8.099e-09,8.242e-09,converged
+near_singular,none,1024,115,9.296e-09,1.105e-06,converged
+near_singular,jacobi,1024,115,9.296e-09,1.105e-06,converged
+near_singular,ilu0,1024,28,9.109e-09,3.127e-07,converged
+bad_initial_guess,none,300,26,2.520e-09,3.071e-09,converged
+bad_initial_guess,jacobi,300,19,5.211e-09,6.164e-09,converged
+bad_initial_guess,ilu0,300,9,1.972e-09,2.156e-09,converged

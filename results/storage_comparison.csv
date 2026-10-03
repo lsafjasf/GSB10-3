@@ -1,0 +1,5 @@
+case,n,nnz,csr_bytes,dense_bytes,dense_over_csr
+diag_dominant,300,7570,92044,720000,7.8
+non_symmetric,300,899,11992,720000,60.0
+near_singular,1024,4992,64004,8388608,131.1
+bad_initial_guess,300,7570,92044,720000,7.8

@@ -1,0 +1,31 @@
+rtol=1e-08, max_iter=500, restart=50
+
+=== diag_dominant  (n=300, nnz=7570) ===
+    storage: CSR: 92044 B (nnz=7570) | dense: 720000 B | dense/CSR = 7.8x
+    none  :   15 iters, rel res = 4.787e-09, rel solution error = 6.138e-09, converged
+    jacobi:   11 iters, rel res = 3.138e-09, rel solution error = 3.796e-09, converged
+    ilu0  :    5 iters, rel res = 3.334e-09, rel solution error = 3.807e-09, converged
+
+=== non_symmetric  (n=300, nnz=899) ===
+    storage: CSR: 11992 B (nnz=899) | dense: 720000 B | dense/CSR = 60.0x
+    none  :   12 iters, rel res = 2.369e-09, rel solution error = 2.585e-09, converged
+    jacobi:   12 iters, rel res = 2.369e-09, rel solution error = 2.585e-09, converged
+    ilu0  :    5 iters, rel res = 8.099e-09, rel solution error = 8.242e-09, converged
+
+=== near_singular  (n=1024, nnz=4992) ===
+    storage: CSR: 64004 B (nnz=4992) | dense: 8388608 B | dense/CSR = 131.1x
+    none  :  115 iters, rel res = 9.296e-09, rel solution error = 1.105e-06, converged
+    jacobi:  115 iters, rel res = 9.296e-09, rel solution error = 1.105e-06, converged
+    ilu0  :   28 iters, rel res = 9.109e-09, rel solution error = 3.127e-07, converged
+
+=== bad_initial_guess  (n=300, nnz=7570) ===
+    storage: CSR: 92044 B (nnz=7570) | dense: 720000 B | dense/CSR = 7.8x
+    none  :   26 iters, rel res = 2.520e-09, rel solution error = 3.071e-09, converged
+    jacobi:   19 iters, rel res = 5.211e-09, rel solution error = 6.164e-09, converged
+    ilu0  :    9 iters, rel res = 1.972e-09, rel solution error = 2.156e-09, converged
+
+Singular system demonstration (Neumann Laplacian, 8x8):
+    FAILED (max_iter=100 reached): 100 iterations, final true rel. residual = 6.977e+00
+    -> converged stays False; residual cannot be driven down; never reported as success
+
+Wrote results/iterations_comparison.csv, results/residual_curves.csv, results/storage_comparison.csv

@@ -1,0 +1,36 @@
+{
+  "scenario": {
+    "base": "v1 (36 字节)",
+    "segment_A": "v2#seg0 [8, 24) 来自备份 v1->v2",
+    "segment_B": "v3#seg0 [12, 28) 来自备份 v2->v3",
+    "overlap": "[12, 24)，按最新优先取 B"
+  },
+  "restored_ok": true,
+  "restored_hex": "414243444546474861616161424242424242424242424242424242423233343536373839",
+  "restored_text": "ABCDEFGHaaaaBBBBBBBBBBBBBBBB23456789",
+  "report": {
+    "base_version": "v1",
+    "target_version": "v3",
+    "target_length": 36,
+    "applied_segments": [
+      "v2#seg0@8+16",
+      "v3#seg0@12+16"
+    ],
+    "overwritten": [
+      {
+        "covered": "v2#seg0@8+16",
+        "covered_kind": "seg",
+        "range": [
+          12,
+          24
+        ],
+        "by": "v3#seg0@12+16"
+      }
+    ]
+  },
+  "intra_backup_overlap": {
+    "file": "intra_overlap.json",
+    "rejected": true,
+    "error": "同一份备份 'v2' 内段互相覆盖: [8, 24) 与 [16, 32)"
+  }
+}

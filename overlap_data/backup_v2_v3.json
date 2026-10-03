@@ -1,0 +1,16 @@
+{
+  "format": "diffseg/1",
+  "base_version": "v2",
+  "target_version": "v3",
+  "target_length": 36,
+  "target_digest": "sha256:b5fdbd5d21f61f540176652679b33320db522b0db22289057902ccad221b4b02",
+  "segments": [
+    {
+      "base_version": "v2",
+      "offset": 12,
+      "length": 16,
+      "digest": "sha256:900dfeb7f1b5e344209e2abce56c333dafe606fb3bf59f68ab2b0e2ef8a0662b",
+      "data_b64": "QkJCQkJCQkJCQkJCQkJCQg=="
+    }
+  ]
+}

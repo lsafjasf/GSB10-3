@@ -1,0 +1,169 @@
+{
+  "huge_timeout": {
+    "description": "timeout beyond one full level-3 round, bulk tick skipping",
+    "placement_chain": {
+      "far": [
+        4,
+        0
+      ],
+      "far_same1": [
+        4,
+        0
+      ],
+      "far_same2": [
+        4,
+        0
+      ],
+      "layered": [
+        4,
+        2,
+        1,
+        0
+      ],
+      "near": [
+        3,
+        0
+      ]
+    },
+    "ticks_skipped": 4295033344,
+    "trigger_order": [
+      "near",
+      "far",
+      "far_same1",
+      "far_same2",
+      "layered"
+    ],
+    "trigger_times": [
+      16777223,
+      4294967338,
+      4294967338,
+      4294967338,
+      4295033344
+    ]
+  },
+  "mass_cancel": {
+    "all_fired_at_their_expiry_tick": true,
+    "cancelled": 3000,
+    "cancelled_fire_counts_all_zero": true,
+    "description": "4000 timers across levels 0-1, 75% lazily cancelled",
+    "fired": 1000,
+    "sample_trigger_order": [
+      1199,
+      3827,
+      2289,
+      865,
+      139,
+      2496,
+      3680,
+      3948,
+      2113,
+      3515,
+      3534,
+      3431,
+      3518,
+      2590,
+      963,
+      1523,
+      2571,
+      2937,
+      2486,
+      61
+    ],
+    "scheduled": 4000
+  },
+  "ordering": {
+    "cancelled_fire_count": 0,
+    "cancelled_tag": "cancelled",
+    "description": "immediate, level 1/2 cascading downgrade, same-tick batch",
+    "placements": {
+      "batch_a": {
+        "expiry": 512,
+        "placement_chain": [
+          1,
+          0
+        ]
+      },
+      "batch_b": {
+        "expiry": 512,
+        "placement_chain": [
+          1,
+          0
+        ]
+      },
+      "batch_c": {
+        "expiry": 512,
+        "placement_chain": [
+          0
+        ]
+      },
+      "cancelled": {
+        "expiry": 257,
+        "placement_chain": [
+          1
+        ]
+      },
+      "imm_a": {
+        "expiry": 0,
+        "placement_chain": [
+          0
+        ]
+      },
+      "imm_b": {
+        "expiry": 0,
+        "placement_chain": [
+          0
+        ]
+      },
+      "lv0": {
+        "expiry": 5,
+        "placement_chain": [
+          0
+        ]
+      },
+      "lv1": {
+        "expiry": 300,
+        "placement_chain": [
+          1,
+          0
+        ]
+      },
+      "lv2_edge": {
+        "expiry": 65537,
+        "placement_chain": [
+          2,
+          0
+        ]
+      },
+      "lv2_off": {
+        "expiry": 66048,
+        "placement_chain": [
+          2,
+          1,
+          0
+        ]
+      }
+    },
+    "trigger_order": [
+      "imm_a",
+      "imm_b",
+      "lv0",
+      "lv1",
+      "batch_a",
+      "batch_b",
+      "batch_c",
+      "lv2_edge",
+      "lv2_off"
+    ],
+    "trigger_times": [
+      0,
+      0,
+      5,
+      300,
+      512,
+      512,
+      512,
+      65537,
+      66048
+    ]
+  }
+}

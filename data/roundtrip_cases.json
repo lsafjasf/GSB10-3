@@ -1,0 +1,28 @@
+[
+  {
+    "name": "packet-nonzero-padding",
+    "comment": "所有填充位置写入非零字节：offset 7 / 13..15 / 17..19",
+    "hex": "428d3412010203aaefbeadde7fbbccdd99eeff00",
+    "values": {
+      "magic": 66,
+      "flags": {"version": 5, "kind": 17},
+      "count": 4660,
+      "tags": [1, 2, 3],
+      "inner": {"a": 3735928559, "b": 127},
+      "tail": 153
+    }
+  },
+  {
+    "name": "packet-boundary-values",
+    "comment": "字段取边界值（0xFF/0x00/符号位），填充位置再换一组非零字节",
+    "hex": "ffffff00ff00801104030201002233445a556677",
+    "values": {
+      "magic": 255,
+      "flags": {"version": 7, "kind": 31},
+      "count": 255,
+      "tags": [255, 0, 128],
+      "inner": {"a": 16909060, "b": 0},
+      "tail": 90
+    }
+  }
+]

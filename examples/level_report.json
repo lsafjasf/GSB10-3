@@ -1,0 +1,1283 @@
+{
+  "body_size": 12,
+  "body_indent": 24,
+  "size_tiers": [
+    18,
+    16,
+    14
+  ],
+  "indent_tiers": [
+    0,
+    12,
+    18
+  ],
+  "preamble": [
+    0,
+    1
+  ],
+  "headings": [
+    {
+      "block_index": 1,
+      "text": "产品说明书",
+      "raw_level": 1,
+      "votes": {
+        "size": {
+          "level": 1,
+          "weight": 2.0,
+          "detail": "字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1"
+        },
+        "position": {
+          "level": 1,
+          "weight": 0.4,
+          "detail": "位置居中 → L1"
+        }
+      },
+      "reason": "加权投票取 L1（字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1，得分 2.4）"
+    },
+    {
+      "block_index": 3,
+      "text": "第一章 概述",
+      "raw_level": 1,
+      "votes": {
+        "numbering": {
+          "level": 1,
+          "weight": 3.0,
+          "detail": "编号『第X章/附录』→ L1（高置信）"
+        },
+        "size": {
+          "level": 1,
+          "weight": 2.0,
+          "detail": "字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1"
+        },
+        "position": {
+          "level": 1,
+          "weight": 0.4,
+          "detail": "缩进 0pt 为第 1 靠左档（正文 24pt）→ L1"
+        }
+      },
+      "reason": "高置信编号直接定级 L1（编号『第X章/附录』→ L1（高置信））"
+    },
+    {
+      "block_index": 5,
+      "text": "1.1 背景",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『1.1』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『1.1』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 7,
+      "text": "1.1.1 术语",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『1.1.1』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『1.1.1』→ L3（高置信））"
+    },
+    {
+      "block_index": 9,
+      "text": "1.1.2 约定",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『1.1.2』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『1.1.2』→ L3（高置信））"
+    },
+    {
+      "block_index": 11,
+      "text": "1.2 目标",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『1.2』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『1.2』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 13,
+      "text": "第二章 安装",
+      "raw_level": 1,
+      "votes": {
+        "numbering": {
+          "level": 1,
+          "weight": 3.0,
+          "detail": "编号『第X章/附录』→ L1（高置信）"
+        },
+        "size": {
+          "level": 1,
+          "weight": 2.0,
+          "detail": "字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1"
+        },
+        "position": {
+          "level": 1,
+          "weight": 0.4,
+          "detail": "缩进 0pt 为第 1 靠左档（正文 24pt）→ L1"
+        }
+      },
+      "reason": "高置信编号直接定级 L1（编号『第X章/附录』→ L1（高置信））"
+    },
+    {
+      "block_index": 15,
+      "text": "2.1 环境要求",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『2.1』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 1,
+          "weight": 0.4,
+          "detail": "位置居中 → L1"
+        }
+      },
+      "reason": "加权投票取 L2（编号『2.1』→ L2（中置信，疑似小数），得分 3.5）；与 position 线索认为 L1（权重 0.4） 冲突，按权重与『编号 > 字号 > 位置』优先级取舍"
+    },
+    {
+      "block_index": 17,
+      "text": "2.1.1 硬件",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『2.1.1』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『2.1.1』→ L3（高置信））"
+    },
+    {
+      "block_index": 19,
+      "text": "2.1.2 软件",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『2.1.2』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『2.1.2』→ L3（高置信））"
+    },
+    {
+      "block_index": 21,
+      "text": "2.2 安装步骤",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『2.2』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『2.2』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 23,
+      "text": "2.2.1 下载",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『2.2.1』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『2.2.1』→ L3（高置信））"
+    },
+    {
+      "block_index": 25,
+      "text": "2.2.2 解压",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『2.2.2』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『2.2.2』→ L3（高置信））"
+    },
+    {
+      "block_index": 27,
+      "text": "2.3 安装后检查",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『2.3』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『2.3』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 29,
+      "text": "特别注意事项",
+      "raw_level": 2,
+      "votes": {
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（缩进 12pt 为第 2 靠左档（正文 24pt）→ L2，得分 0.4）"
+    },
+    {
+      "block_index": 31,
+      "text": "2.4 深度配置",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『2.4』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『2.4』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 33,
+      "text": "2.4.1.1 深层流程",
+      "raw_level": 4,
+      "votes": {
+        "numbering": {
+          "level": 4,
+          "weight": 3.0,
+          "detail": "编号『2.4.1.1』→ L4（高置信）"
+        },
+        "position": {
+          "level": 1,
+          "weight": 0.4,
+          "detail": "缩进 0pt 为第 1 靠左档（正文 24pt）→ L1"
+        }
+      },
+      "reason": "高置信编号直接定级 L4（编号『2.4.1.1』→ L4（高置信））；与 position 线索认为 L1 冲突，按『高置信编号 > 字号 > 位置』取编号"
+    },
+    {
+      "block_index": 35,
+      "text": "第三章 使用",
+      "raw_level": 1,
+      "votes": {
+        "numbering": {
+          "level": 1,
+          "weight": 3.0,
+          "detail": "编号『第X章/附录』→ L1（高置信）"
+        },
+        "size": {
+          "level": 1,
+          "weight": 2.0,
+          "detail": "字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1"
+        },
+        "position": {
+          "level": 1,
+          "weight": 0.4,
+          "detail": "缩进 0pt 为第 1 靠左档（正文 24pt）→ L1"
+        }
+      },
+      "reason": "高置信编号直接定级 L1（编号『第X章/附录』→ L1（高置信））"
+    },
+    {
+      "block_index": 37,
+      "text": "3.1 快速开始",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『3.1』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『3.1』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 39,
+      "text": "3.1.1 登录",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『3.1.1』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『3.1.1』→ L3（高置信））"
+    },
+    {
+      "block_index": 41,
+      "text": "3.1.2 主界面",
+      "raw_level": 3,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 3.0,
+          "detail": "编号『3.1.2』→ L3（高置信）"
+        },
+        "size": {
+          "level": 3,
+          "weight": 2.0,
+          "detail": "字号 14pt 为第 3 大档（正文 12pt，差 2pt，强）→ L3"
+        },
+        "position": {
+          "level": 3,
+          "weight": 0.4,
+          "detail": "缩进 18pt 为第 3 靠左档（正文 24pt）→ L3"
+        }
+      },
+      "reason": "高置信编号直接定级 L3（编号『3.1.2』→ L3（高置信））"
+    },
+    {
+      "block_index": 43,
+      "text": "3.2 高级功能",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『3.2』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『3.2』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 45,
+      "text": "（三）补充说明",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 3,
+          "weight": 1.5,
+          "detail": "编号『（一）』→ L3"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2，得分 2.4）；与 numbering 线索认为 L3（权重 1.5） 冲突，按权重与『编号 > 字号 > 位置』优先级取舍"
+    },
+    {
+      "block_index": 47,
+      "text": "运维指南",
+      "raw_level": 1,
+      "votes": {
+        "size": {
+          "level": 1,
+          "weight": 2.0,
+          "detail": "字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1"
+        }
+      },
+      "reason": "加权投票取 L1（字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1，得分 2.0）"
+    },
+    {
+      "block_index": 49,
+      "text": "第四章 附录",
+      "raw_level": 1,
+      "votes": {
+        "numbering": {
+          "level": 1,
+          "weight": 3.0,
+          "detail": "编号『第X章/附录』→ L1（高置信）"
+        },
+        "size": {
+          "level": 1,
+          "weight": 2.0,
+          "detail": "字号 18pt 为第 1 大档（正文 12pt，差 6pt，强）→ L1"
+        },
+        "position": {
+          "level": 1,
+          "weight": 0.4,
+          "detail": "缩进 0pt 为第 1 靠左档（正文 24pt）→ L1"
+        }
+      },
+      "reason": "高置信编号直接定级 L1（编号『第X章/附录』→ L1（高置信））"
+    },
+    {
+      "block_index": 51,
+      "text": "4.1 参考",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『4.1』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『4.1』→ L2（中置信，疑似小数），得分 3.9）"
+    },
+    {
+      "block_index": 53,
+      "text": "4.2 版本记录",
+      "raw_level": 2,
+      "votes": {
+        "numbering": {
+          "level": 2,
+          "weight": 1.5,
+          "detail": "编号『4.2』→ L2（中置信，疑似小数）"
+        },
+        "size": {
+          "level": 2,
+          "weight": 2.0,
+          "detail": "字号 16pt 为第 2 大档（正文 12pt，差 4pt，强）→ L2"
+        },
+        "position": {
+          "level": 2,
+          "weight": 0.4,
+          "detail": "缩进 12pt 为第 2 靠左档（正文 24pt）→ L2"
+        }
+      },
+      "reason": "加权投票取 L2（编号『4.2』→ L2（中置信，疑似小数），得分 3.9）"
+    }
+  ],
+  "suppressed": [
+    {
+      "block_index": 55,
+      "text": "1.5 倍速播放说明",
+      "reason": "编号疑似小数（a.b 且 b 为个位数），且无字号/位置佐证，按正文处理"
+    }
+  ],
+  "comparisons": {
+    "fill": [
+      {
+        "block_index": 1,
+        "text": "产品说明书",
+        "raw_level": 1,
+        "prev_level": 0,
+        "action": "递进一级，保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 3,
+        "text": "第一章 概述",
+        "raw_level": 1,
+        "prev_level": 1,
+        "action": "同级或回升（L1→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 5,
+        "text": "1.1 背景",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 7,
+        "text": "1.1.1 术语",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 9,
+        "text": "1.1.2 约定",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 11,
+        "text": "1.2 目标",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 13,
+        "text": "第二章 安装",
+        "raw_level": 1,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 15,
+        "text": "2.1 环境要求",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 17,
+        "text": "2.1.1 硬件",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 19,
+        "text": "2.1.2 软件",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 21,
+        "text": "2.2 安装步骤",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 23,
+        "text": "2.2.1 下载",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 25,
+        "text": "2.2.2 解压",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 27,
+        "text": "2.3 安装后检查",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 29,
+        "text": "特别注意事项",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 31,
+        "text": "2.4 深度配置",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 33,
+        "text": "（虚拟标题占位）",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "补齐：插入虚拟 L3 占位标题",
+        "final_level": 3,
+        "synthetic": true
+      },
+      {
+        "block_index": 33,
+        "text": "2.4.1.1 深层流程",
+        "raw_level": 4,
+        "prev_level": 2,
+        "action": "跳级 L2→L4，补齐 1 个虚拟层级后保留 L4",
+        "final_level": 4,
+        "synthetic": false
+      },
+      {
+        "block_index": 35,
+        "text": "第三章 使用",
+        "raw_level": 1,
+        "prev_level": 4,
+        "action": "同级或回升（L4→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 37,
+        "text": "3.1 快速开始",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 39,
+        "text": "3.1.1 登录",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 41,
+        "text": "3.1.2 主界面",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 43,
+        "text": "3.2 高级功能",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 45,
+        "text": "（三）补充说明",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 47,
+        "text": "运维指南",
+        "raw_level": 1,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 49,
+        "text": "第四章 附录",
+        "raw_level": 1,
+        "prev_level": 1,
+        "action": "同级或回升（L1→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 51,
+        "text": "4.1 参考",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 53,
+        "text": "4.2 版本记录",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      }
+    ],
+    "demote": [
+      {
+        "block_index": 1,
+        "text": "产品说明书",
+        "raw_level": 1,
+        "prev_level": 0,
+        "action": "递进一级，保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 3,
+        "text": "第一章 概述",
+        "raw_level": 1,
+        "prev_level": 1,
+        "action": "同级或回升（L1→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 5,
+        "text": "1.1 背景",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 7,
+        "text": "1.1.1 术语",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 9,
+        "text": "1.1.2 约定",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 11,
+        "text": "1.2 目标",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 13,
+        "text": "第二章 安装",
+        "raw_level": 1,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 15,
+        "text": "2.1 环境要求",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 17,
+        "text": "2.1.1 硬件",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 19,
+        "text": "2.1.2 软件",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 21,
+        "text": "2.2 安装步骤",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 23,
+        "text": "2.2.1 下载",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 25,
+        "text": "2.2.2 解压",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 27,
+        "text": "2.3 安装后检查",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 29,
+        "text": "特别注意事项",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 31,
+        "text": "2.4 深度配置",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 33,
+        "text": "2.4.1.1 深层流程",
+        "raw_level": 4,
+        "prev_level": 2,
+        "action": "跳级 L2→L4，降级为 L3（上一层级+1）",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 35,
+        "text": "第三章 使用",
+        "raw_level": 1,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 37,
+        "text": "3.1 快速开始",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 39,
+        "text": "3.1.1 登录",
+        "raw_level": 3,
+        "prev_level": 2,
+        "action": "递进一级，保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 41,
+        "text": "3.1.2 主界面",
+        "raw_level": 3,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L3），保留",
+        "final_level": 3,
+        "synthetic": false
+      },
+      {
+        "block_index": 43,
+        "text": "3.2 高级功能",
+        "raw_level": 2,
+        "prev_level": 3,
+        "action": "同级或回升（L3→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 45,
+        "text": "（三）补充说明",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 47,
+        "text": "运维指南",
+        "raw_level": 1,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 49,
+        "text": "第四章 附录",
+        "raw_level": 1,
+        "prev_level": 1,
+        "action": "同级或回升（L1→L1），保留",
+        "final_level": 1,
+        "synthetic": false
+      },
+      {
+        "block_index": 51,
+        "text": "4.1 参考",
+        "raw_level": 2,
+        "prev_level": 1,
+        "action": "递进一级，保留",
+        "final_level": 2,
+        "synthetic": false
+      },
+      {
+        "block_index": 53,
+        "text": "4.2 版本记录",
+        "raw_level": 2,
+        "prev_level": 2,
+        "action": "同级或回升（L2→L2），保留",
+        "final_level": 2,
+        "synthetic": false
+      }
+    ]
+  },
+  "intervals": [
+    {
+      "level": 1,
+      "heading_block": 1,
+      "start": 1,
+      "end": 3
+    },
+    {
+      "level": 1,
+      "heading_block": 3,
+      "start": 3,
+      "end": 5
+    },
+    {
+      "level": 2,
+      "heading_block": 5,
+      "start": 5,
+      "end": 7
+    },
+    {
+      "level": 3,
+      "heading_block": 7,
+      "start": 7,
+      "end": 9
+    },
+    {
+      "level": 3,
+      "heading_block": 9,
+      "start": 9,
+      "end": 11
+    },
+    {
+      "level": 2,
+      "heading_block": 11,
+      "start": 11,
+      "end": 13
+    },
+    {
+      "level": 1,
+      "heading_block": 13,
+      "start": 13,
+      "end": 15
+    },
+    {
+      "level": 2,
+      "heading_block": 15,
+      "start": 15,
+      "end": 17
+    },
+    {
+      "level": 3,
+      "heading_block": 17,
+      "start": 17,
+      "end": 19
+    },
+    {
+      "level": 3,
+      "heading_block": 19,
+      "start": 19,
+      "end": 21
+    },
+    {
+      "level": 2,
+      "heading_block": 21,
+      "start": 21,
+      "end": 23
+    },
+    {
+      "level": 3,
+      "heading_block": 23,
+      "start": 23,
+      "end": 25
+    },
+    {
+      "level": 3,
+      "heading_block": 25,
+      "start": 25,
+      "end": 27
+    },
+    {
+      "level": 2,
+      "heading_block": 27,
+      "start": 27,
+      "end": 29
+    },
+    {
+      "level": 2,
+      "heading_block": 29,
+      "start": 29,
+      "end": 31
+    },
+    {
+      "level": 2,
+      "heading_block": 31,
+      "start": 31,
+      "end": 33
+    },
+    {
+      "level": 4,
+      "heading_block": 33,
+      "start": 33,
+      "end": 35
+    },
+    {
+      "level": 1,
+      "heading_block": 35,
+      "start": 35,
+      "end": 37
+    },
+    {
+      "level": 2,
+      "heading_block": 37,
+      "start": 37,
+      "end": 39
+    },
+    {
+      "level": 3,
+      "heading_block": 39,
+      "start": 39,
+      "end": 41
+    },
+    {
+      "level": 3,
+      "heading_block": 41,
+      "start": 41,
+      "end": 43
+    },
+    {
+      "level": 2,
+      "heading_block": 43,
+      "start": 43,
+      "end": 45
+    },
+    {
+      "level": 2,
+      "heading_block": 45,
+      "start": 45,
+      "end": 47
+    },
+    {
+      "level": 1,
+      "heading_block": 47,
+      "start": 47,
+      "end": 49
+    },
+    {
+      "level": 1,
+      "heading_block": 49,
+      "start": 49,
+      "end": 51
+    },
+    {
+      "level": 2,
+      "heading_block": 51,
+      "start": 51,
+      "end": 53
+    },
+    {
+      "level": 2,
+      "heading_block": 53,
+      "start": 53,
+      "end": 57
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "language": "en",
+  "description": "English: syllable-based hyphenation (V|CV, VC|CV, affix rules + exceptions)",
+  "min_prefix": 2,
+  "min_suffix": 2,
+  "mode": "pattern",
+  "rules": [
+    {
+      "id": "en-prefix",
+      "type": "pattern",
+      "pattern": "^(?:un|re|pre|dis|mis|non)(?=[bcdfghjklmnpqrstvwxz])",
+      "break_after_match": true,
+      "comment": "break after a prefix followed by a consonant: un-happy, re-play"
+    },
+    {
+      "id": "en-suffix",
+      "type": "pattern",
+      "pattern": "(?:ly|ness|ment|tion|ship|ful|less)$",
+      "break_before_match": true,
+      "comment": "break before a suffix: quick-ly, dark-ness, ac-tion"
+    },
+    {
+      "id": "en-vccv",
+      "type": "pattern",
+      "pattern": "([aeiouy][bcdfghjklmnpqrstvwxz])(?=[bcdfghjklmnpqrstvwxz][aeiouy])",
+      "break_after_group": 1,
+      "comment": "VCCV -> VC|CV: let-ter, run-ning"
+    },
+    {
+      "id": "en-vcv",
+      "type": "pattern",
+      "pattern": "([aeiouy])(?=[bcdfghjklmnpqrstvwxz][aeiouy])",
+      "break_after_group": 1,
+      "comment": "VCV -> V|CV: me-lon, pa-per"
+    }
+  ],
+  "exceptions": {
+    "hyphenation": "hy-phen-ation",
+    "computer": "com-pu-ter",
+    "lemon": "lem-on",
+    "beautiful": "beau-ti-ful",
+    "water": "wa-ter",
+    "mother": "moth-er",
+    "development": "de-vel-op-ment",
+    "friendship": "friend-ship"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "language": "ja",
+  "description": "Japanese: break between kana/kanji except kinsoku (no line start with small kana, long vowel mark or closing punctuation)",
+  "min_prefix": 1,
+  "min_suffix": 1,
+  "mode": "script",
+  "rules": [
+    {
+      "id": "ja-script",
+      "type": "script",
+      "comment": "kinsoku shori: small kana, prolonged sound mark and closing punctuation cannot start a line"
+    }
+  ],
+  "no_break_before": "。、，．！？；：）】」』ぁぃぅぇぉゃゅょっゎァィゥェォャュョッヶー・",
+  "no_break_after": "（【「『"
+}

@@ -1,0 +1,16 @@
+{
+  "language": "ko",
+  "description": "Korean: break between syllable blocks except around punctuation",
+  "min_prefix": 1,
+  "min_suffix": 1,
+  "mode": "script",
+  "rules": [
+    {
+      "id": "ko-script",
+      "type": "script",
+      "comment": "break between Hangul syllables; never before closing punctuation, never after opening punctuation"
+    }
+  ],
+  "no_break_before": "。，、；：？！…．）】」』",
+  "no_break_after": "（【「『"
+}

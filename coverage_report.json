@@ -1,0 +1,118 @@
+{
+  "languages": {
+    "en": {
+      "cases": 32,
+      "cases_with_breaks": 25,
+      "rule_coverage": {
+        "exceptions": 8,
+        "en-suffix": 7,
+        "en-vccv": 7,
+        "en-vcv": 7,
+        "en-prefix": 3
+      },
+      "examples": {
+        "hyphenation": "hy-phen-ation",
+        "computer": "com-pu-ter",
+        "lemon": "lem-on",
+        "beautiful": "beau-ti-ful",
+        "water": "wa-ter",
+        "mother": "moth-er",
+        "development": "de-vel-op-ment",
+        "friendship": "friend-ship",
+        "action": "ac-tion",
+        "station": "sta-tion",
+        "letter": "let-ter",
+        "running": "run-ning",
+        "walking": "wal-king",
+        "singing": "sin-ging",
+        "quickly": "quick-ly",
+        "darkness": "dark-ness",
+        "movement": "mo-ve-ment",
+        "thankful": "thank-ful",
+        "speechless": "speech-less",
+        "unhappy": "un-hap-py",
+        "preheat": "pre-heat",
+        "disconnect": "dis-con-nect",
+        "melon": "me-lon",
+        "paper": "pa-per",
+        "tiger": "ti-ger",
+        "cat": "cat",
+        "dog": "dog",
+        "tree": "tree",
+        "strength": "strength",
+        "thought": "thought",
+        "ivy": "ivy",
+        "well-known": "well-known"
+      }
+    },
+    "de": {
+      "cases": 15,
+      "cases_with_breaks": 13,
+      "rule_coverage": {
+        "de-vcv": 6,
+        "de-vccv": 8,
+        "de-sch": 1,
+        "de-vcc-ch": 2,
+        "de-protect-ch": 5,
+        "de-protect-sch": 2,
+        "de-ch": 2,
+        "de-ck": 1,
+        "de-compound": 4,
+        "de-vcc-sch": 1,
+        "de-protect-triple": 1
+      },
+      "examples": {
+        "Vater": "Va-ter",
+        "Mutter": "Mut-ter",
+        "kommen": "kom-men",
+        "Tasche": "Ta-sche",
+        "sprechen": "spre-chen",
+        "Zucker": "Zuc-ker",
+        "welche": "wel-che",
+        "Muster": "Mus-ter",
+        "Krankenhaus": "Kran-ken-haus",
+        "Versicherung": "Ver-si-che-rung",
+        "Autobahn": "Au-to-bahn",
+        "Kindergarten": "Kin-der-gar-ten",
+        "Donaudampfschifffahrtsgesellschaftskapitän": "Do-nau-dampf-schiff-fahrts-ge-sell-schafts-ka-pi-tän",
+        "Oma": "Oma",
+        "Esel": "Esel"
+      }
+    },
+    "zh": {
+      "cases": 3,
+      "cases_with_breaks": 3,
+      "rule_coverage": {
+        "zh-script": 3
+      },
+      "examples": {
+        "我们都是好朋友": "我-们-都-是-好-朋-友",
+        "你好，世界！": "你-好，-世-界！",
+        "自然语言处理": "自-然-语-言-处-理"
+      }
+    },
+    "ja": {
+      "cases": 3,
+      "cases_with_breaks": 3,
+      "rule_coverage": {
+        "ja-script": 3
+      },
+      "examples": {
+        "きょうと": "きょ-う-と",
+        "ひらがなとカタカナ": "ひ-ら-が-な-と-カ-タ-カ-ナ",
+        "こんにちは、世界！": "こ-ん-に-ち-は、-世-界！"
+      }
+    },
+    "ko": {
+      "cases": 2,
+      "cases_with_breaks": 2,
+      "rule_coverage": {
+        "ko-script": 2
+      },
+      "examples": {
+        "한국어는재미있습니다": "한-국-어-는-재-미-있-습-니-다",
+        "안녕하세요": "안-녕-하-세-요"
+      }
+    }
+  }
+}

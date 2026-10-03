@@ -1,0 +1,96 @@
+{
+  "language": "de",
+  "description": "German: compound segmentation (morpheme dictionary + Fugen elements) plus syllable rules",
+  "min_prefix": 2,
+  "min_suffix": 2,
+  "mode": "pattern",
+  "rules": [
+    {
+      "id": "de-compound",
+      "type": "morpheme",
+      "comment": "break at compound boundaries: Kranken-haus, Donau-dampf-schiff-fahrts-gesellschafts-kapitän"
+    },
+    {
+      "id": "de-ck",
+      "type": "pattern",
+      "pattern": "c(?=k)",
+      "break_after_match": true,
+      "comment": "ck is split (printed as k-k): Zuc-ker"
+    },
+    {
+      "id": "de-sch",
+      "type": "pattern",
+      "pattern": "([aeiouäöü])(?=sch[aeiouäöü])",
+      "break_after_group": 1,
+      "comment": "break before sch: Ta-sche"
+    },
+    {
+      "id": "de-vcc-sch",
+      "type": "pattern",
+      "pattern": "([aeiouäöü][bcdfghjklmnpqrstvwxyz]{1,2})(?=sch[aeiouäöü])",
+      "break_after_group": 1,
+      "comment": "break before sch after consonant: ge-sell-schaft"
+    },
+    {
+      "id": "de-ch",
+      "type": "pattern",
+      "pattern": "([aeiouäöü])(?=ch[aeiouäöü])",
+      "break_after_group": 1,
+      "comment": "break before ch after a vowel: spre-chen"
+    },
+    {
+      "id": "de-vcc-ch",
+      "type": "pattern",
+      "pattern": "([aeiouäöü][bcdfghjklmnpqrstvwxyz]{1,2})(?=ch[aeiouäöü])",
+      "break_after_group": 1,
+      "comment": "break before ch after consonant: wel-che"
+    },
+    {
+      "id": "de-vccv",
+      "type": "pattern",
+      "pattern": "([aeiouäöü][bcdfghjklmnpqrstvwxyz])(?=[bcdfghjklmnpqrstvwxyz][aeiouäöü])",
+      "break_after_group": 1,
+      "comment": "VCCV -> VC|CV: Mut-ter, Mus-ter"
+    },
+    {
+      "id": "de-vcv",
+      "type": "pattern",
+      "pattern": "([aeiouäöü])(?=[bcdfghjklmnpqrstvwxyz][aeiouäöü])",
+      "break_after_group": 1,
+      "comment": "single consonant goes with the next syllable: Va-ter"
+    },
+    {
+      "id": "de-protect-ch",
+      "type": "protect",
+      "pattern": "ch",
+      "comment": "never break inside ch"
+    },
+    {
+      "id": "de-protect-sch",
+      "type": "protect",
+      "pattern": "sch",
+      "comment": "never break inside sch"
+    },
+    {
+      "id": "de-protect-triple",
+      "type": "protect",
+      "pattern": "([bcdfghjklmnpqrstvwxyz])\\1(?=\\1)",
+      "comment": "in triple consonants only the last boundary is legal: Schiff-fahrt"
+    }
+  ],
+  "morphemes": [
+    "versicherung",
+    "gesellschaft",
+    "kranken",
+    "kapitän",
+    "donau",
+    "dampf",
+    "schiff",
+    "fahrt",
+    "auto",
+    "bahn",
+    "kinder",
+    "garten",
+    "haus"
+  ]
+}

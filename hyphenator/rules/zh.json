@@ -1,0 +1,16 @@
+{
+  "language": "zh",
+  "description": "Chinese: break between any two characters except around punctuation (kinsoku-style)",
+  "min_prefix": 1,
+  "min_suffix": 1,
+  "mode": "script",
+  "rules": [
+    {
+      "id": "zh-script",
+      "type": "script",
+      "comment": "break between characters; never before closing punctuation, never after opening punctuation"
+    }
+  ],
+  "no_break_before": "。，、；：？！…．）】》」』—",
+  "no_break_after": "（【《「『"
+}

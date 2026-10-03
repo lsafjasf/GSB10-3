@@ -1,0 +1,382 @@
+{
+  "decoy_header.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2091,
+          "payload_crc_ok": true,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2245,
+        "payload_length": 2091,
+        "payload_offset": 2277,
+        "reasons": [
+          "magic signature matched"
+        ],
+        "score": 100,
+        "status": "valid"
+      },
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2195,
+          "payload_crc_ok": false,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2141,
+        "payload_length": 32,
+        "payload_offset": 2173,
+        "reasons": [
+          "magic signature matched",
+          "payload CRC32 mismatch (stored 0x1bb83af4, computed 0xcf57e242): payload corrupted or signature coincidental"
+        ],
+        "score": 70,
+        "status": "rejected"
+      }
+    ],
+    "exit_code": 0
+  },
+  "multi_candidates.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2091,
+          "payload_crc_ok": true,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2529,
+        "payload_length": 2091,
+        "payload_offset": 2561,
+        "reasons": [
+          "magic signature matched"
+        ],
+        "score": 100,
+        "status": "valid"
+      },
+      {
+        "detail": {
+          "header_crc_ok": false,
+          "header_size": 32,
+          "payload_available": 2335,
+          "payload_crc_ok": null,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2285,
+        "payload_length": 3813586065,
+        "payload_offset": 2317,
+        "reasons": [
+          "magic signature matched",
+          "reserved header bytes are not zero",
+          "header CRC32 mismatch (stored 0xd41eb4e3, computed 0x3de383d9): signature is coincidental or the header was tampered with",
+          "payload truncated: header declares 3813586065 bytes but only 2335 remain in the file"
+        ],
+        "score": 30,
+        "status": "rejected"
+      },
+      {
+        "detail": {
+          "header_crc_ok": false,
+          "header_size": 52562,
+          "payload_available": 2479,
+          "payload_crc_ok": null,
+          "version": 22570
+        },
+        "format": "gspk",
+        "offset": 2141,
+        "payload_length": 3941523946,
+        "payload_offset": 2173,
+        "reasons": [
+          "magic signature matched",
+          "unsupported format version 22570 (expected 1)",
+          "header-size field is 52562, layout requires 32",
+          "reserved header bytes are not zero",
+          "header CRC32 mismatch (stored 0xc56e6ffb, computed 0x2afee902): signature is coincidental or the header was tampered with",
+          "payload truncated: header declares 3941523946 bytes but only 2479 remain in the file"
+        ],
+        "score": 10,
+        "status": "rejected"
+      }
+    ],
+    "exit_code": 0
+  },
+  "no_payload.bin": {
+    "candidates": [],
+    "exit_code": 1
+  },
+  "ok.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2091,
+          "payload_crc_ok": true,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2141,
+        "payload_length": 2091,
+        "payload_offset": 2173,
+        "reasons": [
+          "magic signature matched"
+        ],
+        "score": 100,
+        "status": "valid"
+      }
+    ],
+    "exit_code": 0
+  },
+  "padded.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2091,
+          "payload_crc_ok": true,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 5614,
+        "payload_length": 2091,
+        "payload_offset": 5646,
+        "reasons": [
+          "magic signature matched"
+        ],
+        "score": 100,
+        "status": "valid"
+      }
+    ],
+    "exit_code": 0
+  },
+  "partial_header.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {},
+        "format": "gspk",
+        "offset": 393,
+        "payload_length": null,
+        "payload_offset": null,
+        "reasons": [
+          "magic signature matched",
+          "header truncated: only 7 of 32 header bytes present"
+        ],
+        "score": 10,
+        "status": "rejected"
+      }
+    ],
+    "exit_code": 1
+  },
+  "sfx.zip.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "members": [
+            "readme.txt",
+            "data/blob.bin"
+          ]
+        },
+        "format": "zip",
+        "offset": 2374,
+        "payload_length": 581,
+        "payload_offset": 2374,
+        "reasons": [
+          "local-file-header signature matched",
+          "central directory parses and all 2 member(s) pass their CRC checks"
+        ],
+        "score": 100,
+        "status": "valid"
+      },
+      {
+        "detail": {},
+        "format": "zip",
+        "offset": 2443,
+        "payload_length": null,
+        "payload_offset": null,
+        "reasons": [
+          "local-file-header signature matched",
+          "central directory lists members but their local headers are not reachable from this offset (negative seek value -69): signature sits inside archive data rather than at the archive start"
+        ],
+        "score": 50,
+        "status": "rejected"
+      }
+    ],
+    "exit_code": 0
+  },
+  "sig_inside_data.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2091,
+          "payload_crc_ok": true,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 366,
+        "payload_length": 2091,
+        "payload_offset": 398,
+        "reasons": [
+          "magic signature matched"
+        ],
+        "score": 100,
+        "status": "valid"
+      },
+      {
+        "detail": {
+          "header_crc_ok": false,
+          "header_size": 26231,
+          "payload_available": 2357,
+          "payload_crc_ok": null,
+          "version": 34969
+        },
+        "format": "gspk",
+        "offset": 100,
+        "payload_length": 1719109785,
+        "payload_offset": 132,
+        "reasons": [
+          "magic signature matched",
+          "unsupported format version 34969 (expected 1)",
+          "header-size field is 26231, layout requires 32",
+          "reserved header bytes are not zero",
+          "header CRC32 mismatch (stored 0x66778899, computed 0xba8d5f0d): signature is coincidental or the header was tampered with",
+          "payload truncated: header declares 1719109785 bytes but only 2357 remain in the file"
+        ],
+        "score": 10,
+        "status": "rejected"
+      }
+    ],
+    "exit_code": 0
+  },
+  "sig_inside_data.zip.bin": {
+    "candidates": [
+      {
+        "detail": {},
+        "format": "zip",
+        "offset": 349,
+        "payload_length": null,
+        "payload_offset": null,
+        "reasons": [
+          "local-file-header signature matched",
+          "local header fields implausible (bad method/name-length/sizes): signature is coincidental data, not an archive"
+        ],
+        "score": 10,
+        "status": "rejected"
+      }
+    ],
+    "exit_code": 1
+  },
+  "tampered_payload.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2091,
+          "payload_crc_ok": false,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2141,
+        "payload_length": 2091,
+        "payload_offset": 2173,
+        "reasons": [
+          "magic signature matched",
+          "payload CRC32 mismatch (stored 0x36382471, computed 0xd77ff365): payload corrupted or signature coincidental"
+        ],
+        "score": 70,
+        "status": "rejected"
+      }
+    ],
+    "exit_code": 1
+  },
+  "tampered_shell.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 2091,
+          "payload_crc_ok": true,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2172,
+        "payload_length": 2091,
+        "payload_offset": 2204,
+        "reasons": [
+          "magic signature matched"
+        ],
+        "score": 100,
+        "status": "valid"
+      }
+    ],
+    "exit_code": 0
+  },
+  "truncated.gspk.bin": {
+    "candidates": [
+      {
+        "detail": {
+          "header_crc_ok": true,
+          "header_size": 32,
+          "payload_available": 675,
+          "payload_crc_ok": null,
+          "version": 1
+        },
+        "format": "gspk",
+        "offset": 2141,
+        "payload_length": 2091,
+        "payload_offset": 2173,
+        "reasons": [
+          "magic signature matched",
+          "payload truncated: header declares 2091 bytes but only 675 remain in the file",
+          "header is self-consistent, so this is a real container whose payload was cut short"
+        ],
+        "score": 50,
+        "status": "truncated"
+      }
+    ],
+    "exit_code": 1
+  },
+  "truncated.zip.bin": {
+    "candidates": [
+      {
+        "detail": {},
+        "format": "zip",
+        "offset": 2141,
+        "payload_length": null,
+        "payload_offset": null,
+        "reasons": [
+          "local-file-header signature matched",
+          "local header is plausible but no end-of-central-directory record exists before EOF: archive truncated"
+        ],
+        "score": 25,
+        "status": "truncated"
+      },
+      {
+        "detail": {},
+        "format": "zip",
+        "offset": 2216,
+        "payload_length": null,
+        "payload_offset": null,
+        "reasons": [
+          "local-file-header signature matched",
+          "local header is plausible but no end-of-central-directory record exists before EOF: archive truncated"
+        ],
+        "score": 25,
+        "status": "truncated"
+      }
+    ],
+    "exit_code": 1
+  }
+}

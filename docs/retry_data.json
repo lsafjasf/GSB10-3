@@ -1,0 +1,101 @@
+{
+  "backoff_note": "delay(attempt)=min(maximum, base*factor**(attempt-1))，再按 jitter 向下抖动；测试注入 rand 保证确定性。",
+  "scenarios": [
+    {
+      "name": "normal",
+      "ok": true,
+      "total_time": 0.0,
+      "final_error": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "stage": "DONE",
+          "outcome": "delivered",
+          "detail": "信体被对端接收（DATA 后收到 250）",
+          "wait_after": 0.0
+        }
+      ]
+    },
+    {
+      "name": "mid_session_tls",
+      "ok": true,
+      "total_time": 0.0,
+      "final_error": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "stage": "DONE",
+          "outcome": "delivered",
+          "detail": "信体被对端接收（DATA 后收到 250）",
+          "wait_after": 0.0
+        }
+      ]
+    },
+    {
+      "name": "transient_retry",
+      "ok": true,
+      "total_time": 30.0,
+      "final_error": null,
+      "attempts": [
+        {
+          "attempt": 1,
+          "stage": "RCPT",
+          "outcome": "transient",
+          "detail": "收件人 <bob@example.net> 被临时拒绝: 450 4.7.1 greylisted, try again later [增强码 4.7.1]",
+          "wait_after": 30
+        },
+        {
+          "attempt": 2,
+          "stage": "DONE",
+          "outcome": "delivered",
+          "detail": "信体被对端接收（DATA 后收到 250）",
+          "wait_after": 0.0
+        }
+      ]
+    },
+    {
+      "name": "permanent_abort",
+      "ok": false,
+      "total_time": 0.0,
+      "final_error": "永久性拒绝，立刻中止且不再重试: 收件人 <bob@example.net> 被永久拒绝，立刻中止: 550 5.1.1 no such user here [增强码 5.1.1]",
+      "attempts": [
+        {
+          "attempt": 1,
+          "stage": "RCPT",
+          "outcome": "permanent",
+          "detail": "收件人 <bob@example.net> 被永久拒绝，立刻中止: 550 5.1.1 no such user here [增强码 5.1.1]",
+          "wait_after": 0.0
+        }
+      ]
+    },
+    {
+      "name": "overall_timeout",
+      "ok": false,
+      "total_time": 44.0,
+      "final_error": "整体超时，投递未完成（会话资源均已释放）",
+      "attempts": [
+        {
+          "attempt": 1,
+          "stage": "EHLO",
+          "outcome": "transient",
+          "detail": "等待对端应答超时",
+          "wait_after": 8.0
+        },
+        {
+          "attempt": 2,
+          "stage": "EHLO",
+          "outcome": "transient",
+          "detail": "等待对端应答超时",
+          "wait_after": 16.0
+        },
+        {
+          "attempt": 3,
+          "stage": "ABORTED",
+          "outcome": "timeout",
+          "detail": "整体超时预算耗尽，停止重试",
+          "wait_after": 0.0
+        }
+      ]
+    }
+  ]
+}

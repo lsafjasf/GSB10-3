@@ -1,0 +1,35 @@
+[
+  {
+    "identification": "req-4",
+    "reason": "timeout",
+    "at_time": 10.0,
+    "age": 10.0,
+    "bytes_freed": 18,
+    "covered_bytes": 18,
+    "total_length": 29,
+    "fragments_kept": 2,
+    "detail": "建组后 10.000s 仍未收齐（总长 29，仅覆盖 18）"
+  },
+  {
+    "identification": "A",
+    "reason": "capacity",
+    "at_time": 2,
+    "age": 2,
+    "bytes_freed": 10,
+    "covered_bytes": 10,
+    "total_length": null,
+    "fragments_kept": 1,
+    "detail": "为新分片腾出 14 字节，LRU 选中（last_seen=0）"
+  },
+  {
+    "identification": "C",
+    "reason": "capacity",
+    "at_time": 4,
+    "age": 2,
+    "bytes_freed": 14,
+    "covered_bytes": 14,
+    "total_length": null,
+    "fragments_kept": 1,
+    "detail": "为新分片腾出 10 字节，LRU 选中（last_seen=2）"
+  }
+]

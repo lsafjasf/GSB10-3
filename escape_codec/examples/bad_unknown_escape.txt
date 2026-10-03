@@ -1,0 +1,2 @@
+line one is fine
+second|field\q|tail

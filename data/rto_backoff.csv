@@ -1,0 +1,9 @@
+round,time_start_s,rtt_s,duration_s,cwnd_before_mss,ssthresh_before,lost_mss,acks_seen_mss,event,ssthresh_after,cwnd_after_mss,phase_after,delivered_mss,steady_throughput_Bps
+0,0.000000,0.100000,0.100000,1,8,0,1,ok,8,2,slow_start,1,15000.000000
+1,0.100000,0.100000,0.100000,2,8,0,2,ok,8,4,slow_start,2,30000.000000
+2,0.200000,0.100000,0.100000,4,8,0,4,ok,8,8,congestion_avoidance,4,60000.000000
+3,0.300000,0.100000,0.200000,8,8,1,7,timeout,4,1,slow_start,0,0.000000
+4,0.500000,0.100000,0.400000,1,4,1,0,timeout,2,1,slow_start,0,0.000000
+5,0.900000,0.100000,0.800000,1,2,1,0,timeout,2,1,slow_start,0,0.000000
+6,1.700000,0.100000,0.100000,1,2,0,1,ok,2,2,congestion_avoidance,1,15000.000000
+7,1.800000,0.100000,0.100000,2,2,0,2,ok,2,3,congestion_avoidance,2,30000.000000

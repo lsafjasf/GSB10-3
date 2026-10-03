@@ -1,0 +1,13 @@
+round,time_start_s,rtt_s,duration_s,cwnd_before_mss,ssthresh_before,lost_mss,acks_seen_mss,event,ssthresh_after,cwnd_after_mss,phase_after,delivered_mss,steady_throughput_Bps
+0,0.000000,0.100000,0.100000,1,8,0,1,ok,8,2,slow_start,1,15000.000000
+1,0.100000,0.100000,0.100000,2,8,0,2,ok,8,4,slow_start,2,30000.000000
+2,0.200000,0.100000,0.100000,4,8,0,4,ok,8,8,congestion_avoidance,4,60000.000000
+3,0.300000,0.100000,0.100000,8,8,0,8,ok,8,9,congestion_avoidance,8,120000.000000
+4,0.400000,0.100000,0.100000,9,8,0,9,ok,8,10,congestion_avoidance,9,135000.000000
+5,0.500000,0.100000,0.100000,10,8,0,10,ok,8,11,congestion_avoidance,10,150000.000000
+6,0.600000,0.100000,0.100000,11,8,1,10,fast_retransmit,5,5,congestion_avoidance,10,150000.000000
+7,0.700000,0.100000,0.100000,5,5,0,5,ok,5,6,congestion_avoidance,5,75000.000000
+8,0.800000,0.100000,0.100000,6,5,0,6,ok,5,7,congestion_avoidance,6,90000.000000
+9,0.900000,0.100000,0.100000,7,5,0,7,ok,5,8,congestion_avoidance,7,105000.000000
+10,1.000000,0.100000,0.100000,8,5,0,8,ok,5,9,congestion_avoidance,8,120000.000000
+11,1.100000,0.100000,0.100000,9,5,0,9,ok,5,10,congestion_avoidance,9,135000.000000

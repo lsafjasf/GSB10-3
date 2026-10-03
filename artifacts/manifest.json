@@ -1,0 +1,131 @@
+{
+  "single_32bpp": {
+    "file": "artifacts/single_32bpp.ico",
+    "images": 1,
+    "bytes": 4286,
+    "sha256": "787706eb2f0f0c78f08ca8d6bd58efce9e218b519d79f678d9568e77b91cf932",
+    "roundtrip_identical": true,
+    "entries": [
+      {
+        "size": "32x32",
+        "bpp": 32,
+        "format": "BMP",
+        "payload_bytes": 4264
+      }
+    ]
+  },
+  "multi_mixed": {
+    "file": "artifacts/multi_mixed.ico",
+    "images": 7,
+    "bytes": 23436,
+    "sha256": "c69555e422e8a24c212ed10af4fb468b7f7132650529682f7dbb8e3a37ba03fe",
+    "roundtrip_identical": true,
+    "entries": [
+      {
+        "size": "16x16",
+        "bpp": 8,
+        "format": "BMP",
+        "payload_bytes": 1384
+      },
+      {
+        "size": "16x16",
+        "bpp": 32,
+        "format": "BMP",
+        "payload_bytes": 1128
+      },
+      {
+        "size": "32x32",
+        "bpp": 8,
+        "format": "BMP",
+        "payload_bytes": 2216
+      },
+      {
+        "size": "32x32",
+        "bpp": 32,
+        "format": "BMP",
+        "payload_bytes": 4264
+      },
+      {
+        "size": "48x48",
+        "bpp": 32,
+        "format": "BMP",
+        "payload_bytes": 9640
+      },
+      {
+        "size": "48x48",
+        "bpp": 32,
+        "format": "PNG",
+        "payload_bytes": 1269
+      },
+      {
+        "size": "256x256",
+        "bpp": 32,
+        "format": "PNG",
+        "payload_bytes": 3417
+      }
+    ]
+  },
+  "alpha_32bpp": {
+    "file": "artifacts/alpha_32bpp.ico",
+    "images": 2,
+    "bytes": 5475,
+    "sha256": "5508dbe7fd9a3dd3ff71c43e2f53fcadcf2b3fa2bd7f0f98941e2266c6a4d634",
+    "roundtrip_identical": true,
+    "entries": [
+      {
+        "size": "32x32",
+        "bpp": 32,
+        "format": "BMP",
+        "payload_bytes": 4264
+      },
+      {
+        "size": "32x32",
+        "bpp": 32,
+        "format": "PNG",
+        "payload_bytes": 1173
+      }
+    ]
+  },
+  "edge_256_and_tiny": {
+    "file": "artifacts/edge_256_and_tiny.ico",
+    "images": 2,
+    "bytes": 3503,
+    "sha256": "0e4dc50d532a3c6ac96d076da5b085ce4c1f9e48ca70f7fd77846278a03efcb7",
+    "roundtrip_identical": true,
+    "entries": [
+      {
+        "size": "1x1",
+        "bpp": 32,
+        "format": "BMP",
+        "payload_bytes": 48
+      },
+      {
+        "size": "256x256",
+        "bpp": 32,
+        "format": "PNG",
+        "payload_bytes": 3417
+      }
+    ]
+  },
+  "palette_8bpp": {
+    "file": "artifacts/palette_8bpp.ico",
+    "images": 2,
+    "bytes": 3638,
+    "sha256": "90b3b17db64812ee18f4ac7e06b718e9833f6b3334340f6c3260544eb099b3c9",
+    "roundtrip_identical": true,
+    "entries": [
+      {
+        "size": "16x16",
+        "bpp": 8,
+        "format": "BMP",
+        "payload_bytes": 1384
+      },
+      {
+        "size": "32x32",
+        "bpp": 8,
+        "format": "BMP",
+        "payload_bytes": 2216
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+====================================================================
+noise estimate vs threshold
+--------------------------------------------------------------------
+sample rate            : 16000 Hz
+duration               : 24.000 s
+delta (margin above floor): 10.0 dB
+global noise floor     : -54.17 dBFS
+global threshold       : -44.17 dBFS  (= floor + 10.0)
+local floor range      : -54.38 .. -30.65 dBFS (sliding window)
+silent frame rule      : level_db < local_floor_db + 10.0
+peak level             : -10.78 dBFS
+====================================================================
+split points vs silence intervals (margin = 0.15s)
+--------------------------------------------------------------------
+silence [  0.000,   0.500] (0.500s) -> edge of file, no cut
+silence [ 17.500,  24.000] (6.500s) -> edge of file, no cut
+silence [  3.500,   4.500] (1.000s) -> cut   4.000 | left gap  0.500s, right gap  0.500s  [kept]
+silence [  7.000,   8.000] (1.000s) -> cut   7.500 | left gap  0.500s, right gap  0.500s  [kept]
+silence [ 11.490,  12.510] (1.020s) -> cut  12.000 | left gap  0.510s, right gap  0.510s  [removed-by-merge]
+silence [ 12.790,  15.010] (2.220s) -> cut  13.900 | left gap  1.110s, right gap  1.110s  [kept]
+====================================================================
+segment statistics
+--------------------------------------------------------------------
+segments before merging : 5
+segments after  merging : 4  (1 merge(s))
+  part_001     0.000 ->    4.000   length   4.000 s
+  part_002     4.000 ->    7.500   length   3.500 s
+  part_003     7.500 ->   13.900   length   6.400 s
+  part_004    13.900 ->   24.000   length  10.100 s
+====================================================================

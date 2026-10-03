@@ -1,0 +1,9 @@
+{"seq": 1, "key": "user:1", "op": "update", "value": {"round": 0}}
+{"seq": 2, "key": "user:2", "op": "update", "value": {"round": 0}}
+{"seq": 3, "key": "user:3", "op": "update", "value": {"round": 0}}
+{"seq": 4, "key": "user:1", "op": "update", "value": {"round": 1}}
+{"seq": 5, "key": "user:2", "op": "update", "value": {"round": 1}}
+{"seq": 6, "key": "user:3", "op": "update", "value": {"round": 1}}
+{"seq": 7, "key": "user:1", "op": "update", "value": {"round": 2}}
+{"seq": 8, "key": "user:2", "op": "update", "value": {"round": 2}}
+{"seq": 9, "key": "user:3", "op": "update", "value": {"round": 2}}

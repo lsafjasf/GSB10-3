@@ -1,0 +1,80 @@
+{
+  "seed": 20261003,
+  "python": "Python 3.12.3",
+  "dataset": {
+    "ipv4_base_/24": 95000,
+    "ipv4_duplicates": 3000,
+    "ipv4_enclosing_/16": 100,
+    "ipv6_base_/64": 20000,
+    "ipv6_duplicates": 500,
+    "ipv6_enclosing_/48": 20,
+    "total_raw_entries": 118620
+  },
+  "merge": {
+    "build_and_merge_ms": 2162.4,
+    "ipv4_segments": 93831,
+    "ipv6_segments": 19950,
+    "total": 113781,
+    "invariant_checks": {
+      "minimal_canonical_cidr_cover": true,
+      "coverage_equal_to_raw_union": true,
+      "priority_is_min_of_merged_group": true
+    }
+  },
+  "query_correctness_crosscheck": {
+    "method": "二分索引 vs 线性扫描，随机抽样 300 个 IPv4 地址",
+    "mismatches": 0
+  },
+  "query_timing": {
+    "ipv4_10000_segments": {
+      "queries": 20000,
+      "total_ms": 8.98,
+      "avg_us": 0.449,
+      "min_us": 0.21,
+      "p50_us": 0.35,
+      "p99_us": 0.81,
+      "max_us": 40.891
+    },
+    "ipv4_50000_segments": {
+      "queries": 20000,
+      "total_ms": 12.1,
+      "avg_us": 0.605,
+      "min_us": 0.22,
+      "p50_us": 0.51,
+      "p99_us": 1.23,
+      "max_us": 28.541
+    },
+    "ipv4_93831_segments": {
+      "queries": 20000,
+      "total_ms": 21.05,
+      "avg_us": 1.053,
+      "min_us": 0.23,
+      "p50_us": 0.82,
+      "p99_us": 2.87,
+      "max_us": 77.095
+    },
+    "ipv4_93831_segments_full_api": {
+      "queries": 20000,
+      "total_ms": 18.63,
+      "avg_us": 0.931,
+      "min_us": 0.32,
+      "p50_us": 0.8,
+      "p99_us": 2.08,
+      "max_us": 35.711
+    },
+    "ipv6_19950_segments": {
+      "queries": 20000,
+      "total_ms": 14.22,
+      "avg_us": 0.711,
+      "min_us": 0.23,
+      "p50_us": 0.58,
+      "p99_us": 1.88,
+      "max_us": 22.661
+    }
+  },
+  "notes": [
+    "查询为有序区间二分查找 O(log n)，不随段数线性退化",
+    "每次查询 80% 命中 + 20% 未命中，耗时为单次查询微秒数",
+    "优先级约定：数值越小越高，合并段取组内最高优先级"
+  ]
+}

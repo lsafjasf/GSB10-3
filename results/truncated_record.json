@@ -1,0 +1,6 @@
+{
+  "error": "truncated",
+  "detail": "record rdata truncated",
+  "records_parsed": 0,
+  "missing_bytes": 2
+}

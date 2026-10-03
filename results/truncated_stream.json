@@ -1,0 +1,6 @@
+{
+  "error": "truncated",
+  "detail": "frame declares 254 bytes but only 234 available",
+  "records_parsed": 1,
+  "missing_bytes": 20
+}

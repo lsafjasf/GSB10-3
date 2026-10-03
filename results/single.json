@@ -1,0 +1,46 @@
+{
+  "messages": [
+    {
+      "header": {
+        "id": 4448,
+        "flags": "0x8400",
+        "qr": 1,
+        "opcode": 0,
+        "aa": 1,
+        "tc": 0,
+        "rd": 0,
+        "ra": 0,
+        "rcode": 0,
+        "qdcount": 1,
+        "ancount": 1,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [
+        {
+          "name": "www.example.com",
+          "type": "A",
+          "class": "IN"
+        }
+      ],
+      "record_count": 1
+    }
+  ],
+  "record_count": 1,
+  "groups": [
+    {
+      "name": "www.example.com",
+      "type": "A",
+      "records": [
+        {
+          "section": "answer",
+          "name": "www.example.com",
+          "type": "A",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "93.184.216.34"
+        }
+      ]
+    }
+  ]
+}

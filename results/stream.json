@@ -1,0 +1,173 @@
+{
+  "messages": [
+    {
+      "header": {
+        "id": 4448,
+        "flags": "0x8400",
+        "qr": 1,
+        "opcode": 0,
+        "aa": 1,
+        "tc": 0,
+        "rd": 0,
+        "ra": 0,
+        "rcode": 0,
+        "qdcount": 1,
+        "ancount": 1,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [
+        {
+          "name": "www.example.com",
+          "type": "A",
+          "class": "IN"
+        }
+      ],
+      "record_count": 1
+    },
+    {
+      "header": {
+        "id": 4449,
+        "flags": "0x8400",
+        "qr": 1,
+        "opcode": 0,
+        "aa": 1,
+        "tc": 0,
+        "rd": 0,
+        "ra": 0,
+        "rcode": 0,
+        "qdcount": 1,
+        "ancount": 9,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [
+        {
+          "name": "example.com",
+          "type": "AXFR",
+          "class": "IN"
+        }
+      ],
+      "record_count": 9
+    }
+  ],
+  "record_count": 10,
+  "groups": [
+    {
+      "name": "www.example.com",
+      "type": "A",
+      "records": [
+        {
+          "section": "answer",
+          "name": "www.example.com",
+          "type": "A",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "93.184.216.34"
+        },
+        {
+          "section": "answer",
+          "name": "www.example.com",
+          "type": "A",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "192.0.2.80"
+        },
+        {
+          "section": "answer",
+          "name": "www.example.com",
+          "type": "A",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "192.0.2.81"
+        }
+      ]
+    },
+    {
+      "name": "example.com",
+      "type": "SOA",
+      "records": [
+        {
+          "section": "answer",
+          "name": "example.com",
+          "type": "SOA",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "ns1.example.com hostmaster.example.com 2026100301 7200 3600 1209600 300"
+        },
+        {
+          "section": "answer",
+          "name": "example.com",
+          "type": "SOA",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "ns1.example.com hostmaster.example.com 2026100301 7200 3600 1209600 300"
+        }
+      ]
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "records": [
+        {
+          "section": "answer",
+          "name": "example.com",
+          "type": "NS",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "ns1.example.com"
+        },
+        {
+          "section": "answer",
+          "name": "example.com",
+          "type": "NS",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "ns2.example.com"
+        }
+      ]
+    },
+    {
+      "name": "ns1.example.com",
+      "type": "A",
+      "records": [
+        {
+          "section": "answer",
+          "name": "ns1.example.com",
+          "type": "A",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "192.0.2.1"
+        }
+      ]
+    },
+    {
+      "name": "ns2.example.com",
+      "type": "A",
+      "records": [
+        {
+          "section": "answer",
+          "name": "ns2.example.com",
+          "type": "A",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "192.0.2.2"
+        }
+      ]
+    },
+    {
+      "name": "web.www.example.com",
+      "type": "CNAME",
+      "records": [
+        {
+          "section": "answer",
+          "name": "web.www.example.com",
+          "type": "CNAME",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "www.example.com"
+        }
+      ]
+    }
+  ]
+}

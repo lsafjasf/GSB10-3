@@ -1,0 +1,6 @@
+{
+  "error": "truncated",
+  "detail": "stream frame length prefix truncated",
+  "records_parsed": 1,
+  "missing_bytes": 1
+}

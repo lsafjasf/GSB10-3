@@ -1,0 +1,5 @@
+{
+  "error": "pointer_loop",
+  "detail": "compression pointer loop detected at offset 12",
+  "offset": 12
+}

@@ -1,0 +1,45 @@
+{
+  "target_version": "v2",
+  "target_length": 6100,
+  "applied_segments": [
+    "v2#0",
+    "v2#1",
+    "v2#2",
+    "v1#0"
+  ],
+  "covered_segments": [
+    "v1#1"
+  ],
+  "overlaps": [
+    {
+      "covered_segment": "v1#0",
+      "covering_segment": "v2#0",
+      "offset": 1500,
+      "length": 500
+    },
+    {
+      "covered_segment": "v1#1",
+      "covering_segment": "v2#1",
+      "offset": 5000,
+      "length": 100
+    }
+  ],
+  "holes": [
+    {
+      "offset": 0,
+      "length": 1000,
+      "filled_from": "v0"
+    },
+    {
+      "offset": 2500,
+      "length": 2480,
+      "filled_from": "v0"
+    },
+    {
+      "offset": 5120,
+      "length": 880,
+      "filled_from": "v0"
+    }
+  ],
+  "digest_ok": true
+}

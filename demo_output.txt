@@ -1,0 +1,18 @@
+文本长度 200,000，模式串 'ACGTTGCATGTCGCATGATGCATG'（长度 24），距离阈值 2，耗时 0.76s
+
+命中位置清单（按起始位置排序）：
+        起始         结束     距离      相似度  片段
+      5000       5024      0  100.00%  ACGTTGCATGTCGCATGATGCATG
+     30000      30024      1   95.83%  ACGTTGCATGACGCATGATGCATG
+     60000      60023      1   95.83%  ACGTTGCTGTCGCATGATGCATG
+     90000      90024      1   95.83%  ACGTTGACTGTCGCATGATGCATG
+    120001     120024      2   91.67%  CGTTGCATGTCGCATGATGGATG
+    160000     160025      2   92.00%  ACTTTGCATGTCGGCATGATGCATG
+
+植入位置对照（应全部被命中覆盖）：
+  位置    5000（精确拷贝）：命中
+  位置   30000（1 次替换）：命中
+  位置   60000（1 次删除）：命中
+  位置   90000（1 次相邻交换）：命中
+  位置  120000（2 次替换）：命中
+  位置  160000（1 插入 + 1 替换）：命中

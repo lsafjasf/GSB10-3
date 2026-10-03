@@ -1,0 +1,118 @@
+{
+  "all_success": {
+    "status": "SUCCESS",
+    "partial_success": false,
+    "summary": "全部 3 项准备并提交成功。",
+    "items": [
+      {
+        "name": "A",
+        "prepare": "ok",
+        "commit": "ok",
+        "rollback": "not_needed",
+        "unrecoverable": false,
+        "detail": ""
+      },
+      {
+        "name": "B",
+        "prepare": "ok",
+        "commit": "ok",
+        "rollback": "not_needed",
+        "unrecoverable": false,
+        "detail": ""
+      },
+      {
+        "name": "C",
+        "prepare": "ok",
+        "commit": "ok",
+        "rollback": "not_needed",
+        "unrecoverable": false,
+        "detail": ""
+      }
+    ]
+  },
+  "prepare_failed": {
+    "status": "ABORTED",
+    "partial_success": false,
+    "summary": "准备阶段在 B 处失败，已中止；回退完成。",
+    "items": [
+      {
+        "name": "A",
+        "prepare": "ok",
+        "commit": "skipped",
+        "rollback": "ok",
+        "unrecoverable": false,
+        "detail": ""
+      },
+      {
+        "name": "B",
+        "prepare": "failed",
+        "commit": "skipped",
+        "rollback": "not_needed",
+        "unrecoverable": false,
+        "detail": " prepare_error=PrepareError('B 准备失败');"
+      },
+      {
+        "name": "C",
+        "prepare": "skipped",
+        "commit": "skipped",
+        "rollback": "not_needed",
+        "unrecoverable": false,
+        "detail": ""
+      }
+    ]
+  },
+  "commit_failed_partial": {
+    "status": "PARTIAL_COMMIT",
+    "partial_success": true,
+    "summary": "提交阶段在 C 处失败：2 项已提交且无法回退（部分成功）；其余已准备项回退完成。",
+    "items": [
+      {
+        "name": "A",
+        "prepare": "ok",
+        "commit": "ok",
+        "rollback": "impossible",
+        "unrecoverable": true,
+        "detail": ""
+      },
+      {
+        "name": "B",
+        "prepare": "ok",
+        "commit": "ok",
+        "rollback": "impossible",
+        "unrecoverable": true,
+        "detail": ""
+      },
+      {
+        "name": "C",
+        "prepare": "ok",
+        "commit": "failed",
+        "rollback": "not_needed",
+        "unrecoverable": false,
+        "detail": " commit_error=CommitError('C 提交失败');"
+      }
+    ]
+  },
+  "rollback_failed": {
+    "status": "ABORTED_ROLLBACK_FAILED",
+    "partial_success": false,
+    "summary": "准备阶段在 B 处失败，已中止；回退存在失败。",
+    "items": [
+      {
+        "name": "A",
+        "prepare": "ok",
+        "commit": "skipped",
+        "rollback": "failed",
+        "unrecoverable": false,
+        "detail": " rollback_error=RollbackError('A 回退失败');"
+      },
+      {
+        "name": "B",
+        "prepare": "failed",
+        "commit": "skipped",
+        "rollback": "not_needed",
+        "unrecoverable": false,
+        "detail": " prepare_error=PrepareError('B 准备失败');"
+      }
+    ]
+  }
+}

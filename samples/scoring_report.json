@@ -1,0 +1,426 @@
+{
+  "01_clean.bin": {
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 143,
+        "rank": 1,
+        "score": 100,
+        "warnings": []
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0x507; file is 1299 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x537 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 1268,
+        "rank": 2,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "valid",
+    "note": "well-formed archive, zero padding",
+    "payload_offset_expected": 210,
+    "size": 1299
+  },
+  "02_long_padding.bin": {
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 4239,
+        "rank": 1,
+        "score": 100,
+        "warnings": []
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0x1507; file is 5395 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x1537 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 5364,
+        "rank": 2,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "valid",
+    "note": "4096 random-byte padding before header",
+    "payload_offset_expected": 4306,
+    "size": 5395
+  },
+  "03_embedded_sig_only.bin": {
+    "candidate_count": 1,
+    "candidates": [
+      {
+        "extractable": false,
+        "hard_failures": [
+          "version: declared version=82, supported=1",
+          "flags: reserved flags byte=0xc8 (only 0x00 is defined)",
+          "header_len: declared header_len=23093, expected=48",
+          "bounds: payload_len=1843209942463718554 would end at 0x199465ad4b04a6dd and need a 31-byte footer; file ends at 0x7d0 (2000 bytes short)",
+          "footer: cannot reach footer at 0x199465ad4b04a6dd (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 512,
+        "rank": 1,
+        "score": 18,
+        "warnings": [
+          "prefix (shell/padding) was modified after archiving; payload itself is still authenticated by crc32 + footer"
+        ]
+      }
+    ],
+    "expected_status": "invalid_candidates",
+    "note": "signature appears inside random data; no valid structure follows",
+    "size": 2000
+  },
+  "04_sig_inside_payload.bin": {
+    "candidate_count": 3,
+    "candidates": [
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 151,
+        "rank": 1,
+        "score": 100,
+        "warnings": []
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "version: declared version=32, supported=1",
+          "flags: reserved flags byte=0x70 (only 0x00 is defined)",
+          "header_len: declared header_len=29551, expected=48",
+          "bounds: payload_len=8746589054829800820 would end at 0x7962206769732e9f and need a 31-byte footer; file ends at 0x4da (1242 bytes short)",
+          "footer: cannot reach footer at 0x7962206769732e9f (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 232,
+        "rank": 2,
+        "score": 18,
+        "warnings": [
+          "prefix (shell/padding) was modified after archiving; payload itself is still authenticated by crc32 + footer"
+        ]
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0x4ce; file is 1242 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x4fe (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 1211,
+        "rank": 3,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "valid",
+    "note": "real archive whose payload also contains the magic string",
+    "size": 1242
+  },
+  "05_truncated.bin": {
+    "candidate_count": 1,
+    "candidates": [
+      {
+        "extractable": false,
+        "hard_failures": [
+          "bounds: payload_len=1058 would end at 0x514 and need a 31-byte footer; file ends at 0x522 (1314 bytes short)",
+          "footer: cannot reach footer at 0x514 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 175,
+        "rank": 1,
+        "score": 40,
+        "warnings": []
+      }
+    ],
+    "expected_status": "invalid_candidates",
+    "note": "well-formed archive cut 17 bytes early (payload+footer truncated)",
+    "size": 1314
+  },
+  "06_header_truncated.bin": {
+    "candidate_count": 1,
+    "candidates": [
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0xa2; file is 168 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0xd2 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 143,
+        "rank": 1,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "invalid_candidates",
+    "note": "file ends 6 bytes after the magic, header incomplete",
+    "size": 168
+  },
+  "07_shell_tampered.bin": {
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 175,
+        "rank": 1,
+        "score": 95,
+        "warnings": [
+          "prefix (shell/padding) was modified after archiving; payload itself is still authenticated by crc32 + footer"
+        ]
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0x527; file is 1331 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x557 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 1300,
+        "rank": 2,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "valid_shell_modified",
+    "note": "one bit flipped inside the shell before the payload",
+    "size": 1331
+  },
+  "08_payload_tampered.bin": {
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "extractable": false,
+        "hard_failures": [
+          "crc32: stored=0x27fd2ad1 computed=0xbb43db1d over 1058 payload bytes"
+        ],
+        "max_score": 100,
+        "offset": 143,
+        "rank": 1,
+        "score": 75,
+        "warnings": []
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0x507; file is 1299 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x537 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 1268,
+        "rank": 2,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "invalid_candidates",
+    "note": "one byte flipped inside the payload after archiving",
+    "size": 1299
+  },
+  "09_empty_payload.bin": {
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 148,
+        "rank": 1,
+        "score": 100,
+        "warnings": []
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0xea; file is 246 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x11a (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 215,
+        "rank": 2,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "valid",
+    "note": "zero-length payload with padding",
+    "payload_offset_expected": 215,
+    "size": 246
+  },
+  "10_no_payload.bin": {
+    "candidate_count": 0,
+    "candidates": [],
+    "expected_status": "no_candidate",
+    "note": "plain executable stub with no appended archive",
+    "size": 165
+  },
+  "11_double_archive.bin": {
+    "candidate_count": 4,
+    "candidates": [
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 144,
+        "rank": 1,
+        "score": 100,
+        "warnings": []
+      },
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 399,
+        "rank": 2,
+        "score": 95,
+        "warnings": [
+          "prefix (shell/padding) was modified after archiving; payload itself is still authenticated by crc32 + footer"
+        ]
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "version: declared version=144, supported=1",
+          "header_len: declared header_len=0, expected=48",
+          "bounds: payload_len=13835067160612831232 would end at 0xc0000848000001a6 and need a 31-byte footer; file ends at 0x289 (649 bytes short)",
+          "footer: cannot reach footer at 0xc0000848000001a6 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 355,
+        "rank": 3,
+        "score": 23,
+        "warnings": [
+          "prefix (shell/padding) was modified after archiving; payload itself is still authenticated by crc32 + footer"
+        ]
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0x27d; file is 649 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x2ad (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 618,
+        "rank": 4,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "valid",
+    "note": "two complete archives concatenated; both candidates listed",
+    "size": 649
+  },
+  "12_decoy_then_real.bin": {
+    "candidate_count": 3,
+    "candidates": [
+      {
+        "extractable": true,
+        "hard_failures": [],
+        "max_score": 100,
+        "offset": 346,
+        "rank": 1,
+        "score": 95,
+        "warnings": [
+          "prefix (shell/padding) was modified after archiving; payload itself is still authenticated by crc32 + footer"
+        ]
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "version: declared version=110, supported=1",
+          "flags: reserved flags byte=0x6f (only 0x00 is defined)",
+          "header_len: declared header_len=11636, expected=48",
+          "bounds: payload_len=8243105062447492449 would end at 0x7265646165682e33 and need a 31-byte footer; file ends at 0x5de (1502 bytes short)",
+          "footer: cannot reach footer at 0x7265646165682e33 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 143,
+        "rank": 2,
+        "score": 18,
+        "warnings": [
+          "prefix (shell/padding) was modified after archiving; payload itself is still authenticated by crc32 + footer"
+        ]
+      },
+      {
+        "extractable": false,
+        "hard_failures": [
+          "header_complete: fixed header needs 48 bytes at 0x5d2; file is 1502 bytes",
+          "version: header truncated; not parsed",
+          "flags: header truncated; not parsed",
+          "header_len: header truncated; not parsed",
+          "bounds: header truncated; no length",
+          "footer: cannot reach footer at 0x602 (bounds check failed)",
+          "crc32: full payload unavailable; checksum not verifiable"
+        ],
+        "max_score": 100,
+        "offset": 1471,
+        "rank": 3,
+        "score": 10,
+        "warnings": []
+      }
+    ],
+    "expected_status": "valid_shell_modified",
+    "note": "fake signature with garbage header, then a genuine archive",
+    "size": 1502
+  }
+}

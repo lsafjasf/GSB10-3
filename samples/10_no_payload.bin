@@ -1,0 +1,5 @@
+#!/bin/sh
+# self-extracting demo stub; a real one would tail+exec itself.
+echo "running stub (the unpacker never does this)" >/dev/null
+exit 0
+# end of plain script

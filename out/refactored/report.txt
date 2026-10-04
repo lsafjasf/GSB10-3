@@ -1,0 +1,14 @@
+ORDER A001 alice total=717.10 CNY
+ORDER A003 carol total=1796.34 CNY
+ORDER A005 dave total=330.88 CNY
+ORDER A008 grace total=71.75 CNY
+REJECT A002 amount_not_positive
+REJECT A004 missing_customer
+REJECT A006 amount_not_positive
+REJECT A007 unknown_currency
+REJECT A001 duplicate_id
+REJECT A009 bad_amount
+REJECT A010 bad_amount
+REJECT A011 unknown_currency
+REJECT A012 bad_row
+SUMMARY accepted=4 rejected=9 total=2916.07 CNY

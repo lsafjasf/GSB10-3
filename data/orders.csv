@@ -1,0 +1,14 @@
+A001,alice,100.00,USD
+A002,bob,-5,CNY
+A003,carol,250.5,usd
+A004,,80,CNY
+A005,dave,42,EUR
+A006,erin,0,CNY
+A007,frank,999.99,JPY
+A008,grace,10.005,USD
+A001,alice2,50,USD
+
+A009,ivan,abc,USD
+A010,,x,USD
+A011,kate,20,GBP
+A012,li,30

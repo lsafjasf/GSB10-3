@@ -1,0 +1,119 @@
+{
+  "initial_size": 12,
+  "final_size": 2,
+  "difference_checks": 12,
+  "total_iterations": 9,
+  "accepted_iterations": 3,
+  "rejected_iterations": 6,
+  "is_minimal_verified": true,
+  "original": [
+    3,
+    1,
+    4,
+    2147483647,
+    9,
+    2,
+    7,
+    0,
+    5,
+    8,
+    6,
+    10
+  ],
+  "minimized": [
+    2147483647,
+    2
+  ],
+  "rounds": [
+    {
+      "iteration": 1,
+      "strategy": "block",
+      "detail": "granularity=2 delete indices [0:6)",
+      "before_size": 12,
+      "after_size": 6,
+      "before_diff": true,
+      "after_diff": false,
+      "accepted": false
+    },
+    {
+      "iteration": 2,
+      "strategy": "block",
+      "detail": "granularity=2 delete indices [6:12)",
+      "before_size": 12,
+      "after_size": 6,
+      "before_diff": true,
+      "after_diff": true,
+      "accepted": true
+    },
+    {
+      "iteration": 3,
+      "strategy": "block",
+      "detail": "granularity=2 delete indices [0:3)",
+      "before_size": 6,
+      "after_size": 3,
+      "before_diff": true,
+      "after_diff": true,
+      "accepted": true
+    },
+    {
+      "iteration": 4,
+      "strategy": "block",
+      "detail": "granularity=2 delete indices [0:1)",
+      "before_size": 3,
+      "after_size": 2,
+      "before_diff": true,
+      "after_diff": false,
+      "accepted": false
+    },
+    {
+      "iteration": 5,
+      "strategy": "block",
+      "detail": "granularity=2 delete indices [1:2)",
+      "before_size": 3,
+      "after_size": 2,
+      "before_diff": true,
+      "after_diff": true,
+      "accepted": true
+    },
+    {
+      "iteration": 6,
+      "strategy": "block",
+      "detail": "granularity=2 delete indices [0:1)",
+      "before_size": 2,
+      "after_size": 1,
+      "before_diff": true,
+      "after_diff": false,
+      "accepted": false
+    },
+    {
+      "iteration": 7,
+      "strategy": "block",
+      "detail": "granularity=2 delete indices [1:2)",
+      "before_size": 2,
+      "after_size": 1,
+      "before_diff": true,
+      "after_diff": false,
+      "accepted": false
+    },
+    {
+      "iteration": 8,
+      "strategy": "single",
+      "detail": "delete index 0",
+      "before_size": 2,
+      "after_size": 1,
+      "before_diff": true,
+      "after_diff": false,
+      "accepted": false
+    },
+    {
+      "iteration": 9,
+      "strategy": "single",
+      "detail": "delete index 1",
+      "before_size": 2,
+      "after_size": 1,
+      "before_diff": true,
+      "after_diff": false,
+      "accepted": false
+    }
+  ]
+}

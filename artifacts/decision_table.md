@@ -1,0 +1,870 @@
+# 决策表（由 build_decision_table.py 自动生成，勿手改）
+
+输入维度：amount_band(0:[0,4999] 1:[5000,9999] 2:[10000,19999] 3:[20000,))、qty_band(0:[1,9] 1:[10,19] 2:[20,))、vip、channel、region、coupon、birthday。代表值取段内中点（无上限段取下限+1）。
+
+| # | a_band | q_band | vip | channel | region | coupon | birthday | rep(amount,qty) | 结果 | payable | shipping | discount | gift/label |
+|---|--------|--------|-----|---------|--------|--------|----------|-----------------|------|---------|----------|----------|------------|
+| 1 | 0 | 0 | normal | app | mainland | none | False | (2499,5) | OK  | 2375 | 600 | 124 | False/normal-small |
+| 2 | 0 | 0 | normal | app | mainland | none | True | (2499,5) | OK  | 2375 | 600 | 124 | False/normal-small-bday |
+| 3 | 0 | 0 | normal | app | mainland | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 4 | 0 | 0 | normal | app | mainland | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 5 | 0 | 0 | normal | app | mainland | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 6 | 0 | 0 | normal | app | mainland | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 7 | 0 | 0 | normal | app | remote | none | False | (2499,5) | OK  | 2375 | 1800 | 124 | False/normal-small |
+| 8 | 0 | 0 | normal | app | remote | none | True | (2499,5) | OK  | 2375 | 1800 | 124 | False/normal-small-bday |
+| 9 | 0 | 0 | normal | app | remote | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 10 | 0 | 0 | normal | app | remote | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 11 | 0 | 0 | normal | app | remote | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 12 | 0 | 0 | normal | app | remote | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 13 | 0 | 0 | normal | web | mainland | none | False | (2499,5) | OK  | 2375 | 800 | 124 | False/normal-small |
+| 14 | 0 | 0 | normal | web | mainland | none | True | (2499,5) | OK  | 2375 | 800 | 124 | False/normal-small-bday |
+| 15 | 0 | 0 | normal | web | mainland | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 16 | 0 | 0 | normal | web | mainland | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 17 | 0 | 0 | normal | web | mainland | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 18 | 0 | 0 | normal | web | mainland | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 19 | 0 | 0 | normal | web | remote | none | False | (2499,5) | OK  | 2375 | 0 | 124 | False/normal-small |
+| 20 | 0 | 0 | normal | web | remote | none | True | (2499,5) | OK  | 2375 | 0 | 124 | False/normal-small-bday |
+| 21 | 0 | 0 | normal | web | remote | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 22 | 0 | 0 | normal | web | remote | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 23 | 0 | 0 | normal | web | remote | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 24 | 0 | 0 | normal | web | remote | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 25 | 0 | 0 | silver | app | mainland | none | False | (2499,5) | OK  | 2200 | 600 | 299 | False/silver-small |
+| 26 | 0 | 0 | silver | app | mainland | none | True | (2499,5) | OK  | 2125 | 600 | 374 | False/silver-small |
+| 27 | 0 | 0 | silver | app | mainland | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 28 | 0 | 0 | silver | app | mainland | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 29 | 0 | 0 | silver | app | mainland | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 30 | 0 | 0 | silver | app | mainland | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 31 | 0 | 0 | silver | app | remote | none | False | (2499,5) | OK  | 2200 | 1800 | 299 | False/silver-small |
+| 32 | 0 | 0 | silver | app | remote | none | True | (2499,5) | OK  | 2125 | 1800 | 374 | False/silver-small |
+| 33 | 0 | 0 | silver | app | remote | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 34 | 0 | 0 | silver | app | remote | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 35 | 0 | 0 | silver | app | remote | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 36 | 0 | 0 | silver | app | remote | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 37 | 0 | 0 | silver | web | mainland | none | False | (2499,5) | OK  | 2200 | 800 | 299 | False/silver-small |
+| 38 | 0 | 0 | silver | web | mainland | none | True | (2499,5) | OK  | 2125 | 800 | 374 | False/silver-small |
+| 39 | 0 | 0 | silver | web | mainland | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 40 | 0 | 0 | silver | web | mainland | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 41 | 0 | 0 | silver | web | mainland | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 42 | 0 | 0 | silver | web | mainland | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 43 | 0 | 0 | silver | web | remote | none | False | (2499,5) | OK  | 2200 | 0 | 299 | False/silver-small |
+| 44 | 0 | 0 | silver | web | remote | none | True | (2499,5) | OK  | 2125 | 0 | 374 | False/silver-small |
+| 45 | 0 | 0 | silver | web | remote | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 46 | 0 | 0 | silver | web | remote | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 47 | 0 | 0 | silver | web | remote | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 48 | 0 | 0 | silver | web | remote | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 49 | 0 | 0 | gold | app | mainland | none | False | (2499,5) | OK  | 1750 | 0 | 749 | False/gold-small |
+| 50 | 0 | 0 | gold | app | mainland | none | True | (2499,5) | OK  | 1700 | 0 | 799 | False/gold-small-bday |
+| 51 | 0 | 0 | gold | app | mainland | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 52 | 0 | 0 | gold | app | mainland | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 53 | 0 | 0 | gold | app | mainland | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 54 | 0 | 0 | gold | app | mainland | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 55 | 0 | 0 | gold | app | remote | none | False | (2499,5) | OK  | 1750 | 1200 | 749 | False/gold-small |
+| 56 | 0 | 0 | gold | app | remote | none | True | (2499,5) | OK  | 1700 | 1200 | 799 | False/gold-small-bday |
+| 57 | 0 | 0 | gold | app | remote | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 58 | 0 | 0 | gold | app | remote | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 59 | 0 | 0 | gold | app | remote | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 60 | 0 | 0 | gold | app | remote | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 61 | 0 | 0 | gold | web | mainland | none | False | (2499,5) | OK  | 1750 | 0 | 749 | False/gold-small |
+| 62 | 0 | 0 | gold | web | mainland | none | True | (2499,5) | OK  | 1700 | 0 | 799 | False/gold-small-bday |
+| 63 | 0 | 0 | gold | web | mainland | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 64 | 0 | 0 | gold | web | mainland | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 65 | 0 | 0 | gold | web | mainland | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 66 | 0 | 0 | gold | web | mainland | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 67 | 0 | 0 | gold | web | remote | none | False | (2499,5) | OK  | 1750 | 0 | 749 | False/gold-small |
+| 68 | 0 | 0 | gold | web | remote | none | True | (2499,5) | OK  | 1700 | 0 | 799 | False/gold-small-bday |
+| 69 | 0 | 0 | gold | web | remote | cash | False | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 70 | 0 | 0 | gold | web | remote | cash | True | (2499,5) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 71 | 0 | 0 | gold | web | remote | gift | False | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 72 | 0 | 0 | gold | web | remote | gift | True | (2499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 73 | 0 | 1 | normal | app | mainland | none | False | (2499,14) | OK  | 2375 | 600 | 124 | False/normal-small |
+| 74 | 0 | 1 | normal | app | mainland | none | True | (2499,14) | OK  | 2375 | 600 | 124 | False/normal-small-bday |
+| 75 | 0 | 1 | normal | app | mainland | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 76 | 0 | 1 | normal | app | mainland | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 77 | 0 | 1 | normal | app | mainland | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 78 | 0 | 1 | normal | app | mainland | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 79 | 0 | 1 | normal | app | remote | none | False | (2499,14) | OK  | 2375 | 1800 | 124 | False/normal-small |
+| 80 | 0 | 1 | normal | app | remote | none | True | (2499,14) | OK  | 2375 | 1800 | 124 | False/normal-small-bday |
+| 81 | 0 | 1 | normal | app | remote | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 82 | 0 | 1 | normal | app | remote | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 83 | 0 | 1 | normal | app | remote | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 84 | 0 | 1 | normal | app | remote | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 85 | 0 | 1 | normal | web | mainland | none | False | (2499,14) | OK  | 2375 | 800 | 124 | False/normal-small |
+| 86 | 0 | 1 | normal | web | mainland | none | True | (2499,14) | OK  | 2375 | 800 | 124 | False/normal-small-bday |
+| 87 | 0 | 1 | normal | web | mainland | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 88 | 0 | 1 | normal | web | mainland | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 89 | 0 | 1 | normal | web | mainland | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 90 | 0 | 1 | normal | web | mainland | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 91 | 0 | 1 | normal | web | remote | none | False | (2499,14) | OK  | 2375 | 0 | 124 | False/normal-small |
+| 92 | 0 | 1 | normal | web | remote | none | True | (2499,14) | OK  | 2375 | 0 | 124 | False/normal-small-bday |
+| 93 | 0 | 1 | normal | web | remote | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 94 | 0 | 1 | normal | web | remote | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 95 | 0 | 1 | normal | web | remote | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 96 | 0 | 1 | normal | web | remote | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 97 | 0 | 1 | silver | app | mainland | none | False | (2499,14) | OK  | 2150 | 600 | 349 | False/silver-small-bulk |
+| 98 | 0 | 1 | silver | app | mainland | none | True | (2499,14) | OK  | 2075 | 600 | 424 | False/silver-small-bulk |
+| 99 | 0 | 1 | silver | app | mainland | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 100 | 0 | 1 | silver | app | mainland | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 101 | 0 | 1 | silver | app | mainland | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 102 | 0 | 1 | silver | app | mainland | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 103 | 0 | 1 | silver | app | remote | none | False | (2499,14) | OK  | 2150 | 1800 | 349 | False/silver-small-bulk |
+| 104 | 0 | 1 | silver | app | remote | none | True | (2499,14) | OK  | 2075 | 1800 | 424 | False/silver-small-bulk |
+| 105 | 0 | 1 | silver | app | remote | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 106 | 0 | 1 | silver | app | remote | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 107 | 0 | 1 | silver | app | remote | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 108 | 0 | 1 | silver | app | remote | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 109 | 0 | 1 | silver | web | mainland | none | False | (2499,14) | OK  | 2150 | 800 | 349 | False/silver-small-bulk |
+| 110 | 0 | 1 | silver | web | mainland | none | True | (2499,14) | OK  | 2075 | 800 | 424 | False/silver-small-bulk |
+| 111 | 0 | 1 | silver | web | mainland | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 112 | 0 | 1 | silver | web | mainland | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 113 | 0 | 1 | silver | web | mainland | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 114 | 0 | 1 | silver | web | mainland | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 115 | 0 | 1 | silver | web | remote | none | False | (2499,14) | OK  | 2150 | 0 | 349 | False/silver-small-bulk |
+| 116 | 0 | 1 | silver | web | remote | none | True | (2499,14) | OK  | 2075 | 0 | 424 | False/silver-small-bulk |
+| 117 | 0 | 1 | silver | web | remote | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 118 | 0 | 1 | silver | web | remote | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 119 | 0 | 1 | silver | web | remote | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 120 | 0 | 1 | silver | web | remote | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 121 | 0 | 1 | gold | app | mainland | none | False | (2499,14) | OK  | 1625 | 0 | 874 | False/gold-small-bulk |
+| 122 | 0 | 1 | gold | app | mainland | none | True | (2499,14) | OK  | 1575 | 0 | 924 | False/gold-small-bday |
+| 123 | 0 | 1 | gold | app | mainland | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 124 | 0 | 1 | gold | app | mainland | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 125 | 0 | 1 | gold | app | mainland | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 126 | 0 | 1 | gold | app | mainland | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 127 | 0 | 1 | gold | app | remote | none | False | (2499,14) | OK  | 1625 | 1200 | 874 | False/gold-small-bulk |
+| 128 | 0 | 1 | gold | app | remote | none | True | (2499,14) | OK  | 1575 | 1200 | 924 | False/gold-small-bday |
+| 129 | 0 | 1 | gold | app | remote | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 130 | 0 | 1 | gold | app | remote | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 131 | 0 | 1 | gold | app | remote | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 132 | 0 | 1 | gold | app | remote | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 133 | 0 | 1 | gold | web | mainland | none | False | (2499,14) | OK  | 1625 | 0 | 874 | False/gold-small-bulk |
+| 134 | 0 | 1 | gold | web | mainland | none | True | (2499,14) | OK  | 1575 | 0 | 924 | False/gold-small-bday |
+| 135 | 0 | 1 | gold | web | mainland | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 136 | 0 | 1 | gold | web | mainland | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 137 | 0 | 1 | gold | web | mainland | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 138 | 0 | 1 | gold | web | mainland | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 139 | 0 | 1 | gold | web | remote | none | False | (2499,14) | OK  | 1625 | 0 | 874 | False/gold-small-bulk |
+| 140 | 0 | 1 | gold | web | remote | none | True | (2499,14) | OK  | 1575 | 0 | 924 | False/gold-small-bday |
+| 141 | 0 | 1 | gold | web | remote | cash | False | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 142 | 0 | 1 | gold | web | remote | cash | True | (2499,14) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 143 | 0 | 1 | gold | web | remote | gift | False | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 144 | 0 | 1 | gold | web | remote | gift | True | (2499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 145 | 0 | 2 | normal | app | mainland | none | False | (2499,21) | OK  | 2375 | 600 | 124 | False/normal-small |
+| 146 | 0 | 2 | normal | app | mainland | none | True | (2499,21) | OK  | 2375 | 600 | 124 | False/normal-small-bday |
+| 147 | 0 | 2 | normal | app | mainland | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 148 | 0 | 2 | normal | app | mainland | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 149 | 0 | 2 | normal | app | mainland | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 150 | 0 | 2 | normal | app | mainland | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 151 | 0 | 2 | normal | app | remote | none | False | (2499,21) | OK  | 2375 | 1800 | 124 | False/normal-small |
+| 152 | 0 | 2 | normal | app | remote | none | True | (2499,21) | OK  | 2375 | 1800 | 124 | False/normal-small-bday |
+| 153 | 0 | 2 | normal | app | remote | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 154 | 0 | 2 | normal | app | remote | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 155 | 0 | 2 | normal | app | remote | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 156 | 0 | 2 | normal | app | remote | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 157 | 0 | 2 | normal | web | mainland | none | False | (2499,21) | OK  | 2375 | 800 | 124 | False/normal-small |
+| 158 | 0 | 2 | normal | web | mainland | none | True | (2499,21) | OK  | 2375 | 800 | 124 | False/normal-small-bday |
+| 159 | 0 | 2 | normal | web | mainland | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 160 | 0 | 2 | normal | web | mainland | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 161 | 0 | 2 | normal | web | mainland | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 162 | 0 | 2 | normal | web | mainland | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 163 | 0 | 2 | normal | web | remote | none | False | (2499,21) | OK  | 2375 | 0 | 124 | False/normal-small |
+| 164 | 0 | 2 | normal | web | remote | none | True | (2499,21) | OK  | 2375 | 0 | 124 | False/normal-small-bday |
+| 165 | 0 | 2 | normal | web | remote | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 166 | 0 | 2 | normal | web | remote | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 167 | 0 | 2 | normal | web | remote | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 168 | 0 | 2 | normal | web | remote | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 169 | 0 | 2 | silver | app | mainland | none | False | (2499,21) | OK  | 2150 | 600 | 349 | False/silver-small-bulk |
+| 170 | 0 | 2 | silver | app | mainland | none | True | (2499,21) | OK  | 2075 | 600 | 424 | False/silver-small-bulk |
+| 171 | 0 | 2 | silver | app | mainland | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 172 | 0 | 2 | silver | app | mainland | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 173 | 0 | 2 | silver | app | mainland | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 174 | 0 | 2 | silver | app | mainland | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 175 | 0 | 2 | silver | app | remote | none | False | (2499,21) | OK  | 2150 | 1800 | 349 | False/silver-small-bulk |
+| 176 | 0 | 2 | silver | app | remote | none | True | (2499,21) | OK  | 2075 | 1800 | 424 | False/silver-small-bulk |
+| 177 | 0 | 2 | silver | app | remote | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 178 | 0 | 2 | silver | app | remote | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 179 | 0 | 2 | silver | app | remote | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 180 | 0 | 2 | silver | app | remote | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 181 | 0 | 2 | silver | web | mainland | none | False | (2499,21) | OK  | 2150 | 800 | 349 | False/silver-small-bulk |
+| 182 | 0 | 2 | silver | web | mainland | none | True | (2499,21) | OK  | 2075 | 800 | 424 | False/silver-small-bulk |
+| 183 | 0 | 2 | silver | web | mainland | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 184 | 0 | 2 | silver | web | mainland | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 185 | 0 | 2 | silver | web | mainland | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 186 | 0 | 2 | silver | web | mainland | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 187 | 0 | 2 | silver | web | remote | none | False | (2499,21) | OK  | 2150 | 0 | 349 | False/silver-small-bulk |
+| 188 | 0 | 2 | silver | web | remote | none | True | (2499,21) | OK  | 2075 | 0 | 424 | False/silver-small-bulk |
+| 189 | 0 | 2 | silver | web | remote | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 190 | 0 | 2 | silver | web | remote | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 191 | 0 | 2 | silver | web | remote | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 192 | 0 | 2 | silver | web | remote | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 193 | 0 | 2 | gold | app | mainland | none | False | (2499,21) | OK  | 1625 | 0 | 874 | False/gold-small-bulk |
+| 194 | 0 | 2 | gold | app | mainland | none | True | (2499,21) | OK  | 1575 | 0 | 924 | False/gold-small-bday |
+| 195 | 0 | 2 | gold | app | mainland | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 196 | 0 | 2 | gold | app | mainland | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 197 | 0 | 2 | gold | app | mainland | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 198 | 0 | 2 | gold | app | mainland | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 199 | 0 | 2 | gold | app | remote | none | False | (2499,21) | OK  | 1625 | 1200 | 874 | False/gold-small-bulk |
+| 200 | 0 | 2 | gold | app | remote | none | True | (2499,21) | OK  | 1575 | 1200 | 924 | False/gold-small-bday |
+| 201 | 0 | 2 | gold | app | remote | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 202 | 0 | 2 | gold | app | remote | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 203 | 0 | 2 | gold | app | remote | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 204 | 0 | 2 | gold | app | remote | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 205 | 0 | 2 | gold | web | mainland | none | False | (2499,21) | OK  | 1625 | 0 | 874 | False/gold-small-bulk |
+| 206 | 0 | 2 | gold | web | mainland | none | True | (2499,21) | OK  | 1575 | 0 | 924 | False/gold-small-bday |
+| 207 | 0 | 2 | gold | web | mainland | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 208 | 0 | 2 | gold | web | mainland | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 209 | 0 | 2 | gold | web | mainland | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 210 | 0 | 2 | gold | web | mainland | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 211 | 0 | 2 | gold | web | remote | none | False | (2499,21) | OK  | 1625 | 0 | 874 | False/gold-small-bulk |
+| 212 | 0 | 2 | gold | web | remote | none | True | (2499,21) | OK  | 1575 | 0 | 924 | False/gold-small-bday |
+| 213 | 0 | 2 | gold | web | remote | cash | False | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 214 | 0 | 2 | gold | web | remote | cash | True | (2499,21) | ERROR ValueError: cash coupon requires amount >= 5000 |  |  |  |  |
+| 215 | 0 | 2 | gold | web | remote | gift | False | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 216 | 0 | 2 | gold | web | remote | gift | True | (2499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 217 | 1 | 0 | normal | app | mainland | none | False | (7499,5) | OK  | 7125 | 600 | 374 | False/normal-big |
+| 218 | 1 | 0 | normal | app | mainland | none | True | (7499,5) | OK  | 7125 | 600 | 374 | False/normal-big-bday |
+| 219 | 1 | 0 | normal | app | mainland | cash | False | (7499,5) | OK  | 6125 | 600 | 374 | False/normal-big |
+| 220 | 1 | 0 | normal | app | mainland | cash | True | (7499,5) | OK  | 6125 | 600 | 374 | False/normal-big-bday |
+| 221 | 1 | 0 | normal | app | mainland | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 222 | 1 | 0 | normal | app | mainland | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 223 | 1 | 0 | normal | app | remote | none | False | (7499,5) | OK  | 7125 | 1800 | 374 | False/normal-big |
+| 224 | 1 | 0 | normal | app | remote | none | True | (7499,5) | OK  | 7125 | 1800 | 374 | False/normal-big-bday |
+| 225 | 1 | 0 | normal | app | remote | cash | False | (7499,5) | OK  | 6125 | 1800 | 374 | False/normal-big |
+| 226 | 1 | 0 | normal | app | remote | cash | True | (7499,5) | OK  | 6125 | 1800 | 374 | False/normal-big-bday |
+| 227 | 1 | 0 | normal | app | remote | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 228 | 1 | 0 | normal | app | remote | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 229 | 1 | 0 | normal | web | mainland | none | False | (7499,5) | OK  | 7125 | 800 | 374 | False/normal-big |
+| 230 | 1 | 0 | normal | web | mainland | none | True | (7499,5) | OK  | 7125 | 800 | 374 | False/normal-big-bday |
+| 231 | 1 | 0 | normal | web | mainland | cash | False | (7499,5) | OK  | 6125 | 800 | 374 | False/normal-big |
+| 232 | 1 | 0 | normal | web | mainland | cash | True | (7499,5) | OK  | 6125 | 800 | 374 | False/normal-big-bday |
+| 233 | 1 | 0 | normal | web | mainland | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 234 | 1 | 0 | normal | web | mainland | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 235 | 1 | 0 | normal | web | remote | none | False | (7499,5) | OK  | 7125 | 0 | 374 | False/normal-big |
+| 236 | 1 | 0 | normal | web | remote | none | True | (7499,5) | OK  | 7125 | 0 | 374 | False/normal-big-bday |
+| 237 | 1 | 0 | normal | web | remote | cash | False | (7499,5) | OK  | 6125 | 0 | 374 | False/normal-big |
+| 238 | 1 | 0 | normal | web | remote | cash | True | (7499,5) | OK  | 6125 | 0 | 374 | False/normal-big-bday |
+| 239 | 1 | 0 | normal | web | remote | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 240 | 1 | 0 | normal | web | remote | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 241 | 1 | 0 | silver | app | mainland | none | False | (7499,5) | OK  | 6600 | 0 | 899 | False/silver-small |
+| 242 | 1 | 0 | silver | app | mainland | none | True | (7499,5) | OK  | 6375 | 0 | 1124 | False/silver-small |
+| 243 | 1 | 0 | silver | app | mainland | cash | False | (7499,5) | OK  | 5600 | 600 | 899 | False/silver-small-cash |
+| 244 | 1 | 0 | silver | app | mainland | cash | True | (7499,5) | OK  | 5375 | 600 | 1124 | False/silver-small-cash-bday |
+| 245 | 1 | 0 | silver | app | mainland | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 246 | 1 | 0 | silver | app | mainland | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 247 | 1 | 0 | silver | app | remote | none | False | (7499,5) | OK  | 6600 | 1200 | 899 | False/silver-small |
+| 248 | 1 | 0 | silver | app | remote | none | True | (7499,5) | OK  | 6375 | 1200 | 1124 | False/silver-small |
+| 249 | 1 | 0 | silver | app | remote | cash | False | (7499,5) | OK  | 5600 | 1800 | 899 | False/silver-small-cash |
+| 250 | 1 | 0 | silver | app | remote | cash | True | (7499,5) | OK  | 5375 | 1800 | 1124 | False/silver-small-cash-bday |
+| 251 | 1 | 0 | silver | app | remote | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 252 | 1 | 0 | silver | app | remote | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 253 | 1 | 0 | silver | web | mainland | none | False | (7499,5) | OK  | 6600 | 0 | 899 | False/silver-small |
+| 254 | 1 | 0 | silver | web | mainland | none | True | (7499,5) | OK  | 6375 | 0 | 1124 | False/silver-small |
+| 255 | 1 | 0 | silver | web | mainland | cash | False | (7499,5) | OK  | 5600 | 800 | 899 | False/silver-small-cash |
+| 256 | 1 | 0 | silver | web | mainland | cash | True | (7499,5) | OK  | 5375 | 800 | 1124 | False/silver-small-cash-bday |
+| 257 | 1 | 0 | silver | web | mainland | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 258 | 1 | 0 | silver | web | mainland | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 259 | 1 | 0 | silver | web | remote | none | False | (7499,5) | OK  | 6600 | 0 | 899 | False/silver-small |
+| 260 | 1 | 0 | silver | web | remote | none | True | (7499,5) | OK  | 6375 | 0 | 1124 | False/silver-small |
+| 261 | 1 | 0 | silver | web | remote | cash | False | (7499,5) | OK  | 5600 | 0 | 899 | False/silver-small-cash |
+| 262 | 1 | 0 | silver | web | remote | cash | True | (7499,5) | OK  | 5375 | 0 | 1124 | False/silver-small-cash-bday |
+| 263 | 1 | 0 | silver | web | remote | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 264 | 1 | 0 | silver | web | remote | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 265 | 1 | 0 | gold | app | mainland | none | False | (7499,5) | OK  | 5250 | 0 | 2249 | False/gold-small |
+| 266 | 1 | 0 | gold | app | mainland | none | True | (7499,5) | OK  | 5100 | 0 | 2399 | False/gold-small-bday |
+| 267 | 1 | 0 | gold | app | mainland | cash | False | (7499,5) | OK  | 4250 | 0 | 2249 | False/gold-small |
+| 268 | 1 | 0 | gold | app | mainland | cash | True | (7499,5) | OK  | 4100 | 0 | 2399 | False/gold-small-bday |
+| 269 | 1 | 0 | gold | app | mainland | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 270 | 1 | 0 | gold | app | mainland | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 271 | 1 | 0 | gold | app | remote | none | False | (7499,5) | OK  | 5250 | 1200 | 2249 | False/gold-small |
+| 272 | 1 | 0 | gold | app | remote | none | True | (7499,5) | OK  | 5100 | 1200 | 2399 | False/gold-small-bday |
+| 273 | 1 | 0 | gold | app | remote | cash | False | (7499,5) | OK  | 4250 | 1200 | 2249 | False/gold-small |
+| 274 | 1 | 0 | gold | app | remote | cash | True | (7499,5) | OK  | 4100 | 1200 | 2399 | False/gold-small-bday |
+| 275 | 1 | 0 | gold | app | remote | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 276 | 1 | 0 | gold | app | remote | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 277 | 1 | 0 | gold | web | mainland | none | False | (7499,5) | OK  | 5250 | 0 | 2249 | False/gold-small |
+| 278 | 1 | 0 | gold | web | mainland | none | True | (7499,5) | OK  | 5100 | 0 | 2399 | False/gold-small-bday |
+| 279 | 1 | 0 | gold | web | mainland | cash | False | (7499,5) | OK  | 4250 | 0 | 2249 | False/gold-small |
+| 280 | 1 | 0 | gold | web | mainland | cash | True | (7499,5) | OK  | 4100 | 0 | 2399 | False/gold-small-bday |
+| 281 | 1 | 0 | gold | web | mainland | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 282 | 1 | 0 | gold | web | mainland | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 283 | 1 | 0 | gold | web | remote | none | False | (7499,5) | OK  | 5250 | 0 | 2249 | False/gold-small |
+| 284 | 1 | 0 | gold | web | remote | none | True | (7499,5) | OK  | 5100 | 0 | 2399 | False/gold-small-bday |
+| 285 | 1 | 0 | gold | web | remote | cash | False | (7499,5) | OK  | 4250 | 0 | 2249 | False/gold-small |
+| 286 | 1 | 0 | gold | web | remote | cash | True | (7499,5) | OK  | 4100 | 0 | 2399 | False/gold-small-bday |
+| 287 | 1 | 0 | gold | web | remote | gift | False | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 288 | 1 | 0 | gold | web | remote | gift | True | (7499,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 289 | 1 | 1 | normal | app | mainland | none | False | (7499,14) | OK  | 7125 | 600 | 374 | False/normal-big |
+| 290 | 1 | 1 | normal | app | mainland | none | True | (7499,14) | OK  | 7125 | 600 | 374 | False/normal-big-bday |
+| 291 | 1 | 1 | normal | app | mainland | cash | False | (7499,14) | OK  | 6125 | 600 | 374 | False/normal-big |
+| 292 | 1 | 1 | normal | app | mainland | cash | True | (7499,14) | OK  | 6125 | 600 | 374 | False/normal-big-bday |
+| 293 | 1 | 1 | normal | app | mainland | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 294 | 1 | 1 | normal | app | mainland | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 295 | 1 | 1 | normal | app | remote | none | False | (7499,14) | OK  | 7125 | 1800 | 374 | False/normal-big |
+| 296 | 1 | 1 | normal | app | remote | none | True | (7499,14) | OK  | 7125 | 1800 | 374 | False/normal-big-bday |
+| 297 | 1 | 1 | normal | app | remote | cash | False | (7499,14) | OK  | 6125 | 1800 | 374 | False/normal-big |
+| 298 | 1 | 1 | normal | app | remote | cash | True | (7499,14) | OK  | 6125 | 1800 | 374 | False/normal-big-bday |
+| 299 | 1 | 1 | normal | app | remote | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 300 | 1 | 1 | normal | app | remote | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 301 | 1 | 1 | normal | web | mainland | none | False | (7499,14) | OK  | 7125 | 800 | 374 | False/normal-big |
+| 302 | 1 | 1 | normal | web | mainland | none | True | (7499,14) | OK  | 7125 | 800 | 374 | False/normal-big-bday |
+| 303 | 1 | 1 | normal | web | mainland | cash | False | (7499,14) | OK  | 6125 | 800 | 374 | False/normal-big |
+| 304 | 1 | 1 | normal | web | mainland | cash | True | (7499,14) | OK  | 6125 | 800 | 374 | False/normal-big-bday |
+| 305 | 1 | 1 | normal | web | mainland | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 306 | 1 | 1 | normal | web | mainland | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 307 | 1 | 1 | normal | web | remote | none | False | (7499,14) | OK  | 7125 | 0 | 374 | False/normal-big |
+| 308 | 1 | 1 | normal | web | remote | none | True | (7499,14) | OK  | 7125 | 0 | 374 | False/normal-big-bday |
+| 309 | 1 | 1 | normal | web | remote | cash | False | (7499,14) | OK  | 6125 | 0 | 374 | False/normal-big |
+| 310 | 1 | 1 | normal | web | remote | cash | True | (7499,14) | OK  | 6125 | 0 | 374 | False/normal-big-bday |
+| 311 | 1 | 1 | normal | web | remote | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 312 | 1 | 1 | normal | web | remote | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 313 | 1 | 1 | silver | app | mainland | none | False | (7499,14) | OK  | 6450 | 0 | 1049 | False/silver-small-bulk |
+| 314 | 1 | 1 | silver | app | mainland | none | True | (7499,14) | OK  | 6225 | 0 | 1274 | False/silver-small-bulk |
+| 315 | 1 | 1 | silver | app | mainland | cash | False | (7499,14) | OK  | 5450 | 600 | 1049 | False/silver-small-cash |
+| 316 | 1 | 1 | silver | app | mainland | cash | True | (7499,14) | OK  | 5225 | 600 | 1274 | False/silver-small-cash-bday |
+| 317 | 1 | 1 | silver | app | mainland | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 318 | 1 | 1 | silver | app | mainland | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 319 | 1 | 1 | silver | app | remote | none | False | (7499,14) | OK  | 6450 | 1200 | 1049 | False/silver-small-bulk |
+| 320 | 1 | 1 | silver | app | remote | none | True | (7499,14) | OK  | 6225 | 1200 | 1274 | False/silver-small-bulk |
+| 321 | 1 | 1 | silver | app | remote | cash | False | (7499,14) | OK  | 5450 | 1800 | 1049 | False/silver-small-cash |
+| 322 | 1 | 1 | silver | app | remote | cash | True | (7499,14) | OK  | 5225 | 1800 | 1274 | False/silver-small-cash-bday |
+| 323 | 1 | 1 | silver | app | remote | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 324 | 1 | 1 | silver | app | remote | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 325 | 1 | 1 | silver | web | mainland | none | False | (7499,14) | OK  | 6450 | 0 | 1049 | False/silver-small-bulk |
+| 326 | 1 | 1 | silver | web | mainland | none | True | (7499,14) | OK  | 6225 | 0 | 1274 | False/silver-small-bulk |
+| 327 | 1 | 1 | silver | web | mainland | cash | False | (7499,14) | OK  | 5450 | 800 | 1049 | False/silver-small-cash |
+| 328 | 1 | 1 | silver | web | mainland | cash | True | (7499,14) | OK  | 5225 | 800 | 1274 | False/silver-small-cash-bday |
+| 329 | 1 | 1 | silver | web | mainland | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 330 | 1 | 1 | silver | web | mainland | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 331 | 1 | 1 | silver | web | remote | none | False | (7499,14) | OK  | 6450 | 0 | 1049 | False/silver-small-bulk |
+| 332 | 1 | 1 | silver | web | remote | none | True | (7499,14) | OK  | 6225 | 0 | 1274 | False/silver-small-bulk |
+| 333 | 1 | 1 | silver | web | remote | cash | False | (7499,14) | OK  | 5450 | 0 | 1049 | False/silver-small-cash |
+| 334 | 1 | 1 | silver | web | remote | cash | True | (7499,14) | OK  | 5225 | 0 | 1274 | False/silver-small-cash-bday |
+| 335 | 1 | 1 | silver | web | remote | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 336 | 1 | 1 | silver | web | remote | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 337 | 1 | 1 | gold | app | mainland | none | False | (7499,14) | OK  | 4875 | 0 | 2624 | False/gold-small-bulk |
+| 338 | 1 | 1 | gold | app | mainland | none | True | (7499,14) | OK  | 4725 | 0 | 2774 | False/gold-small-bday |
+| 339 | 1 | 1 | gold | app | mainland | cash | False | (7499,14) | OK  | 3875 | 0 | 2624 | False/gold-small-bulk |
+| 340 | 1 | 1 | gold | app | mainland | cash | True | (7499,14) | OK  | 3725 | 0 | 2774 | False/gold-small-bday |
+| 341 | 1 | 1 | gold | app | mainland | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 342 | 1 | 1 | gold | app | mainland | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 343 | 1 | 1 | gold | app | remote | none | False | (7499,14) | OK  | 4875 | 1200 | 2624 | False/gold-small-bulk |
+| 344 | 1 | 1 | gold | app | remote | none | True | (7499,14) | OK  | 4725 | 1200 | 2774 | False/gold-small-bday |
+| 345 | 1 | 1 | gold | app | remote | cash | False | (7499,14) | OK  | 3875 | 1200 | 2624 | False/gold-small-bulk |
+| 346 | 1 | 1 | gold | app | remote | cash | True | (7499,14) | OK  | 3725 | 1200 | 2774 | False/gold-small-bday |
+| 347 | 1 | 1 | gold | app | remote | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 348 | 1 | 1 | gold | app | remote | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 349 | 1 | 1 | gold | web | mainland | none | False | (7499,14) | OK  | 4875 | 0 | 2624 | False/gold-small-bulk |
+| 350 | 1 | 1 | gold | web | mainland | none | True | (7499,14) | OK  | 4725 | 0 | 2774 | False/gold-small-bday |
+| 351 | 1 | 1 | gold | web | mainland | cash | False | (7499,14) | OK  | 3875 | 0 | 2624 | False/gold-small-bulk |
+| 352 | 1 | 1 | gold | web | mainland | cash | True | (7499,14) | OK  | 3725 | 0 | 2774 | False/gold-small-bday |
+| 353 | 1 | 1 | gold | web | mainland | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 354 | 1 | 1 | gold | web | mainland | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 355 | 1 | 1 | gold | web | remote | none | False | (7499,14) | OK  | 4875 | 0 | 2624 | False/gold-small-bulk |
+| 356 | 1 | 1 | gold | web | remote | none | True | (7499,14) | OK  | 4725 | 0 | 2774 | False/gold-small-bday |
+| 357 | 1 | 1 | gold | web | remote | cash | False | (7499,14) | OK  | 3875 | 0 | 2624 | False/gold-small-bulk |
+| 358 | 1 | 1 | gold | web | remote | cash | True | (7499,14) | OK  | 3725 | 0 | 2774 | False/gold-small-bday |
+| 359 | 1 | 1 | gold | web | remote | gift | False | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 360 | 1 | 1 | gold | web | remote | gift | True | (7499,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 361 | 1 | 2 | normal | app | mainland | none | False | (7499,21) | OK  | 7125 | 600 | 374 | False/normal-big |
+| 362 | 1 | 2 | normal | app | mainland | none | True | (7499,21) | OK  | 7125 | 600 | 374 | False/normal-big-bday |
+| 363 | 1 | 2 | normal | app | mainland | cash | False | (7499,21) | OK  | 6125 | 600 | 374 | False/normal-big |
+| 364 | 1 | 2 | normal | app | mainland | cash | True | (7499,21) | OK  | 6125 | 600 | 374 | False/normal-big-bday |
+| 365 | 1 | 2 | normal | app | mainland | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 366 | 1 | 2 | normal | app | mainland | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 367 | 1 | 2 | normal | app | remote | none | False | (7499,21) | OK  | 7125 | 1800 | 374 | False/normal-big |
+| 368 | 1 | 2 | normal | app | remote | none | True | (7499,21) | OK  | 7125 | 1800 | 374 | False/normal-big-bday |
+| 369 | 1 | 2 | normal | app | remote | cash | False | (7499,21) | OK  | 6125 | 1800 | 374 | False/normal-big |
+| 370 | 1 | 2 | normal | app | remote | cash | True | (7499,21) | OK  | 6125 | 1800 | 374 | False/normal-big-bday |
+| 371 | 1 | 2 | normal | app | remote | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 372 | 1 | 2 | normal | app | remote | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 373 | 1 | 2 | normal | web | mainland | none | False | (7499,21) | OK  | 7125 | 800 | 374 | False/normal-big |
+| 374 | 1 | 2 | normal | web | mainland | none | True | (7499,21) | OK  | 7125 | 800 | 374 | False/normal-big-bday |
+| 375 | 1 | 2 | normal | web | mainland | cash | False | (7499,21) | OK  | 6125 | 800 | 374 | False/normal-big |
+| 376 | 1 | 2 | normal | web | mainland | cash | True | (7499,21) | OK  | 6125 | 800 | 374 | False/normal-big-bday |
+| 377 | 1 | 2 | normal | web | mainland | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 378 | 1 | 2 | normal | web | mainland | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 379 | 1 | 2 | normal | web | remote | none | False | (7499,21) | OK  | 7125 | 0 | 374 | False/normal-big |
+| 380 | 1 | 2 | normal | web | remote | none | True | (7499,21) | OK  | 7125 | 0 | 374 | False/normal-big-bday |
+| 381 | 1 | 2 | normal | web | remote | cash | False | (7499,21) | OK  | 6125 | 0 | 374 | False/normal-big |
+| 382 | 1 | 2 | normal | web | remote | cash | True | (7499,21) | OK  | 6125 | 0 | 374 | False/normal-big-bday |
+| 383 | 1 | 2 | normal | web | remote | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 384 | 1 | 2 | normal | web | remote | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 385 | 1 | 2 | silver | app | mainland | none | False | (7499,21) | OK  | 6450 | 0 | 1049 | False/silver-small-bulk |
+| 386 | 1 | 2 | silver | app | mainland | none | True | (7499,21) | OK  | 6225 | 0 | 1274 | False/silver-small-bulk |
+| 387 | 1 | 2 | silver | app | mainland | cash | False | (7499,21) | OK  | 5450 | 600 | 1049 | False/silver-small-cash |
+| 388 | 1 | 2 | silver | app | mainland | cash | True | (7499,21) | OK  | 5225 | 600 | 1274 | False/silver-small-cash-bday |
+| 389 | 1 | 2 | silver | app | mainland | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 390 | 1 | 2 | silver | app | mainland | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 391 | 1 | 2 | silver | app | remote | none | False | (7499,21) | OK  | 6450 | 1200 | 1049 | False/silver-small-bulk |
+| 392 | 1 | 2 | silver | app | remote | none | True | (7499,21) | OK  | 6225 | 1200 | 1274 | False/silver-small-bulk |
+| 393 | 1 | 2 | silver | app | remote | cash | False | (7499,21) | OK  | 5450 | 1800 | 1049 | False/silver-small-cash |
+| 394 | 1 | 2 | silver | app | remote | cash | True | (7499,21) | OK  | 5225 | 1800 | 1274 | False/silver-small-cash-bday |
+| 395 | 1 | 2 | silver | app | remote | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 396 | 1 | 2 | silver | app | remote | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 397 | 1 | 2 | silver | web | mainland | none | False | (7499,21) | OK  | 6450 | 0 | 1049 | False/silver-small-bulk |
+| 398 | 1 | 2 | silver | web | mainland | none | True | (7499,21) | OK  | 6225 | 0 | 1274 | False/silver-small-bulk |
+| 399 | 1 | 2 | silver | web | mainland | cash | False | (7499,21) | OK  | 5450 | 800 | 1049 | False/silver-small-cash |
+| 400 | 1 | 2 | silver | web | mainland | cash | True | (7499,21) | OK  | 5225 | 800 | 1274 | False/silver-small-cash-bday |
+| 401 | 1 | 2 | silver | web | mainland | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 402 | 1 | 2 | silver | web | mainland | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 403 | 1 | 2 | silver | web | remote | none | False | (7499,21) | OK  | 6450 | 0 | 1049 | False/silver-small-bulk |
+| 404 | 1 | 2 | silver | web | remote | none | True | (7499,21) | OK  | 6225 | 0 | 1274 | False/silver-small-bulk |
+| 405 | 1 | 2 | silver | web | remote | cash | False | (7499,21) | OK  | 5450 | 0 | 1049 | False/silver-small-cash |
+| 406 | 1 | 2 | silver | web | remote | cash | True | (7499,21) | OK  | 5225 | 0 | 1274 | False/silver-small-cash-bday |
+| 407 | 1 | 2 | silver | web | remote | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 408 | 1 | 2 | silver | web | remote | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 409 | 1 | 2 | gold | app | mainland | none | False | (7499,21) | OK  | 4875 | 0 | 2624 | False/gold-small-bulk |
+| 410 | 1 | 2 | gold | app | mainland | none | True | (7499,21) | OK  | 4725 | 0 | 2774 | False/gold-small-bday |
+| 411 | 1 | 2 | gold | app | mainland | cash | False | (7499,21) | OK  | 3875 | 0 | 2624 | False/gold-small-bulk |
+| 412 | 1 | 2 | gold | app | mainland | cash | True | (7499,21) | OK  | 3725 | 0 | 2774 | False/gold-small-bday |
+| 413 | 1 | 2 | gold | app | mainland | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 414 | 1 | 2 | gold | app | mainland | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 415 | 1 | 2 | gold | app | remote | none | False | (7499,21) | OK  | 4875 | 1200 | 2624 | False/gold-small-bulk |
+| 416 | 1 | 2 | gold | app | remote | none | True | (7499,21) | OK  | 4725 | 1200 | 2774 | False/gold-small-bday |
+| 417 | 1 | 2 | gold | app | remote | cash | False | (7499,21) | OK  | 3875 | 1200 | 2624 | False/gold-small-bulk |
+| 418 | 1 | 2 | gold | app | remote | cash | True | (7499,21) | OK  | 3725 | 1200 | 2774 | False/gold-small-bday |
+| 419 | 1 | 2 | gold | app | remote | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 420 | 1 | 2 | gold | app | remote | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 421 | 1 | 2 | gold | web | mainland | none | False | (7499,21) | OK  | 4875 | 0 | 2624 | False/gold-small-bulk |
+| 422 | 1 | 2 | gold | web | mainland | none | True | (7499,21) | OK  | 4725 | 0 | 2774 | False/gold-small-bday |
+| 423 | 1 | 2 | gold | web | mainland | cash | False | (7499,21) | OK  | 3875 | 0 | 2624 | False/gold-small-bulk |
+| 424 | 1 | 2 | gold | web | mainland | cash | True | (7499,21) | OK  | 3725 | 0 | 2774 | False/gold-small-bday |
+| 425 | 1 | 2 | gold | web | mainland | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 426 | 1 | 2 | gold | web | mainland | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 427 | 1 | 2 | gold | web | remote | none | False | (7499,21) | OK  | 4875 | 0 | 2624 | False/gold-small-bulk |
+| 428 | 1 | 2 | gold | web | remote | none | True | (7499,21) | OK  | 4725 | 0 | 2774 | False/gold-small-bday |
+| 429 | 1 | 2 | gold | web | remote | cash | False | (7499,21) | OK  | 3875 | 0 | 2624 | False/gold-small-bulk |
+| 430 | 1 | 2 | gold | web | remote | cash | True | (7499,21) | OK  | 3725 | 0 | 2774 | False/gold-small-bday |
+| 431 | 1 | 2 | gold | web | remote | gift | False | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 432 | 1 | 2 | gold | web | remote | gift | True | (7499,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 433 | 2 | 0 | normal | app | mainland | none | False | (14999,5) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 434 | 2 | 0 | normal | app | mainland | none | True | (14999,5) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 435 | 2 | 0 | normal | app | mainland | cash | False | (14999,5) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 436 | 2 | 0 | normal | app | mainland | cash | True | (14999,5) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 437 | 2 | 0 | normal | app | mainland | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 438 | 2 | 0 | normal | app | mainland | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 439 | 2 | 0 | normal | app | remote | none | False | (14999,5) | OK  | 14250 | 1200 | 749 | False/normal-big |
+| 440 | 2 | 0 | normal | app | remote | none | True | (14999,5) | OK  | 14250 | 1200 | 749 | False/normal-big-bday |
+| 441 | 2 | 0 | normal | app | remote | cash | False | (14999,5) | OK  | 13250 | 1200 | 749 | False/normal-big |
+| 442 | 2 | 0 | normal | app | remote | cash | True | (14999,5) | OK  | 13250 | 1200 | 749 | False/normal-big-bday |
+| 443 | 2 | 0 | normal | app | remote | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 444 | 2 | 0 | normal | app | remote | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 445 | 2 | 0 | normal | web | mainland | none | False | (14999,5) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 446 | 2 | 0 | normal | web | mainland | none | True | (14999,5) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 447 | 2 | 0 | normal | web | mainland | cash | False | (14999,5) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 448 | 2 | 0 | normal | web | mainland | cash | True | (14999,5) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 449 | 2 | 0 | normal | web | mainland | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 450 | 2 | 0 | normal | web | mainland | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 451 | 2 | 0 | normal | web | remote | none | False | (14999,5) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 452 | 2 | 0 | normal | web | remote | none | True | (14999,5) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 453 | 2 | 0 | normal | web | remote | cash | False | (14999,5) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 454 | 2 | 0 | normal | web | remote | cash | True | (14999,5) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 455 | 2 | 0 | normal | web | remote | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 456 | 2 | 0 | normal | web | remote | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 457 | 2 | 0 | silver | app | mainland | none | False | (14999,5) | OK  | 13200 | 0 | 1799 | False/silver-big |
+| 458 | 2 | 0 | silver | app | mainland | none | True | (14999,5) | OK  | 12750 | 0 | 2249 | False/silver-big-bday |
+| 459 | 2 | 0 | silver | app | mainland | cash | False | (14999,5) | OK  | 12200 | 0 | 1799 | False/silver-big |
+| 460 | 2 | 0 | silver | app | mainland | cash | True | (14999,5) | OK  | 11750 | 0 | 2249 | False/silver-big-bday |
+| 461 | 2 | 0 | silver | app | mainland | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 462 | 2 | 0 | silver | app | mainland | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 463 | 2 | 0 | silver | app | remote | none | False | (14999,5) | OK  | 13200 | 1200 | 1799 | False/silver-big |
+| 464 | 2 | 0 | silver | app | remote | none | True | (14999,5) | OK  | 12750 | 1200 | 2249 | False/silver-big-bday |
+| 465 | 2 | 0 | silver | app | remote | cash | False | (14999,5) | OK  | 12200 | 1200 | 1799 | False/silver-big |
+| 466 | 2 | 0 | silver | app | remote | cash | True | (14999,5) | OK  | 11750 | 1200 | 2249 | False/silver-big-bday |
+| 467 | 2 | 0 | silver | app | remote | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 468 | 2 | 0 | silver | app | remote | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 469 | 2 | 0 | silver | web | mainland | none | False | (14999,5) | OK  | 13200 | 0 | 1799 | False/silver-big |
+| 470 | 2 | 0 | silver | web | mainland | none | True | (14999,5) | OK  | 12750 | 0 | 2249 | False/silver-big-bday |
+| 471 | 2 | 0 | silver | web | mainland | cash | False | (14999,5) | OK  | 12200 | 0 | 1799 | False/silver-big |
+| 472 | 2 | 0 | silver | web | mainland | cash | True | (14999,5) | OK  | 11750 | 0 | 2249 | False/silver-big-bday |
+| 473 | 2 | 0 | silver | web | mainland | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 474 | 2 | 0 | silver | web | mainland | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 475 | 2 | 0 | silver | web | remote | none | False | (14999,5) | OK  | 13200 | 0 | 1799 | False/silver-big |
+| 476 | 2 | 0 | silver | web | remote | none | True | (14999,5) | OK  | 12750 | 0 | 2249 | False/silver-big-bday |
+| 477 | 2 | 0 | silver | web | remote | cash | False | (14999,5) | OK  | 12200 | 0 | 1799 | False/silver-big |
+| 478 | 2 | 0 | silver | web | remote | cash | True | (14999,5) | OK  | 11750 | 0 | 2249 | False/silver-big-bday |
+| 479 | 2 | 0 | silver | web | remote | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 480 | 2 | 0 | silver | web | remote | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 481 | 2 | 0 | gold | app | mainland | none | False | (14999,5) | OK  | 10500 | 0 | 4499 | False/gold-small |
+| 482 | 2 | 0 | gold | app | mainland | none | True | (14999,5) | OK  | 10200 | 0 | 4799 | False/gold-small-bday |
+| 483 | 2 | 0 | gold | app | mainland | cash | False | (14999,5) | OK  | 9500 | 0 | 4499 | False/gold-small |
+| 484 | 2 | 0 | gold | app | mainland | cash | True | (14999,5) | OK  | 9200 | 0 | 4799 | False/gold-small-bday |
+| 485 | 2 | 0 | gold | app | mainland | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 486 | 2 | 0 | gold | app | mainland | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 487 | 2 | 0 | gold | app | remote | none | False | (14999,5) | OK  | 10500 | 1200 | 4499 | False/gold-small |
+| 488 | 2 | 0 | gold | app | remote | none | True | (14999,5) | OK  | 10200 | 1200 | 4799 | False/gold-small-bday |
+| 489 | 2 | 0 | gold | app | remote | cash | False | (14999,5) | OK  | 9500 | 1200 | 4499 | False/gold-small |
+| 490 | 2 | 0 | gold | app | remote | cash | True | (14999,5) | OK  | 9200 | 1200 | 4799 | False/gold-small-bday |
+| 491 | 2 | 0 | gold | app | remote | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 492 | 2 | 0 | gold | app | remote | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 493 | 2 | 0 | gold | web | mainland | none | False | (14999,5) | OK  | 10500 | 0 | 4499 | False/gold-small |
+| 494 | 2 | 0 | gold | web | mainland | none | True | (14999,5) | OK  | 10200 | 0 | 4799 | False/gold-small-bday |
+| 495 | 2 | 0 | gold | web | mainland | cash | False | (14999,5) | OK  | 9500 | 0 | 4499 | False/gold-small |
+| 496 | 2 | 0 | gold | web | mainland | cash | True | (14999,5) | OK  | 9200 | 0 | 4799 | False/gold-small-bday |
+| 497 | 2 | 0 | gold | web | mainland | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 498 | 2 | 0 | gold | web | mainland | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 499 | 2 | 0 | gold | web | remote | none | False | (14999,5) | OK  | 10500 | 0 | 4499 | False/gold-small |
+| 500 | 2 | 0 | gold | web | remote | none | True | (14999,5) | OK  | 10200 | 0 | 4799 | False/gold-small-bday |
+| 501 | 2 | 0 | gold | web | remote | cash | False | (14999,5) | OK  | 9500 | 0 | 4499 | False/gold-small |
+| 502 | 2 | 0 | gold | web | remote | cash | True | (14999,5) | OK  | 9200 | 0 | 4799 | False/gold-small-bday |
+| 503 | 2 | 0 | gold | web | remote | gift | False | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 504 | 2 | 0 | gold | web | remote | gift | True | (14999,5) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 505 | 2 | 1 | normal | app | mainland | none | False | (14999,14) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 506 | 2 | 1 | normal | app | mainland | none | True | (14999,14) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 507 | 2 | 1 | normal | app | mainland | cash | False | (14999,14) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 508 | 2 | 1 | normal | app | mainland | cash | True | (14999,14) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 509 | 2 | 1 | normal | app | mainland | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 510 | 2 | 1 | normal | app | mainland | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 511 | 2 | 1 | normal | app | remote | none | False | (14999,14) | OK  | 14250 | 1200 | 749 | False/normal-big |
+| 512 | 2 | 1 | normal | app | remote | none | True | (14999,14) | OK  | 14250 | 1200 | 749 | False/normal-big-bday |
+| 513 | 2 | 1 | normal | app | remote | cash | False | (14999,14) | OK  | 13250 | 1200 | 749 | False/normal-big |
+| 514 | 2 | 1 | normal | app | remote | cash | True | (14999,14) | OK  | 13250 | 1200 | 749 | False/normal-big-bday |
+| 515 | 2 | 1 | normal | app | remote | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 516 | 2 | 1 | normal | app | remote | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 517 | 2 | 1 | normal | web | mainland | none | False | (14999,14) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 518 | 2 | 1 | normal | web | mainland | none | True | (14999,14) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 519 | 2 | 1 | normal | web | mainland | cash | False | (14999,14) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 520 | 2 | 1 | normal | web | mainland | cash | True | (14999,14) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 521 | 2 | 1 | normal | web | mainland | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 522 | 2 | 1 | normal | web | mainland | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 523 | 2 | 1 | normal | web | remote | none | False | (14999,14) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 524 | 2 | 1 | normal | web | remote | none | True | (14999,14) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 525 | 2 | 1 | normal | web | remote | cash | False | (14999,14) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 526 | 2 | 1 | normal | web | remote | cash | True | (14999,14) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 527 | 2 | 1 | normal | web | remote | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 528 | 2 | 1 | normal | web | remote | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 529 | 2 | 1 | silver | app | mainland | none | False | (14999,14) | OK  | 12900 | 0 | 2099 | False/silver-big |
+| 530 | 2 | 1 | silver | app | mainland | none | True | (14999,14) | OK  | 12450 | 0 | 2549 | False/silver-big-bday |
+| 531 | 2 | 1 | silver | app | mainland | cash | False | (14999,14) | OK  | 11900 | 0 | 2099 | False/silver-big |
+| 532 | 2 | 1 | silver | app | mainland | cash | True | (14999,14) | OK  | 11450 | 0 | 2549 | False/silver-big-bday |
+| 533 | 2 | 1 | silver | app | mainland | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 534 | 2 | 1 | silver | app | mainland | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 535 | 2 | 1 | silver | app | remote | none | False | (14999,14) | OK  | 12900 | 1200 | 2099 | False/silver-big |
+| 536 | 2 | 1 | silver | app | remote | none | True | (14999,14) | OK  | 12450 | 1200 | 2549 | False/silver-big-bday |
+| 537 | 2 | 1 | silver | app | remote | cash | False | (14999,14) | OK  | 11900 | 1200 | 2099 | False/silver-big |
+| 538 | 2 | 1 | silver | app | remote | cash | True | (14999,14) | OK  | 11450 | 1200 | 2549 | False/silver-big-bday |
+| 539 | 2 | 1 | silver | app | remote | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 540 | 2 | 1 | silver | app | remote | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 541 | 2 | 1 | silver | web | mainland | none | False | (14999,14) | OK  | 12900 | 0 | 2099 | False/silver-big |
+| 542 | 2 | 1 | silver | web | mainland | none | True | (14999,14) | OK  | 12450 | 0 | 2549 | False/silver-big-bday |
+| 543 | 2 | 1 | silver | web | mainland | cash | False | (14999,14) | OK  | 11900 | 0 | 2099 | False/silver-big |
+| 544 | 2 | 1 | silver | web | mainland | cash | True | (14999,14) | OK  | 11450 | 0 | 2549 | False/silver-big-bday |
+| 545 | 2 | 1 | silver | web | mainland | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 546 | 2 | 1 | silver | web | mainland | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 547 | 2 | 1 | silver | web | remote | none | False | (14999,14) | OK  | 12900 | 0 | 2099 | False/silver-big |
+| 548 | 2 | 1 | silver | web | remote | none | True | (14999,14) | OK  | 12450 | 0 | 2549 | False/silver-big-bday |
+| 549 | 2 | 1 | silver | web | remote | cash | False | (14999,14) | OK  | 11900 | 0 | 2099 | False/silver-big |
+| 550 | 2 | 1 | silver | web | remote | cash | True | (14999,14) | OK  | 11450 | 0 | 2549 | False/silver-big-bday |
+| 551 | 2 | 1 | silver | web | remote | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 552 | 2 | 1 | silver | web | remote | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 553 | 2 | 1 | gold | app | mainland | none | False | (14999,14) | OK  | 9750 | 0 | 5249 | False/gold-small-bulk |
+| 554 | 2 | 1 | gold | app | mainland | none | True | (14999,14) | OK  | 9450 | 0 | 5549 | False/gold-small-bday |
+| 555 | 2 | 1 | gold | app | mainland | cash | False | (14999,14) | OK  | 8750 | 0 | 5249 | False/gold-small-bulk |
+| 556 | 2 | 1 | gold | app | mainland | cash | True | (14999,14) | OK  | 8450 | 0 | 5549 | False/gold-small-bday |
+| 557 | 2 | 1 | gold | app | mainland | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 558 | 2 | 1 | gold | app | mainland | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 559 | 2 | 1 | gold | app | remote | none | False | (14999,14) | OK  | 9750 | 1200 | 5249 | False/gold-small-bulk |
+| 560 | 2 | 1 | gold | app | remote | none | True | (14999,14) | OK  | 9450 | 1200 | 5549 | False/gold-small-bday |
+| 561 | 2 | 1 | gold | app | remote | cash | False | (14999,14) | OK  | 8750 | 1200 | 5249 | False/gold-small-bulk |
+| 562 | 2 | 1 | gold | app | remote | cash | True | (14999,14) | OK  | 8450 | 1200 | 5549 | False/gold-small-bday |
+| 563 | 2 | 1 | gold | app | remote | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 564 | 2 | 1 | gold | app | remote | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 565 | 2 | 1 | gold | web | mainland | none | False | (14999,14) | OK  | 9750 | 0 | 5249 | False/gold-small-bulk |
+| 566 | 2 | 1 | gold | web | mainland | none | True | (14999,14) | OK  | 9450 | 0 | 5549 | False/gold-small-bday |
+| 567 | 2 | 1 | gold | web | mainland | cash | False | (14999,14) | OK  | 8750 | 0 | 5249 | False/gold-small-bulk |
+| 568 | 2 | 1 | gold | web | mainland | cash | True | (14999,14) | OK  | 8450 | 0 | 5549 | False/gold-small-bday |
+| 569 | 2 | 1 | gold | web | mainland | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 570 | 2 | 1 | gold | web | mainland | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 571 | 2 | 1 | gold | web | remote | none | False | (14999,14) | OK  | 9750 | 0 | 5249 | False/gold-small-bulk |
+| 572 | 2 | 1 | gold | web | remote | none | True | (14999,14) | OK  | 9450 | 0 | 5549 | False/gold-small-bday |
+| 573 | 2 | 1 | gold | web | remote | cash | False | (14999,14) | OK  | 8750 | 0 | 5249 | False/gold-small-bulk |
+| 574 | 2 | 1 | gold | web | remote | cash | True | (14999,14) | OK  | 8450 | 0 | 5549 | False/gold-small-bday |
+| 575 | 2 | 1 | gold | web | remote | gift | False | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 576 | 2 | 1 | gold | web | remote | gift | True | (14999,14) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 577 | 2 | 2 | normal | app | mainland | none | False | (14999,21) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 578 | 2 | 2 | normal | app | mainland | none | True | (14999,21) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 579 | 2 | 2 | normal | app | mainland | cash | False | (14999,21) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 580 | 2 | 2 | normal | app | mainland | cash | True | (14999,21) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 581 | 2 | 2 | normal | app | mainland | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 582 | 2 | 2 | normal | app | mainland | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 583 | 2 | 2 | normal | app | remote | none | False | (14999,21) | OK  | 14250 | 1200 | 749 | False/normal-big |
+| 584 | 2 | 2 | normal | app | remote | none | True | (14999,21) | OK  | 14250 | 1200 | 749 | False/normal-big-bday |
+| 585 | 2 | 2 | normal | app | remote | cash | False | (14999,21) | OK  | 13250 | 1200 | 749 | False/normal-big |
+| 586 | 2 | 2 | normal | app | remote | cash | True | (14999,21) | OK  | 13250 | 1200 | 749 | False/normal-big-bday |
+| 587 | 2 | 2 | normal | app | remote | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 588 | 2 | 2 | normal | app | remote | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 589 | 2 | 2 | normal | web | mainland | none | False | (14999,21) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 590 | 2 | 2 | normal | web | mainland | none | True | (14999,21) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 591 | 2 | 2 | normal | web | mainland | cash | False | (14999,21) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 592 | 2 | 2 | normal | web | mainland | cash | True | (14999,21) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 593 | 2 | 2 | normal | web | mainland | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 594 | 2 | 2 | normal | web | mainland | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 595 | 2 | 2 | normal | web | remote | none | False | (14999,21) | OK  | 14250 | 0 | 749 | False/normal-big |
+| 596 | 2 | 2 | normal | web | remote | none | True | (14999,21) | OK  | 14250 | 0 | 749 | False/normal-big-bday |
+| 597 | 2 | 2 | normal | web | remote | cash | False | (14999,21) | OK  | 13250 | 0 | 749 | False/normal-big |
+| 598 | 2 | 2 | normal | web | remote | cash | True | (14999,21) | OK  | 13250 | 0 | 749 | False/normal-big-bday |
+| 599 | 2 | 2 | normal | web | remote | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 600 | 2 | 2 | normal | web | remote | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 601 | 2 | 2 | silver | app | mainland | none | False | (14999,21) | OK  | 12900 | 0 | 2099 | False/silver-big |
+| 602 | 2 | 2 | silver | app | mainland | none | True | (14999,21) | OK  | 12450 | 0 | 2549 | False/silver-big-bday |
+| 603 | 2 | 2 | silver | app | mainland | cash | False | (14999,21) | OK  | 11900 | 0 | 2099 | False/silver-big |
+| 604 | 2 | 2 | silver | app | mainland | cash | True | (14999,21) | OK  | 11450 | 0 | 2549 | False/silver-big-bday |
+| 605 | 2 | 2 | silver | app | mainland | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 606 | 2 | 2 | silver | app | mainland | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 607 | 2 | 2 | silver | app | remote | none | False | (14999,21) | OK  | 12900 | 1200 | 2099 | False/silver-big |
+| 608 | 2 | 2 | silver | app | remote | none | True | (14999,21) | OK  | 12450 | 1200 | 2549 | False/silver-big-bday |
+| 609 | 2 | 2 | silver | app | remote | cash | False | (14999,21) | OK  | 11900 | 1200 | 2099 | False/silver-big |
+| 610 | 2 | 2 | silver | app | remote | cash | True | (14999,21) | OK  | 11450 | 1200 | 2549 | False/silver-big-bday |
+| 611 | 2 | 2 | silver | app | remote | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 612 | 2 | 2 | silver | app | remote | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 613 | 2 | 2 | silver | web | mainland | none | False | (14999,21) | OK  | 12900 | 0 | 2099 | False/silver-big |
+| 614 | 2 | 2 | silver | web | mainland | none | True | (14999,21) | OK  | 12450 | 0 | 2549 | False/silver-big-bday |
+| 615 | 2 | 2 | silver | web | mainland | cash | False | (14999,21) | OK  | 11900 | 0 | 2099 | False/silver-big |
+| 616 | 2 | 2 | silver | web | mainland | cash | True | (14999,21) | OK  | 11450 | 0 | 2549 | False/silver-big-bday |
+| 617 | 2 | 2 | silver | web | mainland | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 618 | 2 | 2 | silver | web | mainland | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 619 | 2 | 2 | silver | web | remote | none | False | (14999,21) | OK  | 12900 | 0 | 2099 | False/silver-big |
+| 620 | 2 | 2 | silver | web | remote | none | True | (14999,21) | OK  | 12450 | 0 | 2549 | False/silver-big-bday |
+| 621 | 2 | 2 | silver | web | remote | cash | False | (14999,21) | OK  | 11900 | 0 | 2099 | False/silver-big |
+| 622 | 2 | 2 | silver | web | remote | cash | True | (14999,21) | OK  | 11450 | 0 | 2549 | False/silver-big-bday |
+| 623 | 2 | 2 | silver | web | remote | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 624 | 2 | 2 | silver | web | remote | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 625 | 2 | 2 | gold | app | mainland | none | False | (14999,21) | OK  | 9750 | 0 | 5249 | False/gold-small-bulk |
+| 626 | 2 | 2 | gold | app | mainland | none | True | (14999,21) | OK  | 9450 | 0 | 5549 | False/gold-small-bday |
+| 627 | 2 | 2 | gold | app | mainland | cash | False | (14999,21) | OK  | 8750 | 0 | 5249 | False/gold-small-bulk |
+| 628 | 2 | 2 | gold | app | mainland | cash | True | (14999,21) | OK  | 8450 | 0 | 5549 | False/gold-small-bday |
+| 629 | 2 | 2 | gold | app | mainland | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 630 | 2 | 2 | gold | app | mainland | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 631 | 2 | 2 | gold | app | remote | none | False | (14999,21) | OK  | 9750 | 1200 | 5249 | False/gold-small-bulk |
+| 632 | 2 | 2 | gold | app | remote | none | True | (14999,21) | OK  | 9450 | 1200 | 5549 | False/gold-small-bday |
+| 633 | 2 | 2 | gold | app | remote | cash | False | (14999,21) | OK  | 8750 | 1200 | 5249 | False/gold-small-bulk |
+| 634 | 2 | 2 | gold | app | remote | cash | True | (14999,21) | OK  | 8450 | 1200 | 5549 | False/gold-small-bday |
+| 635 | 2 | 2 | gold | app | remote | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 636 | 2 | 2 | gold | app | remote | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 637 | 2 | 2 | gold | web | mainland | none | False | (14999,21) | OK  | 9750 | 0 | 5249 | False/gold-small-bulk |
+| 638 | 2 | 2 | gold | web | mainland | none | True | (14999,21) | OK  | 9450 | 0 | 5549 | False/gold-small-bday |
+| 639 | 2 | 2 | gold | web | mainland | cash | False | (14999,21) | OK  | 8750 | 0 | 5249 | False/gold-small-bulk |
+| 640 | 2 | 2 | gold | web | mainland | cash | True | (14999,21) | OK  | 8450 | 0 | 5549 | False/gold-small-bday |
+| 641 | 2 | 2 | gold | web | mainland | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 642 | 2 | 2 | gold | web | mainland | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 643 | 2 | 2 | gold | web | remote | none | False | (14999,21) | OK  | 9750 | 0 | 5249 | False/gold-small-bulk |
+| 644 | 2 | 2 | gold | web | remote | none | True | (14999,21) | OK  | 9450 | 0 | 5549 | False/gold-small-bday |
+| 645 | 2 | 2 | gold | web | remote | cash | False | (14999,21) | OK  | 8750 | 0 | 5249 | False/gold-small-bulk |
+| 646 | 2 | 2 | gold | web | remote | cash | True | (14999,21) | OK  | 8450 | 0 | 5549 | False/gold-small-bday |
+| 647 | 2 | 2 | gold | web | remote | gift | False | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 648 | 2 | 2 | gold | web | remote | gift | True | (14999,21) | ERROR ValueError: gift coupon requires amount >= 20000 |  |  |  |  |
+| 649 | 3 | 0 | normal | app | mainland | none | False | (20001,5) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 650 | 3 | 0 | normal | app | mainland | none | True | (20001,5) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 651 | 3 | 0 | normal | app | mainland | cash | False | (20001,5) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 652 | 3 | 0 | normal | app | mainland | cash | True | (20001,5) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 653 | 3 | 0 | normal | app | mainland | gift | False | (20001,5) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 654 | 3 | 0 | normal | app | mainland | gift | True | (20001,5) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 655 | 3 | 0 | normal | app | remote | none | False | (20001,5) | OK  | 19001 | 1200 | 1000 | False/normal-big |
+| 656 | 3 | 0 | normal | app | remote | none | True | (20001,5) | OK  | 19001 | 1200 | 1000 | False/normal-big-bday |
+| 657 | 3 | 0 | normal | app | remote | cash | False | (20001,5) | OK  | 16001 | 1200 | 1000 | False/normal-big |
+| 658 | 3 | 0 | normal | app | remote | cash | True | (20001,5) | OK  | 16001 | 1200 | 1000 | False/normal-big-bday |
+| 659 | 3 | 0 | normal | app | remote | gift | False | (20001,5) | OK  | 19001 | 1200 | 1000 | True/normal-big |
+| 660 | 3 | 0 | normal | app | remote | gift | True | (20001,5) | OK  | 19001 | 1200 | 1000 | True/normal-big-bday |
+| 661 | 3 | 0 | normal | web | mainland | none | False | (20001,5) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 662 | 3 | 0 | normal | web | mainland | none | True | (20001,5) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 663 | 3 | 0 | normal | web | mainland | cash | False | (20001,5) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 664 | 3 | 0 | normal | web | mainland | cash | True | (20001,5) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 665 | 3 | 0 | normal | web | mainland | gift | False | (20001,5) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 666 | 3 | 0 | normal | web | mainland | gift | True | (20001,5) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 667 | 3 | 0 | normal | web | remote | none | False | (20001,5) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 668 | 3 | 0 | normal | web | remote | none | True | (20001,5) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 669 | 3 | 0 | normal | web | remote | cash | False | (20001,5) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 670 | 3 | 0 | normal | web | remote | cash | True | (20001,5) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 671 | 3 | 0 | normal | web | remote | gift | False | (20001,5) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 672 | 3 | 0 | normal | web | remote | gift | True | (20001,5) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 673 | 3 | 0 | silver | app | mainland | none | False | (20001,5) | OK  | 17601 | 0 | 2400 | False/silver-big |
+| 674 | 3 | 0 | silver | app | mainland | none | True | (20001,5) | OK  | 17001 | 0 | 3000 | False/silver-big-bday |
+| 675 | 3 | 0 | silver | app | mainland | cash | False | (20001,5) | OK  | 14601 | 0 | 2400 | False/silver-big |
+| 676 | 3 | 0 | silver | app | mainland | cash | True | (20001,5) | OK  | 14001 | 0 | 3000 | False/silver-big-bday |
+| 677 | 3 | 0 | silver | app | mainland | gift | False | (20001,5) | OK  | 17601 | 0 | 2400 | True/silver-big |
+| 678 | 3 | 0 | silver | app | mainland | gift | True | (20001,5) | OK  | 17001 | 0 | 3000 | True/silver-big-bday |
+| 679 | 3 | 0 | silver | app | remote | none | False | (20001,5) | OK  | 17601 | 1200 | 2400 | False/silver-big |
+| 680 | 3 | 0 | silver | app | remote | none | True | (20001,5) | OK  | 17001 | 1200 | 3000 | False/silver-big-bday |
+| 681 | 3 | 0 | silver | app | remote | cash | False | (20001,5) | OK  | 14601 | 1200 | 2400 | False/silver-big |
+| 682 | 3 | 0 | silver | app | remote | cash | True | (20001,5) | OK  | 14001 | 1200 | 3000 | False/silver-big-bday |
+| 683 | 3 | 0 | silver | app | remote | gift | False | (20001,5) | OK  | 17601 | 1200 | 2400 | True/silver-big |
+| 684 | 3 | 0 | silver | app | remote | gift | True | (20001,5) | OK  | 17001 | 1200 | 3000 | True/silver-big-bday |
+| 685 | 3 | 0 | silver | web | mainland | none | False | (20001,5) | OK  | 17601 | 0 | 2400 | False/silver-big |
+| 686 | 3 | 0 | silver | web | mainland | none | True | (20001,5) | OK  | 17001 | 0 | 3000 | False/silver-big-bday |
+| 687 | 3 | 0 | silver | web | mainland | cash | False | (20001,5) | OK  | 14601 | 0 | 2400 | False/silver-big |
+| 688 | 3 | 0 | silver | web | mainland | cash | True | (20001,5) | OK  | 14001 | 0 | 3000 | False/silver-big-bday |
+| 689 | 3 | 0 | silver | web | mainland | gift | False | (20001,5) | OK  | 17601 | 0 | 2400 | True/silver-big |
+| 690 | 3 | 0 | silver | web | mainland | gift | True | (20001,5) | OK  | 17001 | 0 | 3000 | True/silver-big-bday |
+| 691 | 3 | 0 | silver | web | remote | none | False | (20001,5) | OK  | 17601 | 0 | 2400 | False/silver-big |
+| 692 | 3 | 0 | silver | web | remote | none | True | (20001,5) | OK  | 17001 | 0 | 3000 | False/silver-big-bday |
+| 693 | 3 | 0 | silver | web | remote | cash | False | (20001,5) | OK  | 14601 | 0 | 2400 | False/silver-big |
+| 694 | 3 | 0 | silver | web | remote | cash | True | (20001,5) | OK  | 14001 | 0 | 3000 | False/silver-big-bday |
+| 695 | 3 | 0 | silver | web | remote | gift | False | (20001,5) | OK  | 17601 | 0 | 2400 | True/silver-big |
+| 696 | 3 | 0 | silver | web | remote | gift | True | (20001,5) | OK  | 17001 | 0 | 3000 | True/silver-big-bday |
+| 697 | 3 | 0 | gold | app | mainland | none | False | (20001,5) | OK  | 14001 | 0 | 6000 | False/gold-big-none |
+| 698 | 3 | 0 | gold | app | mainland | none | True | (20001,5) | OK  | 13601 | 0 | 6400 | False/gold-big-none-bday |
+| 699 | 3 | 0 | gold | app | mainland | cash | False | (20001,5) | OK  | 11001 | 0 | 6000 | False/gold-big-cash |
+| 700 | 3 | 0 | gold | app | mainland | cash | True | (20001,5) | OK  | 10601 | 0 | 6400 | False/gold-big-cash-bday-mainland |
+| 701 | 3 | 0 | gold | app | mainland | gift | False | (20001,5) | OK  | 14001 | 0 | 6000 | True/gold-big-gift |
+| 702 | 3 | 0 | gold | app | mainland | gift | True | (20001,5) | OK  | 13601 | 0 | 6400 | True/gold-big-gift-bday |
+| 703 | 3 | 0 | gold | app | remote | none | False | (20001,5) | OK  | 14001 | 1200 | 6000 | False/gold-big-none |
+| 704 | 3 | 0 | gold | app | remote | none | True | (20001,5) | OK  | 13601 | 1200 | 6400 | False/gold-big-none-bday |
+| 705 | 3 | 0 | gold | app | remote | cash | False | (20001,5) | OK  | 11001 | 1200 | 6000 | False/gold-big-cash |
+| 706 | 3 | 0 | gold | app | remote | cash | True | (20001,5) | OK  | 10601 | 1200 | 6400 | False/gold-big-cash-bday-remote-app |
+| 707 | 3 | 0 | gold | app | remote | gift | False | (20001,5) | OK  | 14001 | 1200 | 6000 | True/gold-big-gift |
+| 708 | 3 | 0 | gold | app | remote | gift | True | (20001,5) | OK  | 13601 | 1200 | 6400 | True/gold-big-gift-bday |
+| 709 | 3 | 0 | gold | web | mainland | none | False | (20001,5) | OK  | 14001 | 0 | 6000 | False/gold-big-none |
+| 710 | 3 | 0 | gold | web | mainland | none | True | (20001,5) | OK  | 13601 | 0 | 6400 | False/gold-big-none-bday |
+| 711 | 3 | 0 | gold | web | mainland | cash | False | (20001,5) | OK  | 11001 | 0 | 6000 | False/gold-big-cash |
+| 712 | 3 | 0 | gold | web | mainland | cash | True | (20001,5) | OK  | 10601 | 0 | 6400 | False/gold-big-cash-bday-mainland |
+| 713 | 3 | 0 | gold | web | mainland | gift | False | (20001,5) | OK  | 14001 | 0 | 6000 | True/gold-big-gift |
+| 714 | 3 | 0 | gold | web | mainland | gift | True | (20001,5) | OK  | 13601 | 0 | 6400 | True/gold-big-gift-bday |
+| 715 | 3 | 0 | gold | web | remote | none | False | (20001,5) | OK  | 14001 | 0 | 6000 | False/gold-big-none |
+| 716 | 3 | 0 | gold | web | remote | none | True | (20001,5) | OK  | 13601 | 0 | 6400 | False/gold-big-none-bday |
+| 717 | 3 | 0 | gold | web | remote | cash | False | (20001,5) | OK  | 11001 | 0 | 6000 | False/gold-big-cash |
+| 718 | 3 | 0 | gold | web | remote | cash | True | (20001,5) | OK  | 10601 | 0 | 6400 | False/gold-big-cash-bday-remote-web |
+| 719 | 3 | 0 | gold | web | remote | gift | False | (20001,5) | OK  | 14001 | 0 | 6000 | True/gold-big-gift |
+| 720 | 3 | 0 | gold | web | remote | gift | True | (20001,5) | OK  | 13601 | 0 | 6400 | True/gold-big-gift-bday |
+| 721 | 3 | 1 | normal | app | mainland | none | False | (20001,14) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 722 | 3 | 1 | normal | app | mainland | none | True | (20001,14) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 723 | 3 | 1 | normal | app | mainland | cash | False | (20001,14) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 724 | 3 | 1 | normal | app | mainland | cash | True | (20001,14) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 725 | 3 | 1 | normal | app | mainland | gift | False | (20001,14) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 726 | 3 | 1 | normal | app | mainland | gift | True | (20001,14) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 727 | 3 | 1 | normal | app | remote | none | False | (20001,14) | OK  | 19001 | 1200 | 1000 | False/normal-big |
+| 728 | 3 | 1 | normal | app | remote | none | True | (20001,14) | OK  | 19001 | 1200 | 1000 | False/normal-big-bday |
+| 729 | 3 | 1 | normal | app | remote | cash | False | (20001,14) | OK  | 16001 | 1200 | 1000 | False/normal-big |
+| 730 | 3 | 1 | normal | app | remote | cash | True | (20001,14) | OK  | 16001 | 1200 | 1000 | False/normal-big-bday |
+| 731 | 3 | 1 | normal | app | remote | gift | False | (20001,14) | OK  | 19001 | 1200 | 1000 | True/normal-big |
+| 732 | 3 | 1 | normal | app | remote | gift | True | (20001,14) | OK  | 19001 | 1200 | 1000 | True/normal-big-bday |
+| 733 | 3 | 1 | normal | web | mainland | none | False | (20001,14) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 734 | 3 | 1 | normal | web | mainland | none | True | (20001,14) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 735 | 3 | 1 | normal | web | mainland | cash | False | (20001,14) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 736 | 3 | 1 | normal | web | mainland | cash | True | (20001,14) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 737 | 3 | 1 | normal | web | mainland | gift | False | (20001,14) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 738 | 3 | 1 | normal | web | mainland | gift | True | (20001,14) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 739 | 3 | 1 | normal | web | remote | none | False | (20001,14) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 740 | 3 | 1 | normal | web | remote | none | True | (20001,14) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 741 | 3 | 1 | normal | web | remote | cash | False | (20001,14) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 742 | 3 | 1 | normal | web | remote | cash | True | (20001,14) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 743 | 3 | 1 | normal | web | remote | gift | False | (20001,14) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 744 | 3 | 1 | normal | web | remote | gift | True | (20001,14) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 745 | 3 | 1 | silver | app | mainland | none | False | (20001,14) | OK  | 17201 | 0 | 2800 | False/silver-big |
+| 746 | 3 | 1 | silver | app | mainland | none | True | (20001,14) | OK  | 16601 | 0 | 3400 | False/silver-big-bday |
+| 747 | 3 | 1 | silver | app | mainland | cash | False | (20001,14) | OK  | 14201 | 0 | 2800 | False/silver-big |
+| 748 | 3 | 1 | silver | app | mainland | cash | True | (20001,14) | OK  | 13601 | 0 | 3400 | False/silver-big-bday |
+| 749 | 3 | 1 | silver | app | mainland | gift | False | (20001,14) | OK  | 17201 | 0 | 2800 | True/silver-big |
+| 750 | 3 | 1 | silver | app | mainland | gift | True | (20001,14) | OK  | 16601 | 0 | 3400 | True/silver-big-bday |
+| 751 | 3 | 1 | silver | app | remote | none | False | (20001,14) | OK  | 17201 | 1200 | 2800 | False/silver-big |
+| 752 | 3 | 1 | silver | app | remote | none | True | (20001,14) | OK  | 16601 | 1200 | 3400 | False/silver-big-bday |
+| 753 | 3 | 1 | silver | app | remote | cash | False | (20001,14) | OK  | 14201 | 1200 | 2800 | False/silver-big |
+| 754 | 3 | 1 | silver | app | remote | cash | True | (20001,14) | OK  | 13601 | 1200 | 3400 | False/silver-big-bday |
+| 755 | 3 | 1 | silver | app | remote | gift | False | (20001,14) | OK  | 17201 | 1200 | 2800 | True/silver-big |
+| 756 | 3 | 1 | silver | app | remote | gift | True | (20001,14) | OK  | 16601 | 1200 | 3400 | True/silver-big-bday |
+| 757 | 3 | 1 | silver | web | mainland | none | False | (20001,14) | OK  | 17201 | 0 | 2800 | False/silver-big |
+| 758 | 3 | 1 | silver | web | mainland | none | True | (20001,14) | OK  | 16601 | 0 | 3400 | False/silver-big-bday |
+| 759 | 3 | 1 | silver | web | mainland | cash | False | (20001,14) | OK  | 14201 | 0 | 2800 | False/silver-big |
+| 760 | 3 | 1 | silver | web | mainland | cash | True | (20001,14) | OK  | 13601 | 0 | 3400 | False/silver-big-bday |
+| 761 | 3 | 1 | silver | web | mainland | gift | False | (20001,14) | OK  | 17201 | 0 | 2800 | True/silver-big |
+| 762 | 3 | 1 | silver | web | mainland | gift | True | (20001,14) | OK  | 16601 | 0 | 3400 | True/silver-big-bday |
+| 763 | 3 | 1 | silver | web | remote | none | False | (20001,14) | OK  | 17201 | 0 | 2800 | False/silver-big |
+| 764 | 3 | 1 | silver | web | remote | none | True | (20001,14) | OK  | 16601 | 0 | 3400 | False/silver-big-bday |
+| 765 | 3 | 1 | silver | web | remote | cash | False | (20001,14) | OK  | 14201 | 0 | 2800 | False/silver-big |
+| 766 | 3 | 1 | silver | web | remote | cash | True | (20001,14) | OK  | 13601 | 0 | 3400 | False/silver-big-bday |
+| 767 | 3 | 1 | silver | web | remote | gift | False | (20001,14) | OK  | 17201 | 0 | 2800 | True/silver-big |
+| 768 | 3 | 1 | silver | web | remote | gift | True | (20001,14) | OK  | 16601 | 0 | 3400 | True/silver-big-bday |
+| 769 | 3 | 1 | gold | app | mainland | none | False | (20001,14) | OK  | 13001 | 0 | 7000 | False/gold-big-none-bulk |
+| 770 | 3 | 1 | gold | app | mainland | none | True | (20001,14) | OK  | 12601 | 0 | 7400 | False/gold-big-none-bday |
+| 771 | 3 | 1 | gold | app | mainland | cash | False | (20001,14) | OK  | 10001 | 0 | 7000 | False/gold-big-cash |
+| 772 | 3 | 1 | gold | app | mainland | cash | True | (20001,14) | OK  | 9601 | 0 | 7400 | False/gold-big-cash-bday-mainland |
+| 773 | 3 | 1 | gold | app | mainland | gift | False | (20001,14) | OK  | 13001 | 0 | 7000 | True/gold-big-gift |
+| 774 | 3 | 1 | gold | app | mainland | gift | True | (20001,14) | OK  | 12601 | 0 | 7400 | True/gold-big-gift-bday |
+| 775 | 3 | 1 | gold | app | remote | none | False | (20001,14) | OK  | 13001 | 1200 | 7000 | False/gold-big-none-bulk |
+| 776 | 3 | 1 | gold | app | remote | none | True | (20001,14) | OK  | 12601 | 1200 | 7400 | False/gold-big-none-bday |
+| 777 | 3 | 1 | gold | app | remote | cash | False | (20001,14) | OK  | 10001 | 1200 | 7000 | False/gold-big-cash |
+| 778 | 3 | 1 | gold | app | remote | cash | True | (20001,14) | OK  | 9601 | 1200 | 7400 | False/gold-big-cash-bday-remote-app-bulk |
+| 779 | 3 | 1 | gold | app | remote | gift | False | (20001,14) | OK  | 13001 | 1200 | 7000 | True/gold-big-gift |
+| 780 | 3 | 1 | gold | app | remote | gift | True | (20001,14) | OK  | 12601 | 1200 | 7400 | True/gold-big-gift-bday |
+| 781 | 3 | 1 | gold | web | mainland | none | False | (20001,14) | OK  | 13001 | 0 | 7000 | False/gold-big-none-bulk |
+| 782 | 3 | 1 | gold | web | mainland | none | True | (20001,14) | OK  | 12601 | 0 | 7400 | False/gold-big-none-bday |
+| 783 | 3 | 1 | gold | web | mainland | cash | False | (20001,14) | OK  | 10001 | 0 | 7000 | False/gold-big-cash |
+| 784 | 3 | 1 | gold | web | mainland | cash | True | (20001,14) | OK  | 9601 | 0 | 7400 | False/gold-big-cash-bday-mainland |
+| 785 | 3 | 1 | gold | web | mainland | gift | False | (20001,14) | OK  | 13001 | 0 | 7000 | True/gold-big-gift |
+| 786 | 3 | 1 | gold | web | mainland | gift | True | (20001,14) | OK  | 12601 | 0 | 7400 | True/gold-big-gift-bday |
+| 787 | 3 | 1 | gold | web | remote | none | False | (20001,14) | OK  | 13001 | 0 | 7000 | False/gold-big-none-bulk |
+| 788 | 3 | 1 | gold | web | remote | none | True | (20001,14) | OK  | 12601 | 0 | 7400 | False/gold-big-none-bday |
+| 789 | 3 | 1 | gold | web | remote | cash | False | (20001,14) | OK  | 10001 | 0 | 7000 | False/gold-big-cash |
+| 790 | 3 | 1 | gold | web | remote | cash | True | (20001,14) | OK  | 9601 | 0 | 7400 | False/gold-big-cash-bday-remote-web |
+| 791 | 3 | 1 | gold | web | remote | gift | False | (20001,14) | OK  | 13001 | 0 | 7000 | True/gold-big-gift |
+| 792 | 3 | 1 | gold | web | remote | gift | True | (20001,14) | OK  | 12601 | 0 | 7400 | True/gold-big-gift-bday |
+| 793 | 3 | 2 | normal | app | mainland | none | False | (20001,21) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 794 | 3 | 2 | normal | app | mainland | none | True | (20001,21) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 795 | 3 | 2 | normal | app | mainland | cash | False | (20001,21) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 796 | 3 | 2 | normal | app | mainland | cash | True | (20001,21) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 797 | 3 | 2 | normal | app | mainland | gift | False | (20001,21) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 798 | 3 | 2 | normal | app | mainland | gift | True | (20001,21) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 799 | 3 | 2 | normal | app | remote | none | False | (20001,21) | OK  | 19001 | 1200 | 1000 | False/normal-big |
+| 800 | 3 | 2 | normal | app | remote | none | True | (20001,21) | OK  | 19001 | 1200 | 1000 | False/normal-big-bday |
+| 801 | 3 | 2 | normal | app | remote | cash | False | (20001,21) | OK  | 16001 | 1200 | 1000 | False/normal-big |
+| 802 | 3 | 2 | normal | app | remote | cash | True | (20001,21) | OK  | 16001 | 1200 | 1000 | False/normal-big-bday |
+| 803 | 3 | 2 | normal | app | remote | gift | False | (20001,21) | OK  | 19001 | 1200 | 1000 | True/normal-big |
+| 804 | 3 | 2 | normal | app | remote | gift | True | (20001,21) | OK  | 19001 | 1200 | 1000 | True/normal-big-bday |
+| 805 | 3 | 2 | normal | web | mainland | none | False | (20001,21) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 806 | 3 | 2 | normal | web | mainland | none | True | (20001,21) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 807 | 3 | 2 | normal | web | mainland | cash | False | (20001,21) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 808 | 3 | 2 | normal | web | mainland | cash | True | (20001,21) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 809 | 3 | 2 | normal | web | mainland | gift | False | (20001,21) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 810 | 3 | 2 | normal | web | mainland | gift | True | (20001,21) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 811 | 3 | 2 | normal | web | remote | none | False | (20001,21) | OK  | 19001 | 0 | 1000 | False/normal-big |
+| 812 | 3 | 2 | normal | web | remote | none | True | (20001,21) | OK  | 19001 | 0 | 1000 | False/normal-big-bday |
+| 813 | 3 | 2 | normal | web | remote | cash | False | (20001,21) | OK  | 16001 | 0 | 1000 | False/normal-big |
+| 814 | 3 | 2 | normal | web | remote | cash | True | (20001,21) | OK  | 16001 | 0 | 1000 | False/normal-big-bday |
+| 815 | 3 | 2 | normal | web | remote | gift | False | (20001,21) | OK  | 19001 | 0 | 1000 | True/normal-big |
+| 816 | 3 | 2 | normal | web | remote | gift | True | (20001,21) | OK  | 19001 | 0 | 1000 | True/normal-big-bday |
+| 817 | 3 | 2 | silver | app | mainland | none | False | (20001,21) | OK  | 17201 | 0 | 2800 | False/silver-big |
+| 818 | 3 | 2 | silver | app | mainland | none | True | (20001,21) | OK  | 16601 | 0 | 3400 | False/silver-big-bday |
+| 819 | 3 | 2 | silver | app | mainland | cash | False | (20001,21) | OK  | 14201 | 0 | 2800 | False/silver-big |
+| 820 | 3 | 2 | silver | app | mainland | cash | True | (20001,21) | OK  | 13601 | 0 | 3400 | False/silver-big-bday |
+| 821 | 3 | 2 | silver | app | mainland | gift | False | (20001,21) | OK  | 17201 | 0 | 2800 | True/silver-big |
+| 822 | 3 | 2 | silver | app | mainland | gift | True | (20001,21) | OK  | 16601 | 0 | 3400 | True/silver-big-bday |
+| 823 | 3 | 2 | silver | app | remote | none | False | (20001,21) | OK  | 17201 | 1200 | 2800 | False/silver-big |
+| 824 | 3 | 2 | silver | app | remote | none | True | (20001,21) | OK  | 16601 | 1200 | 3400 | False/silver-big-bday |
+| 825 | 3 | 2 | silver | app | remote | cash | False | (20001,21) | OK  | 14201 | 1200 | 2800 | False/silver-big |
+| 826 | 3 | 2 | silver | app | remote | cash | True | (20001,21) | OK  | 13601 | 1200 | 3400 | False/silver-big-bday |
+| 827 | 3 | 2 | silver | app | remote | gift | False | (20001,21) | OK  | 17201 | 1200 | 2800 | True/silver-big |
+| 828 | 3 | 2 | silver | app | remote | gift | True | (20001,21) | OK  | 16601 | 1200 | 3400 | True/silver-big-bday |
+| 829 | 3 | 2 | silver | web | mainland | none | False | (20001,21) | OK  | 17201 | 0 | 2800 | False/silver-big |
+| 830 | 3 | 2 | silver | web | mainland | none | True | (20001,21) | OK  | 16601 | 0 | 3400 | False/silver-big-bday |
+| 831 | 3 | 2 | silver | web | mainland | cash | False | (20001,21) | OK  | 14201 | 0 | 2800 | False/silver-big |
+| 832 | 3 | 2 | silver | web | mainland | cash | True | (20001,21) | OK  | 13601 | 0 | 3400 | False/silver-big-bday |
+| 833 | 3 | 2 | silver | web | mainland | gift | False | (20001,21) | OK  | 17201 | 0 | 2800 | True/silver-big |
+| 834 | 3 | 2 | silver | web | mainland | gift | True | (20001,21) | OK  | 16601 | 0 | 3400 | True/silver-big-bday |
+| 835 | 3 | 2 | silver | web | remote | none | False | (20001,21) | OK  | 17201 | 0 | 2800 | False/silver-big |
+| 836 | 3 | 2 | silver | web | remote | none | True | (20001,21) | OK  | 16601 | 0 | 3400 | False/silver-big-bday |
+| 837 | 3 | 2 | silver | web | remote | cash | False | (20001,21) | OK  | 14201 | 0 | 2800 | False/silver-big |
+| 838 | 3 | 2 | silver | web | remote | cash | True | (20001,21) | OK  | 13601 | 0 | 3400 | False/silver-big-bday |
+| 839 | 3 | 2 | silver | web | remote | gift | False | (20001,21) | OK  | 17201 | 0 | 2800 | True/silver-big |
+| 840 | 3 | 2 | silver | web | remote | gift | True | (20001,21) | OK  | 16601 | 0 | 3400 | True/silver-big-bday |
+| 841 | 3 | 2 | gold | app | mainland | none | False | (20001,21) | OK  | 13001 | 0 | 7000 | False/gold-big-none-bulk |
+| 842 | 3 | 2 | gold | app | mainland | none | True | (20001,21) | OK  | 12601 | 0 | 7400 | False/gold-big-none-bday |
+| 843 | 3 | 2 | gold | app | mainland | cash | False | (20001,21) | OK  | 10001 | 0 | 7000 | False/gold-big-cash |
+| 844 | 3 | 2 | gold | app | mainland | cash | True | (20001,21) | OK  | 9601 | 0 | 7400 | False/gold-big-cash-bday-mainland |
+| 845 | 3 | 2 | gold | app | mainland | gift | False | (20001,21) | OK  | 13001 | 0 | 7000 | True/gold-big-gift |
+| 846 | 3 | 2 | gold | app | mainland | gift | True | (20001,21) | OK  | 12601 | 0 | 7400 | True/gold-big-gift-bday |
+| 847 | 3 | 2 | gold | app | remote | none | False | (20001,21) | OK  | 13001 | 1200 | 7000 | False/gold-big-none-bulk |
+| 848 | 3 | 2 | gold | app | remote | none | True | (20001,21) | OK  | 12601 | 1200 | 7400 | False/gold-big-none-bday |
+| 849 | 3 | 2 | gold | app | remote | cash | False | (20001,21) | OK  | 10001 | 1200 | 7000 | False/gold-big-cash |
+| 850 | 3 | 2 | gold | app | remote | cash | True | (20001,21) | OK  | 9601 | 1200 | 7400 | False/gold-big-cash-bday-remote-app-bulk-xl |
+| 851 | 3 | 2 | gold | app | remote | gift | False | (20001,21) | OK  | 13001 | 1200 | 7000 | True/gold-big-gift |
+| 852 | 3 | 2 | gold | app | remote | gift | True | (20001,21) | OK  | 12601 | 1200 | 7400 | True/gold-big-gift-bday |
+| 853 | 3 | 2 | gold | web | mainland | none | False | (20001,21) | OK  | 13001 | 0 | 7000 | False/gold-big-none-bulk |
+| 854 | 3 | 2 | gold | web | mainland | none | True | (20001,21) | OK  | 12601 | 0 | 7400 | False/gold-big-none-bday |
+| 855 | 3 | 2 | gold | web | mainland | cash | False | (20001,21) | OK  | 10001 | 0 | 7000 | False/gold-big-cash |
+| 856 | 3 | 2 | gold | web | mainland | cash | True | (20001,21) | OK  | 9601 | 0 | 7400 | False/gold-big-cash-bday-mainland |
+| 857 | 3 | 2 | gold | web | mainland | gift | False | (20001,21) | OK  | 13001 | 0 | 7000 | True/gold-big-gift |
+| 858 | 3 | 2 | gold | web | mainland | gift | True | (20001,21) | OK  | 12601 | 0 | 7400 | True/gold-big-gift-bday |
+| 859 | 3 | 2 | gold | web | remote | none | False | (20001,21) | OK  | 13001 | 0 | 7000 | False/gold-big-none-bulk |
+| 860 | 3 | 2 | gold | web | remote | none | True | (20001,21) | OK  | 12601 | 0 | 7400 | False/gold-big-none-bday |
+| 861 | 3 | 2 | gold | web | remote | cash | False | (20001,21) | OK  | 10001 | 0 | 7000 | False/gold-big-cash |
+| 862 | 3 | 2 | gold | web | remote | cash | True | (20001,21) | OK  | 9601 | 0 | 7400 | False/gold-big-cash-bday-remote-web |
+| 863 | 3 | 2 | gold | web | remote | gift | False | (20001,21) | OK  | 13001 | 0 | 7000 | True/gold-big-gift |
+| 864 | 3 | 2 | gold | web | remote | gift | True | (20001,21) | OK  | 12601 | 0 | 7400 | True/gold-big-gift-bday |

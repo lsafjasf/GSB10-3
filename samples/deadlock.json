@@ -1,0 +1,68 @@
+{
+  "scenario": "deadlock",
+  "outcome": "deadlock",
+  "bug": true,
+  "choices": [
+    "TA",
+    "TA",
+    "TB",
+    "TB",
+    "TA",
+    "TB"
+  ],
+  "events": [
+    {
+      "step": 0,
+      "tid": "TA",
+      "event": "start"
+    },
+    {
+      "step": 1,
+      "tid": "TA",
+      "event": "acquire(m1) try"
+    },
+    {
+      "step": 2,
+      "tid": "TA",
+      "event": "acquire(m1) ok"
+    },
+    {
+      "step": 3,
+      "tid": "TB",
+      "event": "start"
+    },
+    {
+      "step": 4,
+      "tid": "TB",
+      "event": "acquire(m2) try"
+    },
+    {
+      "step": 5,
+      "tid": "TB",
+      "event": "acquire(m2) ok"
+    },
+    {
+      "step": 6,
+      "tid": "TA",
+      "event": "acquire(m2) try"
+    },
+    {
+      "step": 7,
+      "tid": "TA",
+      "event": "acquire(m2) block (owner=TB)"
+    },
+    {
+      "step": 8,
+      "tid": "TB",
+      "event": "acquire(m1) try"
+    },
+    {
+      "step": 9,
+      "tid": "TB",
+      "event": "acquire(m1) block (owner=TA)"
+    }
+  ],
+  "final_state": {},
+  "thread_errors": {},
+  "check_error": null
+}

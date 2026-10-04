@@ -1,0 +1,50 @@
+{
+  "scenario": "single_race",
+  "outcome": "ok",
+  "bug": true,
+  "choices": [
+    "TA",
+    "TA",
+    "TB",
+    "TB",
+    "TA",
+    "TB"
+  ],
+  "events": [
+    {
+      "step": 0,
+      "tid": "TA",
+      "event": "start"
+    },
+    {
+      "step": 1,
+      "tid": "TA",
+      "event": "read counter -> 0"
+    },
+    {
+      "step": 2,
+      "tid": "TB",
+      "event": "start"
+    },
+    {
+      "step": 3,
+      "tid": "TB",
+      "event": "read counter -> 0"
+    },
+    {
+      "step": 4,
+      "tid": "TA",
+      "event": "write counter: 0 -> 1"
+    },
+    {
+      "step": 5,
+      "tid": "TB",
+      "event": "write counter: 1 -> 1"
+    }
+  ],
+  "final_state": {
+    "counter": 1
+  },
+  "thread_errors": {},
+  "check_error": "lost update: counter=1, expected 2"
+}

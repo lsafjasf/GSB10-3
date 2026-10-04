@@ -1,0 +1,51 @@
+{
+  "scenario": "no_race",
+  "outcome": "ok",
+  "bug": false,
+  "choices": [
+    "TA",
+    "TA",
+    "TA",
+    "TB",
+    "TB",
+    "TB"
+  ],
+  "events": [
+    {
+      "step": 0,
+      "tid": "TA",
+      "event": "start"
+    },
+    {
+      "step": 1,
+      "tid": "TA",
+      "event": "write a: 0 -> 1"
+    },
+    {
+      "step": 2,
+      "tid": "TA",
+      "event": "write a: 1 -> 2"
+    },
+    {
+      "step": 3,
+      "tid": "TB",
+      "event": "start"
+    },
+    {
+      "step": 4,
+      "tid": "TB",
+      "event": "write b: 0 -> 1"
+    },
+    {
+      "step": 5,
+      "tid": "TB",
+      "event": "write b: 1 -> 2"
+    }
+  ],
+  "final_state": {
+    "a": 2,
+    "b": 2
+  },
+  "thread_errors": {},
+  "check_error": null
+}

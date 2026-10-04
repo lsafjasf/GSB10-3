@@ -1,0 +1,31 @@
+{
+  "surfaces": 277,
+  "systems": [
+    {
+      "name": "Lemmatizer（不规则表+规则+词表门控）",
+      "pairs": 38226,
+      "TP": 303,
+      "FP": 0,
+      "TN": 37923,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "surfaces": 277,
+      "surface_correct": 277,
+      "surface_accuracy": 1.0
+    },
+    {
+      "name": "NaiveStemmer（规则加过头的基线）",
+      "pairs": 38226,
+      "TP": 97,
+      "FP": 23,
+      "TN": 37900,
+      "FN": 206,
+      "precision": 0.8083,
+      "recall": 0.3201,
+      "surfaces": 277,
+      "surface_correct": 125,
+      "surface_accuracy": 0.4513
+    }
+  ]
+}

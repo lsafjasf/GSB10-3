@@ -1,0 +1,9 @@
+{
+  "irregular": {
+    "zorked": "zork"
+  },
+  "known": ["zork"],
+  "invariant": ["wildebeest"],
+  "protected": ["forsooth"],
+  "acronyms": ["FAQ"]
+}

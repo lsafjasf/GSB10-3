@@ -1,0 +1,34 @@
+sample               bytes  uniformity  bit_balance  runs  periodicity  overall  expect  verdict
+good_sha256_counter  16384  PASS        PASS         PASS  PASS         PASS     PASS    OK     
+low_nibble_fixed     16384  FAIL        FAIL         FAIL  FAIL         FAIL     FAIL    OK     
+period_2bytes        16384  FAIL        PASS         FAIL  FAIL         FAIL     FAIL    OK     
+period_16bytes       16384  FAIL        PASS         PASS  FAIL         FAIL     FAIL    OK     
+all_zeros            16384  FAIL        FAIL         FAIL  FAIL         FAIL     FAIL    OK     
+
+[good_sha256_counter] overall=PASS
+  - uniformity  PASS 卡方=283.31，临界值=310.0（df=255，p=0.1076）；卡方超过临界值说明字节取值分布显著偏离均匀
+  - bit_balance PASS 总体 |z|=0.24，逐位最大 |z|=2.53（bit2），临界值=4.0；某一位长期偏向 0 或 1（如低位固定）会使逐位 z 极大
+  - runs        PASS 游程数=65640，期望≈65536.5，|z|=0.57，临界值=4.0；游程过少（如全零）或过多（如交替位）都会 FAIL
+  - periodicity PASS 位级最大 |z|=2.38，字节级最大 |z|=1.64，临界值=5.0；候选周期（参考）：位级 无；字节级 无
+[low_nibble_fixed] overall=FAIL
+  - uniformity  FAIL 卡方=246009.91，临界值=310.0（df=255，p=<1e-300）；卡方超过临界值说明字节取值分布显著偏离均匀
+  - bit_balance FAIL 总体 |z|=1.43，逐位最大 |z|=128.00（bit0），临界值=4.0；某一位长期偏向 0 或 1（如低位固定）会使逐位 z 极大
+  - runs        FAIL 游程数=90048，期望≈65536.5，|z|=135.41，临界值=4.0；游程过少（如全零）或过多（如交替位）都会 FAIL
+  - periodicity FAIL 位级最大 |z|=181.79，字节级最大 |z|=1.66，临界值=5.0；候选周期（参考）：位级 bit lag=40（z=181.79，约 40 位）；字节级 无
+[period_2bytes] overall=FAIL
+  - uniformity  FAIL 卡方=2080768.00，临界值=310.0（df=255，p=<1e-300）；卡方超过临界值说明字节取值分布显著偏离均匀
+  - bit_balance PASS 总体 |z|=0.00，逐位最大 |z|=0.00（bit0），临界值=4.0；某一位长期偏向 0 或 1（如低位固定）会使逐位 z 极大
+  - runs        FAIL 游程数=16384，期望≈65536.5，|z|=271.53，临界值=4.0；游程过少（如全零）或过多（如交替位）都会 FAIL
+  - periodicity FAIL 位级最大 |z|=362.03，字节级最大 |z|=219.97，临界值=5.0；候选周期（参考）：位级 bit lag=16（z=362.02，约 16 位）；字节级 byte lag=2（z=219.96，约 16 位）
+[period_16bytes] overall=FAIL
+  - uniformity  FAIL 卡方=245760.00，临界值=310.0（df=255，p=<1e-300）；卡方超过临界值说明字节取值分布显著偏离均匀
+  - bit_balance PASS 总体 |z|=0.00，逐位最大 |z|=0.00（bit0），临界值=4.0；某一位长期偏向 0 或 1（如低位固定）会使逐位 z 极大
+  - runs        PASS 游程数=65537，期望≈65536.5，|z|=0.00，临界值=4.0；游程过少（如全零）或过多（如交替位）都会 FAIL
+  - periodicity FAIL 位级最大 |z|=181.04，字节级最大 |z|=63.99，临界值=5.0；候选周期（参考）：位级 bit lag=18（z=90.52，约 18 位）；字节级 byte lag=16（z=63.99，约 128 位）
+[all_zeros] overall=FAIL
+  - uniformity  FAIL 卡方=4177920.00，临界值=310.0（df=255，p=<1e-300）；卡方超过临界值说明字节取值分布显著偏离均匀
+  - bit_balance FAIL 总体 |z|=362.04，逐位最大 |z|=128.00（bit0），临界值=4.0；某一位长期偏向 0 或 1（如低位固定）会使逐位 z 极大
+  - runs        FAIL 游程数=1，期望≈65536.5，|z|=362.04，临界值=4.0；游程过少（如全零）或过多（如交替位）都会 FAIL
+  - periodicity FAIL 位级最大 |z|=362.04，字节级最大 |z|=219.97，临界值=5.0；候选周期（参考）：位级 bit lag=1（z=362.04，约 1 位）；字节级 byte lag=1（z=219.97，约 8 位）
+
+总体结论：符合预期

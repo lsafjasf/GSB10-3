@@ -1,0 +1,18 @@
+scenario,method,rtol,atol,status,n_accepted,n_rejected,rejection_ratio,global_error,nfev
+"A1 smooth: y' = -y on [0, 5]",rkf45,0.0001,1.0000000000000002e-06,success,11,0,0.000000,1.720287e-06,79
+"A1 smooth: y' = -y on [0, 5]",rkf45,1e-06,1e-08,success,25,0,0.000000,1.811444e-08,177
+"A1 smooth: y' = -y on [0, 5]",rkf45,1e-08,1e-10,success,58,0,0.000000,1.784880e-10,408
+"A1 smooth: y' = -y on [0, 5]",rkf45,1e-10,1e-12,success,143,0,0.000000,1.814148e-12,1003
+"A1 smooth: y' = -y on [0, 5]",rkf45,1e-12,1e-14,success,355,0,0.000000,1.814954e-14,2487
+"A2 steep: logistic y' = y(1-y), y0=1e-4, [0, 20]",rkf45,0.0001,1.0000000000000002e-06,success,21,4,0.160000,4.853924e-06,177
+"A2 steep: logistic y' = y(1-y), y0=1e-4, [0, 20]",rkf45,1e-06,1e-08,success,49,2,0.039216,1.608953e-07,359
+"A2 steep: logistic y' = y(1-y), y0=1e-4, [0, 20]",rkf45,1e-08,1e-10,success,118,3,0.024793,1.959813e-09,849
+"A2 steep: logistic y' = y(1-y), y0=1e-4, [0, 20]",rkf45,1e-10,1e-12,success,293,3,0.010135,3.268763e-11,2074
+"A2 steep: logistic y' = y(1-y), y0=1e-4, [0, 20]",rkf45,1e-12,1e-14,success,730,3,0.004093,3.675948e-13,5133
+"A3 boundary layer: y' = -50(y - cos t), [0, 2]",rkf45,0.0001,1.0000000000000002e-06,success,53,0,0.000000,3.801674e-06,373
+"A3 boundary layer: y' = -50(y - cos t), [0, 2]",rkf45,1e-06,1e-08,success,119,1,0.008333,8.224055e-08,842
+"A3 boundary layer: y' = -50(y - cos t), [0, 2]",rkf45,1e-08,1e-10,success,282,1,0.003534,1.165105e-09,1983
+"A3 boundary layer: y' = -50(y - cos t), [0, 2]",rkf45,1e-10,1e-12,success,691,2,0.002886,1.318107e-11,4853
+"A3 boundary layer: y' = -50(y - cos t), [0, 2]",rkf45,1e-12,1e-14,success,1718,2,0.001163,1.352807e-13,12042
+smooth y'=-y,rkf45,1e-06,1e-08,success,25,0,0.000000,1.811444e-08,177
+smooth y'=-y,bs23,1e-06,1e-08,success,143,0,0.000000,6.640426e-08,574

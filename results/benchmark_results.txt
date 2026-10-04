@@ -1,0 +1,73 @@
+============================================================================
+ADAPTIVE STEP-SIZE INTEGRATION -- BENCHMARK REPORT
+methods: RKF45 (4th/5th-order embedded pair) and BS23 (2nd/3rd pair)
+local error = difference of the two formulas; accept if err_norm<=1
+============================================================================
+
+## A. Tolerance sweep: step count must follow tol^(-1/5) for RKF45
+
+### A1 smooth: y' = -y on [0, 5]
+    rtol=atol*100 swept; error = max abs error vs exact solution at t1
+     rtol    status  accept  reject    rej%   steps x(prev)    glob.err     nfev
+    1e-04   success      11       0    0.00               -   1.720e-06       79
+    1e-06   success      25       0    0.00  2.27 (th 2.51)   1.811e-08      177
+    1e-08   success      58       0    0.00  2.32 (th 2.51)   1.785e-10      408
+    1e-10   success     143       0    0.00  2.47 (th 2.51)   1.814e-12     1003
+    1e-12   success     355       0    0.00  2.48 (th 2.51)   1.815e-14     2487
+
+### A2 steep: logistic y' = y(1-y), y0=1e-4, [0, 20]
+    rtol=atol*100 swept; error = max abs error vs exact solution at t1
+     rtol    status  accept  reject    rej%   steps x(prev)    glob.err     nfev
+    1e-04   success      21       4   16.00               -   4.854e-06      177
+    1e-06   success      49       2    3.92  2.33 (th 2.51)   1.609e-07      359
+    1e-08   success     118       3    2.48  2.41 (th 2.51)   1.960e-09      849
+    1e-10   success     293       3    1.01  2.48 (th 2.51)   3.269e-11     2074
+    1e-12   success     730       3    0.41  2.49 (th 2.51)   3.676e-13     5133
+
+### A3 boundary layer: y' = -50(y - cos t), [0, 2]
+    rtol=atol*100 swept; error = max abs error vs exact solution at t1
+     rtol    status  accept  reject    rej%   steps x(prev)    glob.err     nfev
+    1e-04   success      53       0    0.00               -   3.802e-06      373
+    1e-06   success     119       1    0.83  2.25 (th 2.51)   8.224e-08      842
+    1e-08   success     282       1    0.35  2.37 (th 2.51)   1.165e-09     1983
+    1e-10   success     691       2    0.29  2.45 (th 2.51)   1.318e-11     4853
+    1e-12   success    1718       2    0.12  2.49 (th 2.51)   1.353e-13    12042
+
+## B. Two embedded pairs (different orders) at the same tolerance
+
+### Method comparison on y' = -y, [0, 5], rtol=1e-6, atol=1e-8
+  method   order  accept  reject    rej%     nfev    glob.err
+   rkf45     4/5      25       0    0.00      177   1.811e-08
+    bs23     2/3     143       0    0.00      574   6.640e-08
+
+## C. Equation with a singularity (min-step criterion triggers)
+
+### Singular ODE: y' = y^2, y(0)=1  (blow-up y=1/(1-t) at t=1)
+    min-step criterion: h_min = 100*eps*max(|t0|,|t1|,1) = 4.441e-14
+    on_min_step='stop'  -> status=min_step, stopped at t=0.999999998616476
+        distance to exact blow-up time t*=1: 1.384e-09
+        accepted=468 rejected=0 (rej 0.0%); message: required step 4.213e-14 < h_min 4.441e-14 at t=0.9999999986164757; tolerance is unreachable (roundoff floor) or the solution has a singularity
+    on_min_step='force' -> status=diverged after 18 forced min-step events
+        message: non-finite state at t=0.99999999861723066 (min step forced 18 times); solution likely diverges
+    conclusion: the integrator refuses to shrink h below the
+    float64 clock resolution and reports the singularity instead
+    of hanging; 'force' plows on and detects the divergence.
+
+## D. Too-strict tolerance (protection against infinite shrinkage)
+
+### Too-strict tolerance: y'' = -100y (omega=10), [0, 20]
+    rtol=1e-16, atol=0, default limits -> status=max_steps
+        exceeded max_steps=100000 attempted steps at t=17.609806656139384
+        accepted=99812 rejected=188, reached t=17.6098 of 20
+    rtol=1e-17, atol=0, user h_min=1e-3 -> status=min_step at t=0
+        required step 2.000e-04 < h_min 1.000e-03 at t=0; tolerance is unreachable (roundoff floor) or the solution has a singularity
+    same + on_min_step='force' -> status=success, forced events=20000
+        global error at t=20: 2.304e-10 (tolerance was violated on every forced step)
+    conclusion: with float64, rtol below ~1e-15..1e-16 is beyond
+    the reachable accuracy; the integrator stops with a clear
+    diagnostic (min_step / max_steps) instead of looping forever.
+
+## E. Rejection-ratio summary (all sweep rows above)
+    Rejections cluster where the solution changes rapidly (steep
+    transient / boundary layer) and where tolerance is tight;
+    smooth stretches run with ~0% rejections.

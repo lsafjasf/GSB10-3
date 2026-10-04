@@ -1,0 +1,21 @@
+{
+  "name": "order-api-provider",
+  "version": "1.3",
+  "fields": {
+    "id": {"type": "integer", "required": true},
+    "amount": {"type": "number", "required": true},
+    "status": {"type": "string", "required": true},
+    "tags": {"type": "array", "required": false, "items": "string"},
+    "memo": {"type": "string", "required": false},
+    "trace_id": {"type": "string", "required": false},
+    "address": {
+      "type": "object",
+      "required": false,
+      "fields": {
+        "city": {"type": "string", "required": true},
+        "zip": {"type": "string", "required": false},
+        "country": {"type": "string", "required": false}
+      }
+    }
+  }
+}

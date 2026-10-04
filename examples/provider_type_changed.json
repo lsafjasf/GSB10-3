@@ -1,0 +1,19 @@
+{
+  "name": "order-api-provider",
+  "version": "1.2",
+  "fields": {
+    "id": {"type": "string", "required": true},
+    "amount": {"type": "number", "required": true},
+    "status": {"type": "integer", "required": true},
+    "tags": {"type": "array", "required": false, "items": "integer"},
+    "memo": {"type": "string", "required": false},
+    "address": {
+      "type": "object",
+      "required": false,
+      "fields": {
+        "city": {"type": "string", "required": true},
+        "zip": {"type": "string", "required": false}
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "order-api-consumer-strict",
+  "version": "1.0",
+  "strict": true,
+  "fields": {
+    "id": {"type": "integer", "required": true},
+    "amount": {"type": "number", "required": true},
+    "status": {"type": "string", "required": true}
+  }
+}

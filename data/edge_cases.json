@@ -1,0 +1,298 @@
+{
+  "description": "边界用例：错误值传播、空单元格、空串、跨表、自引用等。期望值以 # 开头表示错误值。",
+  "cases": [
+    {
+      "name": "四则运算与括号优先级",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=2+3*4"
+          },
+          "A2": {
+            "formula": "=(2+3)*4"
+          },
+          "A3": {
+            "formula": "=2^3^2"
+          },
+          "A4": {
+            "formula": "=100/5/4"
+          },
+          "A5": {
+            "formula": "=-2^2"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": 14,
+        "S!A2": 20,
+        "S!A3": 64,
+        "S!A4": 5,
+        "S!A5": 4
+      }
+    },
+    {
+      "name": "空单元格：算术为0，拼接为空串，聚合跳过",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=B9+1"
+          },
+          "A2": {
+            "formula": "=\"[\"&B9&\"]\""
+          },
+          "A3": {
+            "formula": "=SUM(B1:B9)"
+          },
+          "A4": {
+            "formula": "=COUNT(B1:B9)"
+          },
+          "A5": {
+            "formula": "=AVERAGE(B1:B9)"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": 1,
+        "S!A2": "[]",
+        "S!A3": 0,
+        "S!A4": 0,
+        "S!A5": "#DIV/0!"
+      }
+    },
+    {
+      "name": "空字符串单元格与数字文本",
+      "sheets": {
+        "S": {
+          "A1": "",
+          "A2": {
+            "formula": "=A1+1"
+          },
+          "A3": {
+            "formula": "=COUNTA(A1:A1)"
+          },
+          "A4": {
+            "formula": "=\"7\"*6"
+          }
+        }
+      },
+      "expect": {
+        "S!A2": 1,
+        "S!A3": 0,
+        "S!A4": 42
+      }
+    },
+    {
+      "name": "除零错误传播链",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=1/0"
+          },
+          "A2": {
+            "formula": "=A1+100"
+          },
+          "A3": {
+            "formula": "=SUM(A1:A2)"
+          },
+          "A4": {
+            "formula": "=IF(A2=0,1,2)"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": "#DIV/0!",
+        "S!A2": "#DIV/0!",
+        "S!A3": "#DIV/0!",
+        "S!A4": "#DIV/0!"
+      }
+    },
+    {
+      "name": "IF短路：未取分支不求值",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=IF(2>1, 42, 1/0)"
+          },
+          "A2": {
+            "formula": "=IF(2<1, 1/0, \"ok\")"
+          },
+          "A3": {
+            "formula": "=IF(#N/A,1,2)"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": 42,
+        "S!A2": "ok",
+        "S!A3": "#N/A"
+      }
+    },
+    {
+      "name": "区域聚合跳过文本、空值与错误传播",
+      "sheets": {
+        "S": {
+          "A1": 1,
+          "A2": "x",
+          "A3": 2,
+          "A4": null,
+          "A5": {
+            "formula": "=SUM(A1:A4)"
+          },
+          "A6": {
+            "formula": "=AVERAGE(A1:A4)"
+          },
+          "A7": {
+            "formula": "=MIN(A1:A4)"
+          },
+          "A8": {
+            "formula": "=COUNTA(A1:A4)"
+          }
+        }
+      },
+      "expect": {
+        "S!A5": 3,
+        "S!A6": 1.5,
+        "S!A7": 1,
+        "S!A8": 3
+      }
+    },
+    {
+      "name": "跨工作表单格与区域引用（含带引号表名）",
+      "sheets": {
+        "Data": {
+          "B2": 10,
+          "B3": 20
+        },
+        "My Data": {
+          "C1": 7
+        },
+        "S": {
+          "A1": {
+            "formula": "=Data!B2+Data!B3"
+          },
+          "A2": {
+            "formula": "=SUM(Data!B2:B3)"
+          },
+          "A3": {
+            "formula": "='My Data'!C1^2"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": 30,
+        "S!A2": 30,
+        "S!A3": 49
+      }
+    },
+    {
+      "name": "引用不存在的工作表返回#REF!",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=Nope!Z9"
+          },
+          "A2": {
+            "formula": "=SUM(Nope!A1:A2)+1"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": "#REF!",
+        "S!A2": "#REF!"
+      }
+    },
+    {
+      "name": "字符串拼接与比较",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=\"v\"&1&TRUE"
+          },
+          "A2": {
+            "formula": "=10>=10"
+          },
+          "A3": {
+            "formula": "=\"abc\"=\"abc\""
+          },
+          "A4": {
+            "formula": "=1=\"1\""
+          },
+          "A5": {
+            "formula": "=MOD(-7,3)"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": "v1TRUE",
+        "S!A2": true,
+        "S!A3": true,
+        "S!A4": false,
+        "S!A5": 2
+      }
+    },
+    {
+      "name": "数值域错误与未知名称",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=SQRT(-4)"
+          },
+          "A2": {
+            "formula": "=POWER(-2,0.5)"
+          },
+          "A3": {
+            "formula": "=FOOBAR(1)"
+          },
+          "A4": {
+            "formula": "=ROUND(2.5,0)"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": "#NUM!",
+        "S!A2": "#NUM!",
+        "S!A3": "#NAME?",
+        "S!A4": 3
+      }
+    },
+    {
+      "name": "自引用返回循环错误，依赖者传播",
+      "sheets": {
+        "S": {
+          "A1": {
+            "formula": "=A1"
+          },
+          "A2": {
+            "formula": "=A1+5"
+          }
+        }
+      },
+      "expect": {
+        "S!A1": "#CYCLE!",
+        "S!A2": "#CYCLE!"
+      }
+    },
+    {
+      "name": "钻石依赖：同一依赖被多个公式引用",
+      "sheets": {
+        "S": {
+          "A1": 4,
+          "B1": {
+            "formula": "=A1+1"
+          },
+          "B2": {
+            "formula": "=A1*2"
+          },
+          "C1": {
+            "formula": "=B1+B2"
+          }
+        }
+      },
+      "expect": {
+        "S!B1": 5,
+        "S!B2": 8,
+        "S!C1": 13
+      }
+    }
+  ]
+}

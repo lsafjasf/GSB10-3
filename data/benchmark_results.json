@@ -1,0 +1,77 @@
+{
+  "python": "3.12.3",
+  "results": [
+    {
+      "case": "A:链式公式网格(拓扑序)",
+      "grid": "100x100",
+      "cells": 10000,
+      "build_s": 0.019,
+      "eval_s": 0.1,
+      "cells_per_s": 99554
+    },
+    {
+      "case": "B:单SUM大区域",
+      "grid": "100x100",
+      "cells": 10000,
+      "build_s": 0.01,
+      "eval_s": 0.034,
+      "cells_per_s": 296365
+    },
+    {
+      "case": "C:每行SUM行区域",
+      "grid": "100x100",
+      "cells": 10000,
+      "build_s": 0.011,
+      "eval_s": 0.034,
+      "cells_per_s": 296380
+    },
+    {
+      "case": "A:链式公式网格(拓扑序)",
+      "grid": "300x300",
+      "cells": 90000,
+      "build_s": 0.193,
+      "eval_s": 2.041,
+      "cells_per_s": 44102
+    },
+    {
+      "case": "B:单SUM大区域",
+      "grid": "300x300",
+      "cells": 90000,
+      "build_s": 0.099,
+      "eval_s": 0.448,
+      "cells_per_s": 200858
+    },
+    {
+      "case": "C:每行SUM行区域",
+      "grid": "300x300",
+      "cells": 90000,
+      "build_s": 0.116,
+      "eval_s": 0.523,
+      "cells_per_s": 172041
+    },
+    {
+      "case": "A:链式公式网格(拓扑序)",
+      "grid": "1000x1000",
+      "cells": 1000000,
+      "build_s": 2.903,
+      "eval_s": 29.433,
+      "cells_per_s": 33975
+    },
+    {
+      "case": "B:单SUM大区域",
+      "grid": "1000x1000",
+      "cells": 1000000,
+      "build_s": 1.376,
+      "eval_s": 9.929,
+      "cells_per_s": 100711
+    },
+    {
+      "case": "C:每行SUM行区域",
+      "grid": "1000x1000",
+      "cells": 1000000,
+      "build_s": 1.457,
+      "eval_s": 8.329,
+      "cells_per_s": 120061
+    }
+  ]
+}

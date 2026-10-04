@@ -1,0 +1,45 @@
+{
+  "description": "环检测样例。cycle_nodes 列出每个环上的全部单元格（排序后）。",
+  "samples": [
+    {
+      "name": "直接自引用",
+      "sheets": {"S": {"A1": {"formula": "=A1+1"}}},
+      "cycle_nodes": ["S!A1"]
+    },
+    {
+      "name": "两格互相引用",
+      "sheets": {"S": {"A1": {"formula": "=B1"}, "B1": {"formula": "=A1"}}},
+      "cycle_nodes": ["S!A1", "S!B1"]
+    },
+    {
+      "name": "三格环",
+      "sheets": {"S": {"A1": {"formula": "=B1+1"}, "B1": {"formula": "=C1+1"}, "C1": {"formula": "=A1+1"}}},
+      "cycle_nodes": ["S!A1", "S!B1", "S!C1"]
+    },
+    {
+      "name": "环外加旁观者与依赖者（只报环上节点，依赖者传播错误）",
+      "sheets": {"S": {"A1": {"formula": "=B1"}, "B1": {"formula": "=A1"}, "C1": {"formula": "=A1+1"}, "D1": {"formula": "=C1+1"}}},
+      "cycle_nodes": ["S!A1", "S!B1"]
+    },
+    {
+      "name": "同表内两个不相交的环",
+      "sheets": {"S": {"A1": {"formula": "=A2"}, "A2": {"formula": "=A1"}, "C1": {"formula": "=D1"}, "D1": {"formula": "=E1"}, "E1": {"formula": "=C1"}}},
+      "cycle_nodes": ["S!A1", "S!A2", "S!C1", "S!D1", "S!E1"]
+    },
+    {
+      "name": "跨工作表互相引用",
+      "sheets": {"Alpha": {"A1": {"formula": "=Beta!B2"}}, "Beta": {"B2": {"formula": "=Alpha!A1"}}},
+      "cycle_nodes": ["Alpha!A1", "Beta!B2"]
+    },
+    {
+      "name": "区域引用构成的环",
+      "sheets": {"S": {"A1": 1, "A2": {"formula": "=SUM(A1:A3)"}, "A3": {"formula": "=A2"}}},
+      "cycle_nodes": ["S!A2", "S!A3"]
+    },
+    {
+      "name": "深度为5的环",
+      "sheets": {"S": {"A1": {"formula": "=A2"}, "A2": {"formula": "=A3"}, "A3": {"formula": "=A4"}, "A4": {"formula": "=A5"}, "A5": {"formula": "=A1"}, "B1": {"formula": "=A1"}}},
+      "cycle_nodes": ["S!A1", "S!A2", "S!A3", "S!A4", "S!A5"]
+    }
+  ]
+}

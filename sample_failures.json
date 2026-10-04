@@ -1,0 +1,231 @@
+{
+  "failures": [
+    {
+      "test_name": "test_cart_add_item_case_01",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '1.5.2'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 11, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '1.5.2'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_02",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'N/A'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 12, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'N/A'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_03",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: ''",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 13, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: ''"
+    },
+    {
+      "test_name": "test_cart_add_item_case_04",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'x9'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 14, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'x9'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_05",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'twelve'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 15, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'twelve'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_06",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '3,000'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 16, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '3,000'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_07",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '0x1F'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 17, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '0x1F'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_08",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'abc'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 18, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'abc'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_09",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '1.5.2'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 19, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '1.5.2'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_10",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'N/A'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 20, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'N/A'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_11",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: ''",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 21, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: ''"
+    },
+    {
+      "test_name": "test_cart_add_item_case_12",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'x9'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 22, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'x9'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_13",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'twelve'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 23, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'twelve'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_14",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '3,000'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 24, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '3,000'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_15",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '0x1F'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 25, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '0x1F'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_16",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'abc'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 26, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'abc'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_17",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '1.5.2'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 27, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '1.5.2'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_18",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'N/A'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 28, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'N/A'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_19",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: ''",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 29, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: ''"
+    },
+    {
+      "test_name": "test_cart_add_item_case_20",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'x9'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 30, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'x9'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_21",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'twelve'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 31, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'twelve'"
+    },
+    {
+      "test_name": "test_cart_add_item_case_22",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: '3,000'",
+      "stack": "Traceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/case.py\", line 589, in _callTestMethod\n    testMethod()\n  File \"tests/test_cart.py\", line 32, in runTest\n    cart.add(item, qty)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: '3,000'"
+    },
+    {
+      "test_name": "test_session_flow_01",
+      "error_type": "KeyError",
+      "message": "'user_id'",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_session.py\", line 21, in runTest\n    s = store.get_session(sid)\n  File \"src/session_store.py\", line 42, in get_session\n    return self._cache[sid]['user_id']\nKeyError: 'user_id'"
+    },
+    {
+      "test_name": "test_session_flow_02",
+      "error_type": "KeyError",
+      "message": "'user_id'",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_session.py\", line 22, in runTest\n    s = store.get_session(sid)\n  File \"src/session_store.py\", line 42, in get_session\n    return self._cache[sid]['user_id']\nKeyError: 'user_id'"
+    },
+    {
+      "test_name": "test_session_flow_03",
+      "error_type": "KeyError",
+      "message": "'user_id'",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_session.py\", line 23, in runTest\n    s = store.get_session(sid)\n  File \"src/session_store.py\", line 42, in get_session\n    return self._cache[sid]['user_id']\nKeyError: 'user_id'"
+    },
+    {
+      "test_name": "test_session_flow_04",
+      "error_type": "KeyError",
+      "message": "'user_id'",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_session.py\", line 24, in runTest\n    s = store.get_session(sid)\n  File \"src/session_store.py\", line 42, in get_session\n    return self._cache[sid]['user_id']\nKeyError: 'user_id'"
+    },
+    {
+      "test_name": "test_session_flow_05",
+      "error_type": "KeyError",
+      "message": "'user_id'",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_session.py\", line 25, in runTest\n    s = store.get_session(sid)\n  File \"src/session_store.py\", line 42, in get_session\n    return self._cache[sid]['user_id']\nKeyError: 'user_id'"
+    },
+    {
+      "test_name": "test_external_api_sync_01",
+      "error_type": "TimeoutError",
+      "message": "request timed out after 5000 ms",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_external.py\", line 31, in runTest\n    client.send(req)\n  File \"src/http_client.py\", line 133, in send\n    raise TimeoutError(msg)\nTimeoutError: request timed out after 5000 ms"
+    },
+    {
+      "test_name": "test_external_api_sync_02",
+      "error_type": "TimeoutError",
+      "message": "request timed out after 5123 ms",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_external.py\", line 32, in runTest\n    client.send(req)\n  File \"src/http_client.py\", line 133, in send\n    raise TimeoutError(msg)\nTimeoutError: request timed out after 5123 ms"
+    },
+    {
+      "test_name": "test_external_api_sync_03",
+      "error_type": "TimeoutError",
+      "message": "request timed out after 4877 ms",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_external.py\", line 33, in runTest\n    client.send(req)\n  File \"src/http_client.py\", line 133, in send\n    raise TimeoutError(msg)\nTimeoutError: request timed out after 4877 ms"
+    },
+    {
+      "test_name": "test_config_load_env_01",
+      "error_type": "FileNotFoundError",
+      "message": "config file not found: app.yaml",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_config.py\", line 8, in runTest\n    cfg = load_config()\n  File \"src/config_loader.py\", line 21, in load_config\n    open(path)\nFileNotFoundError: config file not found: app.yaml"
+    },
+    {
+      "test_name": "test_config_load_env_02",
+      "error_type": "FileNotFoundError",
+      "message": "config file not found: app.yaml",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_config.py\", line 8, in runTest\n    cfg = load_config()\n  File \"src/config_loader.py\", line 21, in load_config\n    open(path)\nFileNotFoundError: config file not found: app.yaml"
+    },
+    {
+      "test_name": "test_config_load_env_03",
+      "error_type": "FileNotFoundError",
+      "message": "config file not found: app.yaml",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_config.py\", line 8, in runTest\n    cfg = load_config()\n  File \"src/config_loader.py\", line 21, in load_config\n    open(path)\nFileNotFoundError: config file not found: app.yaml"
+    },
+    {
+      "test_name": "test_config_load_env_04",
+      "error_type": "FileNotFoundError",
+      "message": "config file not found: app.yaml",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_config.py\", line 8, in runTest\n    cfg = load_config()\n  File \"src/config_loader.py\", line 21, in load_config\n    open(path)\nFileNotFoundError: config file not found: app.yaml"
+    },
+    {
+      "test_name": "test_payment_refund_auth_bypass",
+      "error_type": "SecurityError",
+      "message": "token validation bypassed for refund amount 9900",
+      "tags": [
+        "payment",
+        "security"
+      ],
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_payment.py\", line 55, in runTest\n    svc.refund(order, token)\n  File \"src/payment_service.py\", line 210, in refund\n    raise SecurityError(\"token validation bypassed\")\nSecurityError: token validation bypassed"
+    },
+    {
+      "test_name": "test_ledger_write_integrity",
+      "error_type": "DataCorruptionError",
+      "message": "checksum mismatch at block 0x7f3a21",
+      "critical": true,
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_ledger.py\", line 77, in runTest\n    ledger.append(entry)\n  File \"src/ledger.py\", line 96, in append\n    raise DataCorruptionError(\"checksum mismatch\")\nDataCorruptionError: checksum mismatch"
+    },
+    {
+      "test_name": "test_auth_token_expiry_parse",
+      "error_type": "ValueError",
+      "message": "invalid literal for int() with base 10: 'exp'",
+      "stack": "Traceback (most recent call last):\n  File \"tests/test_auth.py\", line 33, in runTest\n    svc.parse_expiry(tok)\n  File \"src/cart_service.py\", line 87, in parse_quantity\n    return int(raw)\nValueError: invalid literal for int() with base 10: 'exp'"
+    }
+  ]
+}

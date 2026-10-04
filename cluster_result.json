@@ -1,0 +1,188 @@
+{
+  "total_failures": 37,
+  "cluster_count": 7,
+  "critical_isolated": 3,
+  "clusters": [
+    {
+      "cluster_id": "C01",
+      "size": 1,
+      "error_type": "DataCorruptionError",
+      "message_template": "checksum mismatch at block <ADDR>",
+      "location": "src/ledger.py::append",
+      "signature": "DataCorruptionError|checksum mismatch at block <ADDR>@src/ledger.py::append",
+      "isolated_critical": true,
+      "critical": true,
+      "reasons": [
+        "R1:用例显式标注为关键失败",
+        "R2:错误类型属于关键错误集合(DataCorruptionError)"
+      ],
+      "representative": {
+        "test_name": "test_ledger_write_integrity",
+        "error_type": "DataCorruptionError",
+        "message": "checksum mismatch at block 0x7f3a21",
+        "tags": []
+      },
+      "members": [
+        "test_ledger_write_integrity"
+      ]
+    },
+    {
+      "cluster_id": "C02",
+      "size": 1,
+      "error_type": "SecurityError",
+      "message_template": "token validation bypassed for refund amount <N>",
+      "location": "src/payment_service.py::refund",
+      "signature": "SecurityError|token validation bypassed for refund amount <N>@src/payment_service.py::refund",
+      "isolated_critical": true,
+      "critical": true,
+      "reasons": [
+        "R2:错误类型属于关键错误集合(SecurityError)",
+        "R3:用例名/标签命中关键链路模式('payment')"
+      ],
+      "representative": {
+        "test_name": "test_payment_refund_auth_bypass",
+        "error_type": "SecurityError",
+        "message": "token validation bypassed for refund amount 9900",
+        "tags": [
+          "payment",
+          "security"
+        ]
+      },
+      "members": [
+        "test_payment_refund_auth_bypass"
+      ]
+    },
+    {
+      "cluster_id": "C03",
+      "size": 1,
+      "error_type": "ValueError",
+      "message_template": "invalid literal for int() with base <N>: '<V>'",
+      "location": "src/cart_service.py::parse_quantity",
+      "signature": "ValueError|invalid literal for int() with base <N>: '<V>'@src/cart_service.py::parse_quantity",
+      "isolated_critical": true,
+      "critical": true,
+      "reasons": [
+        "R3:用例名/标签命中关键链路模式('auth')"
+      ],
+      "representative": {
+        "test_name": "test_auth_token_expiry_parse",
+        "error_type": "ValueError",
+        "message": "invalid literal for int() with base 10: 'exp'",
+        "tags": []
+      },
+      "members": [
+        "test_auth_token_expiry_parse"
+      ]
+    },
+    {
+      "cluster_id": "C04",
+      "size": 22,
+      "error_type": "ValueError",
+      "message_template": "invalid literal for int() with base <N>: '<V>'",
+      "location": "src/cart_service.py::parse_quantity",
+      "signature": "ValueError|invalid literal for int() with base <N>: '<V>'@src/cart_service.py::parse_quantity",
+      "isolated_critical": false,
+      "critical": false,
+      "reasons": [],
+      "representative": {
+        "test_name": "test_cart_add_item_case_01",
+        "error_type": "ValueError",
+        "message": "invalid literal for int() with base 10: '1.5.2'",
+        "tags": []
+      },
+      "members": [
+        "test_cart_add_item_case_01",
+        "test_cart_add_item_case_02",
+        "test_cart_add_item_case_03",
+        "test_cart_add_item_case_04",
+        "test_cart_add_item_case_05",
+        "test_cart_add_item_case_06",
+        "test_cart_add_item_case_07",
+        "test_cart_add_item_case_08",
+        "test_cart_add_item_case_09",
+        "test_cart_add_item_case_10",
+        "test_cart_add_item_case_11",
+        "test_cart_add_item_case_12",
+        "test_cart_add_item_case_13",
+        "test_cart_add_item_case_14",
+        "test_cart_add_item_case_15",
+        "test_cart_add_item_case_16",
+        "test_cart_add_item_case_17",
+        "test_cart_add_item_case_18",
+        "test_cart_add_item_case_19",
+        "test_cart_add_item_case_20",
+        "test_cart_add_item_case_21",
+        "test_cart_add_item_case_22"
+      ]
+    },
+    {
+      "cluster_id": "C05",
+      "size": 5,
+      "error_type": "KeyError",
+      "message_template": "'<V>'",
+      "location": "src/session_store.py::get_session",
+      "signature": "KeyError|'<V>'@src/session_store.py::get_session",
+      "isolated_critical": false,
+      "critical": false,
+      "reasons": [],
+      "representative": {
+        "test_name": "test_session_flow_01",
+        "error_type": "KeyError",
+        "message": "'user_id'",
+        "tags": []
+      },
+      "members": [
+        "test_session_flow_01",
+        "test_session_flow_02",
+        "test_session_flow_03",
+        "test_session_flow_04",
+        "test_session_flow_05"
+      ]
+    },
+    {
+      "cluster_id": "C06",
+      "size": 4,
+      "error_type": "FileNotFoundError",
+      "message_template": "config file not found: app.yaml",
+      "location": "src/config_loader.py::load_config",
+      "signature": "FileNotFoundError|config file not found: app.yaml@src/config_loader.py::load_config",
+      "isolated_critical": false,
+      "critical": false,
+      "reasons": [],
+      "representative": {
+        "test_name": "test_config_load_env_01",
+        "error_type": "FileNotFoundError",
+        "message": "config file not found: app.yaml",
+        "tags": []
+      },
+      "members": [
+        "test_config_load_env_01",
+        "test_config_load_env_02",
+        "test_config_load_env_03",
+        "test_config_load_env_04"
+      ]
+    },
+    {
+      "cluster_id": "C07",
+      "size": 3,
+      "error_type": "TimeoutError",
+      "message_template": "request timed out after <N> ms",
+      "location": "src/http_client.py::send",
+      "signature": "TimeoutError|request timed out after <N> ms@src/http_client.py::send",
+      "isolated_critical": false,
+      "critical": false,
+      "reasons": [],
+      "representative": {
+        "test_name": "test_external_api_sync_01",
+        "error_type": "TimeoutError",
+        "message": "request timed out after 5000 ms",
+        "tags": []
+      },
+      "members": [
+        "test_external_api_sync_01",
+        "test_external_api_sync_02",
+        "test_external_api_sync_03"
+      ]
+    }
+  ]
+}

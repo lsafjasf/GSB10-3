@@ -1,0 +1,15 @@
+发现 2 处依赖冲突（按依赖项合并，未做任何自动选边）：
+
+  依赖: axios
+    base:   0.27.2
+    ours:   1.6.0  (来源: feature/upgrade)
+    theirs: 0.28.1  (来源: main)
+    原因:   两侧分别修改为不同版本（1.6.0 vs 0.28.1，base 为 0.27.2）
+
+  依赖: debug
+    base:   4.3.3
+    ours:   4.3.4  (来源: feature/upgrade)
+    theirs: （已删除）  (来源: main)
+    原因:   theirs 删除了该依赖，但 ours 将其修改为 4.3.4
+
+请人工选定版本后重跑合并。

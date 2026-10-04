@@ -1,0 +1,31 @@
+{
+  "status": "conflict",
+  "conflicts": [
+    {
+      "dependency": "axios",
+      "base": "0.27.2",
+      "ours": {
+        "source": "feature/upgrade",
+        "version": "1.6.0"
+      },
+      "theirs": {
+        "source": "main",
+        "version": "0.28.1"
+      },
+      "reason": "两侧分别修改为不同版本（1.6.0 vs 0.28.1，base 为 0.27.2）"
+    },
+    {
+      "dependency": "debug",
+      "base": "4.3.3",
+      "ours": {
+        "source": "feature/upgrade",
+        "version": "4.3.4"
+      },
+      "theirs": {
+        "source": "main",
+        "version": "（已删除）"
+      },
+      "reason": "theirs 删除了该依赖，但 ours 将其修改为 4.3.4"
+    }
+  ]
+}

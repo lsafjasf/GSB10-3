@@ -1,0 +1,10 @@
+{
+  "orders": [
+    {"order_id": "A-1001", "items": [{"sku": "SKU-1", "qty": 2, "unit_price": 9.99}], "coupon": "SAVE10"},
+    {"order_id": "A-1002", "items": [{"sku": "SKU-2", "qty": 1, "unit_price": 100}, {"sku": "SKU-3", "qty": 3, "unit_price": 0.5}]},
+    {"order_id": "B-7", "items": [{"sku": "SKU-9", "qty": 5, "unit_price": 0}], "coupon": null},
+    {"order_id": "C-2026", "items": [{"sku": "SKU-1", "qty": 10, "unit_price": 3.33}], "coupon": "HALF"},
+    {"order_id": "D-0001", "items": [{"sku": "SKU-4", "qty": 1, "unit_price": 0.01}]},
+    {"order_id": "E-EDGE-32CHARS-00000000000001", "items": [{"sku": "SKU-8", "qty": 7, "unit_price": 12.5}], "coupon": "SAVE10"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "missing_items": {"orders": [{"order_id": "X-1"}]},
+  "missing_order_id": {"orders": [{"items": [{"sku": "SKU-1", "qty": 1, "unit_price": 1}]}]},
+  "qty_wrong_type": {"orders": [{"order_id": "X-2", "items": [{"sku": "SKU-1", "qty": "2", "unit_price": 9.99}]}]},
+  "qty_bool": {"orders": [{"order_id": "X-3", "items": [{"sku": "SKU-1", "qty": true, "unit_price": 9.99}]}]},
+  "qty_not_positive": {"orders": [{"order_id": "X-4", "items": [{"sku": "SKU-1", "qty": 0, "unit_price": 9.99}]}]},
+  "negative_price": {"orders": [{"order_id": "X-5", "items": [{"sku": "SKU-1", "qty": 1, "unit_price": -1}]}]},
+  "bad_order_id": {"orders": [{"order_id": "bad id!", "items": [{"sku": "SKU-1", "qty": 1, "unit_price": 1}]}]},
+  "empty_items": {"orders": [{"order_id": "X-6", "items": []}]},
+  "unknown_field": {"orders": [{"order_id": "X-7", "items": [{"sku": "SKU-1", "qty": 1, "unit_price": 1}], "discount_code": "SAVE10"}]},
+  "orders_not_list": {"orders": {"order_id": "X-8"}},
+  "top_level_not_object": [1, 2, 3],
+  "coupon_wrong_type": {"orders": [{"order_id": "X-9", "coupon": 10, "items": [{"sku": "SKU-1", "qty": 1, "unit_price": 1}]}]}
+}

@@ -1,0 +1,6 @@
+{"order_id": "A-1001", "subtotal": 19.98, "discount": 2.0, "total": 17.98, "tax": 1.08}
+{"order_id": "A-1002", "subtotal": 101.5, "discount": 0.0, "total": 101.5, "tax": 6.09}
+{"order_id": "B-7", "subtotal": 0, "discount": 0.0, "total": 0.0, "tax": 0.0}
+{"order_id": "C-2026", "subtotal": 33.3, "discount": 16.65, "total": 16.65, "tax": 1.0}
+{"order_id": "D-0001", "subtotal": 0.01, "discount": 0.0, "total": 0.01, "tax": 0.0}
+{"order_id": "E-EDGE-32CHARS-00000000000001", "subtotal": 87.5, "discount": 8.75, "total": 78.75, "tax": 4.72}

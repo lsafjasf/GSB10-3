@@ -1,0 +1,229 @@
+# 规则表对拍数据：文本	带调拼音(空格分词)	不带调拼音
+# === 单字（默认音 = 语料频率第 1 位）===
+我	wǒ	wo
+行	xíng	xing
+长	cháng	chang
+重	zhòng	zhong
+乐	lè	le
+的	de	de
+地	dì	di
+得	dé	de
+着	zhe	zhe
+了	le	le
+都	dōu	dou
+还	hái	hai
+中	zhōng	zhong
+为	wèi	wei
+好	hǎo	hao
+少	shǎo	shao
+难	nán	nan
+便	biàn	bian
+教	jiào	jiao
+觉	jué	jue
+只	zhǐ	zhi
+种	zhǒng	zhong
+分	fēn	fen
+干	gān	gan
+几	jǐ	ji
+系	xì	xi
+假	jiǎ	jia
+将	jiāng	jiang
+降	jiàng	jiang
+空	kōng	kong
+量	liàng	liang
+没	méi	mei
+强	qiáng	qiang
+省	shěng	sheng
+数	shù	shu
+说	shuō	shuo
+相	xiāng	xiang
+应	yīng	ying
+转	zhuǎn	zhuan
+传	chuán	chuan
+朝	cháo	chao
+曾	céng	ceng
+差	chà	cha
+场	chǎng	chang
+处	chù	chu
+当	dāng	dang
+调	diào	diao
+发	fā	fa
+更	gèng	geng
+给	gěi	gei
+冠	guān	guan
+号	hào	hao
+喝	hē	he
+和	hé	he
+华	huá	hua
+会	huì	hui
+间	jiān	jian
+角	jiǎo	jiao
+结	jié	jie
+解	jiě	jie
+看	kàn	kan
+壳	ké	ke
+落	luò	luo
+累	lèi	lei
+露	lù	lu
+绿	lǜ	lü
+论	lùn	lun
+埋	mái	mai
+蒙	méng	meng
+模	mó	mo
+宁	níng	ning
+弄	nòng	nong
+片	piàn	pian
+漂	piāo	piao
+奇	qí	qi
+悄	qiāo	qiao
+曲	qǔ	qu
+塞	sāi	sai
+散	sàn	san
+似	sì	si
+宿	sù	su
+提	tí	ti
+挑	tiāo	tiao
+吐	tǔ	tu
+鲜	xiān	xian
+校	xiào	xiao
+血	xuè	xue
+咽	yān	yan
+要	yào	yao
+载	zài	zai
+扎	zhā	zha
+占	zhàn	zhan
+正	zhèng	zheng
+钻	zuàn	zuan
+作	zuò	zuo
+坊	fāng	fang
+# === 词组（词表定音，覆盖多音字上下文）===
+银行	yín háng	yin hang
+行走	xíng zǒu	xing zou
+长大	zhǎng dà	zhang da
+长江	cháng jiāng	chang jiang
+重量	zhòng liàng	zhong liang
+重复	chóng fù	chong fu
+快乐	kuài lè	kuai le
+音乐	yīn yuè	yin yue
+目的	mù dì	mu di
+的确	dí què	di que
+觉得	jué de	jue de
+睡觉	shuì jiào	shui jiao
+中国	zhōng guó	zhong guo
+中奖	zhòng jiǎng	zhong jiang
+为了	wèi le	wei le
+作为	zuò wéi	zuo wei
+还是	hái shì	hai shi
+还钱	huán qián	huan qian
+首都	shǒu dū	shou du
+都是	dōu shì	dou shi
+了解	liǎo jiě	liao jie
+数学	shù xué	shu xue
+数一数	shǔ yī shǔ	shu yi shu
+方便	fāng biàn	fang bian
+便宜	pián yi	pian yi
+教书	jiāo shū	jiao shu
+教室	jiào shì	jiao shi
+只有	zhǐ yǒu	zhi you
+一只	yī zhī	yi zhi
+种子	zhǒng zi	zhong zi
+种地	zhòng dì	zhong di
+干净	gān jìng	gan jing
+干活	gàn huó	gan huo
+几乎	jī hū	ji hu
+几个	jǐ gè	ji ge
+假期	jià qī	jia qi
+假如	jiǎ rú	jia ru
+天空	tiān kōng	tian kong
+空地	kòng dì	kong di
+没有	méi yǒu	mei you
+困难	kùn nán	kun nan
+灾难	zāi nàn	zai nan
+强大	qiáng dà	qiang da
+勉强	miǎn qiǎng	mian qiang
+省会	shěng huì	sheng hui
+反省	fǎn xǐng	fan xing
+说话	shuō huà	shuo hua
+相信	xiāng xìn	xiang xin
+相片	xiàng piàn	xiang pian
+应该	yīng gāi	ying gai
+应用	yìng yòng	ying yong
+转身	zhuǎn shēn	zhuan shen
+传说	chuán shuō	chuan shuo
+传记	zhuàn jì	zhuan ji
+朝阳	zhāo yáng	zhao yang
+朝代	cháo dài	chao dai
+曾经	céng jīng	ceng jing
+差不多	chà bu duō	cha bu duo
+出差	chū chāi	chu chai
+处理	chǔ lǐ	chu li
+到处	dào chù	dao chu
+调查	diào chá	diao cha
+调节	tiáo jié	tiao jie
+发现	fā xiàn	fa xian
+头发	tóu fa	tou fa
+更加	gèng jiā	geng jia
+给予	jǐ yǔ	ji yu
+喝水	hē shuǐ	he shui
+和平	hé píng	he ping
+华山	huà shān	hua shan
+会计	kuài jì	kuai ji
+中间	zhōng jiān	zhong jian
+间隔	jiàn gé	jian ge
+角度	jiǎo dù	jiao du
+角色	jué sè	jue se
+结实	jiē shi	jie shi
+解放	jiě fàng	jie fang
+看见	kàn jiàn	kan jian
+看守	kān shǒu	kan shou
+贝壳	bèi ké	bei ke
+地壳	dì qiào	di qiao
+劳累	láo lèi	lao lei
+积累	jī lěi	ji lei
+露水	lù shuǐ	lu shui
+露面	lòu miàn	lou mian
+绿色	lǜ sè	lü se
+论语	lún yǔ	lun yu
+埋怨	mán yuàn	man yuan
+蒙古	měng gǔ	meng gu
+模型	mó xíng	mo xing
+模样	mú yàng	mu yang
+宁静	níng jìng	ning jing
+宁可	nìng kě	ning ke
+弄堂	lòng táng	long tang
+漂亮	piào liang	piao liang
+奇怪	qí guài	qi guai
+奇数	jī shù	ji shu
+歌曲	gē qǔ	ge qu
+弯曲	wān qū	wan qu
+散步	sàn bù	san bu
+散文	sǎn wén	san wen
+似乎	sì hū	si hu
+似的	shì de	shi de
+宿舍	sù shè	su she
+提高	tí gāo	ti gao
+提防	dī fang	di fang
+挑战	tiǎo zhàn	tiao zhan
+呕吐	ǒu tù	ou tu
+新鲜	xīn xiān	xin xian
+学校	xué xiào	xue xiao
+校对	jiào duì	jiao dui
+血液	xuè yè	xue ye
+咽喉	yān hóu	yan hou
+呜咽	wū yè	wu ye
+要求	yāo qiú	yao qiu
+载重	zài zhòng	zai zhong
+记载	jì zǎi	ji zai
+包扎	bāo zā	bao za
+挣扎	zhēng zhá	zheng zha
+正月	zhēng yuè	zheng yue
+钻石	zuàn shí	zuan shi
+钻研	zuān yán	zuan yan
+作坊	zuō fang	zuo fang
+工作	gōng zuò	gong zuo
+世界	shì jiè	shi jie
+你好	nǐ hǎo	ni hao
+# === 非汉字与全角符号（原样保留）===
+你好，世界！	nǐ hǎo ， shì jiè ！	ni hao ， shi jie ！
+ABC中文123	ABC zhōng wén 123	ABC zhong wen 123
+，。！？	，。！？	，。！？

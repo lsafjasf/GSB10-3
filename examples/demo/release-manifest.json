@@ -1,0 +1,37 @@
+{
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "README.txt",
+      "sha256": "04c85740ec7d8637b43458cc7bf22bb0a6aa701965ad20e15637aff7a2e38908",
+      "size": 16,
+      "type": "file"
+    },
+    {
+      "path": "bin/run.sh",
+      "sha256": "299001868fb8c02fd431c336c6d058f5558c5dff5b5af5e6fe04b870a6a9cbba",
+      "size": 18,
+      "type": "file"
+    },
+    {
+      "path": "current-readme",
+      "target": "README.txt",
+      "type": "symlink"
+    },
+    {
+      "path": "docs/guide.md",
+      "sha256": "f59d419282cbca978e4202dd7e1c452b99138891edb1eb739d7626ccfa899353",
+      "size": 9,
+      "type": "file"
+    },
+    {
+      "path": "version.ini",
+      "sha256": "d35c8c6001f3bdc2d566abe393c15dea6c02c9a50e25bcf3bf2160fd93d29f04",
+      "size": 12,
+      "type": "file"
+    }
+  ],
+  "generated_at": "2026-10-04T02:41:14.139367+00:00",
+  "manifest_sha256": "2524bb20d28b695ffa44e497fddce39aa1f3ee7dc1457096fad0102aa808e73e",
+  "version": 1
+}

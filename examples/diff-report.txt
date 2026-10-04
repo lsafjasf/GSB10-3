@@ -1,0 +1,10 @@
+[自检] 清单完整性: 通过（清单未被篡改）
+[修改] 2 个文件被改动
+  M current-readme  (符号链接目标变化)
+  M version.ini  (长度变化: 12 -> 20)
+[删除] 1 个文件缺失
+  D docs/guide.md
+[新增] 1 个文件多出来
+  A stray.log
+结论: 未通过
+verify exit=1

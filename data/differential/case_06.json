@@ -1,0 +1,26 @@
+{
+  "input": {
+    "id": "ORD-006",
+    "currency": "EUR",
+    "items": [
+      {
+        "name": "apple",
+        "qty": 2.5,
+        "price": 3.6
+      }
+    ]
+  },
+  "expected_report": {
+    "id": "ORD-006",
+    "lines": [
+      {
+        "name": "apple",
+        "amount": 9.0
+      }
+    ],
+    "subtotal": 9.0,
+    "tax": 1.71,
+    "discount": 0.0,
+    "total": 10.71
+  }
+}

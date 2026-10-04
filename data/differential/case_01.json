@@ -1,0 +1,26 @@
+{
+  "input": {
+    "id": "ORD-001",
+    "currency": "CNY",
+    "items": [
+      {
+        "name": "键盘",
+        "qty": 2,
+        "price": 199.5
+      }
+    ]
+  },
+  "expected_report": {
+    "id": "ORD-001",
+    "lines": [
+      {
+        "name": "键盘",
+        "amount": 399.0
+      }
+    ],
+    "subtotal": 399.0,
+    "tax": 51.87,
+    "discount": 0.0,
+    "total": 450.87
+  }
+}

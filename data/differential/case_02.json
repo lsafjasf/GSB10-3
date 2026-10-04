@@ -1,0 +1,36 @@
+{
+  "input": {
+    "id": "ORD-002",
+    "currency": "USD",
+    "discount": 0.1,
+    "items": [
+      {
+        "name": "mouse",
+        "qty": 3,
+        "price": 25.0
+      },
+      {
+        "name": "cable",
+        "qty": 5,
+        "price": 4.2
+      }
+    ]
+  },
+  "expected_report": {
+    "id": "ORD-002",
+    "lines": [
+      {
+        "name": "mouse",
+        "amount": 75.0
+      },
+      {
+        "name": "cable",
+        "amount": 21.0
+      }
+    ],
+    "subtotal": 96.0,
+    "tax": 6.72,
+    "discount": 9.6,
+    "total": 93.12
+  }
+}

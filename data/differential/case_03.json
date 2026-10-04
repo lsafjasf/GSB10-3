@@ -1,0 +1,27 @@
+{
+  "input": {
+    "id": "ORD-003",
+    "currency": "EUR",
+    "discount": 0,
+    "items": [
+      {
+        "name": "laptop",
+        "qty": 1,
+        "price": 1299
+      }
+    ]
+  },
+  "expected_report": {
+    "id": "ORD-003",
+    "lines": [
+      {
+        "name": "laptop",
+        "amount": 1299
+      }
+    ],
+    "subtotal": 1299.0,
+    "tax": 246.81,
+    "discount": 0.0,
+    "total": 1545.81
+  }
+}

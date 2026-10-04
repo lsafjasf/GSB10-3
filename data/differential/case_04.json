@@ -1,0 +1,27 @@
+{
+  "input": {
+    "id": "ORD-004",
+    "currency": "CNY",
+    "discount": 1.0,
+    "items": [
+      {
+        "name": "服务包",
+        "qty": 10,
+        "price": 88.8
+      }
+    ]
+  },
+  "expected_report": {
+    "id": "ORD-004",
+    "lines": [
+      {
+        "name": "服务包",
+        "amount": 888.0
+      }
+    ],
+    "subtotal": 888.0,
+    "tax": 115.44,
+    "discount": 888.0,
+    "total": 115.44
+  }
+}

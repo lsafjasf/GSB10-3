@@ -1,0 +1,35 @@
+{
+  "input": {
+    "id": "ORD-005",
+    "currency": "USD",
+    "items": [
+      {
+        "name": "gift",
+        "qty": 1,
+        "price": 0
+      },
+      {
+        "name": "book",
+        "qty": 4,
+        "price": 12.75
+      }
+    ]
+  },
+  "expected_report": {
+    "id": "ORD-005",
+    "lines": [
+      {
+        "name": "gift",
+        "amount": 0
+      },
+      {
+        "name": "book",
+        "amount": 51.0
+      }
+    ],
+    "subtotal": 51.0,
+    "tax": 3.57,
+    "discount": 0.0,
+    "total": 54.57
+  }
+}

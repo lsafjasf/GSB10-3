@@ -1,0 +1,120 @@
+{
+  "message_count": 2,
+  "record_count": 4,
+  "messages": [
+    {
+      "header": {
+        "id": 16,
+        "qr": 1,
+        "opcode": "QUERY",
+        "aa": true,
+        "tc": false,
+        "rd": false,
+        "ra": false,
+        "rcode": "NOERROR",
+        "qdcount": 1,
+        "ancount": 3,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [
+        {
+          "qname": "zone.example.",
+          "qtype": "AXFR",
+          "qclass": "IN"
+        }
+      ],
+      "records": [
+        {
+          "name": "zone.example.",
+          "type": "SOA",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "ns.zone.example. hostmaster.zone.example. 2026010101 7200 3600 1209600 3600",
+          "section": "answer"
+        },
+        {
+          "name": "host.zone.example.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "192.168.1.10",
+          "section": "answer"
+        },
+        {
+          "name": "host.zone.example.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "192.168.1.11",
+          "section": "answer"
+        }
+      ]
+    },
+    {
+      "header": {
+        "id": 17,
+        "qr": 1,
+        "opcode": "QUERY",
+        "aa": true,
+        "tc": false,
+        "rd": false,
+        "ra": false,
+        "rcode": "NOERROR",
+        "qdcount": 0,
+        "ancount": 1,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [],
+      "records": [
+        {
+          "name": "zone.example.",
+          "type": "SOA",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "ns.zone.example. hostmaster.zone.example. 2026010101 7200 3600 1209600 3600",
+          "section": "answer"
+        }
+      ]
+    }
+  ],
+  "grouped": {
+    "zone.example. SOA": [
+      {
+        "name": "zone.example.",
+        "type": "SOA",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "ns.zone.example. hostmaster.zone.example. 2026010101 7200 3600 1209600 3600",
+        "section": "answer"
+      },
+      {
+        "name": "zone.example.",
+        "type": "SOA",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "ns.zone.example. hostmaster.zone.example. 2026010101 7200 3600 1209600 3600",
+        "section": "answer"
+      }
+    ],
+    "host.zone.example. A": [
+      {
+        "name": "host.zone.example.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "192.168.1.10",
+        "section": "answer"
+      },
+      {
+        "name": "host.zone.example.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "192.168.1.11",
+        "section": "answer"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "message_count": 0,
+  "record_count": 0,
+  "messages": [],
+  "grouped": {},
+  "error": {
+    "type": "truncated",
+    "missing_bytes": 97,
+    "parsed_records": 2,
+    "detail": "message truncated: 97 more byte(s) needed, 0 record(s) parsed (reading rdata of example.com. A)"
+  }
+}

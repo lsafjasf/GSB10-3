@@ -1,0 +1,12 @@
+{
+  "message_count": 0,
+  "record_count": 0,
+  "messages": [],
+  "grouped": {},
+  "error": {
+    "type": "truncated",
+    "missing_bytes": 30,
+    "parsed_records": 0,
+    "detail": "message truncated: 30 more byte(s) needed, 0 record(s) parsed (declared length 80 exceeds available 50)"
+  }
+}

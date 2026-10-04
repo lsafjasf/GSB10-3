@@ -1,0 +1,51 @@
+{
+  "message_count": 1,
+  "record_count": 1,
+  "messages": [
+    {
+      "header": {
+        "id": 1,
+        "qr": 1,
+        "opcode": "QUERY",
+        "aa": true,
+        "tc": false,
+        "rd": false,
+        "ra": false,
+        "rcode": "NOERROR",
+        "qdcount": 1,
+        "ancount": 1,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [
+        {
+          "qname": "example.com.",
+          "qtype": "AXFR",
+          "qclass": "IN"
+        }
+      ],
+      "records": [
+        {
+          "name": "example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 300,
+          "rdata": "192.0.2.1",
+          "section": "answer"
+        }
+      ]
+    }
+  ],
+  "grouped": {
+    "example.com. A": [
+      {
+        "name": "example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 300,
+        "rdata": "192.0.2.1",
+        "section": "answer"
+      }
+    ]
+  }
+}

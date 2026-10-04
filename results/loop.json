@@ -1,0 +1,13 @@
+{
+  "error": {
+    "type": "name_loop",
+    "detail": "compression pointer loop detected at offset 12 (chain: 0xc -> 0xe -> 0x10 -> 0x12)",
+    "offset": 12,
+    "chain": [
+      12,
+      14,
+      16,
+      18
+    ]
+  }
+}

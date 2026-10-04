@@ -1,0 +1,133 @@
+{
+  "message_count": 1,
+  "record_count": 6,
+  "messages": [
+    {
+      "header": {
+        "id": 3,
+        "qr": 1,
+        "opcode": "QUERY",
+        "aa": true,
+        "tc": false,
+        "rd": false,
+        "ra": false,
+        "rcode": "NOERROR",
+        "qdcount": 0,
+        "ancount": 6,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [],
+      "records": [
+        {
+          "name": "example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "9.9.9.9",
+          "section": "answer"
+        },
+        {
+          "name": "c.example.com.",
+          "type": "TXT",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "\"abc\"",
+          "section": "answer"
+        },
+        {
+          "name": "b.c.example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "8.8.8.8",
+          "section": "answer"
+        },
+        {
+          "name": "a.b.c.example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "7.7.7.7",
+          "section": "answer"
+        },
+        {
+          "name": "a.b.c.example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "6.6.6.6",
+          "section": "answer"
+        },
+        {
+          "name": "c.example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "5.5.5.5",
+          "section": "answer"
+        }
+      ]
+    }
+  ],
+  "grouped": {
+    "example.com. A": [
+      {
+        "name": "example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "9.9.9.9",
+        "section": "answer"
+      }
+    ],
+    "c.example.com. TXT": [
+      {
+        "name": "c.example.com.",
+        "type": "TXT",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "\"abc\"",
+        "section": "answer"
+      }
+    ],
+    "b.c.example.com. A": [
+      {
+        "name": "b.c.example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "8.8.8.8",
+        "section": "answer"
+      }
+    ],
+    "a.b.c.example.com. A": [
+      {
+        "name": "a.b.c.example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "7.7.7.7",
+        "section": "answer"
+      },
+      {
+        "name": "a.b.c.example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "6.6.6.6",
+        "section": "answer"
+      }
+    ],
+    "c.example.com. A": [
+      {
+        "name": "c.example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "5.5.5.5",
+        "section": "answer"
+      }
+    ]
+  }
+}

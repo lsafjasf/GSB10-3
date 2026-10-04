@@ -1,0 +1,169 @@
+{
+  "message_count": 1,
+  "record_count": 8,
+  "messages": [
+    {
+      "header": {
+        "id": 2,
+        "qr": 1,
+        "opcode": "QUERY",
+        "aa": true,
+        "tc": false,
+        "rd": false,
+        "ra": false,
+        "rcode": "NOERROR",
+        "qdcount": 0,
+        "ancount": 8,
+        "nscount": 0,
+        "arcount": 0
+      },
+      "questions": [],
+      "records": [
+        {
+          "name": "example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "1.2.3.4",
+          "section": "answer"
+        },
+        {
+          "name": "www.example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "93.184.216.34",
+          "section": "answer"
+        },
+        {
+          "name": "ns1.example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "10.0.0.1",
+          "section": "answer"
+        },
+        {
+          "name": "ns2.example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "10.0.0.2",
+          "section": "answer"
+        },
+        {
+          "name": "example.com.",
+          "type": "MX",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "10 example.com.",
+          "section": "answer"
+        },
+        {
+          "name": "mail.example.com.",
+          "type": "CNAME",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "www.example.com.",
+          "section": "answer"
+        },
+        {
+          "name": "example.com.",
+          "type": "NS",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "ns1.example.com.",
+          "section": "answer"
+        },
+        {
+          "name": "example.com.",
+          "type": "A",
+          "class": "IN",
+          "ttl": 3600,
+          "rdata": "5.6.7.8",
+          "section": "answer"
+        }
+      ]
+    }
+  ],
+  "grouped": {
+    "example.com. A": [
+      {
+        "name": "example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "1.2.3.4",
+        "section": "answer"
+      },
+      {
+        "name": "example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "5.6.7.8",
+        "section": "answer"
+      }
+    ],
+    "www.example.com. A": [
+      {
+        "name": "www.example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "93.184.216.34",
+        "section": "answer"
+      }
+    ],
+    "ns1.example.com. A": [
+      {
+        "name": "ns1.example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "10.0.0.1",
+        "section": "answer"
+      }
+    ],
+    "ns2.example.com. A": [
+      {
+        "name": "ns2.example.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "10.0.0.2",
+        "section": "answer"
+      }
+    ],
+    "example.com. MX": [
+      {
+        "name": "example.com.",
+        "type": "MX",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "10 example.com.",
+        "section": "answer"
+      }
+    ],
+    "mail.example.com. CNAME": [
+      {
+        "name": "mail.example.com.",
+        "type": "CNAME",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "www.example.com.",
+        "section": "answer"
+      }
+    ],
+    "example.com. NS": [
+      {
+        "name": "example.com.",
+        "type": "NS",
+        "class": "IN",
+        "ttl": 3600,
+        "rdata": "ns1.example.com.",
+        "section": "answer"
+      }
+    ]
+  }
+}

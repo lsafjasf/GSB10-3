@@ -1,0 +1,62 @@
+[ ca ]
+default_ca = CA_default
+[ CA_default ]
+dir             = int-nc-ca
+database        = $dir/index.txt
+new_certs_dir   = $dir
+serial          = $dir/serial
+default_md      = sha256
+policy          = policy_any
+unique_subject  = no
+[ policy_any ]
+commonName              = supplied
+organizationName        = optional
+countryName             = optional
+[ v3_root ]
+basicConstraints        = critical, CA:true
+keyUsage                = critical, keyCertSign, cRLSign
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+[ v3_inter ]
+basicConstraints        = critical, CA:true, pathlen:1
+keyUsage                = critical, keyCertSign, cRLSign
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+[ v3_inter_p0 ]
+basicConstraints        = critical, CA:true, pathlen:0
+keyUsage                = critical, keyCertSign, cRLSign
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+[ v3_nc_root ]
+basicConstraints        = critical, CA:true
+keyUsage                = critical, keyCertSign, cRLSign
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+nameConstraints         = critical, permitted;DNS:example.com, excluded;DNS:bad.example.com
+[ v3_leaf ]
+basicConstraints        = critical, CA:false
+keyUsage                = critical, digitalSignature, keyEncipherment
+extendedKeyUsage        = serverAuth
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+[ v3_leaf_good ]
+basicConstraints        = critical, CA:false
+keyUsage                = critical, digitalSignature, keyEncipherment
+extendedKeyUsage        = serverAuth
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+subjectAltName          = DNS:www.example.com
+[ v3_leaf_outside ]
+basicConstraints        = critical, CA:false
+keyUsage                = critical, digitalSignature, keyEncipherment
+extendedKeyUsage        = serverAuth
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+subjectAltName          = DNS:evil.com
+[ v3_leaf_excluded ]
+basicConstraints        = critical, CA:false
+keyUsage                = critical, digitalSignature, keyEncipherment
+extendedKeyUsage        = serverAuth
+subjectKeyIdentifier    = hash
+authorityKeyIdentifier  = keyid:always
+subjectAltName          = DNS:bad.example.com

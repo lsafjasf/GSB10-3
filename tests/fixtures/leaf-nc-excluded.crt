@@ -1,0 +1,84 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4098 (0x1002)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=Intermediate NC, O=CertChain Lab
+        Validity
+            Not Before: Jan  1 00:00:00 2025 GMT
+            Not After : Jan  1 00:00:00 2035 GMT
+        Subject: CN=NC Excluded Leaf, O=CertChain Lab
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e3:19:c8:b5:e9:a4:bd:b4:5d:23:81:48:6a:26:
+                    5b:d1:0c:fc:29:9f:b1:a5:2b:bf:30:00:b1:fe:0d:
+                    20:2a:45:23:ce:66:65:8f:cd:18:74:27:51:a1:08:
+                    d2:bd:00:45:1b:2d:b2:e2:ea:40:71:f9:3f:76:fa:
+                    49:51:a6:70:a5:b5:6a:28:8f:8b:3a:70:d1:d4:eb:
+                    bc:77:f1:ca:82:51:f1:42:61:d3:f5:90:48:b6:25:
+                    eb:ea:0f:64:ef:1c:1f:a2:60:1d:84:65:0f:59:5f:
+                    03:6a:3e:8a:e1:26:05:8d:64:a8:bd:df:05:f6:69:
+                    d6:bf:b4:c2:84:94:2e:a7:95:46:c3:7a:7d:a6:88:
+                    45:63:af:60:cf:9e:fe:a8:d5:d2:6e:14:e2:23:89:
+                    a1:3b:b2:1a:aa:3f:dc:8d:9a:39:39:ef:cd:49:53:
+                    21:55:c2:9c:d5:43:44:58:7b:52:51:ac:23:69:7a:
+                    36:c4:c1:1b:7f:98:4e:07:0f:04:e4:71:b2:33:e1:
+                    1f:16:23:65:a0:5f:b0:ee:9c:8e:9b:30:99:bd:9c:
+                    5c:a1:b6:a6:7b:f3:30:28:11:32:8b:65:b1:48:e1:
+                    ea:4f:10:8c:f7:a8:04:07:53:96:8f:02:53:ab:3d:
+                    eb:ad:b2:1d:87:f6:b7:b1:69:ef:d5:66:93:77:56:
+                    d4:43
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Subject Key Identifier: 
+                DE:7C:C8:3F:52:4A:51:7E:C4:1A:67:F3:70:9D:F2:8F:C9:AD:52:BA
+            X509v3 Authority Key Identifier: 
+                D1:EF:26:D5:7B:D8:E4:26:7A:98:71:9D:34:0C:7F:64:6A:1A:C3:AE
+            X509v3 Subject Alternative Name: 
+                DNS:bad.example.com
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        61:68:04:b2:8e:3a:e8:f0:d9:ce:9b:ba:71:dd:03:3e:ce:68:
+        5a:69:a3:b2:cc:8a:78:64:8d:61:85:fa:01:e0:26:e5:cd:ea:
+        ce:af:52:8c:7c:5f:74:89:30:41:9c:51:5d:25:08:1b:c9:4a:
+        de:f3:82:b5:fb:ef:d7:60:ba:b9:09:f4:cb:e0:88:ff:98:63:
+        75:e7:bc:59:19:a8:b4:6f:b5:74:01:52:96:4b:ad:22:dc:be:
+        e7:cd:f0:42:0e:28:7b:9d:b8:a4:dd:17:89:45:60:24:66:64:
+        1f:5e:1f:fe:cb:6e:8b:40:51:7b:1e:86:43:0a:ca:ec:68:9b:
+        a1:15:f7:4f:79:88:af:a5:0d:03:17:34:72:06:5b:ec:3e:af:
+        26:4e:de:c3:38:10:4e:59:80:41:68:bc:a2:65:78:75:ab:38:
+        0f:73:63:78:30:20:ea:9a:04:be:5d:7f:37:f3:b7:d8:2f:fd:
+        1d:25:fe:c6:cb:c8:eb:54:99:be:8d:c0:6b:bb:a6:d1:fd:81:
+        70:1f:d8:1c:d5:3e:21:42:e8:ca:72:9f:22:d4:6a:86:9e:69:
+        f8:63:14:f8:bb:8a:2f:14:cb:bd:92:8f:ba:06:ef:f4:d8:09:
+        75:d9:ee:f0:8f:1a:f8:7f:1c:cf:b0:f1:fc:b1:c8:ac:22:2f:
+        1a:54:3a:41
+-----BEGIN CERTIFICATE-----
+MIIDdDCCAlygAwIBAgICEAIwDQYJKoZIhvcNAQELBQAwMjEYMBYGA1UEAwwPSW50
+ZXJtZWRpYXRlIE5DMRYwFAYDVQQKDA1DZXJ0Q2hhaW4gTGFiMB4XDTI1MDEwMTAw
+MDAwMFoXDTM1MDEwMTAwMDAwMFowMzEZMBcGA1UEAwwQTkMgRXhjbHVkZWQgTGVh
+ZjEWMBQGA1UECgwNQ2VydENoYWluIExhYjCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAOMZyLXppL20XSOBSGomW9EM/CmfsaUrvzAAsf4NICpFI85mZY/N
+GHQnUaEI0r0ARRstsuLqQHH5P3b6SVGmcKW1aiiPizpw0dTrvHfxyoJR8UJh0/WQ
+SLYl6+oPZO8cH6JgHYRlD1lfA2o+iuEmBY1kqL3fBfZp1r+0woSULqeVRsN6faaI
+RWOvYM+e/qjV0m4U4iOJoTuyGqo/3I2aOTnvzUlTIVXCnNVDRFh7UlGsI2l6NsTB
+G3+YTgcPBORxsjPhHxYjZaBfsO6cjpswmb2cXKG2pnvzMCgRMotlsUjh6k8QjPeo
+BAdTlo8CU6s9662yHYf2t7Fp79Vmk3dW1EMCAwEAAaOBkjCBjzAMBgNVHRMBAf8E
+AjAAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAdBgNVHQ4E
+FgQU3nzIP1JKUX7EGmfzcJ3yj8mtUrowHwYDVR0jBBgwFoAU0e8m1XvY5CZ6mHGd
+NAx/ZGoaw64wGgYDVR0RBBMwEYIPYmFkLmV4YW1wbGUuY29tMA0GCSqGSIb3DQEB
+CwUAA4IBAQBhaASyjjro8NnOm7px3QM+zmhaaaOyzIp4ZI1hhfoB4CblzerOr1KM
+fF90iTBBnFFdJQgbyUre84K1++/XYLq5CfTL4Ij/mGN157xZGai0b7V0AVKWS60i
+3L7nzfBCDih7nbik3ReJRWAkZmQfXh/+y26LQFF7HoZDCsrsaJuhFfdPeYivpQ0D
+FzRyBlvsPq8mTt7DOBBOWYBBaLyiZXh1qzgPc2N4MCDqmgS+XX8387fYL/0dJf7G
+y8jrVJm+jcBru6bR/YFwH9gc1T4hQujKcp8i1GqGnmn4YxT4u4ovFMu9ko+6Bu/0
+2Al12e7wjxr4fxzPsPH8scisIi8aVDpB
+-----END CERTIFICATE-----

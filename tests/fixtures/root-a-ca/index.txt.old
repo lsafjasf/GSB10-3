@@ -1,0 +1,4 @@
+V	450101000000Z		1000	unknown	/CN=Root A/O=CertChain Lab
+V	350101000000Z		1001	unknown	/CN=Intermediate CA 1/O=CertChain Lab
+V	350101000000Z		1002	unknown	/CN=Intermediate X/O=CertChain Lab
+V	200101000000Z		1003	unknown	/CN=Intermediate Expired/O=CertChain Lab

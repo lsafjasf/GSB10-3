@@ -1,0 +1,278 @@
+{
+  "full_run": {
+    "workdir": "/home/administrator/gsb/uid242/A/demo_artifacts/1_full_run",
+    "summary": {
+      "written": 12,
+      "skipped_duplicates": 0
+    },
+    "events": [
+      {
+        "event": "resume",
+        "shard": "shard-0",
+        "position": 0
+      },
+      {
+        "event": "shard_begin",
+        "shard": "shard-0",
+        "position": 0
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 1
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 2
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 3
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 4
+      },
+      {
+        "event": "shard_done",
+        "shard": "shard-0"
+      },
+      {
+        "event": "shard_begin",
+        "shard": "shard-1",
+        "position": 0
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 1
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 2
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 3
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 4
+      },
+      {
+        "event": "shard_done",
+        "shard": "shard-1"
+      },
+      {
+        "event": "shard_begin",
+        "shard": "shard-2",
+        "position": 0
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 1
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 2
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 3
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 4
+      },
+      {
+        "event": "shard_done",
+        "shard": "shard-2"
+      },
+      {
+        "event": "job_done"
+      }
+    ]
+  },
+  "interrupt_resume": {
+    "workdir": "/home/administrator/gsb/uid242/A/demo_artifacts/2_interrupt_resume",
+    "crash": "模拟中断：第 7 次提交后崩溃",
+    "interrupt_point": {
+      "shard": "shard-1",
+      "position": 3
+    },
+    "resume_point": {
+      "shard": "shard-1",
+      "position": 3
+    },
+    "consistent": true,
+    "resume_summary": {
+      "written": 5,
+      "skipped_duplicates": 0
+    },
+    "run1_events": [
+      {
+        "event": "resume",
+        "shard": "shard-0",
+        "position": 0
+      },
+      {
+        "event": "shard_begin",
+        "shard": "shard-0",
+        "position": 0
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 1
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 2
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 3
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-0",
+        "position": 4
+      },
+      {
+        "event": "shard_done",
+        "shard": "shard-0"
+      },
+      {
+        "event": "shard_begin",
+        "shard": "shard-1",
+        "position": 0
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 1
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 2
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 3
+      }
+    ],
+    "run2_events": [
+      {
+        "event": "resume",
+        "shard": "shard-1",
+        "position": 3
+      },
+      {
+        "event": "shard_skip",
+        "shard": "shard-0"
+      },
+      {
+        "event": "shard_begin",
+        "shard": "shard-1",
+        "position": 3
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-1",
+        "position": 4
+      },
+      {
+        "event": "shard_done",
+        "shard": "shard-1"
+      },
+      {
+        "event": "shard_begin",
+        "shard": "shard-2",
+        "position": 0
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 1
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 2
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 3
+      },
+      {
+        "event": "record_commit",
+        "shard": "shard-2",
+        "position": 4
+      },
+      {
+        "event": "shard_done",
+        "shard": "shard-2"
+      },
+      {
+        "event": "job_done"
+      }
+    ]
+  },
+  "duplicate_trigger": {
+    "workdir": "/home/administrator/gsb/uid242/A/demo_artifacts/3_duplicate_trigger",
+    "second_run_summary": {
+      "written": 0,
+      "skipped_duplicates": 0
+    },
+    "output_unchanged": true,
+    "commit_events_on_second_run": [],
+    "events": [
+      {
+        "event": "resume",
+        "shard": null,
+        "position": 0
+      },
+      {
+        "event": "shard_skip",
+        "shard": "shard-0"
+      },
+      {
+        "event": "shard_skip",
+        "shard": "shard-1"
+      },
+      {
+        "event": "shard_skip",
+        "shard": "shard-2"
+      },
+      {
+        "event": "job_done"
+      }
+    ]
+  },
+  "corrupt_checkpoint": {
+    "workdir": "/home/administrator/gsb/uid242/A/demo_artifacts/4_corrupt_checkpoint",
+    "recovered_backup": "/home/administrator/gsb/uid242/A/demo_artifacts/4_corrupt_checkpoint/checkpoint.json.corrupt.1791097663696",
+    "rerun_summary": {
+      "written": 0,
+      "skipped_duplicates": 12
+    },
+    "output_lines": 12,
+    "output_unique": 12,
+    "idempotent": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "checksum": "3de74116d9843b46ee88d8a409dc1a64146a5b2676cd5475ace4a88057e3390b",
+  "completed_shards": [
+    "shard-0",
+    "shard-1",
+    "shard-2"
+  ],
+  "job_id": "job",
+  "positions": {},
+  "version": 1
+}

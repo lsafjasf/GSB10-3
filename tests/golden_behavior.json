@@ -1,0 +1,324 @@
+{
+  "api_client.http_get": [
+    {
+      "attempts": 1,
+      "ok": true,
+      "status": 200,
+      "timeout": 30
+    },
+    {
+      "attempts": 2,
+      "ok": true,
+      "status": 200,
+      "timeout": 30
+    },
+    {
+      "attempts": 4,
+      "ok": true,
+      "status": 200,
+      "timeout": 30
+    },
+    {
+      "attempts": 4,
+      "error": "exhausted",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 1,
+      "ok": true,
+      "status": 200,
+      "timeout": 30
+    },
+    {
+      "attempts": 2,
+      "ok": true,
+      "status": 200,
+      "timeout": 30
+    },
+    {
+      "attempts": 4,
+      "ok": true,
+      "status": 200,
+      "timeout": 30
+    },
+    {
+      "attempts": 4,
+      "error": "exhausted",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    },
+    {
+      "attempts": 0,
+      "error": "rate_limited",
+      "ok": false,
+      "timeout": 30
+    }
+  ],
+  "auth.login_allowed": [
+    true,
+    true,
+    false,
+    false
+  ],
+  "auth.session_valid": [
+    true,
+    true,
+    false,
+    false,
+    false
+  ],
+  "cart.cart_summary": [
+    {
+      "bulk": false,
+      "max_discount": 0.3,
+      "total_qty": 0
+    },
+    {
+      "bulk": false,
+      "max_discount": 0.3,
+      "total_qty": 19
+    },
+    {
+      "bulk": true,
+      "max_discount": 0.3,
+      "total_qty": 20
+    },
+    {
+      "bulk": true,
+      "max_discount": 0.3,
+      "total_qty": 20
+    }
+  ],
+  "exporter.download_timeout": 45,
+  "exporter.export_pages": [
+    [],
+    [
+      1
+    ],
+    [
+      999
+    ],
+    [
+      1000
+    ],
+    [
+      1000,
+      1
+    ],
+    [
+      1000,
+      1000,
+      500
+    ]
+  ],
+  "middleware.check_request": [
+    {
+      "allowed": true,
+      "timeout_budget": 30
+    },
+    {
+      "allowed": true,
+      "timeout_budget": 30
+    },
+    {
+      "allowed": false,
+      "retry_after_seconds": 60
+    },
+    {
+      "allowed": false,
+      "retry_after_seconds": 60
+    }
+  ],
+  "notifier.send_sms": [
+    {
+      "attempts": 1,
+      "sent": true
+    },
+    {
+      "attempts": 4,
+      "error": "exhausted",
+      "sent": false
+    },
+    {
+      "attempts": 1,
+      "sent": true
+    },
+    {
+      "attempts": 4,
+      "error": "exhausted",
+      "sent": false
+    },
+    {
+      "error": "too_long",
+      "segments": 2,
+      "sent": false
+    },
+    {
+      "error": "too_long",
+      "segments": 2,
+      "sent": false
+    },
+    {
+      "error": "too_long",
+      "segments": 2,
+      "sent": false
+    },
+    {
+      "error": "too_long",
+      "segments": 2,
+      "sent": false
+    }
+  ],
+  "pricing.price": [
+    10.0,
+    8.0,
+    7.0,
+    7.0,
+    7.0,
+    190.0,
+    152.0,
+    133.0,
+    133.0,
+    133.0,
+    190.0,
+    152.0,
+    133.0,
+    133.0,
+    133.0,
+    199.5,
+    159.6,
+    139.65,
+    139.65,
+    139.65
+  ],
+  "report.build_report": [
+    {
+      "chunks": [],
+      "timeout": 30
+    },
+    {
+      "chunks": [
+        1
+      ],
+      "timeout": 30
+    },
+    {
+      "chunks": [
+        500
+      ],
+      "timeout": 30
+    },
+    {
+      "chunks": [
+        500,
+        1
+      ],
+      "timeout": 30
+    },
+    {
+      "chunks": [
+        500,
+        500
+      ],
+      "timeout": 30
+    }
+  ],
+  "scheduler.batch_timeout": 300,
+  "scheduler.plan_batches": [
+    [],
+    [
+      1
+    ],
+    [
+      499
+    ],
+    [
+      500
+    ],
+    [
+      500,
+      1
+    ],
+    [
+      500,
+      500,
+      200
+    ]
+  ],
+  "session.lockout_remaining": [
+    5,
+    1,
+    0,
+    0
+  ],
+  "test_helpers.discount_cap": 0.3,
+  "test_helpers.fixture_rate_limit": 7,
+  "test_helpers.make_long_message_len": 161,
+  "worker.job_timed_out": [
+    false,
+    false,
+    false,
+    true
+  ],
+  "worker.run_job": [
+    {
+      "attempts": 1,
+      "ok": true
+    },
+    {
+      "attempts": 2,
+      "ok": true
+    },
+    {
+      "attempts": 4,
+      "ok": true
+    },
+    {
+      "attempts": 4,
+      "ok": false
+    }
+  ]
+}

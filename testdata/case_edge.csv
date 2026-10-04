@@ -1,0 +1,12 @@
+order_id,customer,amount,currency
+1,alice,10,USD
+2,,20,USD
+3,bob,abc,USD
+4,carol,5,XXX
+5,alice,-3,EUR
+6,dave,0.1,CNY
+7,dave,0.2,CNY
+8,erin,12345.678,JPY
+9,frank,7,usd
+10,gary,9
+11,helen,15,EUR,extra-column

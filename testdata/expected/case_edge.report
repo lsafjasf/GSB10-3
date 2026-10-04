@@ -1,0 +1,13 @@
+Sales Report
+============
+run: baseline
+orders: 7
+skipped: 4
+------------
+alice: 6.70
+dave: 0.04
+erin: 82.72
+frank: 7.00
+helen: 16.50
+------------
+total: 112.96

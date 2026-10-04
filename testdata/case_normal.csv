@@ -1,0 +1,6 @@
+order_id,customer,amount,currency
+1,alice,100,USD
+2,bob,200,EUR
+3,alice,50.5,CNY
+4,carol,1000,JPY
+5,bob,25,USD

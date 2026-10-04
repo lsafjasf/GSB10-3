@@ -1,0 +1,11 @@
+Sales Report
+============
+run: baseline
+orders: 5
+skipped: 0
+------------
+alice: 107.07
+bob: 245.00
+carol: 6.70
+------------
+total: 358.77

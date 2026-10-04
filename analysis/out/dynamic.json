@@ -1,0 +1,1047 @@
+{
+  "reachable_states": [
+    "CREATED",
+    "PAID",
+    "CANCELLED",
+    "REFUNDING",
+    "PICKING",
+    "REFUNDED",
+    "PACKED",
+    "SHIPPED",
+    "DELIVERED",
+    "CLOSED"
+  ],
+  "unreachable_states": [
+    "AUDITING",
+    "ARCHIVED"
+  ],
+  "bfs_paths": {
+    "CREATED": [],
+    "PAID": [
+      "pay"
+    ],
+    "CANCELLED": [
+      "cancel"
+    ],
+    "REFUNDING": [
+      "pay",
+      "cancel"
+    ],
+    "PICKING": [
+      "pay",
+      "stock_ok"
+    ],
+    "REFUNDED": [
+      "pay",
+      "cancel",
+      "refund_done"
+    ],
+    "PACKED": [
+      "pay",
+      "stock_ok",
+      "pick_done"
+    ],
+    "SHIPPED": [
+      "pay",
+      "stock_ok",
+      "pick_done",
+      "ship"
+    ],
+    "DELIVERED": [
+      "pay",
+      "stock_ok",
+      "pick_done",
+      "ship",
+      "deliver"
+    ],
+    "CLOSED": [
+      "pay",
+      "stock_ok",
+      "pick_done",
+      "ship",
+      "deliver",
+      "close"
+    ]
+  },
+  "matrix": {
+    "CREATED|pay": {
+      "kind": "transition",
+      "state": "CREATED",
+      "target": "PAID"
+    },
+    "CREATED|cancel": {
+      "kind": "transition",
+      "state": "CREATED",
+      "target": "CANCELLED"
+    },
+    "CREATED|timeout": {
+      "kind": "transition",
+      "state": "CREATED",
+      "target": "CANCELLED"
+    },
+    "CREATED|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'stock_ok' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|stock_out": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'stock_out' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'pick_done' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'ship' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'deliver' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'close' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'return_request' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'refund_approve' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'refund_done' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'audit_pass' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "CREATED|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "CREATED",
+      "detail": "event 'audit_fail' not allowed in state 'CREATED' (order_id='EXPERIMENT')"
+    },
+    "PAID|pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'pay' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|cancel": {
+      "kind": "transition",
+      "state": "PAID",
+      "target": "REFUNDING"
+    },
+    "PAID|timeout": {
+      "kind": "stay",
+      "state": "PAID",
+      "target": "PAID"
+    },
+    "PAID|stock_ok": {
+      "kind": "transition",
+      "state": "PAID",
+      "target": "PICKING"
+    },
+    "PAID|stock_out": {
+      "kind": "transition",
+      "state": "PAID",
+      "target": "REFUNDING"
+    },
+    "PAID|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'pick_done' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'ship' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'deliver' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'close' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'return_request' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'refund_approve' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'refund_done' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'audit_pass' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "PAID|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PAID",
+      "detail": "event 'audit_fail' not allowed in state 'PAID' (order_id='EXPERIMENT')"
+    },
+    "CANCELLED|pay": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|cancel": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|timeout": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|stock_ok": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|stock_out": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|pick_done": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|ship": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|deliver": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|close": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|return_request": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|refund_approve": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|refund_done": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|audit_pass": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "CANCELLED|audit_fail": {
+      "kind": "ignored",
+      "state": "CANCELLED",
+      "target": "CANCELLED"
+    },
+    "REFUNDING|pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'pay' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|cancel": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'cancel' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|timeout": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'timeout' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'stock_ok' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|stock_out": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'stock_out' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'pick_done' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'ship' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'deliver' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'close' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'return_request' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'refund_approve' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|refund_done": {
+      "kind": "transition",
+      "state": "REFUNDING",
+      "target": "REFUNDED"
+    },
+    "REFUNDING|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'audit_pass' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "REFUNDING",
+      "detail": "event 'audit_fail' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'pay' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|cancel": {
+      "kind": "transition",
+      "state": "PICKING",
+      "target": "REFUNDING"
+    },
+    "PICKING|timeout": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'timeout' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'stock_ok' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|stock_out": {
+      "kind": "transition",
+      "state": "PICKING",
+      "target": "REFUNDING"
+    },
+    "PICKING|pick_done": {
+      "kind": "transition",
+      "state": "PICKING",
+      "target": "PACKED"
+    },
+    "PICKING|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'ship' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'deliver' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'close' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'return_request' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'refund_approve' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'refund_done' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'audit_pass' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "PICKING|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PICKING",
+      "detail": "event 'audit_fail' not allowed in state 'PICKING' (order_id='EXPERIMENT')"
+    },
+    "REFUNDED|pay": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|cancel": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|timeout": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|stock_ok": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|stock_out": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|pick_done": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|ship": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|deliver": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|close": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|return_request": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|refund_approve": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|refund_done": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|audit_pass": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "REFUNDED|audit_fail": {
+      "kind": "ignored",
+      "state": "REFUNDED",
+      "target": "REFUNDED"
+    },
+    "PACKED|pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'pay' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|cancel": {
+      "kind": "transition",
+      "state": "PACKED",
+      "target": "REFUNDING"
+    },
+    "PACKED|timeout": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'timeout' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'stock_ok' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|stock_out": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'stock_out' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'pick_done' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|ship": {
+      "kind": "transition",
+      "state": "PACKED",
+      "target": "SHIPPED"
+    },
+    "PACKED|deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'deliver' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'close' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'return_request' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'refund_approve' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'refund_done' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'audit_pass' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "PACKED|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "PACKED",
+      "detail": "event 'audit_fail' not allowed in state 'PACKED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|pay": {
+      "kind": "ignored",
+      "state": "SHIPPED",
+      "target": "SHIPPED"
+    },
+    "SHIPPED|cancel": {
+      "kind": "ignored",
+      "state": "SHIPPED",
+      "target": "SHIPPED"
+    },
+    "SHIPPED|timeout": {
+      "kind": "stay",
+      "state": "SHIPPED",
+      "target": "SHIPPED"
+    },
+    "SHIPPED|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'stock_ok' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|stock_out": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'stock_out' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'pick_done' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'ship' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|deliver": {
+      "kind": "transition",
+      "state": "SHIPPED",
+      "target": "DELIVERED"
+    },
+    "SHIPPED|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'close' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'return_request' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'refund_approve' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'refund_done' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'audit_pass' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "SHIPPED",
+      "detail": "event 'audit_fail' not allowed in state 'SHIPPED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'pay' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|cancel": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'cancel' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|timeout": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'timeout' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'stock_ok' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|stock_out": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'stock_out' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'pick_done' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'ship' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|deliver": {
+      "kind": "ignored",
+      "state": "DELIVERED",
+      "target": "DELIVERED"
+    },
+    "DELIVERED|close": {
+      "kind": "transition",
+      "state": "DELIVERED",
+      "target": "CLOSED"
+    },
+    "DELIVERED|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'return_request' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'refund_approve' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'refund_done' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'audit_pass' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "DELIVERED",
+      "detail": "event 'audit_fail' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+    },
+    "CLOSED|pay": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|cancel": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|timeout": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|stock_ok": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|stock_out": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|pick_done": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|ship": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|deliver": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|close": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|return_request": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|refund_approve": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|refund_done": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|audit_pass": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    },
+    "CLOSED|audit_fail": {
+      "kind": "ignored",
+      "state": "CLOSED",
+      "target": "CLOSED"
+    }
+  },
+  "dead_state_probe": {
+    "AUDITING|pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'pay' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|cancel": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'cancel' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|timeout": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'timeout' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'stock_ok' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|stock_out": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'stock_out' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'pick_done' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'ship' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'deliver' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'close' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'return_request' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'refund_approve' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'refund_done' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "AUDITING|audit_pass": {
+      "kind": "transition",
+      "state": "AUDITING",
+      "target": "CLOSED"
+    },
+    "AUDITING|audit_fail": {
+      "kind": "transition",
+      "state": "AUDITING",
+      "target": "CANCELLED"
+    },
+    "AUDITING|definitely_not_a_registered_event": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "AUDITING",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|cancel": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|timeout": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|stock_ok": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|stock_out": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|pick_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|ship": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|close": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|return_request": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|refund_approve": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|audit_pass": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|audit_fail": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "ARCHIVED",
+      "detail": "machine in unknown state 'ARCHIVED' (order_id='EXPERIMENT')"
+    },
+    "ARCHIVED|definitely_not_a_registered_event": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "ARCHIVED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    }
+  },
+  "bogus_event_probe": {
+    "CREATED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "CREATED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "SHIPPED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "CLOSED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "CLOSED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    }
+  }
+}

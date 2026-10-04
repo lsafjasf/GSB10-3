@@ -1,0 +1,313 @@
+{
+  "unknown_event_layer": {
+    "CREATED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "CREATED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "PAID": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "PAID",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "CANCELLED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "CANCELLED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "REFUNDING": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "REFUNDING",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "PICKING": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "PICKING",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "REFUNDED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "REFUNDED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "PACKED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "PACKED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "SHIPPED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "SHIPPED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "DELIVERED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "DELIVERED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "CLOSED": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "CLOSED",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    },
+    "AUDITING": {
+      "kind": "unknown",
+      "error": "UnknownEventError",
+      "state": "AUDITING",
+      "detail": "unknown event 'definitely_not_a_registered_event' (order_id='EXPERIMENT')"
+    }
+  },
+  "per_state": {
+    "CREATED": {
+      "transitions": [
+        "pay→PAID",
+        "cancel→CANCELLED",
+        "timeout→CANCELLED"
+      ],
+      "stay": [],
+      "ignored": [],
+      "raise": [
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "ship",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ]
+    },
+    "PAID": {
+      "transitions": [
+        "cancel→REFUNDING",
+        "stock_ok→PICKING",
+        "stock_out→REFUNDING"
+      ],
+      "stay": [
+        "timeout"
+      ],
+      "ignored": [],
+      "raise": [
+        "pay",
+        "pick_done",
+        "ship",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ]
+    },
+    "CANCELLED": {
+      "transitions": [],
+      "stay": [],
+      "ignored": [
+        "pay",
+        "cancel",
+        "timeout",
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "ship",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ],
+      "raise": []
+    },
+    "REFUNDING": {
+      "transitions": [
+        "refund_done→REFUNDED"
+      ],
+      "stay": [],
+      "ignored": [],
+      "raise": [
+        "pay",
+        "cancel",
+        "timeout",
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "ship",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "audit_pass",
+        "audit_fail"
+      ]
+    },
+    "PICKING": {
+      "transitions": [
+        "cancel→REFUNDING",
+        "stock_out→REFUNDING",
+        "pick_done→PACKED"
+      ],
+      "stay": [],
+      "ignored": [],
+      "raise": [
+        "pay",
+        "timeout",
+        "stock_ok",
+        "ship",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ]
+    },
+    "REFUNDED": {
+      "transitions": [],
+      "stay": [],
+      "ignored": [
+        "pay",
+        "cancel",
+        "timeout",
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "ship",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ],
+      "raise": []
+    },
+    "PACKED": {
+      "transitions": [
+        "cancel→REFUNDING",
+        "ship→SHIPPED"
+      ],
+      "stay": [],
+      "ignored": [],
+      "raise": [
+        "pay",
+        "timeout",
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ]
+    },
+    "SHIPPED": {
+      "transitions": [
+        "deliver→DELIVERED"
+      ],
+      "stay": [
+        "timeout"
+      ],
+      "ignored": [
+        "pay",
+        "cancel"
+      ],
+      "raise": [
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "ship",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ]
+    },
+    "DELIVERED": {
+      "transitions": [
+        "close→CLOSED"
+      ],
+      "stay": [],
+      "ignored": [
+        "deliver"
+      ],
+      "raise": [
+        "pay",
+        "cancel",
+        "timeout",
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "ship",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ]
+    },
+    "CLOSED": {
+      "transitions": [],
+      "stay": [],
+      "ignored": [
+        "pay",
+        "cancel",
+        "timeout",
+        "stock_ok",
+        "stock_out",
+        "pick_done",
+        "ship",
+        "deliver",
+        "close",
+        "return_request",
+        "refund_approve",
+        "refund_done",
+        "audit_pass",
+        "audit_fail"
+      ],
+      "raise": []
+    }
+  },
+  "auditing_probe": {
+    "pay": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'pay' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "deliver": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'deliver' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    },
+    "refund_done": {
+      "kind": "raise",
+      "error": "InvalidTransitionError",
+      "state": "AUDITING",
+      "detail": "event 'refund_done' not allowed in state 'AUDITING' (order_id='EXPERIMENT')"
+    }
+  }
+}

@@ -1,0 +1,634 @@
+{
+  "module_path": "legacy/legacy_order_machine.py",
+  "constants": {
+    "KNOWN_EVENTS": [
+      "pay",
+      "cancel",
+      "timeout",
+      "stock_ok",
+      "stock_out",
+      "pick_done",
+      "ship",
+      "deliver",
+      "close",
+      "return_request",
+      "refund_approve",
+      "refund_done",
+      "audit_pass",
+      "audit_fail"
+    ],
+    "TERMINAL_STATES": [
+      "CLOSED",
+      "CANCELLED",
+      "REFUNDED"
+    ],
+    "ALL_STATES": [
+      "CREATED",
+      "PAID",
+      "PICKING",
+      "PACKED",
+      "SHIPPED",
+      "DELIVERED",
+      "REFUNDING",
+      "CLOSED",
+      "CANCELLED",
+      "REFUNDED",
+      "AUDITING",
+      "ARCHIVED"
+    ],
+    "MAX_SHIP_TIMEOUTS": 3,
+    "init_constants": {
+      "state": "CREATED",
+      "history": [],
+      "ignored": [],
+      "ship_timeouts": 0,
+      "_legacy_v1_returns": false
+    }
+  },
+  "gates": {
+    "unknown_event_gate_line": 137,
+    "terminal_state_gate_line": 143,
+    "defensive_raise_line": 273
+  },
+  "sections": [
+    {
+      "state": "CREATED",
+      "line": 151,
+      "branches": [
+        {
+          "event": "pay",
+          "line": 152,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "raise",
+              "line": 156,
+              "conditions": [
+                {
+                  "test": "amount is not None and amount <= 0",
+                  "arm": true
+                }
+              ]
+            },
+            {
+              "kind": "transition",
+              "line": 157,
+              "conditions": [],
+              "target": "PAID"
+            }
+          ]
+        },
+        {
+          "event": "cancel",
+          "line": 158,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 160,
+              "conditions": [],
+              "target": "CANCELLED"
+            }
+          ]
+        },
+        {
+          "event": "timeout",
+          "line": 161,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 163,
+              "conditions": [],
+              "target": "CANCELLED"
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 164
+      },
+      "statically_reachable": true
+    },
+    {
+      "state": "PAID",
+      "line": 169,
+      "branches": [
+        {
+          "event": "stock_ok",
+          "line": 170,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 171,
+              "conditions": [],
+              "target": "PICKING"
+            }
+          ]
+        },
+        {
+          "event": "stock_out",
+          "line": 172,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 174,
+              "conditions": [],
+              "target": "REFUNDING"
+            }
+          ]
+        },
+        {
+          "event": "cancel",
+          "line": 175,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 177,
+              "conditions": [],
+              "target": "REFUNDING"
+            }
+          ]
+        },
+        {
+          "event": "timeout",
+          "line": 178,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "stay",
+              "line": 180,
+              "conditions": []
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 181
+      },
+      "statically_reachable": true
+    },
+    {
+      "state": "PICKING",
+      "line": 186,
+      "branches": [
+        {
+          "event": "pick_done",
+          "line": 187,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 188,
+              "conditions": [],
+              "target": "PACKED"
+            }
+          ]
+        },
+        {
+          "event": "stock_out",
+          "line": 189,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 191,
+              "conditions": [],
+              "target": "REFUNDING"
+            }
+          ]
+        },
+        {
+          "event": "cancel",
+          "line": 192,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 194,
+              "conditions": [],
+              "target": "REFUNDING"
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 195
+      },
+      "statically_reachable": true
+    },
+    {
+      "state": "PACKED",
+      "line": 200,
+      "branches": [
+        {
+          "event": "ship",
+          "line": 201,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 202,
+              "conditions": [],
+              "target": "SHIPPED"
+            }
+          ]
+        },
+        {
+          "event": "cancel",
+          "line": 203,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 204,
+              "conditions": [],
+              "target": "REFUNDING"
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 205
+      },
+      "statically_reachable": true
+    },
+    {
+      "state": "SHIPPED",
+      "line": 210,
+      "branches": [
+        {
+          "event": "deliver",
+          "line": 211,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 212,
+              "conditions": [],
+              "target": "DELIVERED"
+            }
+          ]
+        },
+        {
+          "event": "timeout",
+          "line": 213,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 218,
+              "conditions": [
+                {
+                  "test": "self.ship_timeouts >= MAX_SHIP_TIMEOUTS",
+                  "arm": true
+                }
+              ],
+              "target": "DELIVERED"
+            },
+            {
+              "kind": "stay",
+              "line": 219,
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "event": "cancel",
+          "line": 220,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "ignored",
+              "line": 222,
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "event": "pay",
+          "line": 223,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "ignored",
+              "line": 225,
+              "conditions": []
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 226
+      },
+      "statically_reachable": true
+    },
+    {
+      "state": "DELIVERED",
+      "line": 231,
+      "branches": [
+        {
+          "event": "close",
+          "line": 232,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 233,
+              "conditions": [],
+              "target": "CLOSED"
+            }
+          ]
+        },
+        {
+          "event": "deliver",
+          "line": 234,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "ignored",
+              "line": 236,
+              "conditions": []
+            }
+          ]
+        },
+        {
+          "event": "return_request",
+          "line": 237,
+          "guard": "self._legacy_v1_returns",
+          "guard_value_literal": false,
+          "dead_reason": "guard-statically-false",
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 239,
+              "conditions": [],
+              "target": "REFUNDING"
+            }
+          ]
+        },
+        {
+          "event": "migrate",
+          "line": 240,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": "event-not-registered",
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 243,
+              "conditions": [],
+              "target": "ARCHIVED"
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 244
+      },
+      "statically_reachable": true
+    },
+    {
+      "state": "REFUNDING",
+      "line": 249,
+      "branches": [
+        {
+          "event": "refund_done",
+          "line": 250,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 251,
+              "conditions": [],
+              "target": "REFUNDED"
+            }
+          ]
+        },
+        {
+          "event": "refund_approve",
+          "line": 252,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "raise",
+              "line": 255,
+              "conditions": []
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 256
+      },
+      "statically_reachable": true
+    },
+    {
+      "state": "AUDITING",
+      "line": 265,
+      "branches": [
+        {
+          "event": "audit_pass",
+          "line": 266,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 267,
+              "conditions": [],
+              "target": "CLOSED"
+            }
+          ]
+        },
+        {
+          "event": "audit_fail",
+          "line": 268,
+          "guard": null,
+          "guard_value_literal": true,
+          "dead_reason": null,
+          "outcomes": [
+            {
+              "kind": "transition",
+              "line": 269,
+              "conditions": [],
+              "target": "CANCELLED"
+            }
+          ]
+        }
+      ],
+      "fallback": {
+        "kind": "raise",
+        "line": 270
+      },
+      "statically_reachable": false
+    }
+  ],
+  "static_reachable_states": [
+    "CANCELLED",
+    "CLOSED",
+    "CREATED",
+    "DELIVERED",
+    "PACKED",
+    "PAID",
+    "PICKING",
+    "REFUNDED",
+    "REFUNDING",
+    "SHIPPED"
+  ],
+  "static_edges": [
+    {
+      "source": "CREATED",
+      "event": "pay",
+      "target": "PAID",
+      "line": 152
+    },
+    {
+      "source": "CREATED",
+      "event": "cancel",
+      "target": "CANCELLED",
+      "line": 158
+    },
+    {
+      "source": "CREATED",
+      "event": "timeout",
+      "target": "CANCELLED",
+      "line": 161
+    },
+    {
+      "source": "PAID",
+      "event": "stock_ok",
+      "target": "PICKING",
+      "line": 170
+    },
+    {
+      "source": "PAID",
+      "event": "stock_out",
+      "target": "REFUNDING",
+      "line": 172
+    },
+    {
+      "source": "PAID",
+      "event": "cancel",
+      "target": "REFUNDING",
+      "line": 175
+    },
+    {
+      "source": "PICKING",
+      "event": "pick_done",
+      "target": "PACKED",
+      "line": 187
+    },
+    {
+      "source": "PICKING",
+      "event": "stock_out",
+      "target": "REFUNDING",
+      "line": 189
+    },
+    {
+      "source": "PICKING",
+      "event": "cancel",
+      "target": "REFUNDING",
+      "line": 192
+    },
+    {
+      "source": "PACKED",
+      "event": "ship",
+      "target": "SHIPPED",
+      "line": 201
+    },
+    {
+      "source": "PACKED",
+      "event": "cancel",
+      "target": "REFUNDING",
+      "line": 203
+    },
+    {
+      "source": "SHIPPED",
+      "event": "deliver",
+      "target": "DELIVERED",
+      "line": 211
+    },
+    {
+      "source": "SHIPPED",
+      "event": "timeout",
+      "target": "DELIVERED",
+      "line": 213
+    },
+    {
+      "source": "DELIVERED",
+      "event": "close",
+      "target": "CLOSED",
+      "line": 232
+    },
+    {
+      "source": "REFUNDING",
+      "event": "refund_done",
+      "target": "REFUNDED",
+      "line": 250
+    },
+    {
+      "source": "AUDITING",
+      "event": "audit_pass",
+      "target": "CLOSED",
+      "line": 266
+    },
+    {
+      "source": "AUDITING",
+      "event": "audit_fail",
+      "target": "CANCELLED",
+      "line": 268
+    }
+  ]
+}

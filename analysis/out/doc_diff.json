@@ -1,0 +1,294 @@
+{
+  "spec_rows": [
+    {
+      "line": 27,
+      "source": "CREATED",
+      "event": "pay",
+      "expected": "PAID",
+      "note": "支付成功",
+      "outcome": {
+        "kind": "transition",
+        "state": "CREATED",
+        "target": "PAID"
+      },
+      "actual": "转移到 PAID",
+      "verdict": "一致"
+    },
+    {
+      "line": 28,
+      "source": "CREATED",
+      "event": "cancel",
+      "expected": "CANCELLED",
+      "note": "用户取消未支付订单",
+      "outcome": {
+        "kind": "transition",
+        "state": "CREATED",
+        "target": "CANCELLED"
+      },
+      "actual": "转移到 CANCELLED",
+      "verdict": "一致"
+    },
+    {
+      "line": 29,
+      "source": "CREATED",
+      "event": "timeout",
+      "expected": "CANCELLED",
+      "note": "超时未支付自动取消",
+      "outcome": {
+        "kind": "transition",
+        "state": "CREATED",
+        "target": "CANCELLED"
+      },
+      "actual": "转移到 CANCELLED",
+      "verdict": "一致"
+    },
+    {
+      "line": 30,
+      "source": "CREATED",
+      "event": "flag_risk",
+      "expected": "AUDITING",
+      "note": "命中风控规则，转人工审核",
+      "outcome": {
+        "kind": "unknown",
+        "error": "UnknownEventError",
+        "state": "CREATED",
+        "detail": "unknown event 'flag_risk' (order_id='EXPERIMENT')"
+      },
+      "actual": "抛 UnknownEventError",
+      "verdict": "不一致"
+    },
+    {
+      "line": 31,
+      "source": "PAID",
+      "event": "stock_ok",
+      "expected": "PICKING",
+      "note": "库存确认，开始拣货",
+      "outcome": {
+        "kind": "transition",
+        "state": "PAID",
+        "target": "PICKING"
+      },
+      "actual": "转移到 PICKING",
+      "verdict": "一致"
+    },
+    {
+      "line": 32,
+      "source": "PAID",
+      "event": "stock_out",
+      "expected": "PAID",
+      "note": "缺货等待补货，状态不变",
+      "outcome": {
+        "kind": "transition",
+        "state": "PAID",
+        "target": "REFUNDING"
+      },
+      "actual": "转移到 REFUNDING",
+      "verdict": "不一致"
+    },
+    {
+      "line": 33,
+      "source": "PAID",
+      "event": "cancel",
+      "expected": "CANCELLED",
+      "note": "用户取消",
+      "outcome": {
+        "kind": "transition",
+        "state": "PAID",
+        "target": "REFUNDING"
+      },
+      "actual": "转移到 REFUNDING",
+      "verdict": "不一致"
+    },
+    {
+      "line": 34,
+      "source": "PICKING",
+      "event": "pick_done",
+      "expected": "PACKED",
+      "note": "拣货完成",
+      "outcome": {
+        "kind": "transition",
+        "state": "PICKING",
+        "target": "PACKED"
+      },
+      "actual": "转移到 PACKED",
+      "verdict": "一致"
+    },
+    {
+      "line": 35,
+      "source": "PICKING",
+      "event": "cancel",
+      "expected": "CANCELLED",
+      "note": "用户取消",
+      "outcome": {
+        "kind": "transition",
+        "state": "PICKING",
+        "target": "REFUNDING"
+      },
+      "actual": "转移到 REFUNDING",
+      "verdict": "不一致"
+    },
+    {
+      "line": 36,
+      "source": "PACKED",
+      "event": "ship",
+      "expected": "SHIPPED",
+      "note": "出库发货",
+      "outcome": {
+        "kind": "transition",
+        "state": "PACKED",
+        "target": "SHIPPED"
+      },
+      "actual": "转移到 SHIPPED",
+      "verdict": "一致"
+    },
+    {
+      "line": 37,
+      "source": "PACKED",
+      "event": "cancel",
+      "expected": "CANCELLED",
+      "note": "用户取消",
+      "outcome": {
+        "kind": "transition",
+        "state": "PACKED",
+        "target": "REFUNDING"
+      },
+      "actual": "转移到 REFUNDING",
+      "verdict": "不一致"
+    },
+    {
+      "line": 38,
+      "source": "SHIPPED",
+      "event": "deliver",
+      "expected": "DELIVERED",
+      "note": "物流签收",
+      "outcome": {
+        "kind": "transition",
+        "state": "SHIPPED",
+        "target": "DELIVERED"
+      },
+      "actual": "转移到 DELIVERED",
+      "verdict": "一致"
+    },
+    {
+      "line": 39,
+      "source": "SHIPPED",
+      "event": "timeout",
+      "expected": "DELIVERED",
+      "note": "物流轨迹超时，系统自动签收",
+      "outcome": {
+        "kind": "stay",
+        "state": "SHIPPED",
+        "target": "SHIPPED"
+      },
+      "actual": "状态不变（stay，记入 history）",
+      "verdict": "不一致"
+    },
+    {
+      "line": 40,
+      "source": "SHIPPED",
+      "event": "cancel",
+      "expected": "（报错）",
+      "note": "已发货不允许取消",
+      "outcome": {
+        "kind": "ignored",
+        "state": "SHIPPED",
+        "target": "SHIPPED"
+      },
+      "actual": "静默忽略（仅记入 ignored 账本）",
+      "verdict": "不一致"
+    },
+    {
+      "line": 41,
+      "source": "DELIVERED",
+      "event": "close",
+      "expected": "CLOSED",
+      "note": "用户确认，订单关闭",
+      "outcome": {
+        "kind": "transition",
+        "state": "DELIVERED",
+        "target": "CLOSED"
+      },
+      "actual": "转移到 CLOSED",
+      "verdict": "一致"
+    },
+    {
+      "line": 42,
+      "source": "DELIVERED",
+      "event": "return_request",
+      "expected": "REFUNDING",
+      "note": "用户发起退货",
+      "outcome": {
+        "kind": "raise",
+        "error": "InvalidTransitionError",
+        "state": "DELIVERED",
+        "detail": "event 'return_request' not allowed in state 'DELIVERED' (order_id='EXPERIMENT')"
+      },
+      "actual": "抛 InvalidTransitionError",
+      "verdict": "不一致"
+    },
+    {
+      "line": 43,
+      "source": "REFUNDING",
+      "event": "refund_approve",
+      "expected": "REFUND_APPROVED",
+      "note": "客服审批通过",
+      "outcome": {
+        "kind": "raise",
+        "error": "InvalidTransitionError",
+        "state": "REFUNDING",
+        "detail": "event 'refund_approve' not allowed in state 'REFUNDING' (order_id='EXPERIMENT')"
+      },
+      "actual": "抛 InvalidTransitionError",
+      "verdict": "不一致"
+    },
+    {
+      "line": 44,
+      "source": "REFUND_APPROVED",
+      "event": "refund_done",
+      "expected": "REFUNDED",
+      "note": "打款完成",
+      "actual": "源状态 REFUND_APPROVED 运行时不可达",
+      "verdict": "无法对拍"
+    },
+    {
+      "line": 45,
+      "source": "AUDITING",
+      "event": "audit_pass",
+      "expected": "CLOSED",
+      "note": "风控审核通过",
+      "actual": "源状态 AUDITING 运行时不可达",
+      "verdict": "无法对拍"
+    },
+    {
+      "line": 46,
+      "source": "AUDITING",
+      "event": "audit_fail",
+      "expected": "CANCELLED",
+      "note": "风控审核不通过",
+      "actual": "源状态 AUDITING 运行时不可达",
+      "verdict": "无法对拍"
+    }
+  ],
+  "illegal_event_policy_violations": [
+    {
+      "state": "CANCELLED",
+      "event": "audit_pass",
+      "kind": "ignored"
+    },
+    {
+      "state": "REFUNDED",
+      "event": "audit_pass",
+      "kind": "ignored"
+    },
+    {
+      "state": "CLOSED",
+      "event": "audit_pass",
+      "kind": "ignored"
+    }
+  ],
+  "shipped_timeout_sequence": [
+    "第1次 timeout → 状态不变（stay，记入 history）",
+    "第2次 timeout → 状态不变（stay，记入 history）",
+    "第3次 timeout → 转移到 DELIVERED"
+  ]
+}

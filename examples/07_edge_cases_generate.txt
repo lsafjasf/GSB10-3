@@ -1,0 +1,2 @@
+wrote /tmp/tmp.RKmncMqt6z/edge/MANIFEST.jsonl: 4 entries
+warning: case-collision: FILE.txt/File.txt

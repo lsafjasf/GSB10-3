@@ -1,0 +1,9 @@
+manifest self-check: OK (manifest signature ok)
+modified: 1
+  M docs/NOTES.md  (content changed (size 14 -> 28))
+deleted: 1
+  D README.md
+added: 1
+  A docs/EXTRA.txt
+unchanged: 3
+result: FAIL

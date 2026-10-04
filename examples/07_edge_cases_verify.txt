@@ -1,0 +1,7 @@
+manifest self-check: OK (manifest signature ok)
+modified: 0
+deleted: 0
+added: 0
+unchanged: 4
+warning: case-collision: FILE.txt/File.txt
+result: PASS

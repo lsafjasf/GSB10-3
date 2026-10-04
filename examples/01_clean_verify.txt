@@ -1,0 +1,6 @@
+manifest self-check: OK (manifest signature ok)
+modified: 0
+deleted: 0
+added: 0
+unchanged: 5
+result: PASS

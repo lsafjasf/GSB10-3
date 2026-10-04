@@ -1,0 +1,23 @@
+{
+  "manifest_ok": true,
+  "manifest_detail": "manifest signature ok",
+  "ok": false,
+  "modified": [
+    {
+      "path": "docs/NOTES.md",
+      "reason": "content changed (size 14 -> 28)"
+    }
+  ],
+  "deleted": [
+    "README.md"
+  ],
+  "added": [
+    "docs/EXTRA.txt"
+  ],
+  "unchanged": [
+    "assets/blob.bin",
+    "bin/run",
+    "bin/run.sh"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,333 @@
+[
+  {
+    "id": "d1",
+    "doc_says": "PAID --stock_out--> PAID（缺货等待补货，状态不变）",
+    "code_ref": "fire() PAID 分支, legacy_order_machine.py:172-174",
+    "observed": {
+      "kind": "transition",
+      "from": "PAID",
+      "event": "stock_out",
+      "to": "REFUNDING",
+      "returned": "REFUNDING",
+      "ship_timeouts": 0,
+      "history_tail": [
+        [
+          "PAID",
+          "stock_out",
+          "REFUNDING"
+        ]
+      ],
+      "ignored_tail": []
+    }
+  },
+  {
+    "id": "d2",
+    "doc_says": "PAID --cancel--> CANCELLED（用户取消）",
+    "code_ref": "fire() PAID 分支, legacy_order_machine.py:175-177",
+    "observed": {
+      "kind": "transition",
+      "from": "PAID",
+      "event": "cancel",
+      "to": "REFUNDING",
+      "returned": "REFUNDING",
+      "ship_timeouts": 0,
+      "history_tail": [
+        [
+          "PAID",
+          "cancel",
+          "REFUNDING"
+        ]
+      ],
+      "ignored_tail": []
+    }
+  },
+  {
+    "id": "d3",
+    "doc_says": "PICKING --cancel--> CANCELLED（用户取消）",
+    "code_ref": "fire() PICKING 分支, legacy_order_machine.py:192-194",
+    "observed": {
+      "kind": "transition",
+      "from": "PICKING",
+      "event": "cancel",
+      "to": "REFUNDING",
+      "returned": "REFUNDING",
+      "ship_timeouts": 0,
+      "history_tail": [
+        [
+          "PICKING",
+          "cancel",
+          "REFUNDING"
+        ]
+      ],
+      "ignored_tail": []
+    }
+  },
+  {
+    "id": "d4",
+    "doc_says": "PACKED --cancel--> CANCELLED（用户取消）",
+    "code_ref": "fire() PACKED 分支, legacy_order_machine.py:203-204",
+    "observed": {
+      "kind": "transition",
+      "from": "PACKED",
+      "event": "cancel",
+      "to": "REFUNDING",
+      "returned": "REFUNDING",
+      "ship_timeouts": 0,
+      "history_tail": [
+        [
+          "PACKED",
+          "cancel",
+          "REFUNDING"
+        ]
+      ],
+      "ignored_tail": []
+    }
+  },
+  {
+    "id": "d5",
+    "doc_says": "SHIPPED --timeout--> DELIVERED（超时系统自动签收，一次即签收）",
+    "code_ref": "fire() SHIPPED 分支 + MAX_SHIP_TIMEOUTS, legacy_order_machine.py:213-219,63",
+    "observed": {
+      "kind": "sequence",
+      "steps": [
+        {
+          "kind": "stay",
+          "from": "SHIPPED",
+          "event": "timeout",
+          "to": "SHIPPED",
+          "returned": "SHIPPED",
+          "ship_timeouts": 1,
+          "history_tail": [
+            [
+              "SHIPPED",
+              "timeout",
+              "SHIPPED"
+            ]
+          ],
+          "ignored_tail": []
+        },
+        {
+          "kind": "stay",
+          "from": "SHIPPED",
+          "event": "timeout",
+          "to": "SHIPPED",
+          "returned": "SHIPPED",
+          "ship_timeouts": 2,
+          "history_tail": [
+            [
+              "SHIPPED",
+              "timeout",
+              "SHIPPED"
+            ]
+          ],
+          "ignored_tail": []
+        },
+        {
+          "kind": "transition",
+          "from": "SHIPPED",
+          "event": "timeout",
+          "to": "DELIVERED",
+          "returned": "DELIVERED",
+          "ship_timeouts": 3,
+          "history_tail": [
+            [
+              "SHIPPED",
+              "timeout",
+              "DELIVERED"
+            ]
+          ],
+          "ignored_tail": []
+        }
+      ],
+      "note": "连续 3 次 timeout 才签收；前 2 次是自循环"
+    }
+  },
+  {
+    "id": "d6",
+    "doc_says": "SHIPPED --cancel--> （报错）已发货不允许取消",
+    "code_ref": "fire() SHIPPED 分支, legacy_order_machine.py:220-222",
+    "observed": {
+      "kind": "ignored",
+      "from": "SHIPPED",
+      "event": "cancel",
+      "to": "SHIPPED",
+      "returned": "SHIPPED",
+      "ship_timeouts": 0,
+      "history_tail": [],
+      "ignored_tail": [
+        [
+          "SHIPPED",
+          "cancel"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "d7",
+    "doc_says": "DELIVERED --return_request--> REFUNDING（用户发起退货）",
+    "code_ref": "fire() DELIVERED 分支 + _legacy_v1_returns, legacy_order_machine.py:237-239,88",
+    "observed": {
+      "kind": "InvalidTransitionError",
+      "from": "DELIVERED",
+      "event": "return_request",
+      "to": "DELIVERED",
+      "detail": "event 'return_request' not allowed in state 'DELIVERED' (order_id='PROBE')"
+    }
+  },
+  {
+    "id": "d8",
+    "doc_says": "CREATED --flag_risk--> AUDITING（命中风控转人工审核）",
+    "code_ref": "KNOWN_EVENTS, legacy_order_machine.py:26-41（flag_risk 已移除）",
+    "observed": {
+      "kind": "UnknownEventError",
+      "from": "CREATED",
+      "event": "flag_risk",
+      "to": "CREATED",
+      "detail": "unknown event 'flag_risk' (order_id='PROBE')"
+    }
+  },
+  {
+    "id": "d9",
+    "doc_says": "AUDITING --audit_pass--> CLOSED（风控审核通过）",
+    "code_ref": "fire() AUDITING 分支, legacy_order_machine.py:265-270（运行时不可达）",
+    "observed": {
+      "kind": "InvalidTransitionError",
+      "from": "CREATED",
+      "event": "audit_pass",
+      "to": "CREATED",
+      "detail": "event 'audit_pass' not allowed in state 'CREATED' (order_id='PROBE')"
+    }
+  },
+  {
+    "id": "d10",
+    "doc_says": "REFUNDING --refund_approve--> REFUND_APPROVED（客服审批通过）",
+    "code_ref": "fire() REFUNDING 分支, legacy_order_machine.py:252-255（显式拒绝）",
+    "observed": {
+      "kind": "InvalidTransitionError",
+      "from": "REFUNDING",
+      "event": "refund_approve",
+      "to": "REFUNDING",
+      "detail": "event 'refund_approve' not allowed in state 'REFUNDING' (order_id='PROBE')"
+    }
+  },
+  {
+    "id": "d11",
+    "doc_says": "文档状态清单含 REFUND_APPROVED（退款已审批，等待打款）",
+    "code_ref": "ALL_STATES, legacy_order_machine.py:47-60（该状态不存在）",
+    "observed": {
+      "kind": "fact",
+      "refund_approved_in_code_states": false,
+      "note": "REFUND_APPROVED 不存在于代码状态清单"
+    }
+  },
+  {
+    "id": "d12",
+    "doc_says": "文档未记载：PAID --timeout 自循环 / SHIPPED 重复 pay 静默忽略 等",
+    "code_ref": "fire() PAID/SHIPPED 分支, legacy_order_machine.py:178-180,223-225",
+    "observed": {
+      "kind": "sequence",
+      "steps": [
+        {
+          "kind": "stay",
+          "from": "PAID",
+          "event": "timeout",
+          "to": "PAID",
+          "returned": "PAID",
+          "ship_timeouts": 0,
+          "history_tail": [
+            [
+              "PAID",
+              "timeout",
+              "PAID"
+            ]
+          ],
+          "ignored_tail": []
+        },
+        {
+          "kind": "ignored",
+          "from": "SHIPPED",
+          "event": "pay",
+          "to": "SHIPPED",
+          "returned": "SHIPPED",
+          "ship_timeouts": 0,
+          "history_tail": [],
+          "ignored_tail": [
+            [
+              "SHIPPED",
+              "pay"
+            ]
+          ]
+        },
+        {
+          "kind": "ignored",
+          "from": "DELIVERED",
+          "event": "deliver",
+          "to": "DELIVERED",
+          "returned": "DELIVERED",
+          "ship_timeouts": 0,
+          "history_tail": [],
+          "ignored_tail": [
+            [
+              "DELIVERED",
+              "deliver"
+            ]
+          ]
+        }
+      ],
+      "note": "三条实现里存在、文档完全没有的转移"
+    }
+  },
+  {
+    "id": "d13",
+    "doc_says": "文档未记载：CREATED pay 带非正金额会被拒绝",
+    "code_ref": "fire() CREATED 分支, legacy_order_machine.py:152-157",
+    "observed": {
+      "kind": "sequence",
+      "steps": [
+        {
+          "kind": "InvalidTransitionError",
+          "from": "CREATED",
+          "event": "pay",
+          "to": "CREATED",
+          "detail": "event 'pay' not allowed in state 'CREATED' (order_id='PROBE')"
+        },
+        {
+          "kind": "InvalidTransitionError",
+          "from": "CREATED",
+          "event": "pay",
+          "to": "CREATED",
+          "detail": "event 'pay' not allowed in state 'CREATED' (order_id='PROBE')"
+        },
+        {
+          "kind": "transition",
+          "from": "CREATED",
+          "event": "pay",
+          "to": "PAID",
+          "returned": "PAID",
+          "ship_timeouts": 0,
+          "history_tail": [
+            [
+              "CREATED",
+              "pay",
+              "PAID"
+            ]
+          ],
+          "ignored_tail": []
+        }
+      ],
+      "note": "amount<=0 抛 InvalidTransitionError；正金额正常转移"
+    }
+  },
+  {
+    "id": "d14",
+    "doc_says": "文档未记载：DELIVERED --migrate--> ARCHIVED 归档分支",
+    "code_ref": "fire() DELIVERED 分支, legacy_order_machine.py:240-243（死代码）",
+    "observed": {
+      "kind": "UnknownEventError",
+      "from": "DELIVERED",
+      "event": "migrate",
+      "to": "DELIVERED",
+      "detail": "unknown event 'migrate' (order_id='PROBE')"
+    }
+  }
+]

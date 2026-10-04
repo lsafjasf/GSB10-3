@@ -1,0 +1,842 @@
+{
+  "CREATED": {
+    "pay": {
+      "result": "TRANSITION",
+      "to": "PAID"
+    },
+    "cancel": {
+      "result": "TRANSITION",
+      "to": "CANCELLED"
+    },
+    "timeout": {
+      "result": "TRANSITION",
+      "to": "CANCELLED"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "stock_out": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "deliver": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "CREATED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "CREATED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "CREATED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "CREATED"
+    }
+  },
+  "PAID": {
+    "pay": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "cancel": {
+      "result": "TRANSITION",
+      "to": "REFUNDING"
+    },
+    "timeout": {
+      "result": "STAY",
+      "to": "PAID"
+    },
+    "stock_ok": {
+      "result": "TRANSITION",
+      "to": "PICKING"
+    },
+    "stock_out": {
+      "result": "TRANSITION",
+      "to": "REFUNDING"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "deliver": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "PAID"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "PAID"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "PAID"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "PAID"
+    }
+  },
+  "PICKING": {
+    "pay": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "cancel": {
+      "result": "TRANSITION",
+      "to": "REFUNDING"
+    },
+    "timeout": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "stock_out": {
+      "result": "TRANSITION",
+      "to": "REFUNDING"
+    },
+    "pick_done": {
+      "result": "TRANSITION",
+      "to": "PACKED"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "deliver": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "PICKING"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "PICKING"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "PICKING"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "PICKING"
+    }
+  },
+  "PACKED": {
+    "pay": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "cancel": {
+      "result": "TRANSITION",
+      "to": "REFUNDING"
+    },
+    "timeout": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "stock_out": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "ship": {
+      "result": "TRANSITION",
+      "to": "SHIPPED"
+    },
+    "deliver": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "PACKED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "PACKED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "PACKED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "PACKED"
+    }
+  },
+  "SHIPPED": {
+    "pay": {
+      "result": "IGNORED",
+      "to": "SHIPPED"
+    },
+    "cancel": {
+      "result": "IGNORED",
+      "to": "SHIPPED"
+    },
+    "timeout": {
+      "result": "STAY",
+      "to": "SHIPPED"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "stock_out": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "deliver": {
+      "result": "TRANSITION",
+      "to": "DELIVERED"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "SHIPPED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "SHIPPED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "SHIPPED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "SHIPPED"
+    }
+  },
+  "DELIVERED": {
+    "pay": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "cancel": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "timeout": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "stock_out": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "deliver": {
+      "result": "IGNORED",
+      "to": "DELIVERED"
+    },
+    "close": {
+      "result": "TRANSITION",
+      "to": "CLOSED"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "DELIVERED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "DELIVERED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "DELIVERED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "DELIVERED"
+    }
+  },
+  "REFUNDING": {
+    "pay": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "cancel": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "timeout": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "stock_out": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "deliver": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "refund_done": {
+      "result": "TRANSITION",
+      "to": "REFUNDED"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "REFUNDING"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "REFUNDING"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "REFUNDING"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "REFUNDING"
+    }
+  },
+  "CLOSED": {
+    "pay": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "cancel": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "timeout": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "stock_ok": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "stock_out": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "pick_done": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "ship": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "deliver": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "close": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "return_request": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "refund_approve": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "refund_done": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "audit_pass": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "audit_fail": {
+      "result": "IGNORED",
+      "to": "CLOSED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "CLOSED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "CLOSED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "CLOSED"
+    }
+  },
+  "CANCELLED": {
+    "pay": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "cancel": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "timeout": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "stock_ok": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "stock_out": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "pick_done": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "ship": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "deliver": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "close": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "return_request": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "refund_approve": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "refund_done": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "audit_pass": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "audit_fail": {
+      "result": "IGNORED",
+      "to": "CANCELLED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "CANCELLED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "CANCELLED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "CANCELLED"
+    }
+  },
+  "REFUNDED": {
+    "pay": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "cancel": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "timeout": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "stock_ok": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "stock_out": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "pick_done": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "ship": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "deliver": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "close": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "return_request": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "refund_approve": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "refund_done": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "audit_pass": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "audit_fail": {
+      "result": "IGNORED",
+      "to": "REFUNDED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "REFUNDED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "REFUNDED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "REFUNDED"
+    }
+  },
+  "AUDITING": {
+    "pay": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "cancel": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "timeout": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "stock_out": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "deliver": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "AUDITING"
+    },
+    "audit_pass": {
+      "result": "TRANSITION",
+      "to": "CLOSED"
+    },
+    "audit_fail": {
+      "result": "TRANSITION",
+      "to": "CANCELLED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "AUDITING"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "AUDITING"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "AUDITING"
+    }
+  },
+  "ARCHIVED": {
+    "pay": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "cancel": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "timeout": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "stock_ok": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "stock_out": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "pick_done": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "ship": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "deliver": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "close": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "return_request": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "refund_approve": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "refund_done": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "audit_pass": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "audit_fail": {
+      "result": "InvalidTransitionError",
+      "to": "ARCHIVED"
+    },
+    "flag_risk": {
+      "result": "UnknownEventError",
+      "to": "ARCHIVED"
+    },
+    "migrate": {
+      "result": "UnknownEventError",
+      "to": "ARCHIVED"
+    },
+    "not_an_event": {
+      "result": "UnknownEventError",
+      "to": "ARCHIVED"
+    }
+  }
+}

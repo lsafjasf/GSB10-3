@@ -1,0 +1,165 @@
+{
+  "declared_states": [
+    "CREATED",
+    "PAID",
+    "PICKING",
+    "PACKED",
+    "SHIPPED",
+    "DELIVERED",
+    "REFUNDING",
+    "CLOSED",
+    "CANCELLED",
+    "REFUNDED",
+    "AUDITING",
+    "ARCHIVED"
+  ],
+  "declared_terminal": [
+    "CLOSED",
+    "CANCELLED",
+    "REFUNDED"
+  ],
+  "declared_events": [
+    "pay",
+    "cancel",
+    "timeout",
+    "stock_ok",
+    "stock_out",
+    "pick_done",
+    "ship",
+    "deliver",
+    "close",
+    "return_request",
+    "refund_approve",
+    "refund_done",
+    "audit_pass",
+    "audit_fail"
+  ],
+  "initial_state": "CREATED",
+  "reachable_states": [
+    "CANCELLED",
+    "CLOSED",
+    "CREATED",
+    "DELIVERED",
+    "PACKED",
+    "PAID",
+    "PICKING",
+    "REFUNDED",
+    "REFUNDING",
+    "SHIPPED"
+  ],
+  "unreachable_states_declared": [
+    "ARCHIVED",
+    "AUDITING"
+  ],
+  "reachable_but_not_declared": [],
+  "bfs_edges": [
+    {
+      "from": "CREATED",
+      "event": "pay",
+      "to": "PAID",
+      "kind": "transition"
+    },
+    {
+      "from": "CREATED",
+      "event": "cancel",
+      "to": "CANCELLED",
+      "kind": "transition"
+    },
+    {
+      "from": "CREATED",
+      "event": "timeout",
+      "to": "CANCELLED",
+      "kind": "transition"
+    },
+    {
+      "from": "PAID",
+      "event": "cancel",
+      "to": "REFUNDING",
+      "kind": "transition"
+    },
+    {
+      "from": "PAID",
+      "event": "timeout",
+      "to": "PAID",
+      "kind": "stay"
+    },
+    {
+      "from": "PAID",
+      "event": "stock_ok",
+      "to": "PICKING",
+      "kind": "transition"
+    },
+    {
+      "from": "PAID",
+      "event": "stock_out",
+      "to": "REFUNDING",
+      "kind": "transition"
+    },
+    {
+      "from": "REFUNDING",
+      "event": "refund_done",
+      "to": "REFUNDED",
+      "kind": "transition"
+    },
+    {
+      "from": "PICKING",
+      "event": "cancel",
+      "to": "REFUNDING",
+      "kind": "transition"
+    },
+    {
+      "from": "PICKING",
+      "event": "stock_out",
+      "to": "REFUNDING",
+      "kind": "transition"
+    },
+    {
+      "from": "PICKING",
+      "event": "pick_done",
+      "to": "PACKED",
+      "kind": "transition"
+    },
+    {
+      "from": "PACKED",
+      "event": "cancel",
+      "to": "REFUNDING",
+      "kind": "transition"
+    },
+    {
+      "from": "PACKED",
+      "event": "ship",
+      "to": "SHIPPED",
+      "kind": "transition"
+    },
+    {
+      "from": "SHIPPED",
+      "event": "timeout",
+      "to": "SHIPPED",
+      "kind": "stay"
+    },
+    {
+      "from": "SHIPPED",
+      "event": "timeout",
+      "to": "SHIPPED",
+      "kind": "stay"
+    },
+    {
+      "from": "SHIPPED",
+      "event": "timeout",
+      "to": "DELIVERED",
+      "kind": "transition"
+    },
+    {
+      "from": "SHIPPED",
+      "event": "deliver",
+      "to": "DELIVERED",
+      "kind": "transition"
+    },
+    {
+      "from": "DELIVERED",
+      "event": "close",
+      "to": "CLOSED",
+      "kind": "transition"
+    }
+  ]
+}

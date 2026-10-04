@@ -1,0 +1,9 @@
+{
+  "format": "detdata/1",
+  "seed": "demo-seed",
+  "counts": {
+    "users": 1000,
+    "orders": 5000
+  },
+  "sha256": "bca6430a76a1d97880f6b53b39015705cd01937c51965139f36db44fbdd1a6d8"
+}

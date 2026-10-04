@@ -1,0 +1,4 @@
+matrix,n,nnz,csr_bytes,dense_bytes,saving_factor
+laplacian_2d_16x16,256,1216,15620,524288,33.57
+nearly_singular_n200,200,598,7980,320000,40.10
+convection_diffusion_16x16,256,1216,15620,524288,33.57

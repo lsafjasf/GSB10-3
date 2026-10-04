@@ -1,0 +1,60 @@
+
+========================================================================
+1. 0 deg / 90 deg exactness
+========================================================================
+0 deg  nearest  expand: size=48x48 exact=True
+0 deg  bilinear expand: size=48x48 exact=True
+90 deg nearest  expand: size=48x48 exact vs index-reference=True
+90 deg bilinear expand: MAE=0.0000  MSE=0.0000  RMSE=0.0000  max=0 (exact=True)
+90 deg nearest  crop  : size=48x48 exact vs reference=True
+
+========================================================================
+2. Nearest vs bilinear interpolation difference
+========================================================================
+15 deg expand: MAE=5.0511  MSE=211.6466  RMSE=14.5481  max=151
+30 deg expand: MAE=4.0784  MSE=167.1885  RMSE=12.9301  max=126
+45 deg expand: MAE=4.1463  MSE=217.2893  RMSE=14.7407  max=119
+-> nearest and bilinear differ as expected (max MSE=217.29)
+
+========================================================================
+3. Inverse mapping error data
+========================================================================
+(a) algebraic map round-trip, 200 random points per case
+     0.0 deg expand: max |forward(backward(p)) - p| = 1.776e-15
+    30.0 deg expand: max |forward(backward(p)) - p| = 1.421e-14
+    90.0 deg expand: max |forward(backward(p)) - p| = 3.553e-15
+   137.5 deg expand: max |forward(backward(p)) - p| = 1.421e-14
+    45.0 deg crop  : max |forward(backward(p)) - p| = 8.882e-15
+(b) canvas corner residual (expand fit)
+     0.0 deg: canvas=48x48 corner residual=0.0000 px
+    30.0 deg: canvas=66x66 corner residual=0.2154 px
+    90.0 deg: canvas=48x48 corner residual=0.0000 px
+   137.5 deg: canvas=68x68 corner residual=0.0912 px
+(c) image round-trip rotate(+t)->rotate(-t) vs original
+  30 deg nearest  round-trip: MAE=2.0075  MSE=319.3519  RMSE=17.8704  max=255
+  30 deg bilinear round-trip: MAE=7.8385  MSE=215.0148  RMSE=14.6634  max=133
+  45 deg bilinear round-trip: MAE=7.5836  MSE=205.7703  RMSE=14.3447  max=132
+
+========================================================================
+4. Boundary strategies: crop vs expand, constant vs clamp
+========================================================================
+(a) 30 deg nearest: expand 66x66 exterior=2052 bg=2052 | crop 48x48 exterior=360 bg=360
+(b) crop equals center-crop of expand (offset=9): True
+(c) bilinear expand edge=constant vs edge=clamp: MAE=55.1397  MSE=8290.4933  RMSE=91.0521  max=255
+
+========================================================================
+5. Out-of-canvas sampling
+========================================================================
+nearest  in-bounds=(10, 0, 0) round=(40, 0, 0) constant-oob=(7, 7, 7) clamp-oob=(30, 0, 0)
+bilinear edge constant=(5, 0, 0) clamp=(10, 0, 0) far-oob=(5, 5, 5)
+2x2 rotated 45 deg expand: size=3x3 bg-pixels=4/9
+
+========================================================================
+Summary
+========================================================================
+0/90 deg exactness           PASS
+interpolation difference     PASS
+inverse mapping              PASS
+boundary strategies          PASS
+out-of-canvas                PASS
+ALL TESTS PASSED

@@ -1,0 +1,9 @@
+{
+  "status": "clean",
+  "conflict_count": 0,
+  "conflicts": [],
+  "validation": {
+    "satisfiable": true,
+    "problems": []
+  }
+}

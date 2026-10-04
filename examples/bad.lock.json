@@ -1,0 +1,11 @@
+{
+  "name": "shop-app",
+  "dependencies": {
+    "lodash":  { "version": "5.0.0" },
+    "react":   { "version": "17.0.2" },
+    "app-core": {
+      "version": "2.1.0",
+      "requires": { "lodash": "^4.17.0", "react": "^17.0.0" }
+    }
+  }
+}

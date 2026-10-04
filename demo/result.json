@@ -1,0 +1,199 @@
+{
+  "total_failures": 33,
+  "cluster_count": 6,
+  "key_clusters": 3,
+  "noise_clusters": 3,
+  "primary_root_cause": "C1",
+  "clusters": [
+    {
+      "cluster_id": "C1",
+      "label": "key",
+      "nature": "product-bug",
+      "size": 26,
+      "location": "src/payment/gateway.py:charge:88",
+      "error_type": "AssertionError",
+      "message_template": "expected <NUM> got <NUM> (order <NUM>)",
+      "representative": "TC-001",
+      "representative_message": "expected 200 got 500 (order 1001)",
+      "members": [
+        "TC-001",
+        "TC-002",
+        "TC-003",
+        "TC-004",
+        "TC-005",
+        "TC-006",
+        "TC-007",
+        "TC-008",
+        "TC-009",
+        "TC-010",
+        "TC-011",
+        "TC-012",
+        "TC-013",
+        "TC-014",
+        "TC-015",
+        "TC-016",
+        "TC-017",
+        "TC-018",
+        "TC-019",
+        "TC-020",
+        "TC-021",
+        "TC-022",
+        "TC-023",
+        "TC-024",
+        "TC-025",
+        "TC-026"
+      ],
+      "reasons": [
+        "K1: 断言类失败且失败位置在产品代码",
+        "K3: 簇规模 26 条，疑似同一根因大面积回归"
+      ]
+    },
+    {
+      "cluster_id": "C2",
+      "label": "key",
+      "nature": "product-bug",
+      "size": 3,
+      "location": "src/inventory/service.py:deduct:55",
+      "error_type": "KeyError",
+      "message_template": "<STR>",
+      "representative": "TC-027",
+      "representative_message": "'sku'",
+      "members": [
+        "TC-027",
+        "TC-028",
+        "TC-029"
+      ],
+      "reasons": [
+        "K2: 产品代码抛出异常（非断言）",
+        "K3: 簇规模 3 条，疑似同一根因大面积回归"
+      ]
+    },
+    {
+      "cluster_id": "C3",
+      "label": "key",
+      "nature": "product-bug",
+      "size": 1,
+      "location": "src/report/exporter.py:to_csv:34",
+      "error_type": "UnicodeDecodeError",
+      "message_template": "<STR> codec can't decode byte <HEX> in position <NUM>: illegal multibyte sequence",
+      "representative": "TC-030",
+      "representative_message": "'gbk' codec can't decode byte 0xff in position 12: illegal multibyte sequence",
+      "members": [
+        "TC-030"
+      ],
+      "reasons": [
+        "K2: 产品代码抛出异常（非断言）"
+      ]
+    },
+    {
+      "cluster_id": "C4",
+      "label": "noise",
+      "nature": "environmental",
+      "size": 1,
+      "location": "tests/conftest.py:db_fixture:12",
+      "error_type": "RuntimeError",
+      "message_template": "db container not ready after 30s",
+      "representative": "TC-031",
+      "representative_message": "db container not ready after 30s",
+      "members": [
+        "TC-031"
+      ],
+      "reasons": [
+        "N1: 失败发生在 setup 阶段（夹具/环境准备），非被测代码",
+        "N3: 失败位置在测试基建文件（tests/ 或 conftest.py）"
+      ]
+    },
+    {
+      "cluster_id": "C5",
+      "label": "noise",
+      "nature": "environmental",
+      "size": 1,
+      "location": "tests/conftest.py:redis_lock_fixture:58",
+      "error_type": "TimeoutError",
+      "message_template": "failed to release redis lock: timed out after 10s",
+      "representative": "TC-032",
+      "representative_message": "failed to release redis lock: timed out after 10s",
+      "members": [
+        "TC-032"
+      ],
+      "reasons": [
+        "N1: 失败发生在 teardown 阶段（夹具/环境准备），非被测代码",
+        "N2: 错误信息命中环境类关键词（超时/连接/资源耗尽/5xx 等）",
+        "N3: 失败位置在测试基建文件（tests/ 或 conftest.py）"
+      ]
+    },
+    {
+      "cluster_id": "C6",
+      "label": "noise",
+      "nature": "environmental",
+      "size": 1,
+      "location": "src/utils/http.py:post:40",
+      "error_type": "TimeoutError",
+      "message_template": "request to http://<IP>/api/health timed out after 30s",
+      "representative": "TC-033",
+      "representative_message": "request to http://10.0.0.8:8080/api/health timed out after 30s",
+      "members": [
+        "TC-033"
+      ],
+      "reasons": [
+        "N2: 错误信息命中环境类关键词（超时/连接/资源耗尽/5xx 等）"
+      ]
+    }
+  ],
+  "representatives": [
+    {
+      "cluster_id": "C1",
+      "label": "key",
+      "size": 26,
+      "representative": "TC-001",
+      "location": "src/payment/gateway.py:charge:88",
+      "error_type": "AssertionError",
+      "representative_message": "expected 200 got 500 (order 1001)"
+    },
+    {
+      "cluster_id": "C2",
+      "label": "key",
+      "size": 3,
+      "representative": "TC-027",
+      "location": "src/inventory/service.py:deduct:55",
+      "error_type": "KeyError",
+      "representative_message": "'sku'"
+    },
+    {
+      "cluster_id": "C3",
+      "label": "key",
+      "size": 1,
+      "representative": "TC-030",
+      "location": "src/report/exporter.py:to_csv:34",
+      "error_type": "UnicodeDecodeError",
+      "representative_message": "'gbk' codec can't decode byte 0xff in position 12: illegal multibyte sequence"
+    },
+    {
+      "cluster_id": "C4",
+      "label": "noise",
+      "size": 1,
+      "representative": "TC-031",
+      "location": "tests/conftest.py:db_fixture:12",
+      "error_type": "RuntimeError",
+      "representative_message": "db container not ready after 30s"
+    },
+    {
+      "cluster_id": "C5",
+      "label": "noise",
+      "size": 1,
+      "representative": "TC-032",
+      "location": "tests/conftest.py:redis_lock_fixture:58",
+      "error_type": "TimeoutError",
+      "representative_message": "failed to release redis lock: timed out after 10s"
+    },
+    {
+      "cluster_id": "C6",
+      "label": "noise",
+      "size": 1,
+      "representative": "TC-033",
+      "location": "src/utils/http.py:post:40",
+      "error_type": "TimeoutError",
+      "representative_message": "request to http://10.0.0.8:8080/api/health timed out after 30s"
+    }
+  ]
+}

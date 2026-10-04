@@ -1,0 +1,43 @@
+========================================================================
+失败归因聚类：共 33 条失败 -> 6 个簇（关键 3 / 噪声 3）
+主要根因簇（最大关键簇）：C1
+========================================================================
+[KEY ] C1  数量=26  AssertionError @ src/payment/gateway.py:charge:88
+      信息模板: expected <NUM> got <NUM> (order <NUM>)
+      代表用例: TC-001
+      判定依据: K1: 断言类失败且失败位置在产品代码; K3: 簇规模 26 条，疑似同一根因大面积回归
+      簇内用例: TC-001, TC-002, TC-003, TC-004, TC-005, TC-006, TC-007, TC-008 ...
+------------------------------------------------------------------------
+[KEY ] C2  数量=3  KeyError @ src/inventory/service.py:deduct:55
+      信息模板: <STR>
+      代表用例: TC-027
+      判定依据: K2: 产品代码抛出异常（非断言）; K3: 簇规模 3 条，疑似同一根因大面积回归
+      簇内用例: TC-027, TC-028, TC-029
+------------------------------------------------------------------------
+[KEY ] C3  数量=1  UnicodeDecodeError @ src/report/exporter.py:to_csv:34
+      信息模板: <STR> codec can't decode byte <HEX> in position <NUM>: illegal multibyte sequence
+      代表用例: TC-030
+      判定依据: K2: 产品代码抛出异常（非断言）
+------------------------------------------------------------------------
+[NOIS] C4  数量=1  RuntimeError @ tests/conftest.py:db_fixture:12
+      信息模板: db container not ready after 30s
+      代表用例: TC-031
+      判定依据: N1: 失败发生在 setup 阶段（夹具/环境准备），非被测代码; N3: 失败位置在测试基建文件（tests/ 或 conftest.py）
+------------------------------------------------------------------------
+[NOIS] C5  数量=1  TimeoutError @ tests/conftest.py:redis_lock_fixture:58
+      信息模板: failed to release redis lock: timed out after 10s
+      代表用例: TC-032
+      判定依据: N1: 失败发生在 teardown 阶段（夹具/环境准备），非被测代码; N2: 错误信息命中环境类关键词（超时/连接/资源耗尽/5xx 等）; N3: 失败位置在测试基建文件（tests/ 或 conftest.py）
+------------------------------------------------------------------------
+[NOIS] C6  数量=1  TimeoutError @ src/utils/http.py:post:40
+      信息模板: request to http://<IP>/api/health timed out after 30s
+      代表用例: TC-033
+      判定依据: N2: 错误信息命中环境类关键词（超时/连接/资源耗尽/5xx 等）
+------------------------------------------------------------------------
+代表用例清单：
+  C1 (key, n=26) TC-001 :: expected 200 got 500 (order 1001)
+  C2 (key, n=3) TC-027 :: 'sku'
+  C3 (key, n=1) TC-030 :: 'gbk' codec can't decode byte 0xff in position 12: illegal multibyte sequence
+  C4 (noise, n=1) TC-031 :: db container not ready after 30s
+  C5 (noise, n=1) TC-032 :: failed to release redis lock: timed out after 10s
+  C6 (noise, n=1) TC-033 :: request to http://10.0.0.8:8080/api/health timed out after 30s

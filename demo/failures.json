@@ -1,0 +1,749 @@
+[
+  {
+    "case_id": "TC-001",
+    "test": "tests/payment/test_checkout.py::test_checkout_with_coupon",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1001)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_with_coupon",
+        "line": 41
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-002",
+    "test": "tests/payment/test_refund.py::test_refund_full",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1002)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_refund.py",
+        "function": "test_refund_full",
+        "line": 42
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-003",
+    "test": "tests/payment/test_subscription.py::test_renew_monthly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1003)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_monthly",
+        "line": 43
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-004",
+    "test": "tests/payment/test_subscription.py::test_renew_yearly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1004)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_yearly",
+        "line": 44
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-005",
+    "test": "tests/payment/test_wallet.py::test_pay_from_wallet",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1005)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_wallet.py",
+        "function": "test_pay_from_wallet",
+        "line": 45
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-006",
+    "test": "tests/payment/test_checkout.py::test_checkout_basic",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1006)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_basic",
+        "line": 46
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-007",
+    "test": "tests/payment/test_checkout.py::test_checkout_with_coupon",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1007)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_with_coupon",
+        "line": 47
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-008",
+    "test": "tests/payment/test_refund.py::test_refund_full",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1008)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_refund.py",
+        "function": "test_refund_full",
+        "line": 48
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-009",
+    "test": "tests/payment/test_subscription.py::test_renew_monthly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1009)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_monthly",
+        "line": 49
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-010",
+    "test": "tests/payment/test_subscription.py::test_renew_yearly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1010)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_yearly",
+        "line": 50
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-011",
+    "test": "tests/payment/test_wallet.py::test_pay_from_wallet",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1011)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_wallet.py",
+        "function": "test_pay_from_wallet",
+        "line": 51
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-012",
+    "test": "tests/payment/test_checkout.py::test_checkout_basic",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1012)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_basic",
+        "line": 52
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-013",
+    "test": "tests/payment/test_checkout.py::test_checkout_with_coupon",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1013)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_with_coupon",
+        "line": 53
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-014",
+    "test": "tests/payment/test_refund.py::test_refund_full",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1014)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_refund.py",
+        "function": "test_refund_full",
+        "line": 54
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-015",
+    "test": "tests/payment/test_subscription.py::test_renew_monthly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1015)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_monthly",
+        "line": 55
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-016",
+    "test": "tests/payment/test_subscription.py::test_renew_yearly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1016)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_yearly",
+        "line": 56
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-017",
+    "test": "tests/payment/test_wallet.py::test_pay_from_wallet",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1017)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_wallet.py",
+        "function": "test_pay_from_wallet",
+        "line": 57
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-018",
+    "test": "tests/payment/test_checkout.py::test_checkout_basic",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1018)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_basic",
+        "line": 58
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-019",
+    "test": "tests/payment/test_checkout.py::test_checkout_with_coupon",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1019)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_with_coupon",
+        "line": 59
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-020",
+    "test": "tests/payment/test_refund.py::test_refund_full",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1020)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_refund.py",
+        "function": "test_refund_full",
+        "line": 60
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-021",
+    "test": "tests/payment/test_subscription.py::test_renew_monthly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1021)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_monthly",
+        "line": 61
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-022",
+    "test": "tests/payment/test_subscription.py::test_renew_yearly",
+    "error_type": "AssertionError",
+    "message": "expected 200 got 500 (order 1022)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_yearly",
+        "line": 62
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-023",
+    "test": "tests/payment/test_checkout.py::test_checkout_with_coupon",
+    "error_type": "AssertionError",
+    "message": "expected status 200 but got 500 (order 1023)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_checkout.py",
+        "function": "test_checkout_with_coupon",
+        "line": 103
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-024",
+    "test": "tests/payment/test_refund.py::test_refund_full",
+    "error_type": "AssertionError",
+    "message": "expected status 200 but got 500 (order 1024)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_refund.py",
+        "function": "test_refund_full",
+        "line": 104
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-025",
+    "test": "tests/payment/test_subscription.py::test_renew_monthly",
+    "error_type": "AssertionError",
+    "message": "expected status 200 but got 500 (order 1025)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_monthly",
+        "line": 105
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-026",
+    "test": "tests/payment/test_subscription.py::test_renew_yearly",
+    "error_type": "AssertionError",
+    "message": "expected status 200 but got 500 (order 1026)",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/payment/test_subscription.py",
+        "function": "test_renew_yearly",
+        "line": 106
+      },
+      {
+        "file": "src/payment/service.py",
+        "function": "checkout",
+        "line": 120
+      },
+      {
+        "file": "/home/ci/workspace/src/payment/gateway.py",
+        "function": "charge",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "case_id": "TC-027",
+    "test": "tests/inventory/test_stock.py::test_deduct_basic",
+    "error_type": "KeyError",
+    "message": "'sku'",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/inventory/test_stock.py",
+        "function": "test_deduct_basic",
+        "line": 42
+      },
+      {
+        "file": "src/inventory/service.py",
+        "function": "deduct",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "case_id": "TC-028",
+    "test": "tests/inventory/test_stock.py::test_deduct_batch",
+    "error_type": "KeyError",
+    "message": "'sku'",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/inventory/test_stock.py",
+        "function": "test_deduct_batch",
+        "line": 43
+      },
+      {
+        "file": "src/inventory/service.py",
+        "function": "deduct",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "case_id": "TC-029",
+    "test": "tests/inventory/test_order.py::test_order_locks_stock",
+    "error_type": "KeyError",
+    "message": "'sku'",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/inventory/test_order.py",
+        "function": "test_order_locks_stock",
+        "line": 44
+      },
+      {
+        "file": "src/inventory/service.py",
+        "function": "deduct",
+        "line": 55
+      }
+    ]
+  },
+  {
+    "case_id": "TC-030",
+    "test": "tests/report/test_export.py::test_export_gbk_csv",
+    "error_type": "UnicodeDecodeError",
+    "message": "'gbk' codec can't decode byte 0xff in position 12: illegal multibyte sequence",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "tests/report/test_export.py",
+        "function": "test_export_gbk_csv",
+        "line": 21
+      },
+      {
+        "file": "src/report/exporter.py",
+        "function": "to_csv",
+        "line": 34
+      }
+    ]
+  },
+  {
+    "case_id": "TC-031",
+    "test": "tests/test_orders.py::test_create_order",
+    "error_type": "RuntimeError",
+    "message": "db container not ready after 30s",
+    "phase": "setup",
+    "traceback": [
+      {
+        "file": "tests/conftest.py",
+        "function": "db_fixture",
+        "line": 12
+      }
+    ]
+  },
+  {
+    "case_id": "TC-032",
+    "test": "tests/payment/test_checkout.py::test_checkout_concurrent",
+    "error_type": "TimeoutError",
+    "message": "failed to release redis lock: timed out after 10s",
+    "phase": "teardown",
+    "traceback": [
+      {
+        "file": "tests/conftest.py",
+        "function": "redis_lock_fixture",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "case_id": "TC-033",
+    "test": "tests/integration/test_smoke.py::test_homepage",
+    "error_type": "TimeoutError",
+    "message": "request to http://10.0.0.8:8080/api/health timed out after 30s",
+    "phase": "call",
+    "traceback": [
+      {
+        "file": "src/utils/http.py",
+        "function": "post",
+        "line": 40
+      },
+      {
+        "file": "/usr/lib/python3.12/socket.py",
+        "function": "create_connection",
+        "line": 845
+      }
+    ]
+  }
+]

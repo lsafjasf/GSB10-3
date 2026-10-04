@@ -1,0 +1,26 @@
+test_e0_call_before_init_is_dispatched (__main__.LifecycleExperiments.test_e0_call_before_init_is_dispatched) ... OBSERVED: load 后未 init：REGISTRY 已可见，state='loaded'
+OBSERVED: call('alpha','work') 在 init 前被照常分发，靠插件自己的防御检查才抛出: alpha: work() 在 init 之前被调用
+ok
+test_e1_duplicate_load_leaks_subscriptions (__main__.LifecycleExperiments.test_e1_duplicate_load_leaks_subscriptions) ... OBSERVED: 重复 load 返回新实例：first is second = False，注册表条目被覆盖：REGISTRY.get('alpha') is second = True
+OBSERVED: 两个实例都收到事件：delivered=2，first.received=[1, 2]，second.received=[2]
+OBSERVED: 卸载后事件仍被投递给幽灵实例：delivered=1，first.received=[1, 2, 3]
+ok
+test_e2_failed_init_stays_callable_and_unretryable (__main__.LifecycleExperiments.test_e2_failed_init_stays_callable_and_unretryable) ... OBSERVED: init 失败后：REGISTRY.get('beta') is None = False，state='failed'
+OBSERVED: FAILED 状态下 call 仍被分发，踩到未初始化属性: 'Plugin' object has no attribute 'ready'
+OBSERVED: 失败后直接重试 init 被拒绝: beta: failed -> failed
+OBSERVED: 瞬时故障后重试：init() 已成功 ready=True，状态却卡在 'failed'，转移被拒绝: delta: failed -> initialized
+ok
+test_e3_reload_after_unload_keeps_module_state (__main__.LifecycleExperiments.test_e3_reload_after_unload_keeps_module_state) ... OBSERVED: 首次 init 后 LOAD_COUNT=1
+OBSERVED: unload 后：REGISTRY.get('alpha')=None，'plugins.alpha' in sys.modules = True
+OBSERVED: 重新 load：mod1 is mod2 = True（模块代码未重新执行）
+OBSERVED: 再次 init 后 LOAD_COUNT=2（模块级状态残留，未复位）
+ok
+test_e4_call_during_unload_is_dispatched (__main__.LifecycleExperiments.test_e4_call_during_unload_is_dispatched) ... OBSERVED: teardown 进行中：state='unloading'，conn=None
+OBSERVED: UNLOADING 期间 call 仍被分发，踩到已释放资源: 'NoneType' object does not support item assignment
+OBSERVED: 卸载完成后：REGISTRY.get('gamma')=None
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.303s
+
+OK

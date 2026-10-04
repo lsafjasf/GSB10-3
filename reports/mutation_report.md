@@ -1,0 +1,23 @@
+# 违规注入验证结果
+
+对每条约定的断言做一处源码变异（断言条件 -> True），
+运行 `python3 -m unittest discover -s tests`，期望全部变异被测试杀死。
+
+| 约定 | 变异文件 | 注入的违规改动 | 结果 | 触发的失败用例 |
+| --- | --- | --- | --- | --- |
+| S1 | events.py | `frozenset(event.keys()) == REQUIRED_KEYS` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_S1_extra_key_rejected (test_violations.ViolationTests.test_S1_extra_key_rejected)<br>test_S1_missing_key_rejected (test_violations.ViolationTests.test_S1_missing_key_rejected) |
+| S2 | events.py | `not (event_type == "quote" and symbol is not None)` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_S2_quote_with_symbol_rejected (test_violations.ViolationTests.test_S2_quote_with_symbol_rejected) |
+| S3 | processor.py | `type(receipt["committed_at"]) is int` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_S3_tampered_receipt_shape_rejected (test_violations.ViolationTests.test_S3_tampered_receipt_shape_rejected) |
+| O1 | processor.py | `self._state in allowed` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_O1_add_after_close_rejected (test_violations.ViolationTests.test_O1_add_after_close_rejected)<br>test_O1_commit_before_close_rejected (test_violations.ViolationTests.test_O1_commit_before_close_rejected)<br>test_O1_double_commit_rejected (test_violations.ViolationTests.test_O1_double_commit_rejected) |
+| O2 | processor.py | `not self._events or event["occurred_at"] >= previous` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_O2_one_less_rejected (test_boundaries.BoundaryTests.test_O2_one_less_rejected)<br>test_O2_out_of_order_timestamp_rejected (test_violations.ViolationTests.test_O2_out_of_order_timestamp_rejected) |
+| O3 | processor.py | `self._state != STATE_DONE` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_O3_register_callback_after_commit_rejected (test_violations.ViolationTests.test_O3_register_callback_after_commit_rejected) |
+| R1 | events.py | `isinstance(event_id, str) and len(event_id) > 0` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_R1_empty_id_rejected (test_boundaries.BoundaryTests.test_R1_empty_id_rejected)<br>test_R1_empty_event_id_rejected (test_violations.ViolationTests.test_R1_empty_event_id_rejected)<br>test_R1_non_string_event_id_rejected (test_violations.ViolationTests.test_R1_non_string_event_id_rejected) |
+| R2 | events.py | `event_type in EVENT_TYPES` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_R2_unknown_type_rejected (test_violations.ViolationTests.test_R2_unknown_type_rejected) |
+| R3 | events.py | `type(amount) is int and MIN_AMOUNT <= amount <= MAX_AMOUNT` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_R3_amount_max_plus_one_rejected (test_boundaries.BoundaryTests.test_R3_amount_max_plus_one_rejected)<br>test_R3_amount_minus_one_rejected (test_boundaries.BoundaryTests.test_R3_amount_minus_one_rejected)<br>test_R3_amount_above_max_rejected (test_violations.ViolationTests.test_R3_amount_above_max_rejected)<br>test_R3_bool_amount_rejected (test_violations.ViolationTests.test_R3_bool_amount_rejected)<br>test_R3_float_amount_rejected (test_violations.ViolationTests.test_R3_float_amount_rejected) |
+| R4 | events.py | `type(occurred_at) is int and occurred_at >= 0` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_R4_occurred_at_minus_one_rejected (test_boundaries.BoundaryTests.test_R4_occurred_at_minus_one_rejected)<br>test_R4_float_occurred_at_rejected (test_violations.ViolationTests.test_R4_float_occurred_at_rejected)<br>test_R4_negative_occurred_at_rejected (test_violations.ViolationTests.test_R4_negative_occurred_at_rejected) |
+| R5 | events.py | `all(type(tag) is str for tag in tags)` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_R5_non_string_tag_rejected (test_violations.ViolationTests.test_R5_non_string_tag_rejected) |
+| R6 | events.py | `symbol is None or symbol in ALLOWED_SYMBOLS` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_R6_symbol_outside_whitelist_rejected (test_violations.ViolationTests.test_R6_symbol_outside_whitelist_rejected) |
+| R7 | processor.py | `len(self._events) < self._max_batch` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_R7_max_plus_one_rejected (test_boundaries.BoundaryTests.test_R7_max_plus_one_rejected)<br>test_R7_batch_size_limit_rejected (test_violations.ViolationTests.test_R7_batch_size_limit_rejected) |
+| T1 | processor.py | `threading.get_ident() == self._owner` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_T1_call_from_foreign_thread_rejected (test_violations.ViolationTests.test_T1_call_from_foreign_thread_rejected) |
+| T2 | processor.py | `not self._lock._is_owned()` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_T2_publish_must_not_hold_lock (test_violations.ViolationTests.test_T2_publish_must_not_hold_lock) |
+| T3 | processor.py | `check(self._lock._is_owned(), "T3"` -> `True` | ✅ KILLED（测试失败，违规被抓住） | test_T3_locked_method_without_lock_rejected (test_violations.ViolationTests.test_T3_locked_method_without_lock_rejected) |

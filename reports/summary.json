@@ -1,0 +1,42 @@
+[
+  {
+    "scenario": "already_minimal",
+    "original_size": 1,
+    "final_size": 1,
+    "iterations": 0,
+    "trials": 2,
+    "rounds": 0,
+    "verified": true,
+    "report": "reports/already_minimal.json"
+  },
+  {
+    "scenario": "only_half_removable",
+    "original_size": 4,
+    "final_size": 2,
+    "iterations": 1,
+    "trials": 10,
+    "rounds": 1,
+    "verified": true,
+    "report": "reports/only_half_removable.json"
+  },
+  {
+    "scenario": "difference_only_at_tail",
+    "original_size": 51,
+    "final_size": 1,
+    "iterations": 5,
+    "trials": 7,
+    "rounds": 5,
+    "verified": true,
+    "report": "reports/difference_only_at_tail.json"
+  },
+  {
+    "scenario": "empty_input_diverges",
+    "original_size": 0,
+    "final_size": 0,
+    "iterations": 0,
+    "trials": 0,
+    "rounds": 0,
+    "verified": true,
+    "report": "reports/empty_input_diverges.json"
+  }
+]

@@ -1,0 +1,190 @@
+{
+  "status": "minimal",
+  "verified": true,
+  "original_size": 51,
+  "final_size": 1,
+  "iterations": 5,
+  "trials": 7,
+  "original": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    99
+  ],
+  "result": [
+    99
+  ],
+  "rounds": [
+    {
+      "index": 1,
+      "phase": "block-delete",
+      "granularity": 2,
+      "removed_count": 26,
+      "before_size": 51,
+      "after_size": 25,
+      "assertion": {
+        "before": [
+          "input=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 99]",
+          "reference -> value=1324",
+          "candidate  -> value=2324",
+          "different  = True"
+        ],
+        "after": [
+          "input=[26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 99]",
+          "reference -> value=999",
+          "candidate  -> value=1999",
+          "different  = True"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "phase": "block-delete",
+      "granularity": 2,
+      "removed_count": 13,
+      "before_size": 25,
+      "after_size": 12,
+      "assertion": {
+        "before": [
+          "input=[26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 99]",
+          "reference -> value=999",
+          "candidate  -> value=1999",
+          "different  = True"
+        ],
+        "after": [
+          "input=[39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 99]",
+          "reference -> value=583",
+          "candidate  -> value=1583",
+          "different  = True"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "phase": "block-delete",
+      "granularity": 2,
+      "removed_count": 6,
+      "before_size": 12,
+      "after_size": 6,
+      "assertion": {
+        "before": [
+          "input=[39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 99]",
+          "reference -> value=583",
+          "candidate  -> value=1583",
+          "different  = True"
+        ],
+        "after": [
+          "input=[45, 46, 47, 48, 49, 99]",
+          "reference -> value=334",
+          "candidate  -> value=1334",
+          "different  = True"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "phase": "block-delete",
+      "granularity": 2,
+      "removed_count": 3,
+      "before_size": 6,
+      "after_size": 3,
+      "assertion": {
+        "before": [
+          "input=[45, 46, 47, 48, 49, 99]",
+          "reference -> value=334",
+          "candidate  -> value=1334",
+          "different  = True"
+        ],
+        "after": [
+          "input=[48, 49, 99]",
+          "reference -> value=196",
+          "candidate  -> value=1196",
+          "different  = True"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "phase": "block-delete",
+      "granularity": 2,
+      "removed_count": 2,
+      "before_size": 3,
+      "after_size": 1,
+      "assertion": {
+        "before": [
+          "input=[48, 49, 99]",
+          "reference -> value=196",
+          "candidate  -> value=1196",
+          "different  = True"
+        ],
+        "after": [
+          "input=[99]",
+          "reference -> value=99",
+          "candidate  -> value=1099",
+          "different  = True"
+        ]
+      }
+    }
+  ],
+  "singleton_checks": [
+    {
+      "index": 0,
+      "element": 99,
+      "kept": true,
+      "detail": "removing 99 loses the divergence"
+    }
+  ],
+  "final_assertion": [
+    "input=[99]",
+    "reference -> value=99",
+    "candidate  -> value=1099",
+    "different  = True"
+  ]
+}

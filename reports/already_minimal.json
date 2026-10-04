@@ -1,0 +1,29 @@
+{
+  "status": "minimal",
+  "verified": true,
+  "original_size": 1,
+  "final_size": 1,
+  "iterations": 0,
+  "trials": 2,
+  "original": [
+    7
+  ],
+  "result": [
+    7
+  ],
+  "rounds": [],
+  "singleton_checks": [
+    {
+      "index": 0,
+      "element": 7,
+      "kept": true,
+      "detail": "removing 7 loses the divergence"
+    }
+  ],
+  "final_assertion": [
+    "input=[7]",
+    "reference -> value=7",
+    "candidate  -> value=0",
+    "different  = True"
+  ]
+}

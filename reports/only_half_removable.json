@@ -1,0 +1,62 @@
+{
+  "status": "minimal",
+  "verified": true,
+  "original_size": 4,
+  "final_size": 2,
+  "iterations": 1,
+  "trials": 10,
+  "original": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "result": [
+    1,
+    2
+  ],
+  "rounds": [
+    {
+      "index": 1,
+      "phase": "block-delete",
+      "granularity": 2,
+      "removed_count": 2,
+      "before_size": 4,
+      "after_size": 2,
+      "assertion": {
+        "before": [
+          "input=[1, 2, 3, 4]",
+          "reference -> value=10",
+          "candidate  -> value=110",
+          "different  = True"
+        ],
+        "after": [
+          "input=[1, 2]",
+          "reference -> value=3",
+          "candidate  -> value=103",
+          "different  = True"
+        ]
+      }
+    }
+  ],
+  "singleton_checks": [
+    {
+      "index": 0,
+      "element": 1,
+      "kept": true,
+      "detail": "removing 1 loses the divergence"
+    },
+    {
+      "index": 1,
+      "element": 2,
+      "kept": true,
+      "detail": "removing 2 loses the divergence"
+    }
+  ],
+  "final_assertion": [
+    "input=[1, 2]",
+    "reference -> value=3",
+    "candidate  -> value=103",
+    "different  = True"
+  ]
+}
